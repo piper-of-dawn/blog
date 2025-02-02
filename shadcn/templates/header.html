@@ -3,10 +3,10 @@
     <div
         class="h-14 w-full max-w-8xl mx-auto px-4 border-x border-x-border/50 flex flex-row justify-between items-stretch">
         <a href="/" class="block mr-4 flex items-center gap-2 lg:mr-6">
-            {# <iconify-icon icon="heroicons:code-bracket-solid" class="inline-block w-[24px]" height="24" width="24"
-                noobserve></iconify-icon> #}
-            {% include "icons/shadcn.svg" %}
-            <h1 class="inline-block font-bold text-md">shadcn/ui</h1>
+            {% include "components/icon.html" %}
+            <h1 class="inline-block font-bold text-md">
+                {{ config.theme.title }}
+            </h1>
         </a>
         <div class="flex items-center gap-0.5">
             {% if config.repo_url %}
