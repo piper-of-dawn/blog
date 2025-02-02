@@ -1,0 +1,13 @@
+[project]
+name = "mkdocs-shadcn"
+version = "0.1.0"
+description = "Documentation that also shines"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["mkdocs>=1.6.1"]
+
+[dependency-groups]
+dev = ["pygments>=2.19.1", "pymdown-extensions>=10.14.2"]
+
+[project.entry-points."mkdocs.themes"]
+shadcn = "shadcn"
