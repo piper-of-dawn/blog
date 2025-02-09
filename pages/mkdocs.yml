@@ -1,0 +1,25 @@
+site_name: "mkdocs-shadcn"
+dev_addr: "127.0.0.1:8080"
+repo_url: "https://github.com/asiffer/mkdocs-shadcn"
+theme:
+  name: shadcn
+  pygments_style: "dracula"
+
+nav:
+  - "Welcome": index.md
+  - install.md
+  - extensions.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  admonition:
+  codehilite:
+  extra:
+  pymdownx.blocks.details:
+  pymdownx.tabbed:
+  # tables:
+  # toc:
+  # pymdownx.highlight:
+  # pymdownx.superfences:
