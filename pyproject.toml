@@ -1,6 +1,6 @@
 [project]
 name = "mkdocs-shadcn"
-version = "0.1.0"
+version = "0.2.0"
 description = "Documentation that also shines"
 authors = [
     { name = "Alban Siffer", email = "31479857+asiffer@users.noreply.github.com" },
@@ -10,7 +10,12 @@ requires-python = ">=3.13"
 dependencies = ["mkdocs>=1.6.1"]
 
 [dependency-groups]
-dev = ["pygments>=2.19.1", "pymdown-extensions>=10.14.2"]
+dev = [
+    "mypy>=1.15.0",
+    "pygments>=2.19.1",
+    "pymdown-extensions>=10.14.2",
+    "types-pygments>=2.19.0.20250107",
+]
 
 [project.entry-points."mkdocs.themes"]
 shadcn = "shadcn"
