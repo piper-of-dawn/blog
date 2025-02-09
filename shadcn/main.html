@@ -2,20 +2,15 @@
 <html lang="en" class="light">
 
 <head>
+    <meta charset="UTF-8">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+    {% include "templates/seo.html" %}
+    <link rel="icon" href="{{ 'img/favicon.ico' | url }}">
     <link href="{{ 'css/base.css' | url }}" rel="stylesheet">
     <link href="{{ 'css/geist.css' | url }}" rel="stylesheet">
-
-    {#
-    <link href="{{ 'css/github-dark.css' | url }}" rel="stylesheet"> #}
-    {#
-    <link href="{{ 'css/monokai.css' | url }}" rel="stylesheet"> #}
-    <link href="{{ 'css/dracula.css' | url }}" rel="stylesheet">
-    {#
-    <link href="{{ 'css/one-dark.css' | url }}" rel="stylesheet"> #}
-    {#
-    <link href="{{ 'css/stata-dark.css' | url }}" rel="stylesheet"> #}
-
+    {% if config.theme.pygments_style %}
+    <link href="{{ ('css/pygments/' + config.theme.pygments_style + '.css') | url }}" rel="stylesheet">
+    {% endif %}
     {%- for path in config.extra_css %}
     <link href="{{ path | url }}" rel="stylesheet">
     {%- endfor %}
@@ -46,7 +41,11 @@
     {%- if script.path %} {# Detected MkDocs 1.5+ which has `script.path` and `script_tag` #}
     {{ script | script_tag }}
     {%- else %} {# Fallback - examine the file name directly #}
-    <script src="{{ script | url }}" {% if script.endswith(".mjs") %} type="module" {% endif %}></script>
+    {% if script.endswith('.mjs') %}
+    <script src="{{ script | url }}" type="module"></script>
+    {% else %}
+    <script src="{{ script | url }}"></script>
+    {% endif %}
     {%- endif %}
     {%- endfor %}
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.3.0/dist/iconify-icon.min.js"></script>
