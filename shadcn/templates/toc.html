@@ -3,8 +3,10 @@
         <div class="space-y-2">
             <p class="font-medium">On This Page</p>
             <ul class="m-0 list-none">
-                {% for h1 in page.toc %}
-                {% for h2 in h1.children %}
+                {% if page.toc %}
+                {% with roottoc = page.toc | list %}
+                {% with toc = roottoc if roottoc | length > 1 else roottoc[0].children %}
+                {% for h2 in toc %}
                 <li class="mt-0 pt-2">
                     <a class="inline-block no-underline transition-colors hover:text-foreground text-muted-foreground"
                         href="{{ h2.url }}">{{ h2.title }}</a>
@@ -20,7 +22,9 @@
                     {% endif %}
                 </li>
                 {% endfor %}
-                {% endfor %}
+                {% endwith %}
+                {% endwith %}
+                {% endif %}
             </ul>
         </div>
     </div>
