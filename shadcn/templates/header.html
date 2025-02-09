@@ -5,7 +5,11 @@
         <a href="/" class="block mr-4 flex items-center gap-2 lg:mr-6">
             {% include "components/icon.html" %}
             <h1 class="inline-block font-bold text-md">
+                {% if config.theme.title %}
                 {{ config.theme.title }}
+                {% else %}
+                {{ config.site_name }}
+                {% endif %}
             </h1>
         </a>
         <div class="flex items-center gap-0.5">
