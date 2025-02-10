@@ -1,5 +1,7 @@
 site_name: "mkdocs-shadcn"
-site_url: "https://asiffer.github.io/mkdocs-shadcn/"
+site_url: "https://asiffer.github.io/mkdocs-shadcn"
+site_description: "Documentation that also shines"
+site_author: "Alban Siffer <31479857+asiffer@users.noreply.github.com>"
 dev_addr: "127.0.0.1:8080"
 repo_url: "https://github.com/asiffer/mkdocs-shadcn"
 theme:
@@ -10,9 +12,6 @@ nav:
   - "Welcome": index.md
   - install.md
   - extensions.md
-
-plugins:
-  - search
 
 markdown_extensions:
   admonition:

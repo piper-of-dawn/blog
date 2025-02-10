@@ -4,7 +4,7 @@ title: Install
 
 Add the package to your project.
 
-=== "`pip`"
+=== "pip"
 
         :::bash
         pip install mkdocs-shadcn

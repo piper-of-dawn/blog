@@ -173,5 +173,5 @@ The theme may provide some pre-computed classes. The `attr_list` extension allow
 [Reference](https://python-markdown.github.io/extensions/attr_list/){: class="reference" }
 ```
 
-T
+
 [Reference](https://python-markdown.github.io/extensions/attr_list/){: class="reference" }
