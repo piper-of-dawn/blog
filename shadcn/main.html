@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 
 <head>
+    <script>
+        // for search plugin notably
+        const base_url = "{{ config.site_url }}";
+    </script>
     <meta charset="UTF-8">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
     {% include "templates/seo.html" %}
