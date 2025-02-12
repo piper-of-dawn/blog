@@ -4,7 +4,9 @@
   </a>
 </p>
 
-**The sleek [shadcn theme](https://ui.shadcn.com/) on top of [MkDocs](https://www.mkdocs.org/)**
+<p align="center">
+    <b>The sleek <a href="https://ui.shadcn.com/">shadcn theme</a> on top of <a href="https://www.mkdocs.org/">MkDocs</a></b>
+</p>
 
 > [!IMPORTANT]  
 > This is an unofficial port of shadcn/ui to MkDocs, and is not affiliated with [@shadcn](https://twitter.com/shadcn).
