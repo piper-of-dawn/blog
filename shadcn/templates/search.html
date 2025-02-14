@@ -20,22 +20,33 @@
                 </svg>
                 <script>
                     let debounceTimer;
-                    let onInputHandler = function (event) {
-                        console.log("onInput")
-                        const query = event.target.value
-                        clearTimeout(debounceTimer); // Clear previous timer
+                    const onInputHandler = function (event) {
+                        const query = event.target.value;
+                        clearTimeout(debounceTimer);
                         debounceTimer = setTimeout(() => {
                             if (searchWorker && (query.length > 2)) {
-                                searchWorker.postMessage({ "query": query })
+                                console.log(`Posting message { "query": "${query}" }`)
+                                // https://lunrjs.com/guides/searching.html
+                                // we should append a wilcard and also a boost on exact term
+                                const lunrQuery = `${query}^10 ${query}* ${query}~1`;
+                                searchWorker.postMessage({ "query": lunrQuery });
+                            } else if (query.length > 2) {
+                                console.warn("searchWorker is not defined")
+                            } else {
+                                const results = document.getElementById("mkdocs-search-results");
+                                if (results) {
+                                    while (results.firstChild) {
+                                        results.removeChild(results.firstChild);
+                                    }
+                                }
                             }
-                        }, 300); // Wait 300ms after last keystroke
+                        }, 300);
                     };
                 </script>
                 <input
                     class="flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Type a command or search..." cmdk-input="" autocomplete="off" autocorrect="off"
-                    spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true"
-                    aria-controls="radix-:rb0:" aria-labelledby="radix-:rb1:" id="radix-:rb2:" type="text" value=""
+                    placeholder="Type a command or search..." autocomplete="off" autocorrect="off" spellcheck="false"
+                    aria-autocomplete="list" role="combobox" aria-expanded="true" type="text" value=""
                     oninput="onInputHandler(event)">
             </div>
         </div>
