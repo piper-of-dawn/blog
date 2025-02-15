@@ -1728,6 +1728,36 @@
   vertical-align: middle;
   margin-left: 0.25rem;
 }
+.typography .progress {
+  position: relative;
+  height: calc(var(--spacing) * 2);
+  width: 100%;
+  border-radius: calc(infinity * 1px);
+  background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+}
+.typography .progress-bar {
+  height: 100%;
+  border-top-left-radius: calc(infinity * 1px);
+  border-bottom-left-radius: calc(infinity * 1px);
+  background-color: var(--color-primary);
+}
+.typography .progress.success .progress-bar {
+  background-color: var(--color-chart-2);
+}
+.typography .progress.warning .progress-bar {
+  background-color: var(--color-chart-5);
+}
+.typography .progress.danger .progress-bar {
+  background-color: var(--color-destructive);
+}
+.typography .progress-label {
+  position: absolute;
+  right: calc(var(--spacing) * 0);
+  bottom: calc(var(--spacing) * 1);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  color: var(--color-primary);
+}
 .max-w-8xl {
   max-width: 1536px;
 }
