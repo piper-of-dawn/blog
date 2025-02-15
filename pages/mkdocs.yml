@@ -19,7 +19,13 @@ markdown_extensions:
   extra:
   pymdownx.blocks.details:
   pymdownx.tabbed:
-  # tables:
-  # toc:
-  # pymdownx.highlight:
-  # pymdownx.superfences:
+  pymdownx.blocks.tab:
+    combine_header_slug: true
+    separator: ___
+    slugify:
+      !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
+  pymdownx.progressbar:
+    # tables:
+    # toc:
+    # pymdownx.highlight:
+    # pymdownx.superfences:

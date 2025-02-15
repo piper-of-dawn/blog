@@ -88,6 +88,8 @@ for num in fibonacci(10):
 
 ## pymdownx.tabbed
 
+[Reference](https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/){: class="reference" }
+
 ~~~ md
 === "`pip`"
 
@@ -123,6 +125,8 @@ for num in fibonacci(10):
         poetry add mkdocs-shadcn
 
 ## pymdownx.blocks.details
+
+[Reference](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/details/){: class="reference" }
 
 ```md
 ### FAQ
@@ -175,3 +179,69 @@ The theme may provide some pre-computed classes. The `attr_list` extension allow
 
 
 [Reference](https://python-markdown.github.io/extensions/attr_list/){: class="reference" }
+
+## pymdownx.blocks.tab
+
+[Reference](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/tab/){: class="reference" }
+
+Tab blocks are aimed at replacing the Tabbed extension (see [tab documentation](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/tab/#tab)).
+
+```md
+/// tab | `pip`
+    new: true
+
+    :::bash
+    pip install mkdocs-shadcn
+///
+
+/// tab | uv
+
+    :::bash
+    uv add mkdocs-shadcn
+///
+
+/// tab | poetry
+
+    :::bash
+    poetry add mkdocs-shadcn
+///
+```
+
+/// tab | `pip`
+    new: true
+
+    :::bash
+    pip install mkdocs-shadcn
+///
+
+/// tab | uv
+
+    :::bash
+    uv add mkdocs-shadcn
+///
+
+/// tab | poetry
+
+    :::bash
+    poetry add mkdocs-shadcn
+///
+
+## pymdownx.progressbar
+
+[Reference](https://facelessuser.github.io/pymdown-extensions/extensions/progressbar/){: class="reference" }
+
+You can leverage `attr_list` to colorize the progress bar.
+
+```md
+[=50% ""]
+[=75% "75%"]
+[=95% "Awesome"]{: .success}
+[=25% "25%"]{: .warning}
+[=5% "5%"]{: .danger}
+```
+
+[=50% ""]
+[=75% "75%"]
+[=95% "Awesome"]{: .success}
+[=25% "25%"]{: .warning}
+[=5% "5%"]{: .danger}
