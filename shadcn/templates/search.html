@@ -1,4 +1,4 @@
-<button onclick="const d = document.getElementById('search-dialog'); if (d) { d.showModal() };"
+<button onclick="onSearchBarClick(event)"
     class="cursor-pointer inline-flex items-center gap-2 whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input hover:bg-accent hover:text-accent-foreground px-4 py-2 relative h-8 w-full justify-start rounded-[0.5rem] bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-56 xl:w-64">
     <span class="hidden lg:inline-flex">Search documentation...</span>
     <span class="inline-flex lg:hidden">Search...</span>
@@ -7,7 +7,7 @@
         <span class="text-xs">⌘</span>K
     </kbd>
 </button>
-<dialog id="search-dialog" onclick="if (event.target === this) { this.close() }"
+<dialog id="search-dialog" onclick="onSearchDialogClick(event)"
     class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background rounded-lg shadow-lg border overflow-hidden p-0">
     <div class="w-lg gap-4">
         <div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground">
@@ -18,7 +18,7 @@
                     <circle cx="11" cy="11" r="8"></circle>
                     <path d="m21 21-4.3-4.3"></path>
                 </svg>
-                <script>
+                <!-- <script>
                     let debounceTimer;
                     const onInputHandler = function (event) {
                         const query = event.target.value;
@@ -42,7 +42,7 @@
                             }
                         }, 300);
                     };
-                </script>
+                </script> -->
                 <input
                     class="flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
                     placeholder="Type a command or search..." autocomplete="off" autocorrect="off" spellcheck="false"
@@ -56,13 +56,6 @@
     </div>
 </dialog>
 <script>
-    document.addEventListener("keydown", function (event) {
-        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
-            event.preventDefault(); // Prevents default browser behavior (e.g., search bar in some apps)
-            const dialog = document.getElementById("search-dialog");
-            if (dialog) {
-                dialog.showModal();
-            }
-        }
-    });
+    document.removeEventListener("keydown", searchShortcutHandler);
+    document.addEventListener("keydown", searchShortcutHandler);
 </script>
