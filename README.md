@@ -11,6 +11,10 @@
 > [!IMPORTANT]  
 > This is an unofficial port of shadcn/ui to MkDocs, and is not affiliated with [@shadcn](https://twitter.com/shadcn).
 
+## Documentation
+
+Yes, yes, the [documentation](https://asiffer.github.io/mkdocs-shadcn/) is built with this theme.
+
 ## Quick start
 
 `mkdocs-shadcn` can be installed with `pip`
