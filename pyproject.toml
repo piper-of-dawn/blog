@@ -1,6 +1,6 @@
 [project]
 name = "mkdocs-shadcn"
-version = "0.2.3"
+version = "0.3.0"
 description = "Documentation that also shines"
 authors = [
     { name = "Alban Siffer", email = "31479857+asiffer@users.noreply.github.com" },
@@ -19,6 +19,9 @@ dev = [
 
 [project.entry-points."mkdocs.themes"]
 shadcn = "shadcn"
+
+[project.entry-points."mkdocs.plugins"]
+"shadcn/search" = "shadcn.plugins.search:SearchPlugin"
 
 [build-system]
 requires = ["hatchling"]
