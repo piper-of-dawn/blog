@@ -8,10 +8,12 @@ theme:
   name: shadcn
   pygments_style: "dracula"
 
-nav:
-  - "Welcome": index.md
-  - install.md
-  - extensions.md
+# nav:
+#   - Welcome: index.md
+#   - install.md
+#   - extensions.md
+#   - Examples:
+#       - examples/a.md
 
 markdown_extensions:
   admonition:
