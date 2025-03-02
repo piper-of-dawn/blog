@@ -45,9 +45,9 @@
     <script src="{{ 'js/callbacks.js' | url }}"></script>
 </head>
 
-<body class="min-h-svh bg-foreground md:bg-background text-foreground scroll-smooth m-0">
+<body class="w-screen bg-foreground md:bg-background text-foreground scroll-smooth m-0">
     <div id="inner-body"
-        class="bg-background origin-[top_center_0px] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
+        class="min-h-screen bg-background origin-[top_center_0px] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
         {% include "templates/header.html" %}
         <div class="border-grid flex flex-1 flex-col">
             <div class="w-full mx-auto max-w-7xl">
