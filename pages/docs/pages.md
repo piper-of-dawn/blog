@@ -12,6 +12,11 @@ summary: Metadata configuration # subtitle
 
 ## Navigation
 
+The navigation follows bare mkdocs. You should just notice that folders will create categories in the sidebar.
+
+!!! warning "Important"
+    `mkdocs-shadcn` has not been tested with highly nested documentation (`d>2`, i.e. `root / folder / folder`)
+
 In addition, two other attributes may help to configure the sidebar.
 
 ```yaml
@@ -48,4 +53,12 @@ description: Extra page description
 keywords: mkdocs,shadcn
 author: asiffer
 image: https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/refs/heads/master/.github/assets/logo.svg
+```
+
+## Extra
+
+As we may find in [shadcn/ui](https://ui.shadcn.com/docs), we can add a `NEW` tag in the sidebar.
+
+```yaml
+new: true
 ```

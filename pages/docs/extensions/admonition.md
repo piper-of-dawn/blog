@@ -6,25 +6,26 @@ The Admonition extension adds rST-style admonitions to Markdown documents.
 
     :::md {.light}
     !!! info "Information:"
-        Something **new** is coming
+        Something **new** is coming to `mkdocs-shadcn`
 
     !!! note "Note:"
-        We notice that
+        We notice that `x=2`
 
     !!! warning "Warning:"
-        There is a *risk* doing that
+        There is a *risk* doing `x/0`
 
     !!! danger "Danger:"
-        Don't do that please!
+        Don't look at `node_modules` **please**! 
 
-!!! info "Info:"
-    Something **new** is coming
+
+!!! info "Information:"
+    Something **new** is coming to `mkdocs-shadcn`
 
 !!! note "Note:"
-    We notice that
+    We notice that `x=2`
 
 !!! warning "Warning:"
-    There is a *risk* doing that
+    There is a *risk* doing `x/0`
 
 !!! danger "Danger:"
-    Don't do that please!
+    Don't look at `node_modules` **please**! 

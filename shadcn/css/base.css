@@ -1742,6 +1742,14 @@
   &:where(.dark, .dark *) {
     background-color: color-mix(in oklab, var(--color-destructive) 30%, transparent);
   }
+  & code {
+    background-color: color-mix(in oklab, var(--color-destructive) 5%, transparent);
+  }
+  &:where(.dark, .dark *) {
+    & code {
+      background-color: color-mix(in oklab, var(--color-destructive) 20%, transparent);
+    }
+  }
 }
 .typography .admonition.warning {
   border-color: var(--color-amber-200);
@@ -1751,6 +1759,14 @@
   }
   &:where(.dark, .dark *) {
     background-color: color-mix(in oklab, var(--color-amber-950) 50%, transparent);
+  }
+  & code {
+    background-color: var(--color-amber-100);
+  }
+  &:where(.dark, .dark *) {
+    & code {
+      background-color: var(--color-amber-950);
+    }
   }
 }
 .typography .admonition.info {
