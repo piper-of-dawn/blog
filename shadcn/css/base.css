@@ -565,6 +565,9 @@
   .relative {
     position: relative;
   }
+  .static {
+    position: static;
+  }
   .sticky {
     position: sticky;
   }
@@ -659,6 +662,10 @@
     width: calc(var(--spacing) * 6) !important;
     height: calc(var(--spacing) * 6) !important;
   }
+  .size-1 {
+    width: calc(var(--spacing) * 1);
+    height: calc(var(--spacing) * 1);
+  }
   .h-2 {
     height: calc(var(--spacing) * 2);
   }
@@ -679,6 +686,15 @@
   }
   .h-14 {
     height: calc(var(--spacing) * 14);
+  }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
+  .h-80 {
+    height: calc(var(--spacing) * 80);
+  }
+  .h-84 {
+    height: calc(var(--spacing) * 84);
   }
   .h-\[calc\(100vh-3\.55rem\)\] {
     height: calc(100vh - 3.55rem);
@@ -938,9 +954,6 @@
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
-  .pt-6 {
-    padding-top: calc(var(--spacing) * 6);
-  }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
   }
@@ -1007,11 +1020,17 @@
   .text-popover-foreground {
     color: var(--color-popover-foreground);
   }
-  .text-primary {
-    color: var(--color-primary);
+  .italic {
+    font-style: italic;
   }
   .no-underline {
     text-decoration-line: none;
+  }
+  .overline {
+    text-decoration-line: overline;
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .underline-offset-2 {
     text-underline-offset: 2px;
@@ -1710,9 +1729,9 @@
     margin-top: calc(var(--spacing) * 6);
   }
 }
-.typography .admonition > * {
+.typography .admonition > p {
   margin: calc(var(--spacing) * 0) !important;
-  display: inline-block;
+  display: inline;
 }
 .typography .admonition.danger {
   border-color: color-mix(in oklab, var(--color-destructive) 50%, transparent);
@@ -1725,10 +1744,32 @@
   }
 }
 .typography .admonition.warning {
-  border-color: var(--color-chart-4);
-  background-color: color-mix(in oklab, var(--color-chart-4) 10%, transparent);
+  border-color: var(--color-amber-200);
+  background-color: var(--color-amber-50);
   &:where(.dark, .dark *) {
-    background-color: color-mix(in oklab, var(--color-chart-4) 30%, transparent);
+    border-color: var(--color-amber-950);
+  }
+  &:where(.dark, .dark *) {
+    background-color: color-mix(in oklab, var(--color-amber-950) 50%, transparent);
+  }
+}
+.typography .admonition.info {
+  margin-bottom: calc(var(--spacing) * 6);
+  border-color: var(--color-blue-600);
+  background-color: var(--color-blue-50);
+  &:where(.dark, .dark *) {
+    border-color: var(--color-blue-900);
+  }
+  &:where(.dark, .dark *) {
+    background-color: var(--color-blue-950);
+  }
+  & code {
+    background-color: var(--color-blue-100);
+  }
+  &:where(.dark, .dark *) {
+    & code {
+      background-color: var(--color-blue-900);
+    }
   }
 }
 .typography .admonition > p.admonition-title {
@@ -1974,6 +2015,10 @@
 }
 #inner-body {
   scrollbar-width: thin;
+}
+.typst-doc {
+  display: inline-block;
+  vertical-align: center;
 }
 #mkdocs-search-results:has(article) {
   padding: calc(var(--spacing) * 3);
