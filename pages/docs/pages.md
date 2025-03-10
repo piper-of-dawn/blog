@@ -3,8 +3,7 @@ title: Pages
 summary: Metadata configuration
 ---
 
-Like this page, you can define its title (and subtitle) through front-matter 
-configuration.
+Like this page, you can define its title (and subtitle) through front-matter configuration.
 
 ```yaml
 title: Pages # title
@@ -16,11 +15,11 @@ summary: Metadata configuration # subtitle
 In addition, two other attributes may help to configure the sidebar.
 
 ```yaml
-order: 2 # title
+order: 2 
 sidebar_title: Navigation title
 ```
 
-The `order` attribute may help to change the rank of the page in the sidebar (without setting the `nav` setting in `mkdocs.yml`). By default, mkdocs ranks pages through alphebetical order. We keep this behavior if `order` is not set. Let us take this example:
+The `order` attribute may help to change the rank of the page in the sidebar (without setting the `nav` setting in `mkdocs.yml`). By default, mkdocs ranks pages through alphabetical order. We keep this behavior if `order` is not set. Let us take this example:
 
 ```ini
 | a.md ; order not set

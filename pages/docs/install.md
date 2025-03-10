@@ -32,4 +32,4 @@ theme:
   icon: heroicons:rocket-launch # use the shadcn svg by default
 ```
 
-Currently there is not many options and they are likely to change. You can define an `icon` (image url or [iconify class](https://icon-sets.iconify.design/)) for the top bar.
+Currently there are not many options and they are likely to change. You can define an `icon` (image url or [iconify class](https://icon-sets.iconify.design/)) for the top bar.
