@@ -27,7 +27,5 @@ markdown_extensions:
     slugify:
       !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
   pymdownx.progressbar:
-    # tables:
-    # toc:
-    # pymdownx.highlight:
-    # pymdownx.superfences:
+  pymdownx.arithmatex:
+    generic: true

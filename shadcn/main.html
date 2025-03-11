@@ -42,7 +42,13 @@
     {%- for path in config.extra_css %}
     <link href="{{ path | url }}" rel="stylesheet">
     {%- endfor %}
+
     <script src="{{ 'js/callbacks.js' | url }}"></script>
+
+    {% if "pymdownx.arithmatex" in config.markdown_extensions %}
+    {% include "templates/katex.html" %}
+    {% endif %}
+
 </head>
 
 <body class="w-screen overflow-x-hidden bg-foreground md:bg-background text-foreground scroll-smooth m-0 p-0">
