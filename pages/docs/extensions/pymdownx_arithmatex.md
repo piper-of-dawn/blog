@@ -6,7 +6,7 @@ new: true
 !!! info "Note:"
     When `pymdownx.arithmatex` is enabled, the theme automatically 
     loads [KateX](https://katex.org/) material to render math (css, js and fonts). 
-    Currently we ship the version `v0.16.9`.
+    Currently we ship the version `v0.16.21`.
 
 ```tex
 Let $F$ be a primitive of $f$,
