@@ -8,7 +8,6 @@ Tab blocks are aimed at replacing the Tabbed extension (see [tab documentation](
 
 ```md
 /// tab | `pip`
-    new: true
 
     :::bash
     pip install mkdocs-shadcn
