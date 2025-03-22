@@ -49,6 +49,9 @@
     {% include "templates/katex.html" %}
     {% endif %}
 
+    {% if "shadcn.extensions.echarts.alpha" in config.markdown_extensions %}
+    {% include "templates/echarts.html" %}
+    {% endif %}
 </head>
 
 <body class="w-screen overflow-x-hidden bg-foreground md:bg-background text-foreground scroll-smooth m-0 p-0">
