@@ -1,8 +1,6 @@
 <article class="typography w-full">
     {% if not page.is_top_level %}
-    <div class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
-        {% include "templates/breadcrumbs.html" %}
-    </div>
+    {% include "templates/breadcrumbs.html" %}
     {% endif %}
     {% if page.meta.title %}
     <h1 class="tracking-tight">{{ page.meta.title }}</h1>
