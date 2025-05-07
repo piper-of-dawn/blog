@@ -1,12 +1,29 @@
 ---
 title: pymdownx.arithmatex
+summary: For maths lovers
 new: true
 ---
+
+The `pymdownx.arithmatex` extension is a Python-Markdown plugin that enables rendering of mathematical expressions written in LaTeX syntax. 
+
+## Configuration
+
+```yaml
+# mkdocs.yml
+
+markdown_extensions:
+  - codehilite
+```
 
 !!! info "Note:"
     When `pymdownx.arithmatex` is enabled, the theme automatically 
     loads [KateX](https://katex.org/) material to render math (css, js and fonts). 
     Currently we ship the version `v0.16.21`.
+
+
+## Syntax
+
+Just like latex.
 
 ```tex
 Let $F$ be a primitive of $f$,

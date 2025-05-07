@@ -1,8 +1,22 @@
 ---
 title: pymdownx.blocks.details
+summary: Collapsible details
 ---
 
 [Reference](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/details/){: class="reference" }
+
+The `pymdownx.blocks.details` extension is a Python-Markdown plugin that provides a simple way to create collapsible "details" blocks in your Markdown content. 
+
+## Configuration
+
+```yaml
+# mkdocs.yml
+
+markdown_extensions:
+  - pymdownx.blocks.details
+```
+
+## Syntax
 
 ```md
 ### FAQ

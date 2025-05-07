@@ -2,10 +2,22 @@
 title: pymdownx.progressbar
 ---
 
-
 [Reference](https://facelessuser.github.io/pymdown-extensions/extensions/progressbar/){: class="reference" }
 
-You can leverage `attr_list` to colorize the progress bar.
+The `pymdownx.progressbar` extension is a Python-Markdown plugin that allows you to create visually appealing progress bars directly in your Markdown content.
+
+## Configuration
+
+```yaml
+# mkdocs.yml
+
+markdown_extensions:
+  - pymdownx.progressbar
+```
+
+## Syntax
+
+You can also leverage `attr_list` to colorize the progress bar.
 
 ```md
 [=50% ""]

@@ -15,6 +15,10 @@ theme:
 #   - Examples:
 #       - examples/a.md
 
+plugins:
+  - search # put it first to inject out custom code
+  - excalidraw
+
 markdown_extensions:
   admonition:
   codehilite:
@@ -32,3 +36,4 @@ markdown_extensions:
   pymdownx.arithmatex:
     generic: true
   shadcn.extensions.echarts.alpha:
+

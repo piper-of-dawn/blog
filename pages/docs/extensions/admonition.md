@@ -1,8 +1,20 @@
 ---
 title: Admonitions
+summary: Notes, infos, warnings and dangers
 ---
 
 The Admonition extension adds rST-style admonitions to Markdown documents.
+
+## Configuration
+
+```yaml
+# mkdocs.yml
+
+markdown_extensions:
+  - admonition
+```
+
+## Syntax
 
     :::md {.light}
     !!! info "Information:"

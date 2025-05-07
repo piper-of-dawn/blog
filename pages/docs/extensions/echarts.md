@@ -1,11 +1,25 @@
 ---
 title: Apache ECharts
 summary: An Open Source JavaScript Visualization Library
+alpha: true
 ---
 
 [Reference](https://echarts.apache.org/en/index.html){: .reference }
 
-The theme provides an alpha version of an `echarts` plugin. From a `js` config it basically plots charts through the Apache ECharts library. Here is the basic syntax:
+The theme provides an alpha version of an `echarts` plugin. 
+
+## Configuration
+
+```yaml
+# mkdocs.yml
+
+markdown_extensions:
+  - shadcn.extensions.echarts.alpha
+```
+
+## Syntax
+
+From a `js` config it basically plots charts through the Apache ECharts library. Here is the basic syntax:
 
 ```md
 +++echarts
@@ -19,7 +33,8 @@ Currently, the plugin does not support dark mode.
 
 
 !!! warning "Important"
-    The `js` config is passed to the `.setOption` method. The plugin crops the input so that it keeps the outtermost curly braces (`{` and `}`) and removes what is outside. You can look at the library [API](https://echarts.apache.org/en/option.html).
+    The `js` config is passed to the `.setOption` method. The plugin crops the input so that it keeps the outtermost curly braces (`{` and `}`) and removes what is outside. You can look at the library [API](https://echarts.apache.org/en/option.html). In a nutshell, it removes code outside
+    of the config object.
 
 !!! info "Tip"
     You can either inline all the config within the block or insert snippets from file thanks to the [`pymdownx.snippets` plugin](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/).
@@ -31,9 +46,9 @@ Currently, the plugin does not support dark mode.
     </code></pre></div>
 
 
-    
+## Examples
 
-## Line
+### Line
 
 
 /// tab | Output
@@ -56,7 +71,7 @@ Currently, the plugin does not support dark mode.
 ///
 
 
-## Bars
+### Bars
 
 /// tab | Output
 
@@ -78,7 +93,7 @@ Currently, the plugin does not support dark mode.
 ///
 
 
-## Pie
+### Pie
 
 /// tab | Output
 
@@ -100,7 +115,7 @@ Currently, the plugin does not support dark mode.
 ///
 
 
-## Scatter
+### Scatter
 
 /// tab | Output
 
@@ -121,7 +136,7 @@ Currently, the plugin does not support dark mode.
 
 ///
 
-## Radar
+### Radar
 
 /// tab | Output
 

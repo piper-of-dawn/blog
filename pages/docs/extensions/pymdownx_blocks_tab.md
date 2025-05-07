@@ -4,7 +4,20 @@ title: pymdownx.blocks.tab
 
 [Reference](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/tab/){: class="reference" }
 
-Tab blocks are aimed at replacing the Tabbed extension (see [tab documentation](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/tab/#tab)).
+The `pymdownx.blocks.tab` extension is a Python-Markdown plugin that allows you to create interactive tabbed content in your Markdown files.
+
+Tab blocks are aimed at replacing the `pymdownx.tabbed` extension (see [tab documentation](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/tab/#tab)).
+
+## Configuration
+
+```yaml
+# mkdocs.yml
+
+markdown_extensions:
+  - pymdownx.blocks.tab
+```
+
+## Syntax
 
 ```md
 /// tab | `pip`
