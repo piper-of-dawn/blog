@@ -13,11 +13,12 @@ summary: Metadata configuration # subtitle
 ## Navigation
 
 The navigation follows bare mkdocs. You should just notice that folders will create categories in the sidebar.
+To sort the sections, you can use the common `00_section_title/` hack. The first numbers sort the folders in the filesystem (so the sections). They are removed by the theme at compile time. 
 
 !!! warning "Important"
     `mkdocs-shadcn` has not been tested with highly nested documentation (`d>2`, i.e. `root / folder / folder`)
 
-In addition, two other attributes may help to configure the sidebar.
+In addition, two other attributes may help to configure pages within the sidebar.
 
 ```yaml
 order: 2 
@@ -44,6 +45,7 @@ After a first pass we will have
 
 So in the sidebar we will get `a.md`, `c.md`, `d.md` and `b.md`.
 
+
 ## SEO
 
 The following attributes are supported for SEO (`<meta>` attributes in the `<head>`).
@@ -57,8 +59,11 @@ image: https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/refs/heads/master
 
 ## Extra
 
-As we may find in [shadcn/ui](https://ui.shadcn.com/docs), we can add a `NEW` tag in the sidebar.
+As we may find in [shadcn/ui](https://ui.shadcn.com/docs), we can add a `NEW` tag in the sidebar 
+(`Alpha` and `Beta` are also available).
 
 ```yaml
 new: true
+# beta: true
+# alpha: true
 ```
