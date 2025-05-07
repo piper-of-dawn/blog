@@ -11,6 +11,7 @@ dependencies = ["mkdocs>=1.6.1"]
 
 [dependency-groups]
 dev = [
+    "bottle>=0.13.2",
     "mypy>=1.15.0",
     "pygments>=2.19.1",
     "pymdown-extensions>=10.14.2",
@@ -23,6 +24,7 @@ shadcn = "shadcn"
 
 [project.entry-points."mkdocs.plugins"]
 "shadcn/search" = "shadcn.plugins.search:SearchPlugin"
+"shadcn/excalidraw" = "shadcn.plugins.excalidraw:ExcalidrawPlugin"
 
 [build-system]
 requires = ["hatchling"]
