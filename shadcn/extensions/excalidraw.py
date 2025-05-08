@@ -33,9 +33,9 @@ class InlineExcalidrawProcessor(InlineProcessor):
                 "r",
             ) as f:
                 # remove namespace
-                svg = etree.fromstring(
-                    re.sub(r'\sxmlns="[^"]+"', "", f.read(), count=1)
-                )
+                z = re.sub(r'\sxmlns="[^"]+"', "", f.read())
+                svg = etree.fromstring(z)
+
             svg.set("xmlns", "http://www.w3.org/2000/svg")
 
             svg_desc = etree.Element("desc")
