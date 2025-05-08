@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://asiffer.github.io/mkdocs-shadcn/">
-    <img src="https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/master/.github/assets/logo.svg" width="320" alt="mkdocs-shadcn">
+    <img src="https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/master/.github/assets/demo.gif" width="320" alt="mkdocs-shadcn">
   </a>
 </p>
 
@@ -10,6 +10,7 @@
 
 > [!IMPORTANT]  
 > This is an unofficial port of shadcn/ui to MkDocs, and is not affiliated with [@shadcn](https://twitter.com/shadcn).
+
 
 ## Documentation
 
@@ -42,4 +43,8 @@ The theme tries to support the built-in extensions along with some `pymdownx` on
 - [x] [`pymdownx.blocks.tab`](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/tab/) 
 - [x] [`pymdownx.progressbar`](https://facelessuser.github.io/pymdown-extensions/extensions/progressbar/)
 - [x] [`pymdownx.arithmatex`](https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/)
-- [ ] custom [`shadcn.echarts`](https://echarts.apache.org)
+- [x] custom [`shadcn.echarts`](https://echarts.apache.org)
+
+## Plugins
+
+We also provides an alpha version of an [`excalidraw`](https://excalidraw.com/) plugin. With this plugin, you can directly edit your excalidraw in dev mode (kind of WYSIWYG) while it is rendered as svg at build time.
