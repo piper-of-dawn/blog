@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://asiffer.github.io/mkdocs-shadcn/">
-    <img src="https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/master/.github/assets/demo.gif" width="320" alt="mkdocs-shadcn">
+    <img src="https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/master/.github/assets/demo.gif" width="800" alt="mkdocs-shadcn">
   </a>
 </p>
 
