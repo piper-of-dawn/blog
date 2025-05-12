@@ -1,4 +1,6 @@
 dev
+_dev
+.dev
 yarn.lock
 node_modules
 dist

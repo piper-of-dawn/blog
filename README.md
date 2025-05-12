@@ -1,12 +1,8 @@
-<p align="center">
-  <a href="https://asiffer.github.io/mkdocs-shadcn/">
-    <img src="https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/master/.github/assets/demo.gif" width="800" alt="mkdocs-shadcn">
-  </a>
-</p>
 
-<p align="center">
-    <b>The sleek <a href="https://ui.shadcn.com/">shadcn theme</a> on top of <a href="https://www.mkdocs.org/">MkDocs</a></b>
-</p>
+![banner](https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/master/.github/assets/banner.png)
+
+![screenshot](https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/master/.github/assets/screenshot2.png)
+
 
 > [!IMPORTANT]  
 > This is an unofficial port of shadcn/ui to MkDocs, and is not affiliated with [@shadcn](https://twitter.com/shadcn).
