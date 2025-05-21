@@ -172,11 +172,12 @@ wheels = [
 
 [[package]]
 name = "mkdocs-shadcn"
-version = "0.4.1"
+version = "0.5.0"
 source = { editable = "." }
 dependencies = [
     { name = "bottle" },
     { name = "mkdocs" },
+    { name = "pymdown-extensions" },
 ]
 
 [package.dev-dependencies]
@@ -192,6 +193,7 @@ dev = [
 requires-dist = [
     { name = "bottle", specifier = ">=0.13.2" },
     { name = "mkdocs", specifier = ">=1.6.1" },
+    { name = "pymdown-extensions", specifier = ">=10.14.3" },
 ]
 
 [package.metadata.requires-dev]
