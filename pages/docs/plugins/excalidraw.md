@@ -4,7 +4,9 @@ summary: The famous hand-drawn style whiteboard
 alpha: true
 ---
 
-The excalidraw extension provides a true editor, integrated in the mkdocs dev server. So you can edit the drawing at dev time and display the output svg at build time.
+The excalidraw plugin provides a true editor, integrated in the mkdocs dev server. So you can edit the drawing at dev time and display the output svg at build time.
+
+![demo](../assets/img/excalidraw.gif)
 
 ## Configuration
 
