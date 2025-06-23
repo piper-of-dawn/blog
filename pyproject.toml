@@ -1,6 +1,6 @@
 [project]
 name = "mkdocs-shadcn"
-version = "0.5.0"
+version = "0.5.1"
 description = "Documentation that also shines"
 authors = [
     { name = "Alban Siffer", email = "31479857+asiffer@users.noreply.github.com" },
@@ -9,8 +9,8 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "mkdocs>=1.6.1",
- "bottle>=0.13.2",
- "pymdown-extensions>=10.14.3",
+    "bottle>=0.13.2",
+    "pymdown-extensions>=10.14.3",
 ]
 
 [dependency-groups]
