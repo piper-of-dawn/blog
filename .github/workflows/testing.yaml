@@ -77,10 +77,9 @@ jobs:
           echo "DIR: $(pwd)"
           echo "FILES:"
           ls -alh --color=auto .
-          ls -alh --color=auto ./*/*
 
       - name: Install wheel
-        run: pip install dist/*.whl
+        run: pip install ./mkdocs_shadcn*.whl
 
       - name: Generate minimal site
         run: |
