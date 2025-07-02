@@ -2,9 +2,10 @@
 title: Apache ECharts
 summary: An Open Source JavaScript Visualization Library
 alpha: true
+external_links:
+    Reference: https://echarts.apache.org/en/index.html
 ---
 
-[Reference](https://echarts.apache.org/en/index.html){: .reference }
 
 The theme provides an alpha version of an `echarts` extensions, allowing to render 
 charts based on the provided options. 

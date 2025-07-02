@@ -78,3 +78,12 @@ new: true
 # beta: true
 # alpha: true
 ```
+
+Finally you an also load per-page CSS and JS files. This is done through the `extra_css` and `extra_javascript` attributes.
+
+```yaml
+extra_css:
+  - css/custom.css
+extra_javascript:
+  - js/custom.js
+```

@@ -1,8 +1,12 @@
 ---
 title: pymdownx.blocks.tab
+summary: Tabbed content
+external_links:
+  Reference: https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/tab/
+
 ---
 
-[Reference](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/tab/){: class="reference" }
+
 
 The `pymdownx.blocks.tab` extension is a Python-Markdown plugin that allows you to create interactive tabbed content in your Markdown files.
 
