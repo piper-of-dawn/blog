@@ -1,8 +1,11 @@
 ---
 title: pymdownx.progressbar
+summary: Visually appealing progress bars
+external_links:
+  Reference: https://facelessuser.github.io/pymdown-extensions/extensions/progressbar/
 ---
 
-[Reference](https://facelessuser.github.io/pymdown-extensions/extensions/progressbar/){: class="reference" }
+
 
 The `pymdownx.progressbar` extension is a Python-Markdown plugin that allows you to create visually appealing progress bars directly in your Markdown content.
 

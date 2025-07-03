@@ -1,8 +1,10 @@
 ---
 title: pymdownx.tabbed
+summary: Tabbed content
+external_links:
+  Reference: https://facelessuser.github.io/pymdown-extensions/extensions/tabbed
 ---
 
-[Reference](https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/){: class="reference" }
 
 The `pymdownx.tabbed` extension is a Python-Markdown plugin that allows you to create tabbed content in your Markdown files.
 

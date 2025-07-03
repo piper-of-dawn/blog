@@ -1,6 +1,8 @@
 ---
 title: Attribute Lists
 summary: Customize HTML attributes
+external_links:
+    Reference: https://python-markdown.github.io/extensions/attr_list/
 ---
 
 The `attr_list` extension is a feature of Python-Markdown that allows you to add custom attributes to HTML elements generated from Markdown. 

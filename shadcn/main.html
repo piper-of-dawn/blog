@@ -6,42 +6,36 @@
         // for search plugin notably
         const base_url = "{{ config.site_url }}";
     </script>
-    <script>
-        const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-        darkTheme.onchange = (e) => {
-            if (e.matches) {
-                document.documentElement.classList.add("dark")
-                localStorage.theme = 'dark';
-            } else {
-                document.documentElement.classList.remove("dark")
-                localStorage.removeItem("theme")
-            }
-        };
+    {% include "templates/dark.html" %}
 
-        // On page load. Priotiry to lcaolStorage
-        if (localStorage.theme === "dark") {
-            document.documentElement.classList.add("dark")
-        } else if (localStorage.theme === "light") {
-            document.documentElement.classList.remove("dark")
-        } else if (darkTheme.matches) {
-            document.documentElement.classList.add("dark")
-        } else {
-            document.documentElement.classList.remove("dark")
-        }
-    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
     {% include "templates/seo.html" %}
+
+    {%- if config.theme.favicon %}
+    <link rel="icon" href="{{ config.theme.favicon | url }}">
+    {%- else %}
     <link rel="icon" href="{{ 'img/favicon.ico' | url }}">
+    {%- endif %}
+
     <link href="{{ 'css/base.css' | url }}" rel="stylesheet">
     <link href="{{ 'css/geist.css' | url }}" rel="stylesheet">
-    {% if config.theme.pygments_style %}
-    <link href="{{ ('css/pygments/' + config.theme.pygments_style + '.css') | url }}" rel="stylesheet">
+
+    {% if "codehilite" in config.markdown_extensions %}
+    {% include "templates/pygments.html" %}
     {% endif %}
+
     {%- for path in config.extra_css %}
     <link href="{{ path | url }}" rel="stylesheet">
     {%- endfor %}
+
+    {% if page.meta.extra_css %}
+    {%- for path in page.meta.extra_css %}
+    <link href="{{ path | url }}" rel="stylesheet">
+    {%- endfor %}
+    {% endif %}
 
     <script src="{{ 'js/callbacks.js' | url }}"></script>
 
@@ -59,47 +53,59 @@
 
 </head>
 
-<body class="w-screen overflow-x-hidden bg-foreground md:bg-background text-foreground scroll-smooth m-0 p-0">
-    <div id="inner-body"
-        class="min-h-screen bg-background origin-[top_center_0px] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
+<body
+    class="text-foreground group/body overscroll-none font-sans antialiased [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*14)] xl:[--footer-height:calc(var(--spacing)*24)] theme-default">
+    <div id="inner-body" class="bg-background relative z-10 flex min-h-svh flex-col">
         {% include "templates/header.html" %}
-        <div class="border-grid flex flex-1 flex-col">
-            <div class="w-full mx-auto 3xl:max-w-8xl">
-                <div
-                    class="px-4 w-full max-w-8xl mx-auto xl:px-6 flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
-                    <aside
-                        class="border-grid fixed top-14 z-30 hidden h-[calc(100vh-3.55rem)] w-full shrink-0 border-r md:sticky md:block">
-                        {% include "templates/sidebar.html" %}
-                    </aside>
-                    <main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
-                        <div class="mx-auto w-full min-w-0 xl:max-w-2xl">
-                            {% include "templates/page.html" %}
+        <main class="flex flex-1 flex-col">
+            <div class="container-wrapper flex flex-1 flex-col px-2">
+                <div data-slot="sidebar-wrapper" style="--sidebar-width: 16rem; --sidebar-width-icon: 3rem;"
+                    class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full 3xl:fixed:container 3xl:fixed:px-3 min-h-min flex-1 items-start px-0 [--sidebar-width:220px] [--top-spacing:0] lg:grid lg:grid-cols-[var(--sidebar-width)_minmax(0,1fr)] lg:[--sidebar-width:240px] lg:[--top-spacing:calc(var(--spacing)*4)]">
+                    <div data-slot="sidebar"
+                        class="text-sidebar-foreground w-(--sidebar-width) flex-col sticky top-[calc(var(--header-height)+1px)] z-30 hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] bg-transparent lg:flex">
+                        <div data-slot="sidebar-content" data-sidebar="content"
+                            class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden no-scrollbar px-2 pb-12">
+                            <div class="h-(--top-spacing) shrink-0"></div>
+                            {% include "templates/sidebar.html" %}
                         </div>
-                        <div class="hidden text-sm xl:block">
-                            {% include "templates/toc.html" %}
+                    </div>
+                    <div class="h-full w-full">
+                        <div data-slot="docs" class="flex items-stretch text-[1.05rem] sm:text-[15px] xl:w-full">
+                            <div class="flex min-w-0 flex-1 flex-col">
+                                <div class="h-(--top-spacing) shrink-0"></div>
+                                {% include "templates/page.html" %}
+                                {% include "templates/bottom_navigation.html" %}
+                                {% include "templates/bottom_sidebar.html" %}
+                            </div>
+                            <div
+                                class="sticky top-[calc(var(--header-height)+1px)] z-30 ml-auto hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] w-72 flex-col gap-4 overflow-hidden overscroll-none pb-8 xl:flex">
+                                <div class="h-(--top-spacing) shrink-0"></div>
+                                {% include "templates/toc.html" %}
+                            </div>
                         </div>
-                    </main>
+                    </div>
                 </div>
             </div>
-            {% include "templates/bottom_sidebar.html" %}
-        </div>
+        </main>
+        {% include "templates/footer.html" %}
     </div>
 
 
-
     {%- for script in config.extra_javascript %}
-    {%- if script.path %} {# Detected MkDocs 1.5+ which has `script.path` and `script_tag` #}
-    {{ script | script_tag }}
-    {%- else %} {# Fallback - examine the file name directly #}
-    {% if script.endswith('.mjs') %}
-    <script src="{{ script | url }}" type="module"></script>
-    {% else %}
-    <script src="{{ script | url }}"></script>
-    {% endif %}
-    {%- endif %}
+    {% include "templates/script.html" %}
     {%- endfor %}
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.3.0/dist/iconify-icon.min.js"></script>
+
+    {% if page.meta.extra_javascript %}
+    {%- for script in page.meta.extra_javascript %}
+    {% include "templates/script.html" %}
+    {%- endfor %}
+    {% endif %}
+
     <script src="{{ 'js/copy-button.js' | url }}"></script>
+    <script>updatePygmentsStylesheet();</script>
+    {% if config.theme.show_stargazers %}
+    <script>fetchStargazers("{{ config.repo_url }}");</script>
+    {% endif %}
 </body>
 
 </html>

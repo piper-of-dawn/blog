@@ -1,7 +1,8 @@
 ---
 title: pymdownx.arithmatex
 summary: For maths lovers
-new: true
+external_links:
+    Reference: https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
 ---
 
 The `pymdownx.arithmatex` extension is a Python-Markdown plugin that enables rendering of mathematical expressions written in LaTeX syntax. 

@@ -1,5 +1,8 @@
 ---
 title: Codehilite
+summary: Syntax highlighting for code blocks
+external_links:
+    Reference: https://python-markdown.github.io/extensions/code_hilite/
 ---
 
 The CodeHilite extension adds code/syntax highlighting to standard Python-Markdown code blocks using [Pygments](http://pygments.org/).
