@@ -1,7 +1,7 @@
 
 ![banner](https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/master/.github/assets/banner.png)
 
-![screenshot](https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/master/.github/assets/screenshot2.png)
+![screenshot](https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/master/.github/assets/screenshot3.png)
 
 
 > [!IMPORTANT]  
