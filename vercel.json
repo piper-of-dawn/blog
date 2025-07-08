@@ -1,12 +1,10 @@
 {
-  "buildCommand": "pip install -e . && mkdocs build",
-  "outputDirectory": "site",
-  "framework": "mkdocs",
-  "installCommand": "pip install -e .",
-  "devCommand": "mkdocs serve",
-  "git": {
-    "deploymentEnabled": {
-      "main": true
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "site" }
     }
-  }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "/$1" }]
 }
