@@ -1,0 +1,34 @@
+site_name: MkDocs Shadcn
+site_description: Documentation that also shines
+site_url: https://shadcn.vercel.app/
+
+repo_name: mkdocs-shadcn
+repo_url: https://github.com/asiffer/mkdocs-shadcn
+
+theme:
+  name: shadcn
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.indexes
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.blocks.details
+  - pymdownx.blocks.tab
+  - pymdownx.progressbar
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+  - search
+  - shadcn/search
+
+nav:
+  - Home: index.md

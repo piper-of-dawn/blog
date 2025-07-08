@@ -1,0 +1,5 @@
+mkdocs>=1.6.1
+pymdown-extensions>=10.14.3
+bottle>=0.13.2
+accessible-pygments>=0.0.4
+pygments>=2.19.1
