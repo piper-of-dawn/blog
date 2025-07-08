@@ -32,6 +32,11 @@ import numpy as np
 ```
 ~~~
 
+
+```python
+import numpy as np
+```
+
 both give
 
     :::python

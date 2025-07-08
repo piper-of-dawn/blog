@@ -24,7 +24,9 @@ plugins:
 
 markdown_extensions:
   admonition:
+  pymdownx.highlight:
   codehilite:
+      linenums: true
   fenced_code:
   extra:
   pymdownx.blocks.details:
