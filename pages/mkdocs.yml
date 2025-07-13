@@ -1,7 +1,7 @@
-site_name: "mkdocs-shadcn"
+site_name: "Kumar Shantanu"
 site_url: "https://piper-of-dawn.github.io/blog"
 site_description: "Documentation that also shines"
-site_author: "Alban Siffer <31479857+asiffer@users.noreply.github.com>"
+site_author: "Kumar Shantanu <31479857+asiffer@users.noreply.github.com>"
 dev_addr: "127.0.0.1:8080"
 repo_url: "https://github.com/asiffer/mkdocs-shadcn"
 theme:
@@ -10,6 +10,9 @@ theme:
   pygments_style:
     light: shadcn-light
     dark: github-dark
+
+extra_javascript:
+  - js/header-transform.js
 
 # nav:
 #   - Welcome: index.md
@@ -26,7 +29,7 @@ markdown_extensions:
   admonition:
   pymdownx.highlight:
   codehilite:
-      linenums: true
+    linenums: true
   fenced_code:
   extra:
   pymdownx.blocks.details:
