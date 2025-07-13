@@ -1,5 +1,6 @@
 
-> [!tldr] TLDR
+::: tldr TLDR
+:::
 > For any Markov chain problem, Always ask: _What’s my state? Where does it end? How does it move?_ That’s the recipe for modeling any Markov problem.
 
 
@@ -23,7 +24,8 @@ Let $P_k$ be the probability of success after seeing $k$ distinct odd numbers, f
 - **Any even** → absorbing failure state (probability = 0)
     
 
-> [!NOTE]
+::: note
+:::
 > *What is absorbing?* 
 > 	In a Markov chain, a state is **absorbing** if **once you enter it, you can’t leave. It’s a “terminal” outcome. In the problem: **Success** state: all 3 odd faces seen → absorbing (you stop rolling) and **Failure** state: any even face appears → absorbing (you stop rolling)
 
