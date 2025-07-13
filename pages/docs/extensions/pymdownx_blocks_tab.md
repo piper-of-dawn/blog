@@ -12,16 +12,16 @@ The `pymdownx.blocks.tab` extension is a Python-Markdown plugin that allows you 
 
 Tab blocks are aimed at replacing the `pymdownx.tabbed` extension (see [tab documentation](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/tab/#tab)).
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 markdown_extensions:
   - pymdownx.blocks.tab
 ```
 
-## Syntax
+## [SYNTAX]
 
 ```md
 /// tab | `pip`

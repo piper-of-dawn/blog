@@ -12,7 +12,7 @@ summary: Metadata configuration # subtitle
 
 You can also define your page title directly with `# Page title` in the markdown content.
 
-## Navigation
+## [NAVIGATION]
 
 The navigation follows bare mkdocs. You should just notice that folders will create categories in the sidebar.
 To sort the sections, you can use the common `00_section_title/` hack. The first numbers sort the folders in the filesystem (so the sections). They are removed by the theme at compile time. 
@@ -47,7 +47,7 @@ After a first pass we will have
 
 So in the sidebar we will get `a.md`, `c.md`, `d.md` and `b.md`.
 
-## External links
+## [EXTERNAL LINKS]
 
 You can add external links (like "API Reference") in the page header. This is done through the `external_links` attribute in the front-matter.
 
@@ -57,7 +57,7 @@ external_links:
   GitHub: https://github.com/asiffer/mkdocs-shadcn
 ```
 
-## SEO
+## [SEO]
 
 The following attributes are supported for SEO (`<meta>` attributes in the `<head>`).
 
@@ -68,15 +68,15 @@ author: asiffer
 image: https://raw.githubusercontent.com/asiffer/mkdocs-shadcn/refs/heads/master/.github/assets/logo.svg
 ```
 
-## Extra
+## [EXTRA]
 
 As we may find in [shadcn/ui](https://ui.shadcn.com/docs), we can add a `NEW` tag in the sidebar 
 (`Alpha` and `Beta` are also available).
 
 ```yaml
 new: true
-# beta: true
-# alpha: true
+# [BETA: TRUE]
+# [ALPHA: TRUE]
 ```
 
 Finally you an also load per-page CSS and JS files. This is done through the `extra_css` and `extra_javascript` attributes.

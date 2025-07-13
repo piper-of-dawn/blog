@@ -10,16 +10,16 @@ external_links:
 The theme provides an alpha version of an `echarts` extensions, allowing to render 
 charts based on the provided options. 
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 markdown_extensions:
   - shadcn.extensions.echarts.alpha
 ```
 
-## Syntax
+## [SYNTAX]
 
 From a `js` config it basically plots charts through the Apache ECharts library. 
 The extension uses the [PyMdown Blocks Extension API](https://facelessuser.github.io/pymdown-extensions/extensions/blocks/) so its syntax (similar to [tab](pymdownx_blocks_tab.md) or [details](pymdownx_blocks_details.md)).
@@ -48,7 +48,7 @@ Currently, the extension does not support dark mode.
     </code></pre></div>
 
 
-## Options
+## [OPTIONS]
 
 You can pass attributes to the chart container through the builtin `attrs` key. The attributes are passed to the `div` element that contains the chart. In addition e expose a `renderer` key that defines the output format of the chart (`svg` or `canvas`). The default values are given below.
 
@@ -94,9 +94,9 @@ In the following example we use the `canvas` renderer and re-define `style` to 
 ///
 
 
-## Examples
+## [EXAMPLES]
 
-### Line
+### [LINE]
 
 
 /// tab | Output
@@ -122,7 +122,7 @@ In the following example we use the `canvas` renderer and re-define `style` to 
 ///
 
 
-### Bars
+### [BARS]
 
 /// tab | Output
 
@@ -144,7 +144,7 @@ In the following example we use the `canvas` renderer and re-define `style` to 
 ///
 
 
-### Pie
+### [PIE]
 
 /// tab | Output
 
@@ -166,7 +166,7 @@ In the following example we use the `canvas` renderer and re-define `style` to 
 ///
 
 
-### Scatter
+### [SCATTER]
 
 /// tab | Output
 
@@ -187,7 +187,7 @@ In the following example we use the `canvas` renderer and re-define `style` to 
 
 ///
 
-### Radar
+### [RADAR]
 
 /// tab | Output
 

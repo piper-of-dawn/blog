@@ -7,16 +7,16 @@ external_links:
 
 The Admonition extension adds rST-style admonitions to Markdown documents.
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 markdown_extensions:
   - admonition
 ```
 
-## Syntax
+## [SYNTAX]
 
     :::md {.light}
     !!! info "Information:"
@@ -44,7 +44,7 @@ markdown_extensions:
 !!! danger "Danger:"
     Don't look at `node_modules` **please**! 
 
-## Code
+## [CODE]
 
 You cannot use [`fenced_code`](./fenced_code.md) inside admonition since:
 > Fenced Code Blocks are only supported at the document root level ([source](https://python-markdown.github.io/extensions/fenced_code_blocks/#syntax))

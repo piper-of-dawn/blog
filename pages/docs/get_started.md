@@ -5,7 +5,7 @@ extra_css:
 
 ---
 
-## Install
+## [INSTALL]
 
 Add the package to your project.
 
@@ -44,10 +44,10 @@ If you want to use `pymdown` extensions, you can also install the `pymdown-exten
         poetry add pymdown-extensions
 
 
-## Configure
+## [CONFIGURE]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 site_name: "awesome-project"
 theme:
   name: shadcn

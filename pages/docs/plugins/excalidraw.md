@@ -8,10 +8,10 @@ The excalidraw plugin provides a true editor, integrated in the mkdocs dev serve
 
 ![demo](../assets/img/excalidraw.gif)
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 plugins:
   - search
@@ -38,7 +38,7 @@ my-project/
 You can change this folder with the `directory` option (the path is relative to the root directory, i.e. the directory where `mkdocs.yml` lives).
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 plugins:
   search:
@@ -46,7 +46,7 @@ plugins:
     directory: assets/excalidraw
 ```
 
-## Syntax
+## [SYNTAX]
 
 The path to the json file is relative to the directory provided to the plugin. The title is injected as build time through a `<title></title>` tag inside the output svg file.
 

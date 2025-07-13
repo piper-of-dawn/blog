@@ -1,0 +1,15 @@
+{
+  "textFontFamily": "",
+  "baseFontSizeAction": true,
+  "monospaceFontFamily": "RobotoMono Nerd Font,Bitstream Charter",
+  "baseFontSize": 18,
+  "theme": "obsidian",
+  "cssTheme": "Cupertino",
+  "interfaceFontFamily": "SFMono Nerd Font Mono Semibold,SFMono Nerd Font Mono",
+  "enabledCssSnippets": [
+    "math",
+    "code",
+    "callout"
+  ],
+  "accentColor": "#00738a"
+}

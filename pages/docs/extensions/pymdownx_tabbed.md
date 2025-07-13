@@ -10,16 +10,16 @@ The `pymdownx.tabbed` extension is a Python-Markdown plugin that allows you to c
 
 This plugin is likely to be replaced by `pymdownx.blocks.tab`, [supported by `mkdocs-shadcn`](./pymdownx_blocks_tab.md).
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 markdown_extensions:
   - pymdownx.tabbed
 ```
 
-## Syntax
+## [SYNTAX]
 
 ~~~ md
 === "`pip`"

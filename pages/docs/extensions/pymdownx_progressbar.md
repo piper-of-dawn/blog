@@ -9,16 +9,16 @@ external_links:
 
 The `pymdownx.progressbar` extension is a Python-Markdown plugin that allows you to create visually appealing progress bars directly in your Markdown content.
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 markdown_extensions:
   - pymdownx.progressbar
 ```
 
-## Syntax
+## [SYNTAX]
 
 You can also leverage `attr_list` to colorize the progress bar.
 

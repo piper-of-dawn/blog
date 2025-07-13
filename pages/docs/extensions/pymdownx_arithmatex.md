@@ -7,10 +7,10 @@ external_links:
 
 The `pymdownx.arithmatex` extension is a Python-Markdown plugin that enables rendering of mathematical expressions written in LaTeX syntax. 
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 markdown_extensions:
   - codehilite
@@ -22,7 +22,7 @@ markdown_extensions:
     Currently we ship the version `v0.16.21`.
 
 
-## Syntax
+## [SYNTAX]
 
 Just like latex.
 

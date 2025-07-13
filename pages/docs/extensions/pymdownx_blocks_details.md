@@ -8,19 +8,19 @@ external_links:
 
 The `pymdownx.blocks.details` extension is a Python-Markdown plugin that provides a simple way to create collapsible "details" blocks in your Markdown content. 
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 markdown_extensions:
   - pymdownx.blocks.details
 ```
 
-## Syntax
+## [SYNTAX]
 
 ```md
-### FAQ
+### [FAQ]
 
 /// details | Why copy/paste and not packaged as a dependency?
 The idea behind this is to give you ownership and control over the code, allowing you to decide how the components are built and styled.
@@ -39,7 +39,7 @@ You can use any framework that supports React. Next.js, Astro, Remix, Gatsby etc
 ///
 ```
 
-### FAQ
+### [FAQ]
 
 /// details | Why copy/paste and not packaged as a dependency?
 The idea behind this is to give you ownership and control over the code, allowing you to decide how the components are built and styled.

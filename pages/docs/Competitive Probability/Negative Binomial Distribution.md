@@ -19,8 +19,6 @@ $$
 $$
 On average, you'd expect to take 25 shots to land 5 hits.
 
-### Relationship with Geometric Distribution
-
-#geometric-distribution
+### Relationship with [[Geometric Distribution]]
 
 The Negative Binomial Distribution generalizes this by modeling the number of trials needed to achieve **r successes**. It’s essentially the sum of **r independent geometric distributions** (each representing the trials until a single success). The **Geometric Distribution** is a special case of the **Negative Binomial Distribution** where r=1r = 1r=1. The Negative Binomial extends the Geometric Distribution by counting the trials needed for more than one success, not just the first one.

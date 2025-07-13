@@ -8,16 +8,16 @@ external_links:
 The `attr_list` extension is a feature of Python-Markdown that allows you to add custom attributes to HTML elements generated from Markdown. 
 
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 markdown_extensions:
   - attr_list
 ```
 
-## Syntax
+## [SYNTAX]
 
 The theme may provide some pre-computed classes. The `attr_list` extension (with `extra`) allows to customize the attribute of the output html. Here is a example with the `reference` class.
 

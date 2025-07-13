@@ -7,16 +7,16 @@ external_links:
 
 The CodeHilite extension adds code/syntax highlighting to standard Python-Markdown code blocks using [Pygments](http://pygments.org/).
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 markdown_extensions:
   - codehilite
 ```
 
-## Syntax
+## [SYNTAX]
 
 With the colon syntax (don't forget to indent the block).
 

@@ -9,10 +9,10 @@ The Fenced Code Blocks extension adds a secondary way to define code blocks, whi
 !!! warning "Warning"
     Fenced Code Blocks are only supported at the **document root** level.
 
-## Configuration
+## [CONFIGURATION]
 
 ```yaml
-# mkdocs.yml
+# [MKDOCS.YML]
 
 markdown_extensions:
   - fenced_code
@@ -20,7 +20,7 @@ markdown_extensions:
 
 To enable syntax highlighting, the [`codehilite`](./codehilite.md) extension must be enabled.
 
-## Syntax
+## [SYNTAX]
 
 ~~~ md
 ```python
