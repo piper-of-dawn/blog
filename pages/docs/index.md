@@ -3,8 +3,6 @@ title: Kumar Shantanu
 summary: Quantitative Finance / Programming / Art / Cameras / Anything in Between
 sidebar_title: Home
 order: 0
-external_links:
-  "shadcn/ui": https://ui.shadcn.com/docs
 ---
 
  I am a design-loving nerd, navigating the intersection of technology, mathematics and art, on this wild ride of figuring out ways to do something meaningful. Nowadays, I am deeply interested in the intersection of machine learning and computational finance.

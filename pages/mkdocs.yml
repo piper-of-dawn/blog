@@ -3,7 +3,7 @@ site_url: "https://piper-of-dawn.github.io/blog"
 site_description: "Documentation that also shines"
 site_author: "Kumar Shantanu <31479857+asiffer@users.noreply.github.com>"
 dev_addr: "127.0.0.1:8080"
-repo_url: "https://github.com/asiffer/mkdocs-shadcn"
+repo_url: "https://github.com/piper-of-dawn"
 theme:
   name: shadcn
   icon: null
