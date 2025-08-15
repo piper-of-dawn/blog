@@ -2,8 +2,8 @@
   "textFontFamily": "",
   "baseFontSizeAction": true,
   "monospaceFontFamily": "RobotoMono Nerd Font,Bitstream Charter",
-  "baseFontSize": 18,
-  "theme": "obsidian",
+  "baseFontSize": 16,
+  "theme": "moonstone",
   "cssTheme": "Cupertino",
   "interfaceFontFamily": "SFMono Nerd Font Mono Semibold,SFMono Nerd Font Mono",
   "enabledCssSnippets": [

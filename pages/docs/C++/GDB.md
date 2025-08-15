@@ -1,3 +1,13 @@
+## Logging
+
+```bash
+set logging on
+set logging file gdb_output.txt
+set logging overwrite on      # optional, overwrites existing file
+set logging redirect on       # No echoing on terminal
+set logging off
+```
+
 ## Breaking Execution
 ### Function Call
 
@@ -63,6 +73,7 @@ set print elements N
 ```
 
 Limits number of elements printed (default: 200).
+
 ### Dump Binary Memory
 
 ```gdb

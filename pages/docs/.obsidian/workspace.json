@@ -4,56 +4,101 @@
     "type": "split",
     "children": [
       {
-        "id": "17e8165cbf333276",
+        "id": "aa5cdda62cd76fc1",
         "type": "tabs",
         "children": [
           {
-            "id": "5a23128cbaf72420",
+            "id": "0c430bfa7eddee91",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "VISA.md",
+                "file": "Graphs.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "VISA"
+              "title": "Graphs"
             }
           },
           {
-            "id": "89a5a3fc1a645bdb",
+            "id": "3ed3c641cf8e666a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spells/Rsync.md",
+                "file": "C++/GDB.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Rsync"
+              "title": "GDB"
             }
           },
           {
-            "id": "3c7cbc3d4b8cd4b6",
+            "id": "168c8facbdada00a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Competitive Probability/Markov Processes.md",
+                "file": "sdsd.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Markov Processes"
+              "title": "sdsd"
+            }
+          },
+          {
+            "id": "e05090b6a00c7dd3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Resolve Merge Conflicts.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Resolve Merge Conflicts"
+            }
+          },
+          {
+            "id": "3cb3b2be0e141451",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Arts/Async Programming.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Async Programming"
+            }
+          },
+          {
+            "id": "99f48cc32827c66a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Persist Configs.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Persist Configs"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -199,11 +244,29 @@
       "math-indicator-changer:Change math indicator": false
     }
   },
-  "active": "3c7cbc3d4b8cd4b6",
+  "active": "e05090b6a00c7dd3",
   "lastOpenFiles": [
-    "Competitive Probability/Geometric Distribution.md",
-    "VISA.md",
+    "Persist Configs.md",
+    "Arts/Async Programming.md",
+    "Affirmation.md",
+    "Rough.md",
+    "Resolve Merge Conflicts.md",
+    "sdsd.md",
     "C++/GDB.md",
+    "Hash Slides.md",
+    "Email to Notary.md",
+    "Untitled",
+    "Zawiadomienie o zmianie pracodawcy – Niebieska Karta UE.md",
+    "Advanced Credit Risk",
+    "Graphs.md",
+    "Computer Algorithms",
+    "Neovim.md",
+    "WIP/Asset Allocation.md",
+    "C++/Unions.md",
+    "Counterparty Credit Risk at HSBC/Bootstrapping Method.md",
+    "VISA.md",
+    "Competitive Probability/Markov Processes.md",
+    "Competitive Probability/Geometric Distribution.md",
     "C++/Binary Dump Using GDB.md",
     "Diary/Daily Habit.md",
     "WIP/Panic Detection.md",
@@ -214,32 +277,14 @@
     "Counterparty Credit Risk at HSBC/Google Cloud.md",
     "Interviews/Framework for Model Development.md",
     "WIP/First Hour Volatility.md",
-    "Quant Finance/Factor Mimicking Portfolio.md",
-    "WIP/Asset Allocation.md",
-    "Counterparty Credit Risk at HSBC/Exposure Measure.md",
-    "C++/CPP Project Structure with Tests.md",
-    "Arts/Async Programming.md",
-    "Competitive Probability/Collecting Toys I.md",
-    "Competitive Probability/Coins.md",
-    "Competitive Probability/Place and Take.md",
-    "Competitive Probability/Optimal Substructure Reasoning.md",
-    "Competitive Probability/Negative Binomial Distribution.md",
-    "Competitive Probability/Markov Processes.md",
-    "Competitive Probability/Expectation.md",
-    "Competitive Probability/Coupon Collector.md",
-    "Competitive Probability/Combinatorics.md",
-    "C++/Unions.md",
     "Quant Finance",
     "Linear Algebra/Pasted image 20250429102423.png",
     "Dark Arts",
     "Arts",
     "Portfolio Management",
     "HSBC",
-    "Archives",
     "Cinematography/images/Pasted image 20250504140713.png",
     "Cinematography/images/Pasted image 20250504141020.png",
-    "Cinematography/images",
-    "PD LGD EAD Stuff",
     "Cinematography/images/Pasted image 20250504140850.png"
   ]
 }

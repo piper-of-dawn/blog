@@ -4,16 +4,11 @@ At the heart of async is something called the event loop. Think of it as a super
 
  
  Why is it called a loop?
-```ad=tip
+
 > while true 
 	{ 
-	1. Check for ready tasks 
-	  2. Run them 
-	  3. Check for new events (network data, timers, etc.) 
-	  4. Go back to step 1 
+	5. Check for ready tasks 
+	  6. Run them 
+	  7. Check for new events (network data, timers, etc.) 
+	  8. Go back to step 1 
 	}
-```
-
-_What happens if no events are ready?_ The loop blocks in the kernel, consuming zero CPU.
-
-

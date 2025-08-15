@@ -1,44 +1,6 @@
 {
   "fonts": [
     {
-      "id": "commit-mono",
-      "family": "Commit Mono",
-      "subsets": [
-        "latin"
-      ],
-      "styles": [
-        "normal",
-        "italic"
-      ],
-      "weights": [
-        200,
-        300,
-        400,
-        500,
-        600,
-        700
-      ],
-      "isActive": true
-    },
-    {
-      "id": "dm-mono",
-      "family": "DM Mono",
-      "subsets": [
-        "latin",
-        "latin-ext"
-      ],
-      "styles": [
-        "italic",
-        "normal"
-      ],
-      "weights": [
-        300,
-        400,
-        500
-      ],
-      "isActive": false
-    },
-    {
       "id": "roboto-mono",
       "family": "Roboto Mono",
       "subsets": [
@@ -76,14 +38,14 @@
           "step": "1"
         }
       },
-      "isActive": false
+      "isActive": true
     }
   ],
   "interfaceFonts": [],
   "textFonts": [
     {
-      "id": "commit-mono",
-      "family": "Commit Mono",
+      "id": "roboto-mono",
+      "family": "Roboto Mono",
       "precedence": 0
     }
   ],

@@ -1,4 +1,3 @@
-
 Unions are pure first-principles: bits are bits, and you’re the one giving them meaning. Memory is just a sequence of bytes divided into slots. 
 
 From this ground truth, a C++ union is as a single slot—say, 4 bytes—that can wear different hats: `union Data { int i; float f; char c; };` lets you store an `int`, a `float`, or a `char` in that one spot. Set `f = 3.14`, and those bytes (`0x4048F5C3`) are written on memory. It’s sized for the largest stored value (`float`), and you decide what’s active, no hand-holding from the compiler. If you overwrite ``f
