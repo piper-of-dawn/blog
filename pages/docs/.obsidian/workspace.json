@@ -13,32 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/Tying Traits to Lifetime.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Tying Traits to Lifetime"
+              "title": "index"
             }
           },
           {
             "id": "9f3e47a796a20eb9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "C++/Shared vs Static libraries.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "dp.png"
               },
-              "icon": "lucide-file",
-              "title": "Shared vs Static libraries"
+              "icon": "lucide-image",
+              "title": "dp"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,12 +181,13 @@
       "math-indicator-changer:Change math indicator": false
     }
   },
-  "active": "49ac21b4a48864af",
+  "active": "cb8a5650f573cfb6",
   "lastOpenFiles": [
+    "dp.png",
+    "Rust/Tying Traits to Lifetime.md",
+    "C++/Shared vs Static libraries.md",
     "index.md",
     "Pasted image 20250826134558.png",
-    "Pasted image 20250826134527.png",
-    "Rust/Tying Traits to Lifetime.md",
     "Dark Arts/Valeyere (2025).md",
     "Dark Arts/Resolve Merge Conflicts.md",
     "Diary/Daily Habit.md",
@@ -200,7 +197,6 @@
     "Archives/Zawiadomienie o zmianie pracodawcy – Niebieska Karta UE.md",
     "Diary/Siddhartha.md",
     "Diary/WEAKNESSES.md",
-    "C++/Shared vs Static libraries.md",
     "C++/CMake.md",
     "Zawiadomienie o zmianie pracodawcy – Niebieska Karta UE.md",
     "Rough.md",
