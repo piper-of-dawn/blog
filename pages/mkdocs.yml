@@ -1,6 +1,6 @@
 site_name: "Kumar Shantanu"
 site_url: "https://piper-of-dawn.github.io/blog"
-site_description: "Documentation that also shines"
+site_description: "My personal notes repository"
 site_author: "Kumar Shantanu <31479857+asiffer@users.noreply.github.com>"
 dev_addr: "127.0.0.1:8080"
 repo_url: "https://github.com/piper-of-dawn"
@@ -13,13 +13,6 @@ theme:
 
 extra_javascript:
   - js/header-transform.js
-
-# nav:
-#   - Welcome: index.md
-#   - install.md
-#   - extensions.md
-#   - Examples:
-#       - examples/a.md
 
 plugins:
   - search # put it first to inject out custom code

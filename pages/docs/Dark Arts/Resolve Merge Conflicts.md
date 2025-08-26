@@ -1,7 +1,4 @@
 To resolve merge conflicts with `master` so that **your changes override** the conflicting changes from `master`, follow these steps:
-
----
-
 ### **1. Fetch and merge `master`**
 
 ```bash
@@ -10,6 +7,10 @@ git merge origin/master
 ```
 
 If there are conflicts, Git will pause and mark the conflicting files.
+
+!!! tip "What is the difference between `git fetch` and `git pull`?:"
+    `git fetch` downloads objects/refs from another repository (or remote) but doesn't merge them into your working directory. `git pull` does both: it fetches and then merges.
+
 
 ---
 
