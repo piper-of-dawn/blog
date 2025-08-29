@@ -3816,13 +3816,14 @@
   :root {
     --radius: 0.625rem;
     --background: #FAF5EB;
-    --foreground: #2f3028;
+    --foreground: #4a4b43;
     --card: #FAF5EB;
     --card-foreground: var(--color-stone-500);
     --popover: #FAF5EB;
     --popover-foreground: var(--color-stone-500);
     --primary: oklch(0.205 0 0);
     --primary-foreground: #e8e9eb;
+    --secondary: #ede6d9;
     --secondary: #ede6d9;
     --secondary-foreground: oklch(0.205 0 0);
     --muted: #ede6d9;
@@ -3871,7 +3872,7 @@
     --popover: #223249;
     --primary: #7E9CD8;
     --primary-foreground: #DCD7BA;
-    --secondary: #e6c48452;
+    --secondary: #e9cd9933;
     --secondary-foreground: #C8C093;
     --muted-foreground: #C8C093;
 
@@ -4174,7 +4175,7 @@ article {
 .typography code:not(pre code) {
   position: relative;
   border-radius: var(--radius-md);
-  background-color: var(--color-muted);
+  background-color: var(--color-secondary);
   padding-inline: 0.3rem;
   padding-block: 0.2rem;
   font-family: var(--font-mono);
@@ -4341,7 +4342,7 @@ article {
   position: sticky;
   left: calc(var(--spacing) * 0);
   display: inline-block;
-  background-color: var(--color-code);
+  /* background-color: var(--color-code); */
   padding-right: calc(var(--spacing) * 6);
   text-align: right;
   font-size: var(--text-sm);
