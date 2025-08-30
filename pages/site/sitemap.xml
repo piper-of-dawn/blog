@@ -2,166 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://piper-of-dawn.github.io/blog/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
+    </url>
+    <url>
+         <loc>https://piper-of-dawn.github.io/blog/Affirmations/</loc>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Arts/Async%20Programming/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/C%2B%2B/GDB/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/C%2B%2B/Linked%20List%20in%20C%2B%2B%20with%20Smart%20Pointers/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/C%2B%2B/Read%20CSV%20in%20C%2B%2B/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/C%2B%2B/Reading%20Args/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/C%2B%2B/Shared%20vs%20Static%20libraries/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/C%2B%2B/The%20Art%20of%20Higher%20Order%20Functions/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/C%2B%2B/The%20Two%20Kinds%20of%20Parallelism/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/C%2B%2B/Unions/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Competitive%20Probability/Coins/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Competitive%20Probability/Collecting%20Toys%20I/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Competitive%20Probability/Combinatorics/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Competitive%20Probability/Coupon%20Collector/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Competitive%20Probability/Expectation/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Competitive%20Probability/Geometric%20Distribution/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Competitive%20Probability/Markov%20Processes/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Competitive%20Probability/Negative%20Binomial%20Distribution/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Competitive%20Probability/Optimal%20Substructure%20Reasoning/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Competitive%20Probability/Place%20and%20Take/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/DSA/Graphs/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Dark%20Arts/Resolve%20Merge%20Conflicts/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Dark%20Arts/Valeyere%20%282025%29/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Linear%20Algebra/Inverse%20of%20the%20Matrix/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Linear%20Algebra/Linear%20Map/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Linear%20Algebra/Matrix%20Multiplication/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Linear%20Algebra/The%20Deeper%20Meaning%20of%20Matrix%20Transpose/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Linear%20Algebra/Vector%20Projection/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Linear%20Algebra/Vector%20Space/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Polish/Connectors/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Polish/notes/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Polish/rules/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Polish/sentences/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Portfolio%20Management/Mean%20Variance%20Portfolio%20Optimization/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Quant%20Finance/Factor%20Mimicking%20Portfolio/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Quant%20Finance/GARCH%20%281%2C1%29/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Quant%20Finance/Stylized%20Facts%20for%20Return%20Distribution/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Rust/Async%20Rust/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Rust/Rust%20Jupyter%20Notebooks/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Rust/Tying%20Traits%20to%20Lifetime/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
     <url>
          <loc>https://piper-of-dawn.github.io/blog/Spells/Rsync/</loc>
-         <lastmod>2025-08-26</lastmod>
+         <lastmod>2025-08-30</lastmod>
     </url>
 </urlset>
