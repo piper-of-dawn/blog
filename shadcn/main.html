@@ -106,6 +106,39 @@
     {% if config.theme.show_stargazers %}
     <script>fetchStargazers("{{ config.repo_url }}");</script>
     {% endif %}
+
+    <script>
+        // Preserve sidebar scroll position across navigations
+        (function () {
+            const KEY = 'sidebar:scrollTop';
+            function getSidebar() {
+                return document.querySelector('[data-slot="sidebar-content"]');
+            }
+            function restoreScroll() {
+                const el = getSidebar();
+                if (!el) return;
+                const raw = sessionStorage.getItem(KEY);
+                if (raw !== null) {
+                    const y = parseInt(raw, 10);
+                    if (!Number.isNaN(y)) el.scrollTop = y;
+                }
+            }
+            function saveScroll() {
+                const el = getSidebar();
+                if (!el) return;
+                try { sessionStorage.setItem(KEY, String(el.scrollTop)); } catch (e) { /* ignore */ }
+            }
+            window.addEventListener('DOMContentLoaded', restoreScroll, { once: true });
+            window.addEventListener('beforeunload', saveScroll);
+            document.addEventListener('click', function (e) {
+                const target = e.target;
+                if (!(target instanceof Element)) return;
+                // Save before following sidebar menu links
+                const link = target.closest('[data-sidebar="menu"] a');
+                if (link) saveScroll();
+            }, true);
+        })();
+    </script>
 </body>
 
 </html>

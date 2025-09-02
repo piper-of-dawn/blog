@@ -14,7 +14,7 @@
                 <div class="text-muted-foreground text-sm font-medium">Menu</div>
                 <div class="flex flex-col gap-3">
                     {% for top_item in top_items %}
-                    <a class="text-2xl font-medium" href="{{ top_item.url | url }}">
+                    <a class="text-base font-medium" href="{{ top_item.url | url }}">
                         {% if top_item.meta and top_item.meta.sidebar_title %}
                         {{ top_item.meta.sidebar_title }}
                         {% else %}
@@ -34,7 +34,7 @@
                     {% if top_item.children %}
                     <div class="flex flex-col gap-3">
                         {% for sidebar_item in top_item.children|sort(attribute="meta.order") %}
-                        <a class="text-2xl font-medium" href="{{ sidebar_item.url | url}}">
+                        <a class="text-base font-medium" href="{{ sidebar_item.url | url}}">
                             {% if sidebar_item.meta and sidebar_item.meta.sidebar_title %}
                             {{ sidebar_item.meta.sidebar_title }}
                             {% else %}
