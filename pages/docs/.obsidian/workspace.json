@@ -4,76 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "321171d4b010638b",
+        "id": "987ba1b173945437",
         "type": "tabs",
         "children": [
           {
-            "id": "cb8a5650f573cfb6",
+            "id": "479c3ac03f8ed7df",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DSA/Graphs.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Graphs"
-            }
-          },
-          {
-            "id": "fe0049ca20525c27",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Dependency Management.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Dependency Management"
-            }
-          },
-          {
-            "id": "2797b218028f28ac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "b3258aa9f0750727",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Affirmations.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Affirmations"
-            }
-          },
-          {
-            "id": "84c444e93ead6c41",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concepts.md",
+                "file": "Rust/Concepts.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
@@ -83,34 +23,22 @@
             }
           },
           {
-            "id": "44ce160ede935e97",
+            "id": "4c591ad34b90240a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Diary/Ideas.md",
+                "file": "Arts/Art of Git.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Ideas"
-            }
-          },
-          {
-            "id": "9f3e47a796a20eb9",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "dp.png"
-              },
-              "icon": "lucide-image",
-              "title": "dp"
+              "title": "Art of Git"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -259,11 +187,15 @@
   },
   "active": "49ac21b4a48864af",
   "lastOpenFiles": [
+    "Affirmations.md",
+    "Arts/Art of Git.md",
+    "Rust/Concepts.md",
+    "Error.md",
+    "DSA/Graphs.md",
+    "Diary/Ideas.md",
     "Quant Finance/Linear Model of Returns.md",
     "Pasted image 20250831192533.png",
-    "Rust/Concepts.md",
     "Quant Finance/Fixed Income.md",
-    "Affirmations.md",
     "index.md",
     "Journal",
     "dp.png",
@@ -277,8 +209,6 @@
     "C++/Linked List in C++ with Smart Pointers.md",
     "C++/GDB.md",
     "Rust/Async Rust.md",
-    "Diary/Ideas.md",
-    "DSA/Graphs.md",
     "Affirmation.md",
     "C++/CUDA.md",
     "C++/CPP Project Structure with Tests.md",
@@ -287,7 +217,6 @@
     "Pasted image 20250826134558.png",
     "Dark Arts/Valeyere (2025).md",
     "Dark Arts/Resolve Merge Conflicts.md",
-    "Diary/Daily Habit.md",
     "DSA",
     "Advanced Credit Risk",
     "Computer Algorithms",
