@@ -1,4 +1,4 @@
-### **What is a runtime?**
+## **What is a runtime?**
 
 Tokio is **the** async runtime for Rust.
 

@@ -3110,7 +3110,7 @@
 @layer base {
   :root {
     --radius: 0.625rem;
-    --background: oklch(1 0 0);
+    --background: #fcfaf8;
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);
@@ -3118,11 +3118,11 @@
     --popover-foreground: oklch(0.145 0 0);
     --primary: oklch(0.205 0 0);
     --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
+    --secondary: #f7f4f0;
     --secondary-foreground: oklch(0.205 0 0);
     --muted: oklch(0.97 0 0);
     --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
+    --accent: #f7f4f0;
     --accent-foreground: oklch(0.205 0 0);
     --destructive: oklch(0.577 0.245 27.325);
     --border: oklch(0.922 0 0);
@@ -3137,13 +3137,13 @@
     --sidebar-foreground: oklch(0.145 0 0);
     --sidebar-primary: oklch(0.205 0 0);
     --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent: #f7f4f0;
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
     --surface: oklch(0.98 0 0);
     --surface-foreground: var(--foreground);
-    --code: var(--surface);
+    --code: #faf7ef;
     --code-foreground: var(--surface-foreground);
     --code-highlight: oklch(0.96 0 0);
     --code-number: oklch(0.56 0 0);
@@ -3386,14 +3386,14 @@ article {
   padding-block: calc(var(--spacing) * 4);
 }
 .typography > pre {
-  background-color: var(--color-muted);
+  background-color: var(--color-code);
 }
 .typography .codehilite pre {
   margin-top: calc(var(--spacing) * 0);
   margin-bottom: calc(var(--spacing) * 0);
 }
 .typography .light > pre {
-  background-color: var(--color-muted);
+  background-color: var(--color-code);
 }
 .typography .light > pre code {
   color: var(--color-foreground);
