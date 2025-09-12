@@ -3,7 +3,7 @@ A linear map is a function that takes vectors, transforms them into new vectors,
 ---
 ## Definition
 
-A **linear map** (or **linear transformation**) is a function $T: V \to W$ between two [[Vector Space]] such that for all vectors $\mathbf{u}, \mathbf{v} \in V$ and all scalars $c \in \mathbb{R}$ (or any field), it satisfies:
+A **linear map** (or **linear transformation**) is a function $T: V \to W$ between two [Vector Space](../Vector Space) such that for all vectors $\mathbf{u}, \mathbf{v} \in V$ and all scalars $c \in \mathbb{R}$ (or any field), it satisfies:
 
 1. **Additivity**: Transformation on addition is addition of transformations: $T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})$
 

@@ -17,9 +17,9 @@ Goal: Find how many draws it **takes on average** to collect all $N$ distinct co
 
 ### Building Blocks
 
-- [[Geometric Distribution]]: Geometric distribution tells you the probability of first success in a series of repeated experiments. The expectation of Geometric Distribution is 1/p.
-- [[Expectation]]: It is probability weighted average of a distribution. Thing of it as centre of gravity.
-- Linearity of [[Expectation]]: Sum of expectations is Expectation of the sum.
+- [Geometric Distribution](../Geometric Distribution): Geometric distribution tells you the probability of first success in a series of repeated experiments. The expectation of Geometric Distribution is 1/p.
+- [Expectation](../Expectation): It is probability weighted average of a distribution. Thing of it as centre of gravity.
+- Linearity of [Expectation](../Expectation): Sum of expectations is Expectation of the sum.
 
 ### How to think about it?
 
@@ -28,7 +28,7 @@ Think of collecting the coupons one by one:
 * Stage 1: How many draws to get the **first** new coupon?
   → Always 1 (since you start with none). Let us call it $T_1$
 
-* Stage 2: Now you have 1 unique coupon. What's the chance the next draw gives a **new** one? *Here we measure the probability of success till we get our first success. This is where [[Geometric Distribution]] is useful.* Let us call this $T_2$
+* Stage 2: Now you have 1 unique coupon. What's the chance the next draw gives a **new** one? *Here we measure the probability of success till we get our first success. This is where [Geometric Distribution](../Geometric Distribution) is useful.* Let us call this $T_2$
   → Probability = $\frac{N - 1}{N}$, so expected number of tries = $\frac{N}{N - 1}$
 
 * Stage 3: Now you have 2 unique coupons. Probability next is new = $\frac{N - 2}{N}$, expected tries = $\frac{N}{N - 2}$. Let us call this $T_3$
