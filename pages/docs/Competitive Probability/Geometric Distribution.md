@@ -1,6 +1,6 @@
-#geometric-distribution
+!!! info
+    > A geometric distribution models the number of trials you need to run until you get your first success in a sequence of independent attempts, each with the same probability of success. Picture flipping a coin until you hit heads: it’s a simple waiting game where the odds don’t change, and the question is “how long until I win?”
 
-> A geometric distribution models the number of trials you need to run until you get your first success in a sequence of independent attempts, each with the same probability of success. Picture flipping a coin until you hit heads: it’s a simple waiting game where the odds don’t change, and the question is “how long until I win?”
 
 Let’s build it up. Start with a single *trial*—say, a coin flip with success probability
 - $p$ (e.g., $p = 0.5$ for heads). 
