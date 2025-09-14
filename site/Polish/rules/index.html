@@ -2256,6 +2256,46 @@ Polish is difficult - Polski jest trudny</p>
     
 
     <script>
+        // Wrap search worker once it exists to surface message flow in console.
+        (function () {
+            var attempts = 0;
+            function wrapWorker() {
+                attempts++;
+                if (typeof window.searchWorker === 'object' && window.searchWorker) {
+                    try {
+                        if (!window.__searchWorkerWrapped) {
+                            window.__searchWorkerWrapped = true;
+                            var originalPost = window.searchWorker.postMessage.bind(window.searchWorker);
+                            var originalOnMessage = window.searchWorker.onmessage;
+                            window.searchWorker.postMessage = function (msg) {
+                                try { console.log('[search-debug] postMessage -> worker', msg); } catch (_) {}
+                                return originalPost(msg);
+                            };
+                            window.searchWorker.onmessage = function (e) {
+                                try { console.log('[search-debug] message <- worker', e && e.data); } catch (_) {}
+                                if (typeof originalOnMessage === 'function') {
+                                    return originalOnMessage(e);
+                                }
+                            };
+                            console.log('[search-debug] worker wrapped');
+                        }
+                        return;
+                    } catch (e) {
+                        console.warn('[search-debug] wrapping worker failed', e);
+                    }
+                }
+                if (attempts < 20) {
+                    setTimeout(wrapWorker, 250);
+                } else {
+                    console.warn('[search-debug] worker not detected after retries');
+                }
+            }
+            // Defer until DOMReady for more predictable script order
+            window.addEventListener('DOMContentLoaded', function () { setTimeout(wrapWorker, 0); }, { once: true });
+        })();
+    </script>
+
+    <script>
         // Preserve sidebar scroll position across navigations
         (function () {
             const KEY = 'sidebar:scrollTop';
