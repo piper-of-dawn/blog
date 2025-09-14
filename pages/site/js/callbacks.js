@@ -16,29 +16,96 @@ const onSearchDialogClick = (event) => {
 	return closeDialogFactory("search-dialog", event);
 };
 
+// Lightweight client-side fallback search if the web worker path fails.
+let __searchIndexCache = null;
+let __lastQuerySentAt = 0;
+
+async function loadSearchIndex() {
+    if (__searchIndexCache) return __searchIndexCache;
+    try {
+        const base = (typeof base_url !== 'undefined') ? base_url : '';
+        const resp = await fetch((base.endsWith('/') ? base : base + '/') + 'search/search_index.json', { credentials: 'same-origin' });
+        if (!resp.ok) throw new Error('Failed to load search_index.json');
+        const json = await resp.json();
+        __searchIndexCache = json;
+        return json;
+    } catch (e) {
+        console.warn('[search-fallback] could not load index', e);
+        return null;
+    }
+}
+
+function renderResults(items) {
+    const results = document.getElementById('mkdocs-search-results');
+    if (!results) return;
+    while (results.firstChild) results.removeChild(results.firstChild);
+    if (!items || items.length === 0) {
+        const p = document.createElement('p');
+        p.textContent = results.getAttribute('data-no-results-text') || 'No results found';
+        results.appendChild(p);
+        return;
+    }
+    const base = (typeof base_url !== 'undefined') ? base_url : '';
+    const joinUrl = (b, p) => (p && p[0] === '/') ? p : (b.endsWith('/') ? b + p : b + '/' + p);
+    items.forEach(doc => {
+        const article = document.createElement('article');
+        const h3 = document.createElement('h3');
+        const a = document.createElement('a');
+        a.href = joinUrl(base, doc.location);
+        a.textContent = doc.title || doc.location;
+        h3.appendChild(a);
+        const p = document.createElement('p');
+        p.textContent = (doc.text || '').slice(0, 200);
+        article.appendChild(h3);
+        article.appendChild(p);
+        results.appendChild(article);
+    });
+}
+
+function containerIsEmpty() {
+    const results = document.getElementById('mkdocs-search-results');
+    return results && !results.firstChild;
+}
+
+async function fallbackSearch(query) {
+    const data = await loadSearchIndex();
+    if (!data) return;
+    const q = query.toLowerCase();
+    const hits = [];
+    for (const doc of data.docs || []) {
+        const hay = ((doc.title || '') + ' ' + (doc.text || '')).toLowerCase();
+        if (hay.includes(q)) hits.push(doc);
+        if (hits.length >= 20) break;
+    }
+    renderResults(hits);
+}
+
 const onInputHandler = (event) => {
-	const query = event.target.value;
-	if (window.debounceTimer) {
-		clearTimeout(debounceTimer);
-	}
-	window.debounceTimer = setTimeout(() => {
-		if (searchWorker && query.length > 2) {
-			console.log(`Posting message { "query": "${query}" }`);
-			// https://lunrjs.com/guides/searching.html
-			// we should append a wilcard and also a boost on exact term
-			const lunrQuery = `${query}^10 ${query}* ${query}~1`;
-			searchWorker.postMessage({ query: lunrQuery });
-		} else if (query.length > 2) {
-			console.warn("searchWorker is not defined");
-		} else {
-			const results = document.getElementById("mkdocs-search-results");
-			if (results) {
-				while (results.firstChild) {
-					results.removeChild(results.firstChild);
-				}
-			}
-		}
-	}, 300);
+    const query = event.target.value;
+    if (window.debounceTimer) clearTimeout(window.debounceTimer);
+    window.debounceTimer = setTimeout(() => {
+        const longEnough = query.length > 2;
+        const now = Date.now();
+        __lastQuerySentAt = now;
+        if (typeof searchWorker !== 'undefined' && searchWorker && longEnough) {
+            console.log(`Posting message { "query": "${query}" }`);
+            const lunrQuery = `${query}^10 ${query}* ${query}~1`;
+            try { searchWorker.postMessage({ query: lunrQuery }); } catch (e) { console.warn('[search] worker post failed', e); }
+            // Fallback after 700ms if nothing rendered yet for this query
+            setTimeout(() => {
+                if (Date.now() - __lastQuerySentAt >= 700 && containerIsEmpty() && (event.target.value === query)) {
+                    console.log('[search-fallback] no worker results, running client match');
+                    fallbackSearch(query);
+                }
+            }, 750);
+        } else if (longEnough) {
+            console.warn('searchWorker is not defined, using fallback');
+            fallbackSearch(query);
+        } else {
+            const results = document.getElementById('mkdocs-search-results');
+            if (results) while (results.firstChild) results.removeChild(results.firstChild);
+        }
+    }, 300);
 };
 
 const searchShortcutHandler = (event) => {

@@ -13,6 +13,7 @@ theme:
 
 extra_javascript:
   - js/header-transform.js
+  - js/search-base.js
 
 plugins:
   - search # put it first to inject our custom code
@@ -37,4 +38,3 @@ markdown_extensions:
   pymdownx.arithmatex:
     generic: true
   shadcn.extensions.echarts.alpha:
-

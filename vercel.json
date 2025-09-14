@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build:vercel",
+  "buildCommand": "bash ./vercel-build.sh",
   "outputDirectory": "site",
   "routes": [{ "src": "/(.*)", "dest": "/$1" }]
 }

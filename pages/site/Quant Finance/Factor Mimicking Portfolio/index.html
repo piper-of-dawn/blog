@@ -3,8 +3,10 @@
 
 <head>
     <script>
-        // for search plugin notably
-        const base_url = "https://piper-of-dawn.github.io/blog/";
+        // Base URL used by MkDocs search assets; keep it path-relative so it works on
+        // both custom domains and preview URLs (Vercel) as well as subpaths (GitHub Pages).
+        // Using the MkDocs `url` filter yields the correct site base path for the current page.
+        const base_url = "../..";
     </script>
     <script>
     const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -50,7 +52,7 @@
 
 
 
-<link rel="canonical" href="https://piper-of-dawn.github.io/blog/Quant%20Finance/Factor%20Mimicking%20Portfolio/">
+<link rel="canonical" href="https://www.kumarshantanu.com/Quant%20Finance/Factor%20Mimicking%20Portfolio/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
@@ -61,7 +63,7 @@
 
 
 
-<meta property="og:url" content="https://piper-of-dawn.github.io/blog/Quant%20Finance/Factor%20Mimicking%20Portfolio/">
+<meta property="og:url" content="https://www.kumarshantanu.com/Quant%20Finance/Factor%20Mimicking%20Portfolio/">
 
 
 
@@ -400,6 +402,46 @@
 <script>
     document.removeEventListener("keydown", searchShortcutHandler);
     document.addEventListener("keydown", searchShortcutHandler);
+</script>
+<script>
+    // Lightweight diagnostics to help verify search assets on deployments.
+    (function () {
+        function logStatus(phase) {
+            try {
+                const searchScript = document.querySelector('script[src$="/search/main.js"], script[src*="/search/main.js"]');
+                const info = {
+                    phase,
+                    base_url: (typeof base_url !== 'undefined') ? base_url : '(undefined)',
+                    searchScriptPresent: !!searchScript,
+                    searchWorkerType: typeof window.searchWorker,
+                };
+                console.log('[search-debug]', info);
+            } catch (e) {
+                console.warn('[search-debug] error while logging status', e);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            logStatus('dom-content-loaded');
+            if (typeof window.searchWorker !== 'undefined') {
+                try {
+                    // Try a harmless ping to ensure worker channel is operational
+                    window.searchWorker.postMessage({ query: '' });
+                } catch (e) {
+                    console.error('[search-debug] postMessage to searchWorker failed', e);
+                }
+            } else {
+                // If worker not yet defined, try again shortly (script may still be streaming)
+                setTimeout(function () { logStatus('retry-after-300ms'); }, 300);
+            }
+        }, { once: true });
+
+        window.addEventListener('error', function (e) {
+            if (e && e.filename && /\/search\/worker\.js$/.test(e.filename)) {
+                console.error('[search-debug] worker error observed', e);
+            }
+        });
+    })();
 </script>
                 </div>
                 <div data-orientation="vertical" role="none" data-slot="separator"
@@ -2160,6 +2202,10 @@ B = \begin{pmatrix} \beta_{1,1} &amp; \beta_{1,2} &amp; \cdots\\ \beta_{2,1} &am
 
      
 
+<script src="../../js/search-base.js"></script>
+
+     
+
 <script src="../../search/main.js"></script>
 
 
@@ -2170,6 +2216,46 @@ B = \begin{pmatrix} \beta_{1,1} &amp; \beta_{1,2} &amp; \cdots\\ \beta_{2,1} &am
     
     <script>fetchStargazers("https://github.com/piper-of-dawn");</script>
     
+
+    <script>
+        // Wrap search worker once it exists to surface message flow in console.
+        (function () {
+            var attempts = 0;
+            function wrapWorker() {
+                attempts++;
+                if (typeof window.searchWorker === 'object' && window.searchWorker) {
+                    try {
+                        if (!window.__searchWorkerWrapped) {
+                            window.__searchWorkerWrapped = true;
+                            var originalPost = window.searchWorker.postMessage.bind(window.searchWorker);
+                            var originalOnMessage = window.searchWorker.onmessage;
+                            window.searchWorker.postMessage = function (msg) {
+                                try { console.log('[search-debug] postMessage -> worker', msg); } catch (_) {}
+                                return originalPost(msg);
+                            };
+                            window.searchWorker.onmessage = function (e) {
+                                try { console.log('[search-debug] message <- worker', e && e.data); } catch (_) {}
+                                if (typeof originalOnMessage === 'function') {
+                                    return originalOnMessage(e);
+                                }
+                            };
+                            console.log('[search-debug] worker wrapped');
+                        }
+                        return;
+                    } catch (e) {
+                        console.warn('[search-debug] wrapping worker failed', e);
+                    }
+                }
+                if (attempts < 20) {
+                    setTimeout(wrapWorker, 250);
+                } else {
+                    console.warn('[search-debug] worker not detected after retries');
+                }
+            }
+            // Defer until DOMReady for more predictable script order
+            window.addEventListener('DOMContentLoaded', function () { setTimeout(wrapWorker, 0); }, { once: true });
+        })();
+    </script>
 
     <script>
         // Preserve sidebar scroll position across navigations
