@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "bash ./vercel-build.sh",
+  "buildCommand": "sh -c 'for d in . .. ../.. ../../.. /vercel/path0; do if [ -f "$d/vercel-build.sh" ]; then sh "$d/vercel-build.sh"; exit $?; fi; done; echo "vercel-build.sh not found" >&2; exit 1'",
   "outputDirectory": "site",
   "routes": [{ "src": "/(.*)", "dest": "/$1" }]
 }
