@@ -3,8 +3,10 @@
 
 <head>
     <script>
-        // for search plugin notably
-        const base_url = "{{ config.site_url }}";
+        // Base URL used by MkDocs search assets; keep it path-relative so it works on
+        // both custom domains and preview URLs (Vercel) as well as subpaths (GitHub Pages).
+        // Using the MkDocs `url` filter yields the correct site base path for the current page.
+        const base_url = "{{ '' | url }}";
     </script>
     {% include "templates/dark.html" %}
 
