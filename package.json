@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build": "mkdocs build -f pages/mkdocs.yml -d ../site",
+    "build:vercel": "mkdocs build -f pages/mkdocs.vercel.yml -d ../site"
+  }
+}
