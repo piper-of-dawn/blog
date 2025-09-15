@@ -20,7 +20,7 @@ cd "$SEARCH_DIR"
 if [ -x .venv/bin/mkdocs ]; then
   MKDOCS=.venv/bin/mkdocs
 else
-  MKDOCS="python -m mkdocs"
+  MKDOCS="python3 -m mkdocs"
 fi
 
 echo "Using mkdocs command: $MKDOCS"
