@@ -16,11 +16,15 @@ if [ ! -f "$SEARCH_DIR/package.json" ]; then
 fi
 cd "$SEARCH_DIR"
 
+# Use the same Python executable that pip uses
+PYTHON_EXEC=$(which python3 || which python)
+echo "Using Python: $PYTHON_EXEC"
+
 # Use python -m mkdocs for better compatibility in containerized environments
 if [ -x .venv/bin/mkdocs ]; then
   MKDOCS=.venv/bin/mkdocs
 else
-  MKDOCS="python3 -m mkdocs"
+  MKDOCS="$PYTHON_EXEC -m mkdocs"
 fi
 
 echo "Using mkdocs command: $MKDOCS"
