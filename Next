@@ -1,0 +1,277 @@
+shadcn/js/copy-button.js:13:	span.setAttribute("class", "sr-only");
+shadcn/templates/header.html:27:                    <span class="sr-only">Toggle Menu</span>
+shadcn/templates/header.html:66:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+shadcn/templates/header.html:89:                    <span class="sr-only">Toggle theme</span>
+shadcn/templates/page.html:22:                        <span class="sr-only">Previous</span>
+shadcn/templates/page.html:29:                        <span class="sr-only">Next</span>
+pages/site/Rust/Error/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Rust/Error/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Rust/Error/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Rust/Error/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Rust/Error/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Affirmations/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Affirmations/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Affirmations/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Affirmations/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Affirmations/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Competitive Probability/Geometric Distribution/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Competitive Probability/Geometric Distribution/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Competitive Probability/Geometric Distribution/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Competitive Probability/Geometric Distribution/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Competitive Probability/Geometric Distribution/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Competitive Probability/Expectation/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Competitive Probability/Expectation/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Competitive Probability/Expectation/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Competitive Probability/Expectation/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Competitive Probability/Expectation/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Competitive Probability/Markov Processes/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Competitive Probability/Markov Processes/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Competitive Probability/Markov Processes/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Competitive Probability/Markov Processes/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Competitive Probability/Markov Processes/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Competitive Probability/Negative Binomial Distribution/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Competitive Probability/Negative Binomial Distribution/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Competitive Probability/Negative Binomial Distribution/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Competitive Probability/Negative Binomial Distribution/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Competitive Probability/Negative Binomial Distribution/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Competitive Probability/Combinatorics/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Competitive Probability/Combinatorics/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Competitive Probability/Combinatorics/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Competitive Probability/Combinatorics/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Competitive Probability/Combinatorics/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Competitive Probability/Collecting Toys I/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Competitive Probability/Collecting Toys I/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Competitive Probability/Collecting Toys I/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Competitive Probability/Collecting Toys I/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Competitive Probability/Collecting Toys I/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/js/copy-button.js:13:	span.setAttribute("class", "sr-only");
+pages/site/Competitive Probability/Coins/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Competitive Probability/Coins/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Competitive Probability/Coins/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Competitive Probability/Coins/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Competitive Probability/Coins/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Competitive Probability/Place and Take/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Competitive Probability/Place and Take/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Competitive Probability/Place and Take/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Competitive Probability/Place and Take/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Competitive Probability/Place and Take/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Dark Arts/Valeyere (2025)/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Dark Arts/Valeyere (2025)/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Dark Arts/Valeyere (2025)/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Dark Arts/Valeyere (2025)/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Dark Arts/Valeyere (2025)/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Competitive Probability/Optimal Substructure Reasoning/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Competitive Probability/Optimal Substructure Reasoning/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Competitive Probability/Optimal Substructure Reasoning/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Competitive Probability/Optimal Substructure Reasoning/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Competitive Probability/Optimal Substructure Reasoning/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Competitive Probability/Coupon Collector/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Competitive Probability/Coupon Collector/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Competitive Probability/Coupon Collector/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Competitive Probability/Coupon Collector/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Competitive Probability/Coupon Collector/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Linear Algebra/Subspace/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Linear Algebra/Subspace/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Linear Algebra/Subspace/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Linear Algebra/Subspace/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Linear Algebra/Subspace/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Dark Arts/Resolve Merge Conflicts/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Dark Arts/Resolve Merge Conflicts/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Dark Arts/Resolve Merge Conflicts/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Dark Arts/Resolve Merge Conflicts/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Dark Arts/Resolve Merge Conflicts/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Quant Finance/Linear Regressions/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Quant Finance/Linear Regressions/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Quant Finance/Linear Regressions/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Quant Finance/Linear Regressions/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Quant Finance/Linear Regressions/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Linear Algebra/Vector Space/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Linear Algebra/Vector Space/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Linear Algebra/Vector Space/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Linear Algebra/Vector Space/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Linear Algebra/Vector Space/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Linear Algebra/Matrix Multiplication/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Linear Algebra/Matrix Multiplication/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Linear Algebra/Matrix Multiplication/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Linear Algebra/Matrix Multiplication/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Linear Algebra/Matrix Multiplication/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Linear Algebra/Vector Projection/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Linear Algebra/Vector Projection/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Linear Algebra/Vector Projection/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Linear Algebra/Vector Projection/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Linear Algebra/Vector Projection/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Linear Algebra/The Deeper Meaning of Matrix Transpose/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Linear Algebra/The Deeper Meaning of Matrix Transpose/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Linear Algebra/The Deeper Meaning of Matrix Transpose/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Linear Algebra/The Deeper Meaning of Matrix Transpose/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Linear Algebra/The Deeper Meaning of Matrix Transpose/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Linear Algebra/Linear Regression as Projections/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Linear Algebra/Linear Regression as Projections/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Linear Algebra/Linear Regression as Projections/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Linear Algebra/Linear Regression as Projections/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Linear Algebra/Linear Regression as Projections/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Linear Algebra/Linear Map/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Linear Algebra/Linear Map/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Linear Algebra/Linear Map/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Linear Algebra/Linear Map/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Linear Algebra/Linear Map/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Linear Algebra/Vector Subspace/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Linear Algebra/Vector Subspace/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Linear Algebra/Vector Subspace/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Linear Algebra/Vector Subspace/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Linear Algebra/Vector Subspace/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Quant Finance/Stylized Facts for Return Distribution/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Quant Finance/Stylized Facts for Return Distribution/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Quant Finance/Stylized Facts for Return Distribution/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Quant Finance/Stylized Facts for Return Distribution/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Quant Finance/Stylized Facts for Return Distribution/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Linear Algebra/Inverse of the Matrix/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Linear Algebra/Inverse of the Matrix/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Linear Algebra/Inverse of the Matrix/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Linear Algebra/Inverse of the Matrix/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Linear Algebra/Inverse of the Matrix/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Quant Finance/GARCH (1,1)/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Quant Finance/GARCH (1,1)/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Quant Finance/GARCH (1,1)/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Quant Finance/GARCH (1,1)/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Quant Finance/GARCH (1,1)/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Quant Finance/Linear Model of Returns/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Quant Finance/Linear Model of Returns/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Quant Finance/Linear Model of Returns/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Quant Finance/Linear Model of Returns/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Quant Finance/Linear Model of Returns/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Rust/Async Rust/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Rust/Async Rust/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Rust/Async Rust/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Rust/Async Rust/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Rust/Async Rust/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Quant Finance/Factor Mimicking Portfolio/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Quant Finance/Factor Mimicking Portfolio/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Quant Finance/Factor Mimicking Portfolio/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Quant Finance/Factor Mimicking Portfolio/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Quant Finance/Factor Mimicking Portfolio/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Rust/Tying Traits to Lifetime/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Rust/Tying Traits to Lifetime/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Rust/Tying Traits to Lifetime/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Rust/Tying Traits to Lifetime/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Rust/Tying Traits to Lifetime/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Rust/Rust Jupyter Notebooks/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Rust/Rust Jupyter Notebooks/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Rust/Rust Jupyter Notebooks/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Rust/Rust Jupyter Notebooks/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Rust/Rust Jupyter Notebooks/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Quant Finance/Fixed Income/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Quant Finance/Fixed Income/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Quant Finance/Fixed Income/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Quant Finance/Fixed Income/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Quant Finance/Fixed Income/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Rust/Concepts/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Rust/Concepts/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Rust/Concepts/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Rust/Concepts/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Rust/Concepts/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/index.html:1580:                        <span class="sr-only">Next</span>
+pages/site/css/base.css:576:  .sr-only {
+pages/site/Arts/Art of Shell/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Arts/Art of Shell/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Arts/Art of Shell/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Arts/Art of Shell/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Arts/Art of Shell/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Portfolio Management/Mean Variance Portfolio Optimization/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Portfolio Management/Mean Variance Portfolio Optimization/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Portfolio Management/Mean Variance Portfolio Optimization/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Portfolio Management/Mean Variance Portfolio Optimization/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Portfolio Management/Mean Variance Portfolio Optimization/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Polish/Connectors/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Polish/Connectors/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Polish/Connectors/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Polish/Connectors/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Polish/Connectors/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Arts/Art of Git/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Arts/Art of Git/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Arts/Art of Git/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Arts/Art of Git/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Arts/Art of Git/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Polish/rules/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Polish/rules/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Polish/rules/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Polish/rules/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Polish/rules/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Books/The Zen and the Art of Motorcycle Maintenance/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Books/The Zen and the Art of Motorcycle Maintenance/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Books/The Zen and the Art of Motorcycle Maintenance/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Books/The Zen and the Art of Motorcycle Maintenance/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Books/The Zen and the Art of Motorcycle Maintenance/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Spells/Rsync/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Spells/Rsync/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Spells/Rsync/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Spells/Rsync/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Arts/Async Programming/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Arts/Async Programming/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Arts/Async Programming/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Arts/Async Programming/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Arts/Async Programming/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Polish/notes/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Polish/notes/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Polish/notes/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Polish/notes/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Polish/notes/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/Polish/sentences/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/Polish/sentences/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/Polish/sentences/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/Polish/sentences/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/Polish/sentences/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/C++/Concepts/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/C++/Concepts/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/C++/Concepts/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/C++/Concepts/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/C++/Concepts/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/C++/Read CSV in C++/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/C++/Read CSV in C++/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/C++/Read CSV in C++/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/C++/Read CSV in C++/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/C++/Read CSV in C++/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/C++/Unions/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/C++/Unions/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/C++/Unions/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/C++/Unions/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/C++/Unions/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/C++/Shared vs Static libraries/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/C++/Shared vs Static libraries/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/C++/Shared vs Static libraries/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/C++/Shared vs Static libraries/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/C++/Shared vs Static libraries/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/C++/Linked List in C++ with Smart Pointers/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/C++/Linked List in C++ with Smart Pointers/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/C++/Linked List in C++ with Smart Pointers/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/C++/Linked List in C++ with Smart Pointers/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/C++/Linked List in C++ with Smart Pointers/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/C++/The Art of Higher Order Functions/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/C++/The Art of Higher Order Functions/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/C++/The Art of Higher Order Functions/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/C++/The Art of Higher Order Functions/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/C++/The Art of Higher Order Functions/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/DSA/Graphs/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/DSA/Graphs/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/DSA/Graphs/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/DSA/Graphs/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/DSA/Graphs/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/C++/Reading Args/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/C++/Reading Args/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/C++/Reading Args/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/C++/Reading Args/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/C++/Reading Args/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/C++/The Two Kinds of Parallelism/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/C++/The Two Kinds of Parallelism/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/C++/The Two Kinds of Parallelism/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/C++/The Two Kinds of Parallelism/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/C++/The Two Kinds of Parallelism/index.html:1593:                        <span class="sr-only">Next</span>
+pages/site/C++/GDB/index.html:337:                    <span class="sr-only">Toggle Menu</span>
+pages/site/C++/GDB/index.html:425:                    title="Toggle layout" onclick="toggleLayout(event)"><span class="sr-only">Toggle layout</span><svg
+pages/site/C++/GDB/index.html:448:                    <span class="sr-only">Toggle theme</span>
+pages/site/C++/GDB/index.html:1586:                        <span class="sr-only">Previous</span>
+pages/site/C++/GDB/index.html:1593:                        <span class="sr-only">Next</span>
+shadcn/css/base.css:576:  .sr-only {

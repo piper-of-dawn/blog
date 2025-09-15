@@ -3,8 +3,10 @@
 
 <head>
     <script>
-        // for search plugin notably
-        const base_url = "https://piper-of-dawn.github.io/blog/";
+        // Base URL used by MkDocs search assets; keep it path-relative so it works on
+        // both custom domains and preview URLs (Vercel) as well as subpaths (GitHub Pages).
+        // Using the MkDocs `url` filter yields the correct site base path for the current page.
+        const base_url = "../..";
     </script>
     <script>
     const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -50,7 +52,7 @@
 
 
 
-<link rel="canonical" href="https://piper-of-dawn.github.io/blog/Linear%20Algebra/Vector%20Projection/">
+<link rel="canonical" href="https://www.kumarshantanu.com/Linear%20Algebra/Vector%20Projection/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
@@ -61,7 +63,7 @@
 
 
 
-<meta property="og:url" content="https://piper-of-dawn.github.io/blog/Linear%20Algebra/Vector%20Projection/">
+<meta property="og:url" content="https://www.kumarshantanu.com/Linear%20Algebra/Vector%20Projection/">
 
 
 
@@ -400,6 +402,46 @@
 <script>
     document.removeEventListener("keydown", searchShortcutHandler);
     document.addEventListener("keydown", searchShortcutHandler);
+</script>
+<script>
+    // Lightweight diagnostics to help verify search assets on deployments.
+    (function () {
+        function logStatus(phase) {
+            try {
+                const searchScript = document.querySelector('script[src$="/search/main.js"], script[src*="/search/main.js"]');
+                const info = {
+                    phase,
+                    base_url: (typeof base_url !== 'undefined') ? base_url : '(undefined)',
+                    searchScriptPresent: !!searchScript,
+                    searchWorkerType: typeof window.searchWorker,
+                };
+                console.log('[search-debug]', info);
+            } catch (e) {
+                console.warn('[search-debug] error while logging status', e);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            logStatus('dom-content-loaded');
+            if (typeof window.searchWorker !== 'undefined') {
+                try {
+                    // Try a harmless ping to ensure worker channel is operational
+                    window.searchWorker.postMessage({ query: '' });
+                } catch (e) {
+                    console.error('[search-debug] postMessage to searchWorker failed', e);
+                }
+            } else {
+                // If worker not yet defined, try again shortly (script may still be streaming)
+                setTimeout(function () { logStatus('retry-after-300ms'); }, 300);
+            }
+        }, { once: true });
+
+        window.addEventListener('error', function (e) {
+            if (e && e.filename && /\/search\/worker\.js$/.test(e.filename)) {
+                console.error('[search-debug] worker error observed', e);
+            }
+        });
+    })();
 </script>
                 </div>
                 <div data-orientation="vertical" role="none" data-slot="separator"
@@ -856,7 +898,7 @@
         data-active="false" 
         href="../../Competitive%20Probability/Geometric%20Distribution/">
         
-        geometric-distribution
+        Geometric Distribution
         
 
         
@@ -1524,7 +1566,7 @@
                     
                     <a data-slot="button"
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-                        href="/blog/Linear%20Algebra/The%20Deeper%20Meaning%20of%20Matrix%20Transpose/">
+                        href="../The%20Deeper%20Meaning%20of%20Matrix%20Transpose/">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="tabler-icon tabler-icon-arrow-left ">
@@ -1538,7 +1580,7 @@
                     
                     <a data-slot="button"
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-                        href="/blog/Linear%20Algebra/Vector%20Space/">
+                        href="../Vector%20Space/">
                         <span class="sr-only">Next</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1588,7 +1630,7 @@ $$\begin{pmatrix}1 &amp; 1\\ 1 &amp; -1\end{pmatrix} \times \begin{pmatrix} 5 \c
     
     <a data-slot="button"
         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 shadow-none"
-        href="/blog/Linear%20Algebra/The%20Deeper%20Meaning%20of%20Matrix%20Transpose/">
+        href="../The%20Deeper%20Meaning%20of%20Matrix%20Transpose/">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="tabler-icon tabler-icon-arrow-left ">
@@ -1602,7 +1644,7 @@ $$\begin{pmatrix}1 &amp; 1\\ 1 &amp; -1\end{pmatrix} \times \begin{pmatrix} 5 \c
     
     <a data-slot="button"
         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 ml-auto shadow-none"
-        href="/blog/Linear%20Algebra/Vector%20Space/">
+        href="../Vector%20Space/">
         Vector Space
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1785,7 +1827,7 @@ $$\begin{pmatrix}1 &amp; 1\\ 1 &amp; -1\end{pmatrix} \times \begin{pmatrix} 5 \c
                         
                         <a class="text-base font-medium" href="../../Competitive%20Probability/Geometric%20Distribution/">
                             
-                            geometric-distribution
+                            Geometric Distribution
                             
                         </a>
                         
@@ -2114,6 +2156,10 @@ $$\begin{pmatrix}1 &amp; 1\\ 1 &amp; -1\end{pmatrix} \times \begin{pmatrix} 5 \c
 
      
 
+<script src="../../js/search-base.js"></script>
+
+     
+
 <script src="../../search/main.js"></script>
 
 
@@ -2124,6 +2170,46 @@ $$\begin{pmatrix}1 &amp; 1\\ 1 &amp; -1\end{pmatrix} \times \begin{pmatrix} 5 \c
     
     <script>fetchStargazers("https://github.com/piper-of-dawn");</script>
     
+
+    <script>
+        // Wrap search worker once it exists to surface message flow in console.
+        (function () {
+            var attempts = 0;
+            function wrapWorker() {
+                attempts++;
+                if (typeof window.searchWorker === 'object' && window.searchWorker) {
+                    try {
+                        if (!window.__searchWorkerWrapped) {
+                            window.__searchWorkerWrapped = true;
+                            var originalPost = window.searchWorker.postMessage.bind(window.searchWorker);
+                            var originalOnMessage = window.searchWorker.onmessage;
+                            window.searchWorker.postMessage = function (msg) {
+                                try { console.log('[search-debug] postMessage -> worker', msg); } catch (_) {}
+                                return originalPost(msg);
+                            };
+                            window.searchWorker.onmessage = function (e) {
+                                try { console.log('[search-debug] message <- worker', e && e.data); } catch (_) {}
+                                if (typeof originalOnMessage === 'function') {
+                                    return originalOnMessage(e);
+                                }
+                            };
+                            console.log('[search-debug] worker wrapped');
+                        }
+                        return;
+                    } catch (e) {
+                        console.warn('[search-debug] wrapping worker failed', e);
+                    }
+                }
+                if (attempts < 20) {
+                    setTimeout(wrapWorker, 250);
+                } else {
+                    console.warn('[search-debug] worker not detected after retries');
+                }
+            }
+            // Defer until DOMReady for more predictable script order
+            window.addEventListener('DOMContentLoaded', function () { setTimeout(wrapWorker, 0); }, { once: true });
+        })();
+    </script>
 
     <script>
         // Preserve sidebar scroll position across navigations

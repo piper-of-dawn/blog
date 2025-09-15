@@ -1,0 +1,40 @@
+site_name: "Kumar Shantanu"
+site_url: "https://www.kumarshantanu.com/"
+site_description: "My personal notes repository"
+site_author: "Kumar Shantanu <31479857+asiffer@users.noreply.github.com>"
+dev_addr: "127.0.0.1:8080"
+repo_url: "https://github.com/piper-of-dawn"
+theme:
+  name: shadcn
+  icon: null
+  pygments_style:
+    light: shadcn-light
+    dark: github-dark
+
+extra_javascript:
+  - js/header-transform.js
+  - js/search-base.js
+
+plugins:
+  - search # put it first to inject our custom code
+  - excalidraw
+
+markdown_extensions:
+  admonition:
+  pymdownx.highlight:
+  codehilite:
+    linenums: true
+  fenced_code:
+  extra:
+  pymdownx.blocks.details:
+  pymdownx.tabbed:
+  pymdownx.blocks.tab:
+    combine_header_slug: true
+    separator: ___
+    slugify:
+      !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
+  pymdownx.progressbar:
+  pymdownx.snippets:
+  pymdownx.arithmatex:
+    generic: true
+  shadcn.extensions.echarts.alpha:

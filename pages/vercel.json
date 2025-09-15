@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "buildCommand": "mkdocs build -f mkdocs.vercel.yml -d site",
+  "outputDirectory": "site",
+  "routes": [{ "src": "/(.*)", "dest": "/$1" }]
+}
