@@ -8,19 +8,3 @@ b, strong {
 .dark b, .dark strong {
   color: var(--color-gray-300);
 }
-
-/* Aesthetic link styling within page content */
-.typography a:not([data-slot]) {
-  text-decoration: underline !important;
-  text-decoration-color: #faf7ef !important;
-  text-decoration-thickness: 2px !important;
-  text-underline-offset: 3px !important;
-  background-color: #faf7ef !important;
-  border-radius: 6px;
-  padding: 0 2px;
-  transition: box-shadow 0.2s ease, background-color 0.2s ease;
-}
-
-.typography a:not([data-slot]):hover {
-  box-shadow: 0 0 0 3px rgba(250, 247, 239, 0.5);
-}
