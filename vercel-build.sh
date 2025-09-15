@@ -16,12 +16,16 @@ if [ ! -f "$SEARCH_DIR/package.json" ]; then
 fi
 cd "$SEARCH_DIR"
 
-# Prefer vendored mkdocs from .venv if present, else rely on system mkdocs
-if [ -x .venv/bin/mkdocs ]; then MKDOCS=.venv/bin/mkdocs; else MKDOCS=mkdocs; fi
+# Use python -m mkdocs for better compatibility in containerized environments
+if [ -x .venv/bin/mkdocs ]; then
+  MKDOCS=.venv/bin/mkdocs
+else
+  MKDOCS="python -m mkdocs"
+fi
 
-echo "Using mkdocs at: $(command -v "$MKDOCS" || echo "$MKDOCS")"
+echo "Using mkdocs command: $MKDOCS"
 
 # Build to ./site using the Vercel-specific config
-"$MKDOCS" build -f pages/mkdocs.vercel.yml -d site
+$MKDOCS build -f pages/mkdocs.vercel.yml -d site
 
 echo "MkDocs build complete. Output in ./site"
