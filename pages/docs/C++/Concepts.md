@@ -1,4 +1,31 @@
 
+## Difference between Pointers and References
+
+### Pointers `Typename*`
+It doesn’t hold an object, it holds an address. A mailbox, not the letter. To use what’s inside, you dereference it with `*` or `->`. That’s why you see it in linked lists, tries, or anything that needs “maybe there, maybe not” semantics. You can reassign it. You can set it to `nullptr`. You can leak memory if you forget to clean up. Example:
+
+```cpp
+TypeName* ptr = new TypeName();
+ptr->data = 5;
+```
+
+Here you carved out memory on the heap, stashed its address in `ptr`, and poked at it with `->`. Pass `&obj` into a function expecting a `TypeName*` and you’re literally saying: here’s where the object lives.
+### References `TypeName&`
+`TypeName&` is stricter. It’s a reference, an alias welded onto one existing object. No nulls, no rebinding. You treat it like the object itself—just `obj.data`, no pointer gymnastics. That makes it perfect for function parameters:
+
+```cpp
+void update(TypeName& obj) { obj.data = 10; }
+```
+
+The compiler guarantees you’re not dealing with a ghost. No null checks, no dangling reassignments.
+
+The confusion comes from the symbols: `*` and `&` moonlight as both declaration operators and runtime operators. `*` means “this is a pointer type” and also “dereference this pointer.” `&` means “this is a reference type” and also “give me the address of this object.” Same glyph, different roles.
+
+```cpp
+int n = 0
+int& r = n; // You have direct access to r through n.
+int* p = &n; // You need to deref p to access n.
+```
 ## Uninitialized Locals = Garbage
 
 In c++, a local variable without an initializer doesn’t start at zero — it just inherits whatever junk was left in that memory slot.

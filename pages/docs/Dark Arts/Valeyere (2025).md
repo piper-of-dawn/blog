@@ -12,7 +12,7 @@ Step-by-step
     
 2. Update volatility (σ²) first  
     Exponential moving average of squared returns with decay η:  
-    $$\sigma^{2}{t}= (1-\eta)\,\sigma^{2}{t-1}+\eta\,r_{t}^{2}  $$
+    $$\sigma^{2}_{t}= (1-\eta)\,\sigma^{2}_{t-1}+\eta\,r_{t}^{2}  $$
     This is a one-line “memory” of recent squared moves; smaller η = longer memory.
 3. Normalise today’s return 
 $$z_t = \frac{r_t}{\sigma_t+\epsilon}  $$

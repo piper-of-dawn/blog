@@ -3,8 +3,10 @@
 
 <head>
     <script>
-        // for search plugin notably
-        const base_url = "https://piper-of-dawn.github.io/blog/";
+        // Base URL used by MkDocs search assets; keep it path-relative so it works on
+        // both custom domains and preview URLs (Vercel) as well as subpaths (GitHub Pages).
+        // Using the MkDocs `url` filter yields the correct site base path for the current page.
+        const base_url = "../..";
     </script>
     <script>
     const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -401,6 +403,46 @@
     document.removeEventListener("keydown", searchShortcutHandler);
     document.addEventListener("keydown", searchShortcutHandler);
 </script>
+<script>
+    // Lightweight diagnostics to help verify search assets on deployments.
+    (function () {
+        function logStatus(phase) {
+            try {
+                const searchScript = document.querySelector('script[src$="/search/main.js"], script[src*="/search/main.js"]');
+                const info = {
+                    phase,
+                    base_url: (typeof base_url !== 'undefined') ? base_url : '(undefined)',
+                    searchScriptPresent: !!searchScript,
+                    searchWorkerType: typeof window.searchWorker,
+                };
+                console.log('[search-debug]', info);
+            } catch (e) {
+                console.warn('[search-debug] error while logging status', e);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            logStatus('dom-content-loaded');
+            if (typeof window.searchWorker !== 'undefined') {
+                try {
+                    // Try a harmless ping to ensure worker channel is operational
+                    window.searchWorker.postMessage({ query: '' });
+                } catch (e) {
+                    console.error('[search-debug] postMessage to searchWorker failed', e);
+                }
+            } else {
+                // If worker not yet defined, try again shortly (script may still be streaming)
+                setTimeout(function () { logStatus('retry-after-300ms'); }, 300);
+            }
+        }, { once: true });
+
+        window.addEventListener('error', function (e) {
+            if (e && e.filename && /\/search\/worker\.js$/.test(e.filename)) {
+                console.error('[search-debug] worker error observed', e);
+            }
+        });
+    })();
+</script>
                 </div>
                 <div data-orientation="vertical" role="none" data-slot="separator"
                     class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px ml-2 hidden lg:block">
@@ -508,6 +550,44 @@
 </li>
                 
                 
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+        data-active="false" 
+        href="../../CFA%20Notes/">
+        
+        CFA Notes
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
+                
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+        data-active="false" 
+        href="../../What%20is%20Price%3F/">
+        
+        What is Price?
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
+                
             </ul>
         </div>
     </div>
@@ -529,6 +609,23 @@
         href="../../Arts/Art%20of%20Git/">
         
         Art of Git
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+        data-active="false" 
+        href="../../Arts/Art%20of%20Shell/">
+        
+        Art of Shell
         
 
         
@@ -761,6 +858,87 @@
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
         <div data-slot="sidebar-group-label" data-sidebar="group-label"
             class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md px-2 text-xs outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground font-medium">
+            CFA</div>
+        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+        data-active="false" 
+        href="../../CFA/Annuity%20Calculation/">
+        
+        Annuity Calculation
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+        data-active="false" 
+        href="../../CFA/Contingency%20Provisions/">
+        
+        Contingency Provisions
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+        data-active="false" 
+        href="../../CFA/CouponStructures/">
+        
+        CouponStructures
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+        data-active="false" 
+        href="../../CFA/Legal%20Terms%20Related%20to%20Bonds/">
+        
+        Legal Terms Related to Bonds
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
+            </ul>
+        </div>
+    </div>
+    
+    
+    
+    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+        <div data-slot="sidebar-group-label" data-sidebar="group-label"
+            class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md px-2 text-xs outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground font-medium">
             Competitive Probability</div>
         <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
             <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
@@ -856,7 +1034,7 @@
         data-active="false" 
         href="../../Competitive%20Probability/Geometric%20Distribution/">
         
-        geometric-distribution
+        Geometric Distribution
         
 
         
@@ -965,6 +1143,23 @@
     </a>
 </li>
                 
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+        data-active="false" 
+        href="../../DSA/Trie/">
+        
+        Trie
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
             </ul>
         </div>
     </div>
@@ -1062,10 +1257,44 @@
                 <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
     <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
         class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+        data-active="false" 
+        href="../Linear%20Regression%20as%20Projections/">
+        
+        Linear Regression as Projections
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
         data-active="true" 
         href="./">
         
         Matrix Multiplication
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+        data-active="false" 
+        href="../Subspace/">
+        
+        Subspace
         
 
         
@@ -1524,7 +1753,7 @@
                     
                     <a data-slot="button"
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-                        href="/blog/Linear%20Algebra/Linear%20Map/">
+                        href="../Linear%20Regression%20as%20Projections/">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="tabler-icon tabler-icon-arrow-left ">
@@ -1538,7 +1767,7 @@
                     
                     <a data-slot="button"
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-                        href="/blog/Linear%20Algebra/The%20Deeper%20Meaning%20of%20Matrix%20Transpose/">
+                        href="../Subspace/">
                         <span class="sr-only">Next</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1568,7 +1797,7 @@
     
     <a data-slot="button"
         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 shadow-none"
-        href="/blog/Linear%20Algebra/Linear%20Map/">
+        href="../Linear%20Regression%20as%20Projections/">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="tabler-icon tabler-icon-arrow-left ">
@@ -1576,14 +1805,14 @@
             <path d="M5 12l6 6"></path>
             <path d="M5 12l6 -6"></path>
         </svg>
-        Linear Map
+        Linear Regression as Projections
     </a>
     
     
     <a data-slot="button"
         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 ml-auto shadow-none"
-        href="/blog/Linear%20Algebra/The%20Deeper%20Meaning%20of%20Matrix%20Transpose/">
-        The Deeper Meaning of Matrix Transpose
+        href="../Subspace/">
+        Subspace
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="tabler-icon tabler-icon-arrow-right ">
@@ -1622,6 +1851,18 @@
                         
                     </a>
                     
+                    <a class="text-base font-medium" href="../../CFA%20Notes/">
+                        
+                        CFA Notes
+                        
+                    </a>
+                    
+                    <a class="text-base font-medium" href="../../What%20is%20Price%3F/">
+                        
+                        What is Price?
+                        
+                    </a>
+                    
                 </div>
             </div>
             
@@ -1637,6 +1878,12 @@
                         <a class="text-base font-medium" href="../../Arts/Art%20of%20Git/">
                             
                             Art of Git
+                            
+                        </a>
+                        
+                        <a class="text-base font-medium" href="../../Arts/Art%20of%20Shell/">
+                            
+                            Art of Shell
                             
                         </a>
                         
@@ -1729,6 +1976,39 @@
                 </div>
                 
                 <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">CFA</div>
+                    
+                    <div class="flex flex-col gap-3">
+                        
+                        <a class="text-base font-medium" href="../../CFA/Annuity%20Calculation/">
+                            
+                            Annuity Calculation
+                            
+                        </a>
+                        
+                        <a class="text-base font-medium" href="../../CFA/Contingency%20Provisions/">
+                            
+                            Contingency Provisions
+                            
+                        </a>
+                        
+                        <a class="text-base font-medium" href="../../CFA/CouponStructures/">
+                            
+                            CouponStructures
+                            
+                        </a>
+                        
+                        <a class="text-base font-medium" href="../../CFA/Legal%20Terms%20Related%20to%20Bonds/">
+                            
+                            Legal Terms Related to Bonds
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Competitive Probability</div>
                     
                     <div class="flex flex-col gap-3">
@@ -1765,7 +2045,7 @@
                         
                         <a class="text-base font-medium" href="../../Competitive%20Probability/Geometric%20Distribution/">
                             
-                            geometric-distribution
+                            Geometric Distribution
                             
                         </a>
                         
@@ -1805,6 +2085,12 @@
                         <a class="text-base font-medium" href="../../DSA/Graphs/">
                             
                             Graphs
+                            
+                        </a>
+                        
+                        <a class="text-base font-medium" href="../../DSA/Trie/">
+                            
+                            Trie
                             
                         </a>
                         
@@ -1850,9 +2136,21 @@
                             
                         </a>
                         
+                        <a class="text-base font-medium" href="../Linear%20Regression%20as%20Projections/">
+                            
+                            Linear Regression as Projections
+                            
+                        </a>
+                        
                         <a class="text-base font-medium" href="./">
                             
                             Matrix Multiplication
+                            
+                        </a>
+                        
+                        <a class="text-base font-medium" href="../Subspace/">
+                            
+                            Subspace
                             
                         </a>
                         
@@ -2082,6 +2380,46 @@
     
     <script>fetchStargazers("https://github.com/piper-of-dawn");</script>
     
+
+    <script>
+        // Wrap search worker once it exists to surface message flow in console.
+        (function () {
+            var attempts = 0;
+            function wrapWorker() {
+                attempts++;
+                if (typeof window.searchWorker === 'object' && window.searchWorker) {
+                    try {
+                        if (!window.__searchWorkerWrapped) {
+                            window.__searchWorkerWrapped = true;
+                            var originalPost = window.searchWorker.postMessage.bind(window.searchWorker);
+                            var originalOnMessage = window.searchWorker.onmessage;
+                            window.searchWorker.postMessage = function (msg) {
+                                try { console.log('[search-debug] postMessage -> worker', msg); } catch (_) {}
+                                return originalPost(msg);
+                            };
+                            window.searchWorker.onmessage = function (e) {
+                                try { console.log('[search-debug] message <- worker', e && e.data); } catch (_) {}
+                                if (typeof originalOnMessage === 'function') {
+                                    return originalOnMessage(e);
+                                }
+                            };
+                            console.log('[search-debug] worker wrapped');
+                        }
+                        return;
+                    } catch (e) {
+                        console.warn('[search-debug] wrapping worker failed', e);
+                    }
+                }
+                if (attempts < 20) {
+                    setTimeout(wrapWorker, 250);
+                } else {
+                    console.warn('[search-debug] worker not detected after retries');
+                }
+            }
+            // Defer until DOMReady for more predictable script order
+            window.addEventListener('DOMContentLoaded', function () { setTimeout(wrapWorker, 0); }, { once: true });
+        })();
+    </script>
 
     <script>
         // Preserve sidebar scroll position across navigations
