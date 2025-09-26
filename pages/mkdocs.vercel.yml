@@ -16,8 +16,8 @@ extra_javascript:
   - js/search-base.js
 
 plugins:
-  - search # put it first to inject our custom code
-  - excalidraw
+  - shadcn/search # put it first to inject our custom code
+  - shadcn/excalidraw
 
 markdown_extensions:
   admonition:

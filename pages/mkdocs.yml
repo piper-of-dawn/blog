@@ -15,8 +15,8 @@ extra_javascript:
   - js/header-transform.js
 
 plugins:
-  - search # put it first to inject out custom code
-  - excalidraw
+  - shadcn/search # put it first to inject our custom code
+  - shadcn/excalidraw
 
 markdown_extensions:
   admonition:

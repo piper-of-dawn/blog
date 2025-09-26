@@ -20,6 +20,12 @@ cd "$SEARCH_DIR"
 PYTHON_EXEC=$(which python3 || which python)
 echo "Using Python: $PYTHON_EXEC"
 
+# Ensure pip is up to date and install local theme/plugins so mkdocs can resolve them
+echo "Upgrading pip and installing local package..."
+$PYTHON_EXEC -m pip install --upgrade pip
+# Reinstall requirements in case install step was skipped, then install local package (this repo)
+$PYTHON_EXEC -m pip install -r requirements.txt .
+
 # Use python -m mkdocs for better compatibility in containerized environments
 if [ -x .venv/bin/mkdocs ]; then
   MKDOCS=.venv/bin/mkdocs
