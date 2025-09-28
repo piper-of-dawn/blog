@@ -1883,23 +1883,23 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>The expected number of trials to get <span class="arithmatex">\(n\)</span> successes in a Bernoulli process with success probability <span class="arithmatex">\(p\)</span> is:</p>
-<div class="arithmatex">\[
-\mathbb{E}[\text{trials}] = \frac{n}{p}
+        <p>The expected number of trials to get <span class="arithmatex">\(n\)</span> successes in a Bernoulli process with success probability <span class="arithmatex">\(p\)</span> is:  </p>
+<div class="arithmatex">\[  
+\mathbb{E}[\text{trials}] = \frac{n}{p}  
 \]</div>
 <h3 id="why-first-principles">Why? (First Principles)</h3>
-<p>Each success takes on average <span class="arithmatex">\(\frac{1}{p}\)</span> trials (this is just the expectation of a geometric distribution). So if you need <span class="arithmatex">\(n\)</span> successes, and each is independent:</p>
-<div class="arithmatex">\[
-\mathbb{E}[\text{trials}] = \underbrace{\frac{1}{p} + \frac{1}{p} + \cdots + \frac{1}{p}}_{n \text{ times}} = \frac{n}{p}
+<p>Each success takes on average <span class="arithmatex">\(\frac{1}{p}\)</span> trials (this is just the expectation of a geometric distribution). So if you need <span class="arithmatex">\(n\)</span> successes, and each is independent:  </p>
+<div class="arithmatex">\[  
+\mathbb{E}[\text{trials}] = \underbrace{\frac{1}{p} + \frac{1}{p} + \cdots + \frac{1}{p}}_{n \text{ times}} = \frac{n}{p}  
 \]</div>
 <h3 id="example">Example</h3>
-<p>If the probability of success is 0.2 (e.g., hitting a target with 20% accuracy), and you want 5 hits:
-$$
-\mathbb{E}[\text{trials}] = \frac{5}{0.2} = 25
-$$
-On average, you'd expect to take 25 shots to land 5 hits.</p>
+<p>If the probability of success is 0.2 (e.g., hitting a target with 20% accuracy), and you want 5 hits:<br />
+$$<br />
+\mathbb{E}[\text{trials}] = \frac{5}{0.2} = 25<br />
+$$<br />
+On average, you'd expect to take 25 shots to land 5 hits.  </p>
 <h3 id="relationship-with-geometric-distribution">Relationship with <a href="../Geometric%20Distribution/">Geometric Distribution</a></h3>
-<p>The Negative Binomial Distribution generalizes this by modeling the number of trials needed to achieve <strong>r successes</strong>. It’s essentially the sum of <strong>r independent geometric distributions</strong> (each representing the trials until a single success). The <strong>Geometric Distribution</strong> is a special case of the <strong>Negative Binomial Distribution</strong> where r=1r = 1r=1. The Negative Binomial extends the Geometric Distribution by counting the trials needed for more than one success, not just the first one.</p>
+<p>The Negative Binomial Distribution generalizes this by modeling the number of trials needed to achieve <strong>r successes</strong>. It’s essentially the sum of <strong>r independent geometric distributions</strong> (each representing the trials until a single success). The <strong>Geometric Distribution</strong> is a special case of the <strong>Negative Binomial Distribution</strong> where r=1r = 1r=1. The Negative Binomial extends the Geometric Distribution by counting the trials needed for more than one success, not just the first one.  </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">

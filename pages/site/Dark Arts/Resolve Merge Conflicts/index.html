@@ -1883,28 +1883,28 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>To resolve merge conflicts with <code>master</code> so that <strong>your changes override</strong> the conflicting changes from <code>master</code>, follow these steps:</p>
+        <p>To resolve merge conflicts with <code>master</code> so that <strong>your changes override</strong> the conflicting changes from <code>master</code>, follow these steps:  </p>
 <h3 id="1-fetch-and-merge-master"><strong>1. Fetch and merge <code>master</code></strong></h3>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>origin
 git<span class="w"> </span>merge<span class="w"> </span>origin/master
 </code></pre></div></td></tr></table></div>
 
-<p>If there are conflicts, Git will pause and mark the conflicting files.</p>
+<p>If there are conflicts, Git will pause and mark the conflicting files.  </p>
 <div class="admonition tip">
 <p class="admonition-title">What is the difference between <code>git fetch</code> and <code>git pull</code>?:</p>
-<p><code>git fetch</code> downloads objects/refs from another repository (or remote) but doesn't merge them into your working directory. <code>git pull</code> does both: it fetches and then merges.</p>
+<p><code>git fetch</code> downloads objects/refs from another repository (or remote) but doesn't merge them into your working directory. <code>git pull</code> does both: it fetches and then merges.  </p>
 </div>
 <hr />
 <h3 id="2-overwrite-conflicts-with-your-version"><strong>2. Overwrite conflicts with your version</strong></h3>
-<p>For each conflicted file:</p>
+<p>For each conflicted file:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>--ours<span class="w"> </span>&lt;file&gt;
 </code></pre></div></td></tr></table></div>
 
 <blockquote>
-<p><code>--ours</code> = your branch (i.e., your changes override <code>master</code>)</p>
+<p><code>--ours</code> = your branch (i.e., your changes override <code>master</code>)  </p>
 </blockquote>
-<p>Repeat this for all conflicted files or run:</p>
+<p>Repeat this for all conflicted files or run:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>diff<span class="w"> </span>--name-only<span class="w"> </span>--diff-filter<span class="o">=</span>U<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>--ours
 </code></pre></div></td></tr></table></div>
 
@@ -1923,7 +1923,7 @@ git<span class="w"> </span>merge<span class="w"> </span>origin/master
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>rebase<span class="w"> </span>origin/master
 </code></pre></div></td></tr></table></div>
 
-<p>Then during each conflict:</p>
+<p>Then during each conflict:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>--ours<span class="w"> </span>&lt;file&gt;
@@ -1932,7 +1932,7 @@ git<span class="w"> </span>rebase<span class="w"> </span>--continue
 </code></pre></div></td></tr></table></div>
 
 <hr />
-<p><strong>Warning:</strong> This strategy discards all changes made in <code>master</code> for the conflicted files, so use it only when you're sure your changes must prevail.</p>
+<p><strong>Warning:</strong> This strategy discards all changes made in <code>master</code> for the conflicted files, so use it only when you're sure your changes must prevail.  </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">

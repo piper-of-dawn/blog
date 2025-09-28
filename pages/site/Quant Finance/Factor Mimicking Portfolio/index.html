@@ -1886,27 +1886,27 @@
         <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 <ul>
-<li>Daily asset returns r_{i,t} for a liquid universe.</li>
+<li>Daily asset returns r_{i,t} for a liquid universe.  </li>
 <li>
-<p>Daily VIX return f_{\text{VIX},t} and any other observed factors f_{\ell,t}.</p>
+<p>Daily VIX return f_{\text{VIX},t} and any other observed factors f_{\ell,t}.  </p>
 </li>
 <li>
 <p>Estimate betas (time-series regressions)<br />
     r_{i,t} \;=\; \beta_{i,\text{VIX}}\,f_{\text{VIX},t}\;+\;\sum_{\ell\neq\text{VIX}}\beta_{i,\ell}\,f_{\ell,t}\;+\;\varepsilon_{i,t}.<br />
-    Collect all \beta_{i,\cdot} into the loading matrix B and
-The phrase means: once you’ve run each time‐series regression</p>
+    Collect all \beta_{i,\cdot} into the loading matrix B and<br />
+The phrase means: once you’ve run each time‐series regression  </p>
 </li>
 </ul>
-<p>r_{i,t} \;=\;\sum_{\ell}\beta_{i,\ell}\,f_{\ell,t}\;+\;\varepsilon_{i,t},</p>
-<p>you collect all \beta_{i,\ell} into one matrix</p>
-<div class="arithmatex">\[
-B = \begin{pmatrix} \beta_{1,1} &amp; \beta_{1,2} &amp; \cdots\\ \beta_{2,1} &amp; \beta_{2,2} &amp; \cdots\\ \vdots &amp; \vdots &amp; \ddots \end{pmatrix},
+<p>r_{i,t} \;=\;\sum_{\ell}\beta_{i,\ell}\,f_{\ell,t}\;+\;\varepsilon_{i,t},  </p>
+<p>you collect all \beta_{i,\ell} into one matrix  </p>
+<div class="arithmatex">\[  
+B = \begin{pmatrix} \beta_{1,1} &amp; \beta_{1,2} &amp; \cdots\\ \beta_{2,1} &amp; \beta_{2,2} &amp; \cdots\\ \vdots &amp; \vdots &amp; \ddots \end{pmatrix},  
 \]</div>
-<p>and you form the vector of residuals for each asset</p>
-<p>\varepsilon_{i,t}.  Then</p>
-<p>\Omega_{\varepsilon} \;=\; \operatorname{Cov}\bigl(\varepsilon_{t}\bigr)</p>
-<p>is the N\times N covariance matrix whose (i,j) entry is</p>
-<p>\mathbb{E}[\varepsilon_{i,t}\,\varepsilon_{j,t}].</p>
+<p>and you form the vector of residuals for each asset  </p>
+<p>\varepsilon_{i,t}.  Then  </p>
+<p>\Omega_{\varepsilon} \;=\; \operatorname{Cov}\bigl(\varepsilon_{t}\bigr)  </p>
+<p>is the N\times N covariance matrix whose (i,j) entry is  </p>
+<p>\mathbb{E}[\varepsilon_{i,t}\,\varepsilon_{j,t}].  </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">

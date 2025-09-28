@@ -1886,36 +1886,36 @@
         <div class="admonition info">
 <p class="admonition-title">Info</p>
 <blockquote>
-<p>A geometric distribution models the number of trials you need to run until you get your first success in a sequence of independent attempts, each with the same probability of success. Picture flipping a coin until you hit heads: it’s a simple waiting game where the odds don’t change, and the question is “how long until I win?”</p>
+<p>A geometric distribution models the number of trials you need to run until you get your first success in a sequence of independent attempts, each with the same probability of success. Picture flipping a coin until you hit heads: it’s a simple waiting game where the odds don’t change, and the question is “how long until I win?”  </p>
 </blockquote>
 </div>
-<p>Let’s build it up. Start with a single <em>trial</em>—say, a coin flip with success probability
-- <span class="arithmatex">\(p\)</span> (e.g., <span class="arithmatex">\(p = 0.5\)</span> for heads). 
-- Failure is <span class="arithmatex">\(1 - p\)</span>, and each trial is independent, like rolling a die unaware of past rolls. 
-- Now, imagine waiting for the first success: you might fail <span class="arithmatex">\(k-1\)</span> times (probability <span class="arithmatex">\((1-p)^{k-1}\)</span>), 
-- Then succeed on the <span class="arithmatex">\(k_{th}\)</span> try (probability <span class="arithmatex">\(p\)</span>). </p>
-<p>The geometric distribution’s probability mass function is:
-<span class="arithmatex">\(P(X = k) = (1-p)^{k-1} \cdot p\)</span></p>
-<p>where <span class="arithmatex">\(k = 1, 2, 3, \ldots\)</span>. It’s a chain of failures capped by a win, derived from multiplying these basic probabilities together—exponential decay until the breakthrough.</p>
+<p>Let’s build it up. Start with a single <em>trial</em>—say, a coin flip with success probability<br />
+- <span class="arithmatex">\(p\)</span> (e.g., <span class="arithmatex">\(p = 0.5\)</span> for heads). <br />
+- Failure is <span class="arithmatex">\(1 - p\)</span>, and each trial is independent, like rolling a die unaware of past rolls. <br />
+- Now, imagine waiting for the first success: you might fail <span class="arithmatex">\(k-1\)</span> times (probability <span class="arithmatex">\((1-p)^{k-1}\)</span>), <br />
+- Then succeed on the <span class="arithmatex">\(k_{th}\)</span> try (probability <span class="arithmatex">\(p\)</span>).   </p>
+<p>The geometric distribution’s probability mass function is:<br />
+<span class="arithmatex">\(P(X = k) = (1-p)^{k-1} \cdot p\)</span>  </p>
+<p>where <span class="arithmatex">\(k = 1, 2, 3, \ldots\)</span>. It’s a chain of failures capped by a win, derived from multiplying these basic probabilities together—exponential decay until the breakthrough.  </p>
 <h2 id="expectation">Expectation</h2>
-<p>You're trying to get a new coupon you don't already have.</p>
+<p>You're trying to get a new coupon you don't already have.  </p>
 <ul>
-<li>If you already have 1 out of <span class="arithmatex">\(N\)</span> coupons, then there are <span class="arithmatex">\(N - 1\)</span> new ones left.</li>
-<li>The chance the next coupon is <strong>new</strong> = <span class="arithmatex">\(\frac{N - 1}{N}\)</span></li>
-<li>So, the expected number of draws to get a new one is:</li>
+<li>If you already have 1 out of <span class="arithmatex">\(N\)</span> coupons, then there are <span class="arithmatex">\(N - 1\)</span> new ones left.  </li>
+<li>The chance the next coupon is <strong>new</strong> = <span class="arithmatex">\(\frac{N - 1}{N}\)</span>  </li>
+<li>So, the expected number of draws to get a new one is:  </li>
 </ul>
-<div class="arithmatex">\[
-\text{Expected tries} = \frac{1}{\text{Probability}} = \frac{N}{N - 1}
+<div class="arithmatex">\[  
+\text{Expected tries} = \frac{1}{\text{Probability}} = \frac{N}{N - 1}  
 \]</div>
-<p>This is just how probability works: if success chance is <span class="arithmatex">\(p\)</span>, then expected number of trials until success = <span class="arithmatex">\(\frac{1}{p}\)</span>.</p>
-<p>Let <span class="arithmatex">\(X\)</span> denote the number of tries till the first success.
-<span class="arithmatex">\(<span class="arithmatex">\(P(X=n) = (1-p)^n \times p\)</span>\)</span>
-Now the expectation can be written as:
-$$\sum^\infty n (1-p)^n p $$
-The sum of a Arithmetic-Geometric progression is:
-$$ S = \frac{a}{1-r} + \frac{dr}{(1-r)^2}$$
-Hence the expectation is:
-<span class="arithmatex">\(<span class="arithmatex">\(E(X) = \frac{1}{p}\)</span>\)</span> </p>
+<p>This is just how probability works: if success chance is <span class="arithmatex">\(p\)</span>, then expected number of trials until success = <span class="arithmatex">\(\frac{1}{p}\)</span>.  </p>
+<p>Let <span class="arithmatex">\(X\)</span> denote the number of tries till the first success.<br />
+<span class="arithmatex">\(<span class="arithmatex">\(P(X=n) = (1-p)^n \times p\)</span>\)</span><br />
+Now the expectation can be written as:<br />
+$$\sum^\infty n (1-p)^n p $$<br />
+The sum of a Arithmetic-Geometric progression is:<br />
+$$ S = \frac{a}{1-r} + \frac{dr}{(1-r)^2}$$<br />
+Hence the expectation is:<br />
+<span class="arithmatex">\(<span class="arithmatex">\(E(X) = \frac{1}{p}\)</span>\)</span>   </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">

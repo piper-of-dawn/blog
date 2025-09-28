@@ -1884,29 +1884,29 @@
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <blockquote>
-<p>Vector projection is equivalent to the dot product. </p>
+<p>Vector projection is equivalent to the dot product.   </p>
 </blockquote>
-<p>The dot product of r and s is the projection of the vector <span class="arithmatex">\(r\)</span> on the vector <span class="arithmatex">\(s\)</span>. </p>
-<p>For two n component vectors, the dot product is defined as:
-$$ a . b = a_1b_1 + a_2b_2 \dots + a_nb_n $$
-Geometrically, for two vectors r and s, the projection appears as follows:</p>
-<p>It is equivalent to:
-$$  r . s = |r| |s| \cos \theta  $$</p>
+<p>The dot product of r and s is the projection of the vector <span class="arithmatex">\(r\)</span> on the vector <span class="arithmatex">\(s\)</span>.   </p>
+<p>For two n component vectors, the dot product is defined as:<br />
+$$ a . b = a_1b_1 + a_2b_2 \dots + a_nb_n $$<br />
+Geometrically, for two vectors r and s, the projection appears as follows:  </p>
+<p>It is equivalent to:<br />
+$$  r . s = |r| |s| \cos \theta  $$  </p>
 <h2 id="basis">Basis</h2>
-<p>To be considered as a basis, a set of vectors must:
-- Be linearly independent
-- Span the space
-Basis vectors can be orthogonal because orthogonal vectors are independent. However, the converse is not necessarily true: non-orthogonal vectors can be linearly independent and thus form a basis (but not a standard basis).
-<img alt="Pasted image 20250429102423.png" src="../Pasted%20image%2020250429102423.png" /></p>
+<p>To be considered as a basis, a set of vectors must:<br />
+- Be linearly independent<br />
+- Span the space<br />
+Basis vectors can be orthogonal because orthogonal vectors are independent. However, the converse is not necessarily true: non-orthogonal vectors can be linearly independent and thus form a basis (but not a standard basis).<br />
+<img alt="Pasted image 20250429102423.png" src="../Pasted%20image%2020250429102423.png" />  </p>
 <h3 id="change-of-basis">Change of Basis</h3>
-<p>Suppose we have a vector <span class="arithmatex">\(\begin{pmatrix} 1 \cr 3 \end{pmatrix}\)</span> or <span class="arithmatex">\(1\hat{i} + 3\hat{j}\)</span>. Here <span class="arithmatex">\(\hat{i}\)</span> and <span class="arithmatex">\(\hat{j}\)</span> are the basis vectors. These vectors are also known as a standard basis. Here, <span class="arithmatex">\(\hat{i}\)</span> is a unit vector in the <span class="arithmatex">\(x\)</span> direction and <span class="arithmatex">\(\hat{j}\)</span> is a unit vector in the <span class="arithmatex">\(y\)</span> direction. </p>
-<p>The vector <span class="arithmatex">\(\begin{pmatrix} 5 \cr -1 \end{pmatrix}\)</span> can be written as a linear combination of the basis vectors <span class="arithmatex">\(\hat{i}\)</span> and <span class="arithmatex">\(\hat{j}\)</span> as follows:
-$$\begin{pmatrix}1 &amp; 0\\ 0 &amp; 1\end{pmatrix} \times \begin{pmatrix} 5 \cr -1 \end{pmatrix} $$
-Now suppose we want to change the basis vectors to <span class="arithmatex">\(\begin{pmatrix} 1 \cr 1 \end{pmatrix}\)</span> and <span class="arithmatex">\(\begin{pmatrix} 1 \cr -1 \end{pmatrix}\)</span>. Now instead of <span class="arithmatex">\(\hat{i}\)</span> and <span class="arithmatex">\(\hat{j}\)</span>, we have <span class="arithmatex">\(\hat{i'}\)</span> and <span class="arithmatex">\(\hat{j'}\)</span>. We can write the vector <span class="arithmatex">\(\begin{pmatrix} 1 \cr 3 \end{pmatrix}\)</span> as a linear combination of the new basis vectors as follows:
-$$\begin{pmatrix}1 &amp; 1\\ 1 &amp; -1\end{pmatrix} \times \begin{pmatrix} 5 \cr -1 \end{pmatrix} = 2 \cdot \begin{pmatrix}2 \cr 3\end{pmatrix} $$</p>
+<p>Suppose we have a vector <span class="arithmatex">\(\begin{pmatrix} 1 \cr 3 \end{pmatrix}\)</span> or <span class="arithmatex">\(1\hat{i} + 3\hat{j}\)</span>. Here <span class="arithmatex">\(\hat{i}\)</span> and <span class="arithmatex">\(\hat{j}\)</span> are the basis vectors. These vectors are also known as a standard basis. Here, <span class="arithmatex">\(\hat{i}\)</span> is a unit vector in the <span class="arithmatex">\(x\)</span> direction and <span class="arithmatex">\(\hat{j}\)</span> is a unit vector in the <span class="arithmatex">\(y\)</span> direction.   </p>
+<p>The vector <span class="arithmatex">\(\begin{pmatrix} 5 \cr -1 \end{pmatrix}\)</span> can be written as a linear combination of the basis vectors <span class="arithmatex">\(\hat{i}\)</span> and <span class="arithmatex">\(\hat{j}\)</span> as follows:<br />
+$$\begin{pmatrix}1 &amp; 0\\ 0 &amp; 1\end{pmatrix} \times \begin{pmatrix} 5 \cr -1 \end{pmatrix} $$<br />
+Now suppose we want to change the basis vectors to <span class="arithmatex">\(\begin{pmatrix} 1 \cr 1 \end{pmatrix}\)</span> and <span class="arithmatex">\(\begin{pmatrix} 1 \cr -1 \end{pmatrix}\)</span>. Now instead of <span class="arithmatex">\(\hat{i}\)</span> and <span class="arithmatex">\(\hat{j}\)</span>, we have <span class="arithmatex">\(\hat{i'}\)</span> and <span class="arithmatex">\(\hat{j'}\)</span>. We can write the vector <span class="arithmatex">\(\begin{pmatrix} 1 \cr 3 \end{pmatrix}\)</span> as a linear combination of the new basis vectors as follows:<br />
+$$\begin{pmatrix}1 &amp; 1\\ 1 &amp; -1\end{pmatrix} \times \begin{pmatrix} 5 \cr -1 \end{pmatrix} = 2 \cdot \begin{pmatrix}2 \cr 3\end{pmatrix} $$  </p>
 <h4 id="useful-links-to-consult">Useful Links to Consult:</h4>
 <ol>
-<li>https://www.nagwa.com/en/explainers/792181370490/</li>
+<li>https://www.nagwa.com/en/explainers/792181370490/  </li>
 </ol>
     </div>
 </article>

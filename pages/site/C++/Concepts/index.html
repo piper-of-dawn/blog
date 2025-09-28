@@ -1885,20 +1885,20 @@
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <h2 id="difference-between-pointers-and-references">Difference between Pointers and References</h2>
 <h3 id="pointers-typename">Pointers <code>Typename*</code></h3>
-<p>It doesn’t hold an object, it holds an address. A mailbox, not the letter. To use what’s inside, you dereference it with <code>*</code> or <code>-&gt;</code>. That’s why you see it in linked lists, tries, or anything that needs “maybe there, maybe not” semantics. You can reassign it. You can set it to <code>nullptr</code>. You can leak memory if you forget to clean up. Example:</p>
+<p>It doesn’t hold an object, it holds an address. A mailbox, not the letter. To use what’s inside, you dereference it with <code>*</code> or <code>-&gt;</code>. That’s why you see it in linked lists, tries, or anything that needs “maybe there, maybe not” semantics. You can reassign it. You can set it to <code>nullptr</code>. You can leak memory if you forget to clean up. Example:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">TypeName</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TypeName</span><span class="p">();</span>
 <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 
-<p>Here you carved out memory on the heap, stashed its address in <code>ptr</code>, and poked at it with <code>-&gt;</code>. Pass <code>&amp;obj</code> into a function expecting a <code>TypeName*</code> and you’re literally saying: here’s where the object lives.</p>
+<p>Here you carved out memory on the heap, stashed its address in <code>ptr</code>, and poked at it with <code>-&gt;</code>. Pass <code>&amp;obj</code> into a function expecting a <code>TypeName*</code> and you’re literally saying: here’s where the object lives.  </p>
 <h3 id="references-typename">References <code>TypeName&amp;</code></h3>
-<p><code>TypeName&amp;</code> is stricter. It’s a reference, an alias welded onto one existing object. No nulls, no rebinding. You treat it like the object itself—just <code>obj.data</code>, no pointer gymnastics. That makes it perfect for function parameters:</p>
+<p><code>TypeName&amp;</code> is stricter. It’s a reference, an alias welded onto one existing object. No nulls, no rebinding. You treat it like the object itself—just <code>obj.data</code>, no pointer gymnastics. That makes it perfect for function parameters:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">TypeName</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
-<p>The compiler guarantees you’re not dealing with a ghost. No null checks, no dangling reassignments.</p>
-<p>The confusion comes from the symbols: <code>*</code> and <code>&amp;</code> moonlight as both declaration operators and runtime operators. <code>*</code> means “this is a pointer type” and also “dereference this pointer.” <code>&amp;</code> means “this is a reference type” and also “give me the address of this object.” Same glyph, different roles.</p>
+<p>The compiler guarantees you’re not dealing with a ghost. No null checks, no dangling reassignments.  </p>
+<p>The confusion comes from the symbols: <code>*</code> and <code>&amp;</code> moonlight as both declaration operators and runtime operators. <code>*</code> means “this is a pointer type” and also “dereference this pointer.” <code>&amp;</code> means “this is a reference type” and also “give me the address of this object.” Same glyph, different roles.  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
@@ -1907,7 +1907,7 @@
 </code></pre></div></td></tr></table></div>
 
 <h2 id="uninitialized-locals-garbage">Uninitialized Locals = Garbage</h2>
-<p>In c++, a local variable without an initializer doesn’t start at zero — it just inherits whatever junk was left in that memory slot.</p>
+<p>In c++, a local variable without an initializer doesn’t start at zero — it just inherits whatever junk was left in that memory slot.  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1929,11 +1929,11 @@
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
-<p>locals live on the stack, and the compiler won’t wipe the stack clean for you. that’s why <code>x</code> can look like a random number. globals/statics get zeroed by the runtime, but locals are your responsibility.</p>
-<p><strong>rule:</strong> if you care about the value, initialize it. always.</p>
+<p>locals live on the stack, and the compiler won’t wipe the stack clean for you. that’s why <code>x</code> can look like a random number. globals/statics get zeroed by the runtime, but locals are your responsibility.  </p>
+<p><strong>rule:</strong> if you care about the value, initialize it. always.  </p>
 <hr />
 <h2 id="operator-overloading">Operator Overloading</h2>
-<p>Operator overloading is just teaching C++ what everyday symbols mean for your custom types. By default, <code>+</code> works on ints, not on your <code>Vector2D</code>.</p>
+<p>Operator overloading is just teaching C++ what everyday symbols mean for your custom types. By default, <code>+</code> works on ints, not on your <code>Vector2D</code>.  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Vector2D</span><span class="w"> </span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vector2D</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector2D</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1942,18 +1942,18 @@
 </code></pre></div></td></tr></table></div>
 
 <ul>
-<li><code>Vector2D</code> at the start → this function spits out a <code>Vector2D</code>. That’s the result of <code>a + b</code>.</li>
-<li><code>operator+</code> → the magic name. You’re telling the compiler “when someone writes <code>+</code> between two <code>Vector2D</code>s, call this.”</li>
-<li><code>(const Vector2D&amp; a, const Vector2D&amp; b)</code> → both operands come in as references (no copying), locked as <code>const</code> (you promise not to mutate them).</li>
-<li>Inside: <code>return {a.x + b.x, a.y + b.y};</code> → builds a new <code>Vector2D</code> whose components are just the sum of the inputs.</li>
-<li>No side effects, no hidden tricks. You give it two vectors, you get back their sum. Exactly how <code>+</code> should feel.</li>
+<li><code>Vector2D</code> at the start → this function spits out a <code>Vector2D</code>. That’s the result of <code>a + b</code>.  </li>
+<li><code>operator+</code> → the magic name. You’re telling the compiler “when someone writes <code>+</code> between two <code>Vector2D</code>s, call this.”  </li>
+<li><code>(const Vector2D&amp; a, const Vector2D&amp; b)</code> → both operands come in as references (no copying), locked as <code>const</code> (you promise not to mutate them).  </li>
+<li>Inside: <code>return {a.x + b.x, a.y + b.y};</code> → builds a new <code>Vector2D</code> whose components are just the sum of the inputs.  </li>
+<li>No side effects, no hidden tricks. You give it two vectors, you get back their sum. Exactly how <code>+</code> should feel.  </li>
 </ul>
 <hr />
 <h2 id="static-members-one-definition-always-global">Static Members — One Definition, Always Global</h2>
-<p>In C++, static data members are a two-step ritual.
-You <strong>declare them inside the class</strong> to announce their existence. But that’s just a promise, not storage. To actually give them memory, you must <strong>define them once in the global scope</strong> — outside any function, method, or class body.</p>
-<p>The declaration says <em>“every object shares this.”</em>
-The definition says <em>“here’s where it actually lives.”</em></p>
+<p>In C++, static data members are a two-step ritual.<br />
+You <strong>declare them inside the class</strong> to announce their existence. But that’s just a promise, not storage. To actually give them memory, you must <strong>define them once in the global scope</strong> — outside any function, method, or class body.  </p>
+<p>The declaration says <em>“every object shares this.”</em><br />
+The definition says <em>“here’s where it actually lives.”</em>  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1967,9 +1967,9 @@ The definition says <em>“here’s where it actually lives.”</em></p>
 <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Human</span><span class="o">::</span><span class="n">species</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Homo Sapien&quot;</span><span class="p">;</span><span class="w">   </span><span class="c1">// defined once, in global scope</span>
 </code></pre></div></td></tr></table></div>
 
-<p>Every <code>Coord</code> points to the same <code>len_x</code>. No duplication, no per-object copies.</p>
-<p>Static methods obey the same law. Declared inside the class, defined outside with <code>ClassName::</code>. One definition, global, or the linker will scream.</p>
-<p>This is not optional. It’s the rule.</p>
+<p>Every <code>Coord</code> points to the same <code>len_x</code>. No duplication, no per-object copies.  </p>
+<p>Static methods obey the same law. Declared inside the class, defined outside with <code>ClassName::</code>. One definition, global, or the linker will scream.  </p>
+<p>This is not optional. It’s the rule.  </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">

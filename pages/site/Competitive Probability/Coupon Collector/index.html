@@ -1884,51 +1884,51 @@
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <h3 id="tldr">TL;DR</h3>
-<p>If there are <span class="arithmatex">\(N\)</span> different items (like toys or coupons), and each time you pick one at random, it gets harder to find the missing ones as your collection grows.
-* First item is always new.
-* Second one is still easy to find.
-* But the last few are rare—you keep getting duplicates.
-The average number of total picks you need to get all <span class="arithmatex">\(N\)</span> different items is about:
-$$
-N \times (\ln N + 0.577)
-$$
-This grows a bit faster than linear. For 50 items, you'd need about 225 tries.</p>
+<p>If there are <span class="arithmatex">\(N\)</span> different items (like toys or coupons), and each time you pick one at random, it gets harder to find the missing ones as your collection grows.<br />
+<em> First item is always new.<br />
+</em> Second one is still easy to find.<br />
+* But the last few are rare—you keep getting duplicates.<br />
+The average number of total picks you need to get all <span class="arithmatex">\(N\)</span> different items is about:<br />
+$$<br />
+N \times (\ln N + 0.577)<br />
+$$<br />
+This grows a bit faster than linear. For 50 items, you'd need about 225 tries.  </p>
 <h3 id="problem-statement">Problem Statement</h3>
-<p>You have <span class="arithmatex">\(N\)</span> unique coupons. Each time you draw, you get one coupon chosen uniformly at random (with replacement).
-Goal: Find how many draws it <strong>takes on average</strong> to collect all <span class="arithmatex">\(N\)</span> distinct coupons.</p>
+<p>You have <span class="arithmatex">\(N\)</span> unique coupons. Each time you draw, you get one coupon chosen uniformly at random (with replacement).<br />
+Goal: Find how many draws it <strong>takes on average</strong> to collect all <span class="arithmatex">\(N\)</span> distinct coupons.  </p>
 <h3 id="building-blocks">Building Blocks</h3>
 <ul>
-<li><a href="../Geometric%20Distribution/">Geometric Distribution</a>: Geometric distribution tells you the probability of first success in a series of repeated experiments. The expectation of Geometric Distribution is 1/p.</li>
-<li><a href="../Expectation/">Expectation</a>: It is probability weighted average of a distribution. Thing of it as centre of gravity.</li>
-<li>Linearity of <a href="../Expectation/">Expectation</a>: Sum of expectations is Expectation of the sum.</li>
+<li><a href="../Geometric%20Distribution/">Geometric Distribution</a>: Geometric distribution tells you the probability of first success in a series of repeated experiments. The expectation of Geometric Distribution is 1/p.  </li>
+<li><a href="../Expectation/">Expectation</a>: It is probability weighted average of a distribution. Thing of it as centre of gravity.  </li>
+<li>Linearity of <a href="../Expectation/">Expectation</a>: Sum of expectations is Expectation of the sum.  </li>
 </ul>
 <h3 id="how-to-think-about-it">How to think about it?</h3>
-<p>Think of collecting the coupons one by one:</p>
+<p>Think of collecting the coupons one by one:  </p>
 <ul>
 <li>
-<p>Stage 1: How many draws to get the <strong>first</strong> new coupon?
-  → Always 1 (since you start with none). Let us call it <span class="arithmatex">\(T_1\)</span></p>
+<p>Stage 1: How many draws to get the <strong>first</strong> new coupon?<br />
+  → Always 1 (since you start with none). Let us call it <span class="arithmatex">\(T_1\)</span>  </p>
 </li>
 <li>
-<p>Stage 2: Now you have 1 unique coupon. What's the chance the next draw gives a <strong>new</strong> one? <em>Here we measure the probability of success till we get our first success. This is where <a href="../Geometric%20Distribution/">Geometric Distribution</a> is useful.</em> Let us call this <span class="arithmatex">\(T_2\)</span>
-  → Probability = <span class="arithmatex">\(\frac{N - 1}{N}\)</span>, so expected number of tries = <span class="arithmatex">\(\frac{N}{N - 1}\)</span></p>
+<p>Stage 2: Now you have 1 unique coupon. What's the chance the next draw gives a <strong>new</strong> one? <em>Here we measure the probability of success till we get our first success. This is where <a href="../Geometric%20Distribution/">Geometric Distribution</a> is useful.</em> Let us call this <span class="arithmatex">\(T_2\)</span><br />
+  → Probability = <span class="arithmatex">\(\frac{N - 1}{N}\)</span>, so expected number of tries = <span class="arithmatex">\(\frac{N}{N - 1}\)</span>  </p>
 </li>
 <li>
-<p>Stage 3: Now you have 2 unique coupons. Probability next is new = <span class="arithmatex">\(\frac{N - 2}{N}\)</span>, expected tries = <span class="arithmatex">\(\frac{N}{N - 2}\)</span>. Let us call this <span class="arithmatex">\(T_3\)</span></p>
+<p>Stage 3: Now you have 2 unique coupons. Probability next is new = <span class="arithmatex">\(\frac{N - 2}{N}\)</span>, expected tries = <span class="arithmatex">\(\frac{N}{N - 2}\)</span>. Let us call this <span class="arithmatex">\(T_3\)</span>  </p>
 </li>
 <li>
-<p>And so on...</p>
+<p>And so on...  </p>
 </li>
 </ul>
-<p>By linearity of expectations: $$ E(T) = E(T_1 + \dots + T_n) = E(T_1) + \dots + E(T_n)$$
-This implies:
-$$\begin{aligned}
-E(T) &amp;= 1+ \frac{N}{N-1} + \frac{N}{N-2} + \dots + \frac{N}{N-k+1} \
-&amp;= N \left[\frac{1}{N} + \dots + \frac{1}{N-k+1} + 1 \right]
-\end{aligned}
-$$
-The term in the bracket is a [[Harmonic Sum]], which is <span class="arithmatex">\(\log(n)\)</span> </p>
-<p><strong>Hence Expectation is <span class="arithmatex">\(n \log(n)\)</span></strong></p>
+<p>By linearity of expectations: $$ E(T) = E(T_1 + \dots + T_n) = E(T_1) + \dots + E(T_n)$$<br />
+This implies:<br />
+$$\begin{aligned}<br />
+E(T) &amp;= 1+ \frac{N}{N-1} + \frac{N}{N-2} + \dots + \frac{N}{N-k+1} \<br />
+&amp;= N \left[\frac{1}{N} + \dots + \frac{1}{N-k+1} + 1 \right]<br />
+\end{aligned}<br />
+$$<br />
+The term in the bracket is a [[Harmonic Sum]], which is <span class="arithmatex">\(\log(n)\)</span>   </p>
+<p><strong>Hence Expectation is <span class="arithmatex">\(n \log(n)\)</span></strong>  </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">

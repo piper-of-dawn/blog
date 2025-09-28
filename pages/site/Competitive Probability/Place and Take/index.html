@@ -1885,42 +1885,42 @@
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <h1 id="hard">hard</h1>
 <blockquote>
-<p>You are playing a one-player game with two opaque boxes. At each turn, you can choose to either "place" or "take". "Place" places $1 from a third party into one box randomly. "Take" empties out one box randomly and that money is yours. This game consists of 100 turns where you must either place or take. Assuming optimal play, what is the expected payoff of this game? Note that you do not know how much money you have taken until the end of the game.</p>
+<p>You are playing a one-player game with two opaque boxes. At each turn, you can choose to either "place" or "take". "Place" places $1 from a third party into one box randomly. "Take" empties out one box randomly and that money is yours. This game consists of 100 turns where you must either place or take. Assuming optimal play, what is the expected payoff of this game? Note that you do not know how much money you have taken until the end of the game.  </p>
 </blockquote>
 <h2 id="thought-process">Thought Process</h2>
-<p>Think of every dollar you drop in as a goldfish in a pond. Each time you “take,” you scoop one of the two ponds at random, so any given goldfish has a 1/2 chance of getting caught. If you plan to scoop <strong>k</strong> times, the chance a goldfish eventually gets caught is
-$$ 1 - (\frac{1}{2})^k $$</p>
+<p>Think of every dollar you drop in as a goldfish in a pond. Each time you “take,” you scoop one of the two ponds at random, so any given goldfish has a 1/2 chance of getting caught. If you plan to scoop <strong>k</strong> times, the chance a goldfish eventually gets caught is<br />
+$$ 1 - (\frac{1}{2})^k $$  </p>
 <blockquote>
-<p>How?
-Probability of not getting caught in <span class="arithmatex">\(k\)</span> attempts = <span class="arithmatex">\((1/2)^k\)</span>
-Probability of getting caught atleast once = <span class="arithmatex">\(1 - (1/2)^k\)</span></p>
+<p>How?<br />
+Probability of not getting caught in <span class="arithmatex">\(k\)</span> attempts = <span class="arithmatex">\((1/2)^k\)</span><br />
+Probability of getting caught atleast once = <span class="arithmatex">\(1 - (1/2)^k\)</span>  </p>
 </blockquote>
-<p>You take <span class="arithmatex">\(k\)</span> attempts so you place <span class="arithmatex">\(100-k\)</span> attempts.</p>
-<p>So payoff function:
-$$ (100-k)(1 - (\frac{1}{2})^k)  $$
-Maximise this payoff as:</p>
+<p>You take <span class="arithmatex">\(k\)</span> attempts so you place <span class="arithmatex">\(100-k\)</span> attempts.  </p>
+<p>So payoff function:<br />
+$$ (100-k)(1 - (\frac{1}{2})^k)  $$<br />
+Maximise this payoff as:  </p>
 <div class="arithmatex">\[ \text{arg max}_k (100-k)(1 - 0.5^k)  \]</div>
-<p>Differential it wrt <span class="arithmatex">\(k\)</span> and set the derivative to 0.</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\text{Let} \ u &amp;= 1-0.5^k \\
-du/dk &amp;= k0.5^{k-1} \\
-\end{aligned}
+<p>Differential it wrt <span class="arithmatex">\(k\)</span> and set the derivative to 0.  </p>
+<div class="arithmatex">\[  
+\begin{aligned}  
+\text{Let} \ u &amp;= 1-0.5^k \\  
+du/dk &amp;= k0.5^{k-1} \\  
+\end{aligned}  
 \]</div>
-<div class="arithmatex">\[
-\begin{aligned}
-\text{Let} \ v &amp;= 100-k \\
-du/dv &amp;= -1 \\
-\end{aligned}
+<div class="arithmatex">\[  
+\begin{aligned}  
+\text{Let} \ v &amp;= 100-k \\  
+du/dv &amp;= -1 \\  
+\end{aligned}  
 \]</div>
-<p>$$
-\begin{aligned}
-0.5^k -1 + k0.5^{k-1}(100-k) = 0 \
-0.5^k + 2k0.5^{k}(100-k) = 1 \
-\text{Let} \  0.5^k = T \
-T - 200kT - 2k^2T =1</p>
-<p>\end{aligned}
-$$</p>
+<p>$$<br />
+\begin{aligned}<br />
+0.5^k -1 + k0.5^{k-1}(100-k) = 0 \<br />
+0.5^k + 2k0.5^{k}(100-k) = 1 \<br />
+\text{Let} \  0.5^k = T \<br />
+T - 200kT - 2k^2T =1  </p>
+<p>\end{aligned}<br />
+$$  </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">

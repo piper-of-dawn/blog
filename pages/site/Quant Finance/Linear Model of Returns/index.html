@@ -1884,45 +1884,45 @@
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <h2 id="volatility-decomposition">Volatility Decomposition</h2>
-<p>$$
-\Omega_r = B\, \Omega_f\, B^T + \Omega_\epsilon
-$$
-This equation tells us <strong>what causes the ups and downs in a group of asset returns, and how those sources mix together.</strong> If you want to understand risk, build portfolios, or analyze any group of assets, this formula is a fundamental “recipe” for how returns vary together.</p>
-<p>Start from the recipe for asset returns:
-$$
-r = Bf + \epsilon
-$$
-The <strong>covariance</strong> (how things wiggle together) of <span class="arithmatex">\(r\)</span> is:
-$$
-\Omega_r = \mathrm{Var}(r)
-$$
-Plug in our recipe:
-$$
-= \mathrm{Var}(Bf + \epsilon)
-$$
-If errors and factors are independent, the variance of a sum is just the sum of variances:
-$$
-= \mathrm{Var}(Bf) + \mathrm{Var}(\epsilon)
-$$
-When you scale factors by B, variances get mapped like so:
-$$
-\mathrm{Var}(Bf) = B\, \mathrm{Var}(f)\, B^T
-$$
-$$
-\Omega_r = B\, \Omega_f\, B^T + \Omega_\epsilon
-$$</p>
+<p>$$<br />
+\Omega_r = B\, \Omega_f\, B^T + \Omega_\epsilon<br />
+$$<br />
+This equation tells us <strong>what causes the ups and downs in a group of asset returns, and how those sources mix together.</strong> If you want to understand risk, build portfolios, or analyze any group of assets, this formula is a fundamental “recipe” for how returns vary together.  </p>
+<p>Start from the recipe for asset returns:<br />
+$$<br />
+r = Bf + \epsilon<br />
+$$<br />
+The <strong>covariance</strong> (how things wiggle together) of <span class="arithmatex">\(r\)</span> is:<br />
+$$<br />
+\Omega_r = \mathrm{Var}(r)<br />
+$$<br />
+Plug in our recipe:<br />
+$$<br />
+= \mathrm{Var}(Bf + \epsilon)<br />
+$$<br />
+If errors and factors are independent, the variance of a sum is just the sum of variances:<br />
+$$<br />
+= \mathrm{Var}(Bf) + \mathrm{Var}(\epsilon)<br />
+$$<br />
+When you scale factors by B, variances get mapped like so:<br />
+$$<br />
+\mathrm{Var}(Bf) = B\, \mathrm{Var}(f)\, B^T<br />
+$$<br />
+$$<br />
+\Omega_r = B\, \Omega_f\, B^T + \Omega_\epsilon<br />
+$$  </p>
 <h2 id="socratic-qa">Socratic Q\&amp;A</h2>
-<p>Q: What does the first term <span class="arithmatex">\(B \Omega_f B^T\)</span> mean in words?
-A: It shows how group movements (factors) flow through to each asset and spread out to influence asset risk.</p>
-<p>Q: Why do we need <span class="arithmatex">\(B\)</span> and <span class="arithmatex">\(B^T\)</span>, not just <span class="arithmatex">\(\Omega_f\)</span>?
-A: Because <span class="arithmatex">\(B\)</span> tailors the factor wiggles to each asset, and $B^T $connects back to all assets, creating a full map of shared risk.</p>
-<p>Q: What does <span class="arithmatex">\(\Omega_\epsilon\)</span> add to the mix?
-A: It captures each asset’s personal quirks—randomness that factors cannot explain.</p>
-<p>Q: Why is the sum of two covariances—the shared and the unique?
-A: Because return variations come from big market shocks (factors) and small asset-specific surprises (errors).</p>
-<p>Q: What’s the practical importance of splitting up risks this way?
-A: It lets investors see what risks can be diversified (factor risks) and what is stubborn (idiosyncratic risk).
-<span style="display:none">[^1]</span></p>
+<p>Q: What does the first term <span class="arithmatex">\(B \Omega_f B^T\)</span> mean in words?<br />
+A: It shows how group movements (factors) flow through to each asset and spread out to influence asset risk.  </p>
+<p>Q: Why do we need <span class="arithmatex">\(B\)</span> and <span class="arithmatex">\(B^T\)</span>, not just <span class="arithmatex">\(\Omega_f\)</span>?<br />
+A: Because <span class="arithmatex">\(B\)</span> tailors the factor wiggles to each asset, and $B^T $connects back to all assets, creating a full map of shared risk.  </p>
+<p>Q: What does <span class="arithmatex">\(\Omega_\epsilon\)</span> add to the mix?<br />
+A: It captures each asset’s personal quirks—randomness that factors cannot explain.  </p>
+<p>Q: Why is the sum of two covariances—the shared and the unique?<br />
+A: Because return variations come from big market shocks (factors) and small asset-specific surprises (errors).  </p>
+<p>Q: What’s the practical importance of splitting up risks this way?<br />
+A: It lets investors see what risks can be diversified (factor risks) and what is stubborn (idiosyncratic risk).<br />
+<span style="display:none">[^1]</span>  </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">

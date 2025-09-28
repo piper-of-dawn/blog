@@ -30,9 +30,12 @@ def get_all_processors() -> List[MarkdownProcessor]:
     from .obsidian_callouts import ObsidianCalloutProcessor
     from .obsidian_admonitions import ObsidianAdmonitionProcessor
     from .obsidian_links import ObsidianLinksProcessor
+    from .hard_line_breaks import HardLineBreaksProcessor
     
     return [
         ObsidianCalloutProcessor(),
         ObsidianAdmonitionProcessor(),
         ObsidianLinksProcessor(),
+        # Ensure this runs last so earlier processors can work with original structure
+        HardLineBreaksProcessor(),
     ]

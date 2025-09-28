@@ -1,5 +1,5 @@
 
-Every method in this trait that hands out or consumes references is chained to a specific borrow duration.
+Every method in this trait that hands out or consumes references is chained to a specific borrow duration.  
 
 ```rust
 struct Person<'a> {
@@ -20,4 +20,4 @@ trait Named<'a> {
 
 ```
 
-Now the methods in the trait are parameterized with a lifetime parameter. Now we’re saying: “When something implements `Named<'a>`, its `name()` method gives back a string slice that lives as long as `'a`.”
+Now the methods in the trait are parameterized with a lifetime parameter. Now we’re saying: “When something implements `Named<'a>`, its `name()` method gives back a string slice that lives as long as `'a`.”  

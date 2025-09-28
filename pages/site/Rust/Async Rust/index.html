@@ -1884,23 +1884,23 @@
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <h2 id="what-is-a-runtime"><strong>What is a runtime?</strong></h2>
-<p>Tokio is <strong>the</strong> async runtime for Rust.</p>
+<p>Tokio is <strong>the</strong> async runtime for Rust.  </p>
 <ul>
 <li>Think: thread pool + task scheduler + event loop.    </li>
 <li>It drives your futures to completion.    </li>
 <li>It gives you <code>#[tokio::main]</code> to start your async <code>main()</code>.    </li>
-<li>It provides async I/O (files, network, timers, etc.).</li>
+<li>It provides async I/O (files, network, timers, etc.).  </li>
 </ul>
 <h3 id="tokios-job"><strong>Tokio's Job:</strong></h3>
 <ul>
 <li><strong>Poll</strong> your futures <strong>repeatedly</strong>.    </li>
 <li>Wait for external events (e.g., HTTP done, file ready).    </li>
-<li>Wake up your future and call <code>poll()</code> again <strong>only when needed</strong>.</li>
+<li>Wake up your future and call <code>poll()</code> again <strong>only when needed</strong>.  </li>
 </ul>
 <h3 id="one-liner-intuition"><strong>One-liner intuition:</strong></h3>
-<p><code>poll()</code> = "Are you done yet?"    <br />
+<p><code>poll()</code> = "Are you done yet?"      <br />
 Future: "No." → <code>Pending</code><br />
-Future: "Yes!" → <code>Ready(output)</code></p>
+Future: "Yes!" → <code>Ready(output)</code>  </p>
 <h3 id="futuresunordered">FuturesUnordered</h3>
     </div>
 </article>

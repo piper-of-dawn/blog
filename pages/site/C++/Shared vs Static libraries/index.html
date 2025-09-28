@@ -1883,53 +1883,53 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p><strong>Shared Libraries</strong>:</p>
+        <p><strong>Shared Libraries</strong>:  </p>
 <ul>
 <li>
-<p><strong>Definition</strong>: Dynamically linked libraries (<code>.so</code> on Unix, <code>.dll</code> on Windows) <strong>loaded at runtime</strong>.</p>
+<p><strong>Definition</strong>: Dynamically linked libraries (<code>.so</code> on Unix, <code>.dll</code> on Windows) <strong>loaded at runtime</strong>.  </p>
 </li>
 <li>
-<p><strong>Size</strong>: Smaller executable size; library code is not embedded in the binary.</p>
+<p><strong>Size</strong>: Smaller executable size; library code is not embedded in the binary.  </p>
 </li>
 <li>
-<p><strong>Linking</strong>: Linked at runtime via dynamic linker; requires library presence on the system.</p>
+<p><strong>Linking</strong>: Linked at runtime via dynamic linker; requires library presence on the system.  </p>
 </li>
 <li>
-<p><strong>Updates</strong>: Can be updated independently without recompiling the executable.</p>
+<p><strong>Updates</strong>: Can be updated independently without recompiling the executable.  </p>
 </li>
 <li>
-<p><strong>Performance</strong>: Slight runtime overhead due to dynamic linking.</p>
+<p><strong>Performance</strong>: Slight runtime overhead due to dynamic linking.  </p>
 </li>
 <li>
-<p><strong>Distribution</strong>: Must be distributed with the executable or installed on the target system.</p>
+<p><strong>Distribution</strong>: Must be distributed with the executable or installed on the target system.  </p>
 </li>
 <li>
-<p><strong>Memory</strong>: Shared across multiple processes, reducing memory usage. <strong>Example</strong>: <code>libc.so</code> on Linux.</p>
+<p><strong>Memory</strong>: Shared across multiple processes, reducing memory usage. <strong>Example</strong>: <code>libc.so</code> on Linux.  </p>
 </li>
 </ul>
-<p><strong>Static Libraries</strong>:
-- <strong>Definition</strong>: Archives (<code>.a</code> on Unix, <code>.lib</code> on Windows) <strong>embedded into the executable at compile time.</strong></p>
+<p><strong>Static Libraries</strong>:<br />
+- <strong>Definition</strong>: Archives (<code>.a</code> on Unix, <code>.lib</code> on Windows) <strong>embedded into the executable at compile time.</strong>  </p>
 <ul>
 <li>
-<p><strong>Size</strong>: Larger executable size; library code is included in the binary.</p>
+<p><strong>Size</strong>: Larger executable size; library code is included in the binary.  </p>
 </li>
 <li>
-<p><strong>Linking</strong>: Linked at compile time; no external dependencies at runtime.</p>
+<p><strong>Linking</strong>: Linked at compile time; no external dependencies at runtime.  </p>
 </li>
 <li>
-<p><strong>Updates</strong>: Requires recompilation of the executable to incorporate library updates.</p>
+<p><strong>Updates</strong>: Requires recompilation of the executable to incorporate library updates.  </p>
 </li>
 <li>
-<p><strong>Performance</strong>: Faster at runtime; no dynamic linking overhead.</p>
+<p><strong>Performance</strong>: Faster at runtime; no dynamic linking overhead.  </p>
 </li>
 <li>
-<p><strong>Distribution</strong>: Self-contained executable; no need to distribute the library separately.</p>
+<p><strong>Distribution</strong>: Self-contained executable; no need to distribute the library separately.  </p>
 </li>
 <li>
-<p><strong>Memory</strong>: Each executable has its own copy, increasing memory usage.</p>
+<p><strong>Memory</strong>: Each executable has its own copy, increasing memory usage.  </p>
 </li>
 <li>
-<p><strong>Example</strong>: <code>libc.a</code> on Linux.</p>
+<p><strong>Example</strong>: <code>libc.a</code> on Linux.  </p>
 </li>
 </ul>
     </div>

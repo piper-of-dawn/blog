@@ -1883,32 +1883,32 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>Keep two running trackers: 
-- tracker A = “how jumpy prices have been lately” (volatility)
-- tracker B = “how prices have moved lately” (returns), but scaled by tracker A</p>
-<p>Update both after every new price. The ratio tells you how many standard deviations today’s price move is, smoothed over time. Large positive = trend up, large negative = trend down.</p>
-<p>Step-by-step </p>
+        <p>Keep two running trackers: <br />
+- tracker A = “how jumpy prices have been lately” (volatility)<br />
+- tracker B = “how prices have moved lately” (returns), but scaled by tracker A  </p>
+<p>Update both after every new price. The ratio tells you how many standard deviations today’s price move is, smoothed over time. Large positive = trend up, large negative = trend down.  </p>
+<p>Step-by-step   </p>
 <ol>
 <li>
 <p>Compute a scale-free return<br />
-    $$r_{t}= \frac{P_t-P_{t-1}}{P_{t-1}}\quad\text{or}\quad\ln(P_t/P_{t-1})  $$
-    Using percent/log makes the metric independent of the absolute price level.</p>
+    $$r_{t}= \frac{P_t-P_{t-1}}{P_{t-1}}\quad\text{or}\quad\ln(P_t/P_{t-1})  $$<br />
+    Using percent/log makes the metric independent of the absolute price level.  </p>
 </li>
 <li>
 <p>Update volatility (σ²) first<br />
     Exponential moving average of squared returns with decay η:<br />
-    $$\sigma^{2}<em t-1="t-1">{t}= (1-\eta)\,\sigma^{2}</em>  $$
-    This is a one-line “memory” of recent squared moves; smaller η = longer memory.}+\eta\,r_{t}^{2</p>
+    $$\sigma^{2}<em t-1="t-1">{t}= (1-\eta)\,\sigma^{2}</em>  $$}+\eta\,r_{t}^{2<br />
+    This is a one-line “memory” of recent squared moves; smaller η = longer memory.  </p>
 </li>
-<li>Normalise today’s return 
-$$z_t = \frac{r_t}{\sigma_t+\epsilon}  $$
-    ε is a tiny constant to prevent division by zero.</li>
+<li>Normalise today’s return <br />
+$$z_t = \frac{r_t}{\sigma_t+\epsilon}  $$<br />
+    ε is a tiny constant to prevent division by zero.  </li>
 <li>Update the signal<br />
-    Another exponential average, but of the z-scores:  $$
-    \phi_t = (1-\eta)\,\phi_{t-1} + \sqrt{\eta}\,z_t  $$
-    The <span class="arithmatex">\(\sqrt{\eta}\)</span> factor keeps the signal’s variance near 1 when returns are white noise.</li>
+    Another exponential average, but of the z-scores:  $$<br />
+    \phi_t = (1-\eta)\,\phi_{t-1} + \sqrt{\eta}\,z_t  $$<br />
+    The <span class="arithmatex">\(\sqrt{\eta}\)</span> factor keeps the signal’s variance near 1 when returns are white noise.  </li>
 </ol>
-<p>So φ = +2.0 means: the exponentially weighted average of 112 day returns is two standard deviations above zero.</p>
+<p>So φ = +2.0 means: the exponentially weighted average of 112 day returns is two standard deviations above zero.  </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">

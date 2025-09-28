@@ -1883,49 +1883,49 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>A linear map is a function that takes vectors, transforms them into new vectors, and makes sure that adding and scaling vectors still works the same way before and after the transformation. A <strong>linear map</strong> is just a rule that takes a vector and turns it into another vector <strong>without bending or breaking its structure</strong>. It respects addition and scaling. Think of it like applying a fixed transformation that preserves lines and the origin.</p>
+        <p>A linear map is a function that takes vectors, transforms them into new vectors, and makes sure that adding and scaling vectors still works the same way before and after the transformation. A <strong>linear map</strong> is just a rule that takes a vector and turns it into another vector <strong>without bending or breaking its structure</strong>. It respects addition and scaling. Think of it like applying a fixed transformation that preserves lines and the origin.  </p>
 <hr />
 <h2 id="definition">Definition</h2>
-<p>A <strong>linear map</strong> (or <strong>linear transformation</strong>) is a function <span class="arithmatex">\(T: V \to W\)</span> between two <a href="../Vector%20Space/">Vector Space</a> such that for all vectors <span class="arithmatex">\(\mathbf{u}, \mathbf{v} \in V\)</span> and all scalars <span class="arithmatex">\(c \in \mathbb{R}\)</span> (or any field), it satisfies:</p>
+<p>A <strong>linear map</strong> (or <strong>linear transformation</strong>) is a function <span class="arithmatex">\(T: V \to W\)</span> between two <a href="../Vector%20Space/">Vector Space</a> such that for all vectors <span class="arithmatex">\(\mathbf{u}, \mathbf{v} \in V\)</span> and all scalars <span class="arithmatex">\(c \in \mathbb{R}\)</span> (or any field), it satisfies:  </p>
 <ol>
 <li>
-<p><strong>Additivity</strong>: Transformation on addition is addition of transformations: <span class="arithmatex">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span></p>
+<p><strong>Additivity</strong>: Transformation on addition is addition of transformations: <span class="arithmatex">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span>  </p>
 </li>
 <li>
-<p><strong>Homogeneity (scalar multiplication)</strong>: Transformation on a vector scalar product is same as scalar multiplied to a transformed vector. <span class="arithmatex">\(T(c\mathbf{v}) = cT(\mathbf{v})\)</span></p>
+<p><strong>Homogeneity (scalar multiplication)</strong>: Transformation on a vector scalar product is same as scalar multiplied to a transformed vector. <span class="arithmatex">\(T(c\mathbf{v}) = cT(\mathbf{v})\)</span>  </p>
 </li>
 </ol>
-<p>These two together mean:
-$$
-T(a\mathbf{u} + b\mathbf{v}) = aT(\mathbf{u}) + bT(\mathbf{v})
-$$</p>
+<p>These two together mean:<br />
+$$<br />
+T(a\mathbf{u} + b\mathbf{v}) = aT(\mathbf{u}) + bT(\mathbf{v})<br />
+$$  </p>
 <hr />
 <h2 id="key-properties">Key Properties</h2>
 <ul>
-<li>The <strong>origin maps to origin</strong>: <span class="arithmatex">\(T(\mathbf{0}) = \mathbf{0}\)</span></li>
-<li>Linear maps can be represented as <strong>matrices</strong> when vector spaces are finite-dimensional.</li>
-<li>If <span class="arithmatex">\(T: \mathbb{R}^n \to \mathbb{R}^m\)</span>, then <span class="arithmatex">\(T(\mathbf{x}) = A\mathbf{x}\)</span> for some <span class="arithmatex">\(m \times n\)</span> matrix <span class="arithmatex">\(A\)</span>.</li>
+<li>The <strong>origin maps to origin</strong>: <span class="arithmatex">\(T(\mathbf{0}) = \mathbf{0}\)</span>  </li>
+<li>Linear maps can be represented as <strong>matrices</strong> when vector spaces are finite-dimensional.  </li>
+<li>If <span class="arithmatex">\(T: \mathbb{R}^n \to \mathbb{R}^m\)</span>, then <span class="arithmatex">\(T(\mathbf{x}) = A\mathbf{x}\)</span> for some <span class="arithmatex">\(m \times n\)</span> matrix <span class="arithmatex">\(A\)</span>.  </li>
 </ul>
 <hr />
 <h2 id="examples">Examples</h2>
 <ol>
-<li><strong>Scaling</strong>: <span class="arithmatex">\(T(x) = 2x\)</span> → doubles every input → linear.</li>
-<li><strong>Rotation</strong> in the plane → linear.</li>
-<li><span class="arithmatex">\(T(x) = x + 1\)</span> → <strong>not linear</strong> because it doesn’t preserve the origin.</li>
+<li><strong>Scaling</strong>: <span class="arithmatex">\(T(x) = 2x\)</span> → doubles every input → linear.  </li>
+<li><strong>Rotation</strong> in the plane → linear.  </li>
+<li><span class="arithmatex">\(T(x) = x + 1\)</span> → <strong>not linear</strong> because it doesn’t preserve the origin.  </li>
 </ol>
 <hr />
 <h2 id="geometric-intuition">Geometric Intuition</h2>
-<p>A linear map:
-* Preserves straight lines.
-* Preserves ratios along lines.
-* Doesn’t twist, curve, or displace the origin.</p>
+<p>A linear map:<br />
+<em> Preserves straight lines.<br />
+</em> Preserves ratios along lines.<br />
+* Doesn’t twist, curve, or displace the origin.  </p>
 <hr />
 <h2 id="why-it-matters">Why It Matters</h2>
-<p>Linear maps are the <strong>building blocks of all transformations</strong> in linear algebra. Every matrix <em>is</em> a linear map. They're fundamental in:</p>
+<p>Linear maps are the <strong>building blocks of all transformations</strong> in linear algebra. Every matrix <em>is</em> a linear map. They're fundamental in:  </p>
 <ul>
-<li>Solving systems of equations.</li>
-<li>Understanding projections, rotations, shears.</li>
-<li>Machine learning (every neural net layer is mostly a linear map + nonlinearity).</li>
+<li>Solving systems of equations.  </li>
+<li>Understanding projections, rotations, shears.  </li>
+<li>Machine learning (every neural net layer is mostly a linear map + nonlinearity).  </li>
 </ul>
     </div>
 </article>

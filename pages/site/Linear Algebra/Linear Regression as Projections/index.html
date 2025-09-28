@@ -1883,40 +1883,40 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>You start with a target vector <span class="arithmatex">\(y \in \mathbb{R}^n\)</span>. The outcomes observed. Then you’ve got a design matrix <span class="arithmatex">\(X \in \mathbb{R}^{n \times p}\)</span>.  Each column of <span class="arithmatex">\(X\)</span> is a predictor, and the span of those columns is a <span class="arithmatex">\(p\)</span>-dimensional <a href="../Subspace/">Subspace</a> of <span class="arithmatex">\(\mathbb{R}^n\)</span>.</p>
-<p>Imagine <span class="arithmatex">\(y\)</span> as a point floating in 3D space, and <span class="arithmatex">\(X\)</span> as a tilted 2D plane. Regression doesn’t invent a new direction; it just drops <span class="arithmatex">\(y\)</span> straight down onto the plane. In higher dimensions, same story — only now the plane is a <span class="arithmatex">\(p\)</span>-dimensional slab inside <span class="arithmatex">\(\mathbb{R}^n\)</span>.</p>
-<p>You’ve got <span class="arithmatex">\(y \in \mathbb{R}^3\)</span>, a point floating in space. You’ve got <span class="arithmatex">\(X\)</span>, whose columns span a tilted 2D plane slicing through the origin. The regression problem is: where does <span class="arithmatex">\(y\)</span> land if you drop it straight down onto that plane? That landing spot is <span class="arithmatex">\(\hat{y} = X\hat{\beta}\)</span>. It’s the <strong>orthogonal projection</strong> of <span class="arithmatex">\(y\)</span> onto the column space of <span class="arithmatex">\(X\)</span>. The residual <span class="arithmatex">\(r = y - \hat{y}\)</span> is the vertical drop — and it’s perpendicular to the plane.</p>
-<p>So the question linear regression asks is brutally geometric:</p>
+        <p>You start with a target vector <span class="arithmatex">\(y \in \mathbb{R}^n\)</span>. The outcomes observed. Then you’ve got a design matrix <span class="arithmatex">\(X \in \mathbb{R}^{n \times p}\)</span>.  Each column of <span class="arithmatex">\(X\)</span> is a predictor, and the span of those columns is a <span class="arithmatex">\(p\)</span>-dimensional <a href="../Subspace/">Subspace</a> of <span class="arithmatex">\(\mathbb{R}^n\)</span>.  </p>
+<p>Imagine <span class="arithmatex">\(y\)</span> as a point floating in 3D space, and <span class="arithmatex">\(X\)</span> as a tilted 2D plane. Regression doesn’t invent a new direction; it just drops <span class="arithmatex">\(y\)</span> straight down onto the plane. In higher dimensions, same story — only now the plane is a <span class="arithmatex">\(p\)</span>-dimensional slab inside <span class="arithmatex">\(\mathbb{R}^n\)</span>.  </p>
+<p>You’ve got <span class="arithmatex">\(y \in \mathbb{R}^3\)</span>, a point floating in space. You’ve got <span class="arithmatex">\(X\)</span>, whose columns span a tilted 2D plane slicing through the origin. The regression problem is: where does <span class="arithmatex">\(y\)</span> land if you drop it straight down onto that plane? That landing spot is <span class="arithmatex">\(\hat{y} = X\hat{\beta}\)</span>. It’s the <strong>orthogonal projection</strong> of <span class="arithmatex">\(y\)</span> onto the column space of <span class="arithmatex">\(X\)</span>. The residual <span class="arithmatex">\(r = y - \hat{y}\)</span> is the vertical drop — and it’s perpendicular to the plane.  </p>
+<p>So the question linear regression asks is brutally geometric:  </p>
 <blockquote>
-<p>Among all possible linear combinations of the columns of <span class="arithmatex">\(X\)</span>, which one is nearest to <span class="arithmatex">\(y\)</span>?</p>
+<p>Among all possible linear combinations of the columns of <span class="arithmatex">\(X\)</span>, which one is nearest to <span class="arithmatex">\(y\)</span>?  </p>
 </blockquote>
-<p>Formally: find <span class="arithmatex">\(\hat{y} = X\hat{\beta}\)</span> such that
-$$
-|y - \hat{y}|_2
-$$
-is minimized. That’s just saying: project <span class="arithmatex">\(y\)</span> orthogonally onto the subspace <span class="arithmatex">\(\text{Col}(X)\)</span>.</p>
+<p>Formally: find <span class="arithmatex">\(\hat{y} = X\hat{\beta}\)</span> such that<br />
+$$<br />
+|y - \hat{y}|_2<br />
+$$<br />
+is minimized. That’s just saying: project <span class="arithmatex">\(y\)</span> orthogonally onto the subspace <span class="arithmatex">\(\text{Col}(X)\)</span>.  </p>
 <hr />
-<p>Now, what does it mean to be a projection?
-* If <span class="arithmatex">\(\hat{y}\)</span> is the projection, then the residual <span class="arithmatex">\(r = y - \hat{y}\)</span> must be orthogonal to the subspace.
-* Orthogonal to the subspace means orthogonal to each column of <span class="arithmatex">\(X\)</span>.
-* Which gives the normal equations:
-$$
-X^\top (y - X\hat{\beta}) = 0.
-$$
-That condition pins down <span class="arithmatex">\(\hat{\beta}\)</span>. Solving it yields the familiar formula:
-$$
-\hat{\beta} = (X^\top X)^{-1} X^\top y.
-$$
-So, the coefficients <span class="arithmatex">\(\hat{\beta}\)</span> are nothing mystical — they’re just the coordinates of the projection of <span class="arithmatex">\(y\)</span> onto the span of the predictors.</p>
-<p>The whole operation can be packaged into a single matrix:
-$$
-P = X (X^\top X)^{-1} X^\top.
-$$
-This is the <strong>projection matrix</strong>. It’s symmetric, idempotent (<span class="arithmatex">\(P^2 = P\)</span>), and it maps any <span class="arithmatex">\(y\)</span> to its fitted values:
-$$
-\hat{y} = Py.
-$$</p>
-<p>That’s linear regression boiled down: every time you “fit a line,” what you’re actually doing is multiplying <span class="arithmatex">\(y\)</span> by <span class="arithmatex">\(P\)</span> and dropping it onto a lower-dimensional plane carved out by the predictors.</p>
+<p>Now, what does it mean to be a projection?<br />
+<em> If <span class="arithmatex">\(\hat{y}\)</span> is the projection, then the residual <span class="arithmatex">\(r = y - \hat{y}\)</span> must be orthogonal to the subspace.<br />
+</em> Orthogonal to the subspace means orthogonal to each column of <span class="arithmatex">\(X\)</span>.<br />
+* Which gives the normal equations:<br />
+$$<br />
+X^\top (y - X\hat{\beta}) = 0.<br />
+$$<br />
+That condition pins down <span class="arithmatex">\(\hat{\beta}\)</span>. Solving it yields the familiar formula:<br />
+$$<br />
+\hat{\beta} = (X^\top X)^{-1} X^\top y.<br />
+$$<br />
+So, the coefficients <span class="arithmatex">\(\hat{\beta}\)</span> are nothing mystical — they’re just the coordinates of the projection of <span class="arithmatex">\(y\)</span> onto the span of the predictors.  </p>
+<p>The whole operation can be packaged into a single matrix:<br />
+$$<br />
+P = X (X^\top X)^{-1} X^\top.<br />
+$$<br />
+This is the <strong>projection matrix</strong>. It’s symmetric, idempotent (<span class="arithmatex">\(P^2 = P\)</span>), and it maps any <span class="arithmatex">\(y\)</span> to its fitted values:<br />
+$$<br />
+\hat{y} = Py.<br />
+$$  </p>
+<p>That’s linear regression boiled down: every time you “fit a line,” what you’re actually doing is multiplying <span class="arithmatex">\(y\)</span> by <span class="arithmatex">\(P\)</span> and dropping it onto a lower-dimensional plane carved out by the predictors.  </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">

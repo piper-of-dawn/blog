@@ -1885,84 +1885,84 @@
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <div class="admonition tldr">
 <p class="admonition-title">TLDR:</p>
-<p>For any Markov chain problem, Always ask: <em>What’s my state? Where does it end? How does it move?</em> That’s the recipe for modeling any Markov problem.</p>
+<p>For any Markov chain problem, Always ask: <em>What’s my state? Where does it end? How does it move?</em> That’s the recipe for modeling any Markov problem.  </p>
 </div>
 <h2 id="problem-1">Problem 1:</h2>
-<p>You roll a fair 6-sided die repeatedly. What's the probability that you see all <strong>odd values</strong> {1,3,5} <strong>before</strong> you see any <strong>even</strong> value {2,4,6}?</p>
+<p>You roll a fair 6-sided die repeatedly. What's the probability that you see all <strong>odd values</strong> {1,3,5} <strong>before</strong> you see any <strong>even</strong> value {2,4,6}?  </p>
 <h3 id="step-1-define-states">Step 1: Define States</h3>
-<p>Let <span class="arithmatex">\(P_k\)</span> be the probability of success after seeing <span class="arithmatex">\(k\)</span> distinct odd numbers, for <span class="arithmatex">\(k=\{0,1,2,3\}\)</span>:</p>
+<p>Let <span class="arithmatex">\(P_k\)</span> be the probability of success after seeing <span class="arithmatex">\(k\)</span> distinct odd numbers, for <span class="arithmatex">\(k=\{0,1,2,3\}\)</span>:  </p>
 <ul>
 <li>
-<p><strong>State 0</strong>: no odd values seen</p>
+<p><strong>State 0</strong>: no odd values seen  </p>
 </li>
 <li>
-<p><strong>State 1</strong>: seen 1 distinct odd value</p>
+<p><strong>State 1</strong>: seen 1 distinct odd value  </p>
 </li>
 <li>
-<p><strong>State 2</strong>: seen 2 distinct odd values</p>
+<p><strong>State 2</strong>: seen 2 distinct odd values  </p>
 </li>
 <li>
-<p><strong>State 3</strong>: absorbing success state (all 3 seen)</p>
+<p><strong>State 3</strong>: absorbing success state (all 3 seen)  </p>
 </li>
 <li>
-<p><strong>Any even</strong> → absorbing failure state (probability = 0)</p>
+<p><strong>Any even</strong> → absorbing failure state (probability = 0)  </p>
 </li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><em>What is absorbing?</em>
-In a Markov chain, a state is <strong>absorbing</strong> if <strong>once you enter it, you can’t leave. It’s a “terminal” outcome. In the problem: </strong>Success<strong> state: all 3 odd faces seen → absorbing (you stop rolling) and </strong>Failure** state: any even face appears → absorbing (you stop rolling)</p>
+<p><em>What is absorbing?</em><br />
+In a Markov chain, a state is <strong>absorbing</strong> if <strong>once you enter it, you can’t leave. It’s a “terminal” outcome. In the problem: </strong>Success<strong> state: all 3 odd faces seen → absorbing (you stop rolling) and </strong>Failure** state: any even face appears → absorbing (you stop rolling)  </p>
 </div>
 <hr />
 <h3 id="step-2-set-boundary-conditions">Step 2: Set Boundary Conditions</h3>
 <ul>
 <li>
-<p><span class="arithmatex">\(P_3 = 1\)</span> (success: already collected all 3 odds)</p>
+<p><span class="arithmatex">\(P_3 = 1\)</span> (success: already collected all 3 odds)  </p>
 </li>
 <li>
-<p>If an even number is drawn in any state → probability = 3</p>
+<p>If an even number is drawn in any state → probability = 3  </p>
 </li>
 </ul>
 <hr />
 <h3 id="step-3-write-recurrence-transition-probabilities">Step 3: Write Recurrence (Transition Probabilities)</h3>
-<p>At state <span class="arithmatex">\(k\)</span> (for <span class="arithmatex">\(k&lt;3\)</span>):
+<p>At state <span class="arithmatex">\(k\)</span> (for <span class="arithmatex">\(k&lt;3\)</span>):<br />
 - With probability <span class="arithmatex">\(1/2\)</span>, you roll an even → failure → contribute 0  <br />
 - With probability <span class="arithmatex">\(1/2\)</span>, you roll an odd:  <br />
     - Chance it’s a <strong>new</strong> odd: <span class="arithmatex">\(\frac{3-k}{3}\)</span> → go to state <span class="arithmatex">\(k+1\)</span>      <br />
-    - Chance it’s a <strong>repeat</strong> odd: <span class="arithmatex">\(\frac{k}{3}\)</span> → stay in state <span class="arithmatex">\(k\)</span></p>
-<p>So,</p>
-<p><strong>The total probability of eventual success from state <span class="arithmatex">\(k\)</span> is the expected value of what happens after the </strong>next roll**, weighted by the probabilities of each type of outcome.</p>
-<div class="arithmatex">\[ 
-P_k = \underbrace{\frac{1}{2} \cdot 0}_{\text{even} \to \text{failure}} 
-+ \underbrace{\frac{1}{2}}_{\text{odd roll}} \cdot \left( 
-\underbrace{\frac{3-k}{3} \cdot P_{k+1}}_{\text{new odd} \to \text{progress}} 
-+ \underbrace{\frac{k}{3} \cdot P_k}_{\text{repeat} \to \text{stay}} 
-\right)
+    - Chance it’s a <strong>repeat</strong> odd: <span class="arithmatex">\(\frac{k}{3}\)</span> → stay in state <span class="arithmatex">\(k\)</span>  </p>
+<p>So,  </p>
+<p><strong>The total probability of eventual success from state <span class="arithmatex">\(k\)</span> is the expected value of what happens after the </strong>next roll**, weighted by the probabilities of each type of outcome.  </p>
+<div class="arithmatex">\[   
+P_k = \underbrace{\frac{1}{2} \cdot 0}_{\text{even} \to \text{failure}}   
++ \underbrace{\frac{1}{2}}_{\text{odd roll}} \cdot \left(   
+\underbrace{\frac{3-k}{3} \cdot P_{k+1}}_{\text{new odd} \to \text{progress}}   
++ \underbrace{\frac{k}{3} \cdot P_k}_{\text{repeat} \to \text{stay}}   
+\right)  
 \]</div>
 <hr />
 <h3 id="step-4-solve-recursively-work-backwards">Step 4: Solve Recursively (Work Backwards)</h3>
 <ul>
-<li>Start from <span class="arithmatex">\(P_3 = 1\)</span>. Now solve for <span class="arithmatex">\(P_2\)</span>}</li>
+<li>Start from <span class="arithmatex">\(P_3 = 1\)</span>. Now solve for <span class="arithmatex">\(P_2\)</span>}  </li>
 </ul>
-<p>Solve:</p>
+<p>Solve:  </p>
 <hr />
 <h3 id="final-answer">Final Answer:</h3>
 <div class="arithmatex">\[ \boxed{P(\text{all odd before even}) = \frac{1}{20}} \]</div>
 <hr />
 <h3 id="problem-2-gamblers-ruin-problem">Problem 2: Gambler's Ruin Problem</h3>
-<p>Find the expected number of flips of a fair coin needed to have 10 more heads flipped more than tails or 7 more tails flipped more than heads.</p>
+<p>Find the expected number of flips of a fair coin needed to have 10 more heads flipped more than tails or 7 more tails flipped more than heads.  </p>
 <h1 id="insight-when-you-have-sequence-of-events-think-of-markov-processes-or-random-walks">insight When you have sequence of events think of <strong>Markov Processes</strong> or <strong>Random Walks</strong>.</h1>
-<p>Let <span class="arithmatex">\(X_n\)</span> be the head-tail difference.
-$$ X_{n+1} =\begin{cases} X_n+1,&amp;\tfrac12\,,\ X_n-1,&amp;\tfrac12\, \end{cases}$$
-The difference increases by 1 with probability 1/2 and vice-versa. Now we need to find the probability: <span class="arithmatex">\(P(X_n = 10 \ \cup \ X_n = -7)\)</span>. Here 10 and -7 and absorption states, where the process terminates. Everything in between is a <strong>transient state</strong>—you keep walking until you fall into a boundary.</p>
+<p>Let <span class="arithmatex">\(X_n\)</span> be the head-tail difference.<br />
+$$ X_{n+1} =\begin{cases} X_n+1,&amp;\tfrac12\,,\ X_n-1,&amp;\tfrac12\, \end{cases}$$<br />
+The difference increases by 1 with probability 1/2 and vice-versa. Now we need to find the probability: <span class="arithmatex">\(P(X_n = 10 \ \cup \ X_n = -7)\)</span>. Here 10 and -7 and absorption states, where the process terminates. Everything in between is a <strong>transient state</strong>—you keep walking until you fall into a boundary.  </p>
 <blockquote>
-<p>What are absorption states?
-    In random walks, absorbing states are like traps — once you're in, you're stuck. The rest of the states are <strong>transient</strong> — you might visit them many times, but you'll eventually leave. The question becomes: "How long does the walker wander before falling into one of the traps?"</p>
+<p>What are absorption states?<br />
+    In random walks, absorbing states are like traps — once you're in, you're stuck. The rest of the states are <strong>transient</strong> — you might visit them many times, but you'll eventually leave. The question becomes: "How long does the walker wander before falling into one of the traps?"  </p>
 </blockquote>
-<p>Define a new RV <span class="arithmatex">\(i = X_n + 7\)</span>
-$$ i_{n+1} =\begin{cases} i+1,&amp;\tfrac12\,,\ i-1,&amp;\tfrac12\, \end{cases}$$
-Now we need to find the probability: <span class="arithmatex">\(i = 7 \ \cup \ i = 17\)</span></p>
-<p>We start from 7 and terminate at 17. Here <span class="arithmatex">\(N=17\)</span> and <span class="arithmatex">\(i=7\)</span></p>
+<p>Define a new RV <span class="arithmatex">\(i = X_n + 7\)</span><br />
+$$ i_{n+1} =\begin{cases} i+1,&amp;\tfrac12\,,\ i-1,&amp;\tfrac12\, \end{cases}$$<br />
+Now we need to find the probability: <span class="arithmatex">\(i = 7 \ \cup \ i = 17\)</span>  </p>
+<p>We start from 7 and terminate at 17. Here <span class="arithmatex">\(N=17\)</span> and <span class="arithmatex">\(i=7\)</span>  </p>
 <h1 id="probability_concept-mean-absorption-time-of-a-markov-process">probability_concept **Mean absorption time of a Markov Process:</h1>
 <div class="arithmatex">\[E_i = i(N - i ) = 7 \times (17 - 7) = 70\]</div>
     </div>

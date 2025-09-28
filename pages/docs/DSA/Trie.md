@@ -1,4 +1,4 @@
-A Trie data structure is simply two things. An array of length (number of characters) and a boolean flag.
+A Trie data structure is simply two things. An array of length (number of characters) and a boolean flag.  
 
 ```cpp
 
@@ -37,6 +37,6 @@ class Trie {
     }
 ```
 
-Every Trie node holds a reference to the next node.
+Every Trie node holds a reference to the next node.  
 
-> Where is the reference stored? > 
+> Where is the reference stored? >   

@@ -1884,11 +1884,11 @@
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <h2 id="xargs">xargs</h2>
-<p><code>xargs</code> is plumbing. It takes a stream of text, splits it on whitespace, and bolts the pieces onto another command. By default it spits them into <code>echo</code>, but the moment you point it at something real — <code>rm</code>, <code>git</code>, whatever — it turns into a batch-launcher.  For example:</p>
+<p><code>xargs</code> is plumbing. It takes a stream of text, splits it on whitespace, and bolts the pieces onto another command. By default it spits them into <code>echo</code>, but the moment you point it at something real — <code>rm</code>, <code>git</code>, whatever — it turns into a batch-launcher.  For example:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>diff<span class="w"> </span>--name-only<span class="w"> </span>--diff-filter<span class="o">=</span>U<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-I<span class="w"> </span><span class="o">{}</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>--ours<span class="w"> </span><span class="o">{}</span>
 </code></pre></div></td></tr></table></div>
 
-<p>This one-liner pulls out every conflicted file and runs <code>git checkout --ours</code> on each.</p>
+<p>This one-liner pulls out every conflicted file and runs <code>git checkout --ours</code> on each.  </p>
 <hr />
     </div>
 </article>

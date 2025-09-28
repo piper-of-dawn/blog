@@ -1934,7 +1934,7 @@ break function_name
 </code></pre></div></td></tr></table></div>
 
 <blockquote>
-<p>Requires variable to have a stable memory address (e.g., global or in-scope local).</p>
+<p>Requires variable to have a stable memory address (e.g., global or in-scope local).  </p>
 </blockquote>
 <h2 id="io">I/O</h2>
 <h3 id="set-pretty-printing">Set Pretty Printing</h3>
@@ -1944,20 +1944,20 @@ break function_name
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>set print elements N
 </code></pre></div></td></tr></table></div>
 
-<p>Limits number of elements printed (default: 200).</p>
+<p>Limits number of elements printed (default: 200).  </p>
 <h3 id="dump-binary-memory">Dump Binary Memory</h3>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">dump</span><span class="w"> </span><span class="nx">binary</span><span class="w"> </span><span class="nx">memory</span><span class="w"> </span><span class="nx">filename</span><span class="w"> </span><span class="nx">start_addr</span><span class="w"> </span><span class="nx">end_addr</span>
 </code></pre></div></td></tr></table></div>
 
-<p>Example:</p>
+<p>Example:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dump binary memory dump.bin 0x600000 0x601000
 </code></pre></div></td></tr></table></div>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
-<li><em>Use pointer arithmetic to calculate start and end addresses</em></li>
-<li>A useful use-case is that you can dump containers to read them back into python</li>
+<li><em>Use pointer arithmetic to calculate start and end addresses</em>  </li>
+<li>A useful use-case is that you can dump containers to read them back into python  </li>
 </ul>
 </div>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
@@ -1968,13 +1968,13 @@ dump binary memory &lt;FILE_NAME&gt;.bin $start $end
 </code></pre></div></td></tr></table></div>
 
 <h3 id="tldr-first-principles">TL;DR (First Principles):</h3>
-<p>When GDB executes a program, it maps your variables—including arrays and matrices—into memory. You can tell GDB to <strong>dump raw memory</strong> of any variable to a binary file. This lets you <strong>analyze the data outside GDB</strong> (e.g., with Python + NumPy) without GDB choking on printing large data inline.</p>
+<p>When GDB executes a program, it maps your variables—including arrays and matrices—into memory. You can tell GDB to <strong>dump raw memory</strong> of any variable to a binary file. This lets you <strong>analyze the data outside GDB</strong> (e.g., with Python + NumPy) without GDB choking on printing large data inline.  </p>
 <h4 id="1-understand-what-youre-dumping">1. <strong>Understand What You're Dumping</strong></h4>
-<p>You need:
-- The <strong>starting memory address</strong> (<code>&amp;my_matrix</code>)
-- The <strong>exact byte size</strong> to dump (<code>sizeof(my_matrix)</code>)
--
-Example: for a <code>float my_matrix[100][100]</code>:</p>
+<p>You need:<br />
+- The <strong>starting memory address</strong> (<code>&amp;my_matrix</code>)<br />
+- The <strong>exact byte size</strong> to dump (<code>sizeof(my_matrix)</code>)<br />
+-<br />
+Example: for a <code>float my_matrix[100][100]</code>:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">sizeof</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40000</span><span class="w"> </span><span class="n">bytes</span>
 </code></pre></div></td></tr></table></div>
 
@@ -1982,27 +1982,27 @@ Example: for a <code>float my_matrix[100][100]</code>:</p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">dump</span><span class="w"> </span><span class="nx">binary</span><span class="w"> </span><span class="nx">memory</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">filename</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">start_address</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">end_address</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 
-<p>Or if you know the size:</p>
+<p>Or if you know the size:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dump binary memory matrix.bin &amp;my_matrix &amp;my_matrix + sizeof(my_matrix)
 </code></pre></div></td></tr></table></div>
 
-<p>But GDB doesn't support pointer arithmetic like that directly on <code>sizeof</code>. Instead:</p>
+<p>But GDB doesn't support pointer arithmetic like that directly on <code>sizeof</code>. Instead:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dump binary memory matrix.bin &amp;my_matrix (&amp;my_matrix)+40000
 </code></pre></div></td></tr></table></div>
 
-<p>(You can replace <code>40000</code> with any exact byte count)</p>
-<p>Or calculate in GDB: </p>
+<p>(You can replace <code>40000</code> with any exact byte count)  </p>
+<p>Or calculate in GDB:   </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>gdb p sizeof(my_matrix)
 </code></pre></div></td></tr></table></div>
 
-<p>Then manually use the value:</p>
+<p>Then manually use the value:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dump binary memory matrix.bin &amp;my_matrix (&amp;my_matrix)+40000
 </code></pre></div></td></tr></table></div>
 
 <h3 id="what-happens-internally">What Happens Internally</h3>
 <ul>
-<li>GDB interprets the address <code>&amp;my_matrix</code> as a raw memory location.</li>
-<li>It writes the raw byte sequence (just 1s and 0s) to <code>matrix.bin</code>.</li>
+<li>GDB interprets the address <code>&amp;my_matrix</code> as a raw memory location.  </li>
+<li>It writes the raw byte sequence (just 1s and 0s) to <code>matrix.bin</code>.  </li>
 </ul>
 <h3 id="load-it-in-python-post-gdb">Load It in Python (Post-GDB)</h3>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
@@ -2016,19 +2016,19 @@ Example: for a <code>float my_matrix[100][100]</code>:</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 
-<p>Make sure <code>dtype</code> and shape match your C++ matrix layout.</p>
+<p>Make sure <code>dtype</code> and shape match your C++ matrix layout.  </p>
 <h3 id="sanity-check-in-gdb">🧪 Sanity Check in GDB</h3>
-<p>Want to confirm it’s dumping the correct values?</p>
+<p>Want to confirm it’s dumping the correct values?  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>x/10f &amp;my_matrix[0][0]   # examine 10 floats
 </code></pre></div></td></tr></table></div>
 
-<p>Then check if those match the first line of <code>matrix[0][:10]</code> in NumPy.</p>
+<p>Then check if those match the first line of <code>matrix[0][:10]</code> in NumPy.  </p>
 <div class="admonition warning">
 <p class="admonition-title">Pitfalls:</p>
 <ul>
-<li>Don’t dump pointers unless they point to <strong>contiguous</strong> memory blocks.</li>
-<li>Avoid structs with padding unless you understand layout.</li>
-<li>Beware of endian issues if moving between architectures.</li>
+<li>Don’t dump pointers unless they point to <strong>contiguous</strong> memory blocks.  </li>
+<li>Avoid structs with padding unless you understand layout.  </li>
+<li>Beware of endian issues if moving between architectures.  </li>
 </ul>
 </div>
     </div>

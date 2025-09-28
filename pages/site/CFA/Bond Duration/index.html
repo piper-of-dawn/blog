@@ -1883,9 +1883,9 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>What is it?
-Bond duration is the cashflow weighted average of time. Suppose you have a following series of cashflows:</p>
-<p>We explicitely assume that yield is 0.</p>
+        <p>What is it?<br />
+Bond duration is the cashflow weighted average of time. Suppose you have a following series of cashflows:  </p>
+<p>We explicitely assume that yield is 0.  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>C = 10    10     10     10     10     10
@@ -1893,12 +1893,12 @@ Bond duration is the cashflow weighted average of time. Suppose you have a follo
 T = 1     2      3      4      5      6
 </code></pre></div></td></tr></table></div>
 
-<p>The bond duration would be calculated as:</p>
-<p>$$ D = \sum_{t=1}^6 t \times 10  $$
-Now assume that we have a positive yield of 10%. In this case, we need to discount each cashflow to its present value. </p>
+<p>The bond duration would be calculated as:  </p>
+<p>$$ D = \sum_{t=1}^6 t \times 10  $$<br />
+Now assume that we have a positive yield of 10%. In this case, we need to discount each cashflow to its present value.   </p>
 <div class="arithmatex">\[ D = \sum_{t=1}^6 \frac {10t}{(1+0.1)^{t}}  \]</div>
 <blockquote>
-<p>The intuitive equivalence is that if all of the bond's cashflows are collapsed into a single lumpsum payment, then at what time that payment would occur. </p>
+<p>The intuitive equivalence is that if all of the bond's cashflows are collapsed into a single lumpsum payment, then at what time that payment would occur.   </p>
 </blockquote>
     </div>
 </article>

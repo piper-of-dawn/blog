@@ -1883,10 +1883,10 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>Functional programming is awesome. The concept of a function is so pure. You have this elegant thing that takes an input and gives you an output, and no matter what, the same input always gives you the same output. The key thing hat ensures that it gives you the same answer always for infinity is that there's no state and hence no side-effects.</p>
-<p>Higher-order functions are beautiful. They take the idea of a function—this clean little input-output machine—and elevate it. Instead of just working with numbers or strings, now functions can take in other functions. They can return functions. They can build behaviour out of behaviour. And suddenly, your functions are composable, modular, and expressive and still the logic and the essence of a function remains pure, untouched.</p>
-<p>Let's create one that measures execution time. We will write this simple wrapper that takes any arbitrary function as input and gives you an enhanced function as output. The key thing that makes this approach so clean is that we're not touching the original function's logic or introducing side-effects.</p>
-<p>Suppose you have a function which generates a sequence of <code>n</code> integers starting from <code>start</code>, increasing by <code>step</code>. It returns the result as a pre-allocated <code>std::vector&lt;int&gt;</code> for performance.</p>
+        <p>Functional programming is awesome. The concept of a function is so pure. You have this elegant thing that takes an input and gives you an output, and no matter what, the same input always gives you the same output. The key thing hat ensures that it gives you the same answer always for infinity is that there's no state and hence no side-effects.  </p>
+<p>Higher-order functions are beautiful. They take the idea of a function—this clean little input-output machine—and elevate it. Instead of just working with numbers or strings, now functions can take in other functions. They can return functions. They can build behaviour out of behaviour. And suddenly, your functions are composable, modular, and expressive and still the logic and the essence of a function remains pure, untouched.  </p>
+<p>Let's create one that measures execution time. We will write this simple wrapper that takes any arbitrary function as input and gives you an enhanced function as output. The key thing that makes this approach so clean is that we're not touching the original function's logic or introducing side-effects.  </p>
+<p>Suppose you have a function which generates a sequence of <code>n</code> integers starting from <code>start</code>, increasing by <code>step</code>. It returns the result as a pre-allocated <code>std::vector&lt;int&gt;</code> for performance.  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1902,7 +1902,7 @@
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
-<p>Now here come the fun part:</p>
+<p>Now here come the fun part:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1926,10 +1926,10 @@
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
-<p>Let’s unpack what’s happening inside.</p>
-<p><code>auto&amp;&amp;... args</code> is what makes the wrapper flexible. It says: give me any number of inputs, of any type—whether they’re temporary values flying in, or persistent references you want to preserve.</p>
-<p><code>decltype(args)</code> captures the true nature of each argument. It doesn’t just look at the value—it remembers how it was passed in: was it moveable? Was it a reference?</p>
-<p>And then comes the real hero: <code>std::forward&lt;decltype(args)&gt;(args)...</code>. This is a bit tricky! It makes sure each argument is forwarded exactly as it arrived—if it was an rvalue, it stays one; if it was an lvalue, we respect that. No surprises. If like me, you also find lvalue and rvalue intimidating to comprehend, here's a simple example to distinguish lvalues and rvalues:</p>
+<p>Let’s unpack what’s happening inside.  </p>
+<p><code>auto&amp;&amp;... args</code> is what makes the wrapper flexible. It says: give me any number of inputs, of any type—whether they’re temporary values flying in, or persistent references you want to preserve.  </p>
+<p><code>decltype(args)</code> captures the true nature of each argument. It doesn’t just look at the value—it remembers how it was passed in: was it moveable? Was it a reference?  </p>
+<p>And then comes the real hero: <code>std::forward&lt;decltype(args)&gt;(args)...</code>. This is a bit tricky! It makes sure each argument is forwarded exactly as it arrived—if it was an rvalue, it stays one; if it was an lvalue, we respect that. No surprises. If like me, you also find lvalue and rvalue intimidating to comprehend, here's a simple example to distinguish lvalues and rvalues:  </p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>

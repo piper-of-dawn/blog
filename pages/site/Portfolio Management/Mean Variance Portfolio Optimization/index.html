@@ -1883,54 +1883,54 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p><strong>Quadratic utility</strong> is defined as:
-$$
-U(W) = aW - bW^2
-$$
-where:
-- <span class="arithmatex">\(W\)</span> = wealth,
-- <span class="arithmatex">\(a, b &gt; 0\)</span> are constants.</p>
+        <p><strong>Quadratic utility</strong> is defined as:<br />
+$$<br />
+U(W) = aW - bW^2<br />
+$$<br />
+where:<br />
+- <span class="arithmatex">\(W\)</span> = wealth,<br />
+- <span class="arithmatex">\(a, b &gt; 0\)</span> are constants.  </p>
 <h4 id="why-utility-function-is-assumed-this-way">Why utility function is assumed this way?</h4>
-<p>If utility is quadratic:
-$$
-U(W) = aW - bW^2
-$$
-then the <strong>expected utility</strong> is:
-$$
-\mathbb{E}[U(W)] = a \mathbb{E}[W] - b \mathbb{E}[W^2]
-$$
-Expand <span class="arithmatex">\(\mathbb{E}[W^2]\)</span> using the formula:
-$$
-\mathbb{E}[W^2] = (\mathbb{E}[W])^2 + \text{Var}(W)
-$$
-This comes from the relationship: <span class="arithmatex">\(\text{Var}(X) = E(X)^2 - E(X^2)\)</span></p>
-<p>thus:
-$$
-\mathbb{E}[U(W)] = a \mathbb{E}[W] - b\left((\mathbb{E}[W])^2 + \text{Var}(W)\right)
-$$
-Grouping terms:
-$$
-\mathbb{E}[U(W)] = (a - 2b \mathbb{E}[W])\mathbb{E}[W] - b \, \text{Var}(W)
-$$
-<strong>Interpretation:</strong>
+<p>If utility is quadratic:<br />
+$$<br />
+U(W) = aW - bW^2<br />
+$$<br />
+then the <strong>expected utility</strong> is:<br />
+$$<br />
+\mathbb{E}[U(W)] = a \mathbb{E}[W] - b \mathbb{E}[W^2]<br />
+$$<br />
+Expand <span class="arithmatex">\(\mathbb{E}[W^2]\)</span> using the formula:<br />
+$$<br />
+\mathbb{E}[W^2] = (\mathbb{E}[W])^2 + \text{Var}(W)<br />
+$$<br />
+This comes from the relationship: <span class="arithmatex">\(\text{Var}(X) = E(X)^2 - E(X^2)\)</span>  </p>
+<p>thus:<br />
+$$<br />
+\mathbb{E}[U(W)] = a \mathbb{E}[W] - b\left((\mathbb{E}[W])^2 + \text{Var}(W)\right)<br />
+$$<br />
+Grouping terms:<br />
+$$<br />
+\mathbb{E}[U(W)] = (a - 2b \mathbb{E}[W])\mathbb{E}[W] - b \, \text{Var}(W)<br />
+$$<br />
+<strong>Interpretation:</strong><br />
 - You maximize expected utility by <strong>increasing expected return</strong> <span class="arithmatex">\(\mathbb{E}[W]\)</span><br />
-- <strong>and minimizing variance</strong> <span class="arithmatex">\(\text{Var}(W)\)</span>.</p>
-<p>Thus, <strong>maximizing expected quadratic utility reduces to a trade-off between expected return and variance</strong>, which is exactly the objective of <strong>mean-variance optimization</strong>.</p>
+- <strong>and minimizing variance</strong> <span class="arithmatex">\(\text{Var}(W)\)</span>.  </p>
+<p>Thus, <strong>maximizing expected quadratic utility reduces to a trade-off between expected return and variance</strong>, which is exactly the objective of <strong>mean-variance optimization</strong>.  </p>
 <h4 id="why-mean-variance-optimization-is-a-projection-problem">Why Mean Variance Optimization is a projection problem?</h4>
-<p><strong>You are projecting the expected return vector <span class="arithmatex">\(\alpha\)</span> onto the weight space, using a distance measured by the covariance matrix <span class="arithmatex">\(\Omega\)</span>.</strong></p>
-<p>The space (portfolio space or weight space) is <span class="arithmatex">\(\mathbb{R}^n\)</span> for <span class="arithmatex">\(n\)</span> assets. Instead of normal Euclidean distance, you use <strong>risk-based distance</strong>: $$
-  d(w) = \sqrt{w^T \Omega w}
-$$<strong>This risk-based distance stretches and twists</strong> the space — the geometry is no longer flat like Euclidean space.</p>
-<p>"We are finding the weight vector <span class="arithmatex">\(𝑤\)</span> that points in the best possible direction towards the return vector <span class="arithmatex">\(\alpha\)</span>, but measured using risk distance defined by <span class="arithmatex">\(\omega\)</span>.</p>
+<p><strong>You are projecting the expected return vector <span class="arithmatex">\(\alpha\)</span> onto the weight space, using a distance measured by the covariance matrix <span class="arithmatex">\(\Omega\)</span>.</strong>  </p>
+<p>The space (portfolio space or weight space) is <span class="arithmatex">\(\mathbb{R}^n\)</span> for <span class="arithmatex">\(n\)</span> assets. Instead of normal Euclidean distance, you use <strong>risk-based distance</strong>: $$<br />
+  d(w) = \sqrt{w^T \Omega w}<br />
+$$<strong>This risk-based distance stretches and twists</strong> the space — the geometry is no longer flat like Euclidean space.  </p>
+<p>"We are finding the weight vector <span class="arithmatex">\(𝑤\)</span> that points in the best possible direction towards the return vector <span class="arithmatex">\(\alpha\)</span>, but measured using risk distance defined by <span class="arithmatex">\(\omega\)</span>.  </p>
 <h3 id="optimization-problem">Optimization Problem</h3>
-<p>$$
-\max_w \quad \alpha^T w \quad \text{subject to} \quad w^T \Omega w \leq \sigma^2
-$$
-Lagrangian leads to:
-$$
-\Omega w \propto \alpha \quad \Rightarrow \quad w \propto \Omega^{-1} \alpha
-$$
-Thus, <strong>optimal weight is proportional to <span class="arithmatex">\(\Omega^{-1} \alpha\)</span></strong> — meaning <strong>alpha corrected by risk geometry</strong>.</p>
+<p>$$<br />
+\max_w \quad \alpha^T w \quad \text{subject to} \quad w^T \Omega w \leq \sigma^2<br />
+$$<br />
+Lagrangian leads to:<br />
+$$<br />
+\Omega w \propto \alpha \quad \Rightarrow \quad w \propto \Omega^{-1} \alpha<br />
+$$<br />
+Thus, <strong>optimal weight is proportional to <span class="arithmatex">\(\Omega^{-1} \alpha\)</span></strong> — meaning <strong>alpha corrected by risk geometry</strong>.  </p>
     </div>
 </article>
                                 <div class="mx-auto flex h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">
