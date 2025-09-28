@@ -1,4 +1,4 @@
-You start with a target vector $y \in \mathbb{R}^n$. The outcomes observed. Then you’ve got a design matrix $X \in \mathbb{R}^{n \times p}$.  Each column of $X$ is a predictor, and the span of those columns is a $p$-dimensional [[Subspace]] of $\mathbb{R}^n$.
+You start with a target vector $y \in \mathbb{R}^n$. The outcomes observed. Then you’ve got a design matrix $X \in \mathbb{R}^{n \times p}$.  Each column of $X$ is a predictor, and the span of those columns is a $p$-dimensional [Subspace](Subspace.md) of $\mathbb{R}^n$.
 
 Imagine $y$ as a point floating in 3D space, and $X$ as a tilted 2D plane. Regression doesn’t invent a new direction; it just drops $y$ straight down onto the plane. In higher dimensions, same story — only now the plane is a $p$-dimensional slab inside $\mathbb{R}^n$.
 

@@ -35,6 +35,10 @@ fi
 
 echo "Using mkdocs command: $MKDOCS"
 
+# Preprocess markdown: convert Obsidian wikilinks and callouts to MkDocs
+echo "Preprocessing markdown (Obsidian -> MkDocs) ..."
+$PYTHON_EXEC scripts/blog_automation.py --process-only --target "$SEARCH_DIR/pages/docs" -v || true
+
 # Build to ./site using the Vercel-specific config
 $MKDOCS build -f pages/mkdocs.vercel.yml -d site
 

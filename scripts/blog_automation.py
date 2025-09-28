@@ -88,7 +88,13 @@ class BlogAutomation:
                 content = original_content
                 for processor in self.processors:
                     self.log(f"  Applying {processor.name()}")
-                    content = processor.process(content)
+                    # Prefer processors that can use file path context
+                    if hasattr(processor, "process_with_path"):
+                        content = processor.process_with_path(
+                            content, md_file, self.target_dir
+                        )
+                    else:
+                        content = processor.process(content)
 
                 # Write back if content changed
                 if content != original_content:

@@ -1,7 +1,7 @@
 /* Tone down <strong> weight and color for better aesthetics */
 b,
 strong {
-    font-weight: 600; /* semibold instead of bold */
+    font-weight: 500 !important; /* force medium for all bold */
     color: var(--color-gray-800);
 }
 
@@ -9,6 +9,11 @@ strong {
 .dark b,
 .dark strong {
     color: var(--color-gray-300);
+}
+
+/* Normalize font weight scale for semibold to 500 */
+:root, :host {
+    --font-weight-semibold: 500;
 }
 
 /* Aesthetic link styling within page content */
@@ -26,4 +31,33 @@ strong {
 
 .typography a:not([data-slot]):hover {
     box-shadow: 0 0 0 3px rgba(250, 247, 239, 0.5);
+}
+
+/* Ensure headings also use 500 weight */
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6,
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500 !important;
+}
+
+/* Sidebar menu button: allow multiline without overlap */
+[data-slot="sidebar-menu-button"] {
+    height: auto !important;
+    line-height: 1.3; /* match base for readable wrap */
+}
+[data-slot="sidebar-menu-button"]::after {
+    top: 0 !important;
+    bottom: 0 !important; /* neutralize -inset-y-1 overlap */
+}
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6 {
+    font-weight: 500 !important;
 }

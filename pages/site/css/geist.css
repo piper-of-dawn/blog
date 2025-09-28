@@ -12,6 +12,55 @@
   font-display: swap;
 }
 
+/* DM Mono font faces */
+@font-face {
+  font-family: "DM Mono";
+  font-style: normal;
+  src: url("../fonts/DM_Mono/DMMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  font-style: italic;
+  src: url("../fonts/DM_Mono/DMMono-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  font-style: normal;
+  src: url("../fonts/DM_Mono/DMMono-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  font-style: italic;
+  src: url("../fonts/DM_Mono/DMMono-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  font-style: normal;
+  src: url("../fonts/DM_Mono/DMMono-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  font-style: italic;
+  src: url("../fonts/DM_Mono/DMMono-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "Inter";
   font-style: normal;

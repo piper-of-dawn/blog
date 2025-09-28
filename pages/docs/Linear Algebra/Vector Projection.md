@@ -13,7 +13,7 @@ To be considered as a basis, a set of vectors must:
 - Be linearly independent
 - Span the space
 Basis vectors can be orthogonal because orthogonal vectors are independent. However, the converse is not necessarily true: non-orthogonal vectors can be linearly independent and thus form a basis (but not a standard basis).
-![[Pasted image 20250429102423.png]]
+![Pasted image 20250429102423.png](Pasted image 20250429102423.png)
 
 ### Change of Basis
 Suppose we have a vector $\begin{pmatrix} 1 \cr 3 \end{pmatrix}$ or $1\hat{i} + 3\hat{j}$. Here $\hat{i}$ and $\hat{j}$ are the basis vectors. These vectors are also known as a standard basis. Here, $\hat{i}$ is a unit vector in the $x$ direction and $\hat{j}$ is a unit vector in the $y$ direction. 

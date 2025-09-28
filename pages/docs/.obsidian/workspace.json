@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CFA/Contingency Provisions.md",
+                "file": "CFA/Bond Duration.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Contingency Provisions"
+              "title": "Bond Duration"
             }
           }
         ]
@@ -171,6 +171,7 @@
   },
   "active": "a9e531b9876ccba7",
   "lastOpenFiles": [
+    "CFA/Contingency Provisions.md",
     "Legal Terms Related to Bonds.md",
     "DSA/Trie.md",
     "Annuity Calculation.md",
@@ -198,7 +199,6 @@
     "C++/Shared vs Static libraries.md",
     "Rust/Error.md",
     "Books/The Zen and the Art of Motorcycle Maintenance.md",
-    "Affirmations.md",
     "Pasted image 20250831192533.png",
     "Journal",
     "dp.png",
