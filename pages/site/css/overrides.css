@@ -25,6 +25,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500 !important;
 }
 
+/* Ensure headings use DM Mono consistently */
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6,
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mono), monospace !important;
+}
+
 /* Sidebar menu button: allow multiline without overlap */
 [data-slot="sidebar-menu-button"] {
   height: auto !important;
