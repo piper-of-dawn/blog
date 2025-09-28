@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CFA/Bond Duration.md",
+                "file": "CFA/Contingency Provisions.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Bond Duration"
+              "title": "Contingency Provisions"
             }
           }
         ]
@@ -171,7 +171,11 @@
   },
   "active": "a9e531b9876ccba7",
   "lastOpenFiles": [
+    "CFA/Yeild to Maturity.md",
+    "CFA/Yeild to Maturity.md~",
     "CFA/Contingency Provisions.md",
+    "CFA/Contingency Provisions.md~",
+    "CFA/Bond Duration.md",
     "Legal Terms Related to Bonds.md",
     "DSA/Trie.md",
     "Annuity Calculation.md",
@@ -196,9 +200,6 @@
     "Linear Algebra/Vector Subspace.md",
     "Advanced Credit Risk",
     "Diary/End of Summer 2025.md",
-    "C++/Shared vs Static libraries.md",
-    "Rust/Error.md",
-    "Books/The Zen and the Art of Motorcycle Maintenance.md",
     "Pasted image 20250831192533.png",
     "Journal",
     "dp.png",
@@ -209,8 +210,6 @@
     "WIP",
     "Quant Finance",
     "Linear Algebra/Pasted image 20250429102423.png",
-    "Dark Arts",
-    "Arts",
     "Cinematography/images/Pasted image 20250504140713.png",
     "Cinematography/images/Pasted image 20250504141020.png",
     "Cinematography/images/Pasted image 20250504140850.png"

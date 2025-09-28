@@ -1,6 +1,24 @@
 {
   "fonts": [
     {
+      "id": "dm-mono",
+      "family": "DM Mono",
+      "subsets": [
+        "latin",
+        "latin-ext"
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ],
+      "weights": [
+        300,
+        400,
+        500
+      ],
+      "isActive": true
+    },
+    {
       "id": "roboto-mono",
       "family": "Roboto Mono",
       "subsets": [
@@ -46,6 +64,11 @@
     {
       "id": "roboto-mono",
       "family": "Roboto Mono",
+      "precedence": 0
+    },
+    {
+      "id": "dm-mono",
+      "family": "DM Mono",
       "precedence": 0
     }
   ],
