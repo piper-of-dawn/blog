@@ -20,7 +20,9 @@ two sweeteners stacked on top:
 
 Difference is: the convertible feature consumes the bond itself—you give up the bond when you convert. The warrant is separate and detachable—you can sell it, trade it, or exercise it without touching the bond.  
 
-So you’re lending money, earning coupons, and holding optionality twice: you can convert your bond into stock *and* you can keep (or even sell) the warrant.  
+So you’re lending money, earning coupons, and holding optionality twice: you can cfd  
+
+onvert your bond into stock *and* you can keep (or even sell) the warrant.  
 **Example:** A company issues a 5-year 5% bond. You can convert it into shares at \$50 each. On top, you get a warrant giving you the right to buy more shares at \$55 anytime in the next 3 years.  
 
 !!! warning  
