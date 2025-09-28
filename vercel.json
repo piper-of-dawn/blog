@@ -1,8 +1,33 @@
 {
   "version": 2,
-  "installCommand": "sh vercel-install.sh",
-  "devCommand": "sh vercel-dev.sh",
-  "buildCommand": "sh -c 'for d in . .. ../.. ../../.. /vercel/path0; do if [ -f \"$d/vercel-build.sh\" ]; then sh \"$d/vercel-build.sh\"; exit $?; fi; done; echo \"vercel-build.sh not found\" 1>&2; exit 1'",
+  "installCommand": "sh vercel.sh install",
+  "devCommand": "sh vercel.sh dev",
+  "buildCommand": "sh vercel.sh build",
   "outputDirectory": "site",
-  "routes": [{ "src": "/(.*)", "dest": "/$1" }]
+  "headers": [
+    {
+      "source": "/",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/(.*)/",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
 }
