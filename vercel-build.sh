@@ -16,8 +16,14 @@ if [ ! -f "$SEARCH_DIR/package.json" ]; then
 fi
 cd "$SEARCH_DIR"
 
-# Use the same Python executable that pip uses
-PYTHON_EXEC=$(which python3 || which python)
+# Prefer Vercel build venv, then project venv, then system python
+if [ -x .vercel_venv/bin/python ]; then
+  PYTHON_EXEC=.vercel_venv/bin/python
+elif [ -x .venv/bin/python ]; then
+  PYTHON_EXEC=.venv/bin/python
+else
+  PYTHON_EXEC=$(which python3 || which python)
+fi
 echo "Using Python: $PYTHON_EXEC"
 
 # Ensure pip is up to date and install local theme/plugins so mkdocs can resolve them
@@ -27,7 +33,9 @@ $PYTHON_EXEC -m pip install --upgrade pip
 $PYTHON_EXEC -m pip install -r requirements.txt .
 
 # Use python -m mkdocs for better compatibility in containerized environments
-if [ -x .venv/bin/mkdocs ]; then
+if [ -x .vercel_venv/bin/mkdocs ]; then
+  MKDOCS=.vercel_venv/bin/mkdocs
+elif [ -x .venv/bin/mkdocs ]; then
   MKDOCS=.venv/bin/mkdocs
 else
   MKDOCS="$PYTHON_EXEC -m mkdocs"
