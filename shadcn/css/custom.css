@@ -1,0 +1,58 @@
+/* @font-face { */
+/*   font-family: "Supreme"; */
+/*   src: url("../fonts/Supreme/Supreme-Variable.ttf") format("truetype"); */
+/*   font-style: normal; */
+/*   font-weight: 100 900; */
+/*   font-display: swap; */
+/* } */
+/**/
+/* @font-face { */
+/*   font-family: "Supreme"; */
+/*   src: url("../fonts/Supreme/Supreme-VariableItalic.ttf") format("truetype"); */
+/*   font-style: italic; */
+/*   font-weight: 100 900; */
+/*   font-display: swap; */
+/* } */
+/**/
+/* :root { */
+/*   font-size: 110%; */
+/*   --font-sans: "Supreme", sans-serif; */
+/*   --font-inter: "Supreme", sans-serif; */
+/* } */
+/**/
+article .arithmatex {
+  max-width: 100%;
+}
+
+article .arithmatex .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+  scrollbar-width: thin;
+}
+
+article .arithmatex .katex-display > .katex {
+  min-width: max-content;
+}
+
+[data-sidebar="menu-button"] {
+  height: auto !important;
+  min-height: 2.25rem;
+  align-items: flex-start;
+  line-height: 1.35;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+[data-sidebar="menu-button"] > span:last-child,
+[data-sidebar="menu-button"] {
+  text-wrap: pretty;
+}
+
+article > pre,
+article .codehilite,
+article .admonition .codehilite {
+  background: #f6efb8;
+  border: 1px solid #e7dc94;
+}

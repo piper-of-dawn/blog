@@ -3,7 +3,7 @@ name: Pages
 on:
   push:
     branches:
-      - master
+      - clean
   # workflow_dispatch allows the site to be rebuilt and published manually if needed
   workflow_dispatch:
 

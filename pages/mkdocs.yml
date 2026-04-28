@@ -4,6 +4,8 @@ site_description: "Documentation that also shines"
 site_author: "Alban Siffer <31479857+asiffer@users.noreply.github.com>"
 dev_addr: "127.0.0.1:8080"
 repo_url: "https://github.com/asiffer/mkdocs-shadcn"
+extra_css:
+  - css/custom.css
 theme:
   name: shadcn
   icon: null
@@ -29,10 +31,12 @@ plugins:
 
 markdown_extensions:
   admonition:
+  shadcn.extensions.obsidian_callouts:
   codehilite:
   fenced_code:
   footnotes:
   extra:
+  pymdownx.details:
   pymdownx.blocks.details:
   pymdownx.tabbed:
   pymdownx.blocks.tab:
