@@ -1,9 +1,9 @@
-site_name: "mkdocs-shadcn"
-site_url: "https://asiffer.github.io/mkdocs-shadcn"
+site_name: "blog"
+site_url: "https://piper-of-dawn.github.io/blog/"
 site_description: "Documentation that also shines"
-site_author: "Alban Siffer <31479857+asiffer@users.noreply.github.com>"
+site_author: "Kumar Shantanu <kumarshan25@gmail.com>"
 dev_addr: "127.0.0.1:8080"
-repo_url: "https://github.com/asiffer/mkdocs-shadcn"
+repo_url: "https://github.com/piper-of-dawn/blog"
 extra_css:
   - css/custom.css
 theme:
