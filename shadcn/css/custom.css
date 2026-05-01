@@ -37,7 +37,13 @@ article mark {
   -webkit-box-decoration-break: clone;
 }
 
-.dark article mark { --mark-color: 214 156 24; }
+.dark article mark {
+  --mark-color: 156 118 34;
+  background:
+    conic-gradient(at 0 100%, rgb(var(--mark-color) / 70%) 1%, #fff0 3%) no-repeat 0 0 / auto 120%,
+    conic-gradient(from 180deg at 100% 0, #fff0, rgb(var(--mark-color) / 70%) 1%, #fff0 4%) no-repeat 100% 100% / auto 120%,
+    linear-gradient(var(--mark-bg-angle), rgb(var(--mark-color) / 34%), rgb(var(--mark-color) / 14%) 75%, rgb(var(--mark-color) / 30%)) no-repeat center / auto;
+}
 
 article mark:nth-of-type(3n + 2) {
   --mark-color: 91 233 92;
@@ -139,7 +145,7 @@ article details.question {
 article .admonition.example,
 article details.example {
   --callout-color: #9333ea;
-  --callout-icon: url("https://api.iconify.design/lucide/flask-conical.svg");
+  --callout-icon: url("https://api.iconify.design/lucide/book-open-check.svg");
   border-color: rgb(147 51 234 / 42%);
   background: rgb(147 51 234 / 10%);
 }
