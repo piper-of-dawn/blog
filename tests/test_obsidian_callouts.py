@@ -20,7 +20,7 @@ def test_obsidian_callout_renders_as_admonition():
         "> Reuse MkDocs admonition styling.\n"
     )
 
-    assert '<div class="admonition success">' in html
+    assert '<div class="admonition tip">' in html
     assert '<p class="admonition-title">Quick checks</p>' in html
     assert "<p>Keep the source vault untouched.</p>" in html
     assert "<p>Reuse MkDocs admonition styling.</p>" in html
@@ -35,6 +35,16 @@ def test_obsidian_folded_callout_uses_details_syntax():
     assert "<details" in html
     assert "<summary>TLDR</summary>" in html
     assert "<p>Summary line.</p>" in html
+
+
+def test_obsidian_callout_preserves_question_class():
+    html = render(
+        "> [!question] Quick numerical\n"
+        "> What is the answer?\n"
+    )
+
+    assert '<div class="admonition question">' in html
+    assert '<p class="admonition-title">Quick numerical</p>' in html
 
 
 def test_obsidian_mark_highlight_renders_mark_tag():

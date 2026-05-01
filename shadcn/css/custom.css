@@ -49,50 +49,115 @@ article mark:nth-of-type(3n + 3) {
   --mark-bg-angle: 150deg;
 }
 
+article .admonition,
+article details {
+  --callout-color: currentColor;
+  --callout-icon: url("https://api.iconify.design/lucide/file-text.svg");
+}
+
 article .admonition > p.admonition-title,
 article details > summary {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.5rem;
+  color: var(--callout-color);
 }
 
 article .admonition > p.admonition-title::before,
 article details > summary::before {
   content: "";
-  width: 1rem;
-  height: 1rem;
-  flex: 0 0 1rem;
-  background-color: currentColor;
+  width: 1.08rem;
+  height: 1.08rem;
+  flex: 0 0 1.08rem;
+  background-color: var(--callout-color);
+  mask-image: var(--callout-icon);
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
+  -webkit-mask-image: var(--callout-icon);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
 }
 
-article .admonition.info > p.admonition-title::before,
-article details.info > summary::before {
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4'/%3E%3Cpath d='M12 8h.01'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4'/%3E%3Cpath d='M12 8h.01'/%3E%3C/svg%3E");
+article .admonition.note,
+article details.note {
+  --callout-color: #5b6ee1;
+  --callout-icon: url("https://api.iconify.design/lucide/notebook-tabs.svg");
+  border-color: rgb(91 110 225 / 42%);
+  background: rgb(91 110 225 / 10%);
 }
 
-article .admonition.warning > p.admonition-title::before,
-article details.warning > summary::before {
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E");
+article .admonition.abstract,
+article details.abstract {
+  --callout-color: #7c3aed;
+  --callout-icon: url("https://api.iconify.design/lucide/list-checks.svg");
+  border-color: rgb(124 58 237 / 42%);
+  background: rgb(124 58 237 / 10%);
 }
 
-article .admonition.danger > p.admonition-title::before,
-article details.danger > summary::before {
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='15' x2='9' y1='9' y2='15'/%3E%3Cline x1='9' x2='15' y1='9' y2='15'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='15' x2='9' y1='9' y2='15'/%3E%3Cline x1='9' x2='15' y1='9' y2='15'/%3E%3C/svg%3E");
+article .admonition.info,
+article details.info {
+  --callout-color: #2563eb;
+  --callout-icon: url("https://api.iconify.design/lucide/info.svg");
 }
 
-article .admonition.success > p.admonition-title::before,
-article details.success > summary::before {
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+article .admonition.tip,
+article details.tip {
+  --callout-color: #16a34a;
+  --callout-icon: url("https://api.iconify.design/lucide/lightbulb.svg");
+  border-color: rgb(22 163 74 / 42%);
+  background: rgb(22 163 74 / 10%);
+}
+
+article .admonition.warning,
+article details.warning {
+  --callout-color: #d97706;
+  --callout-icon: url("https://api.iconify.design/lucide/triangle-alert.svg");
+}
+
+article .admonition.danger,
+article details.danger {
+  --callout-color: #dc2626;
+  --callout-icon: url("https://api.iconify.design/lucide/octagon-alert.svg");
+}
+
+article .admonition.success,
+article details.success {
+  --callout-color: #059669;
+  --callout-icon: url("https://api.iconify.design/lucide/circle-check-big.svg");
+}
+
+article .admonition.question,
+article details.question {
+  --callout-color: #0d9488;
+  --callout-icon: url("https://api.iconify.design/lucide/circle-help.svg");
+  border-color: rgb(13 148 136 / 42%);
+  background: rgb(13 148 136 / 10%);
+}
+
+article .admonition.example,
+article details.example {
+  --callout-color: #9333ea;
+  --callout-icon: url("https://api.iconify.design/lucide/flask-conical.svg");
+  border-color: rgb(147 51 234 / 42%);
+  background: rgb(147 51 234 / 10%);
+}
+
+article .admonition.quote,
+article details.quote {
+  --callout-color: #64748b;
+  --callout-icon: url("https://api.iconify.design/lucide/quote.svg");
+  border-color: rgb(100 116 139 / 42%);
+  background: rgb(100 116 139 / 10%);
+}
+
+article .admonition.todo,
+article details.todo {
+  --callout-color: #0891b2;
+  --callout-icon: url("https://api.iconify.design/lucide/circle-plus.svg");
+  border-color: rgb(8 145 178 / 42%);
+  background: rgb(8 145 178 / 10%);
 }
 
 article .arithmatex .katex-display {
