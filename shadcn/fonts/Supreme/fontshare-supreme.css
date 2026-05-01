@@ -1,0 +1,66 @@
+/* Supreme */
+@font-face {
+  font-family: 'Supreme';
+  src: url('//cdn.fontshare.com/wf/SXOY54OPHQ5GORKTE5K4LHJ5E4UDSTBU/3W4DXXBZIIUZAF7R7P3XS335E67EFNWF/3TQJM3LST7JIZJBUX4IH5OAMDJS4D5BC.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/SXOY54OPHQ5GORKTE5K4LHJ5E4UDSTBU/3W4DXXBZIIUZAF7R7P3XS335E67EFNWF/3TQJM3LST7JIZJBUX4IH5OAMDJS4D5BC.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/SXOY54OPHQ5GORKTE5K4LHJ5E4UDSTBU/3W4DXXBZIIUZAF7R7P3XS335E67EFNWF/3TQJM3LST7JIZJBUX4IH5OAMDJS4D5BC.ttf') format('truetype');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Supreme';
+  src: url('//cdn.fontshare.com/wf/J37Y74HE4TOUVE26XAVWLEQEHH3GQXQ5/LBZGSWOPU5DQUFKTBH4LBGGXKEJRC3LC/6IG5NRG4D4MEEF77CBE44JBJS4T2YCGU.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/J37Y74HE4TOUVE26XAVWLEQEHH3GQXQ5/LBZGSWOPU5DQUFKTBH4LBGGXKEJRC3LC/6IG5NRG4D4MEEF77CBE44JBJS4T2YCGU.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/J37Y74HE4TOUVE26XAVWLEQEHH3GQXQ5/LBZGSWOPU5DQUFKTBH4LBGGXKEJRC3LC/6IG5NRG4D4MEEF77CBE44JBJS4T2YCGU.ttf') format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Supreme';
+  src: url('//cdn.fontshare.com/wf/V3KAW2H4UCIIIUBD6S2PIWF3IF5MUSOJ/G3J6DZB2HINA35VD6CICETHD4ZJTLLPR/SPD5TGNFK2XOFPWN7JB26FTXSLXBKEAV.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/V3KAW2H4UCIIIUBD6S2PIWF3IF5MUSOJ/G3J6DZB2HINA35VD6CICETHD4ZJTLLPR/SPD5TGNFK2XOFPWN7JB26FTXSLXBKEAV.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/V3KAW2H4UCIIIUBD6S2PIWF3IF5MUSOJ/G3J6DZB2HINA35VD6CICETHD4ZJTLLPR/SPD5TGNFK2XOFPWN7JB26FTXSLXBKEAV.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Supreme';
+  src: url('//cdn.fontshare.com/wf/UDGUA26XVGIV6IQWMQNGGAL7FQZFY227/E6HQU6YVWTGYX3KW3DF66KAAJ224ZDU6/5ZZU4JM62PS7KOJ7BOKLPL3AEO2G76TS.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/UDGUA26XVGIV6IQWMQNGGAL7FQZFY227/E6HQU6YVWTGYX3KW3DF66KAAJ224ZDU6/5ZZU4JM62PS7KOJ7BOKLPL3AEO2G76TS.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/UDGUA26XVGIV6IQWMQNGGAL7FQZFY227/E6HQU6YVWTGYX3KW3DF66KAAJ224ZDU6/5ZZU4JM62PS7KOJ7BOKLPL3AEO2G76TS.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Supreme';
+  src: url('//cdn.fontshare.com/wf/OTYYUXNCZZI6EV6RSCAQFTGEGQ7JTD6B/45FLQUBI6DWIP6NYFVBTMKS6YPU3VYPT/GHZ524YD2KXKRX4PZ2S7DE3HKNPE2EKH.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/OTYYUXNCZZI6EV6RSCAQFTGEGQ7JTD6B/45FLQUBI6DWIP6NYFVBTMKS6YPU3VYPT/GHZ524YD2KXKRX4PZ2S7DE3HKNPE2EKH.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/OTYYUXNCZZI6EV6RSCAQFTGEGQ7JTD6B/45FLQUBI6DWIP6NYFVBTMKS6YPU3VYPT/GHZ524YD2KXKRX4PZ2S7DE3HKNPE2EKH.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Supreme';
+  src: url('//cdn.fontshare.com/wf/5T6APCD6XXAHAFTHDATQKT4RFVWRY3KR/VM6PC4PLGZYYJIHGMT63IIGYLTQKGSH6/TN7F4YNDQ3FJ6JRJV2XDS3CGMFKQRLXV.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/5T6APCD6XXAHAFTHDATQKT4RFVWRY3KR/VM6PC4PLGZYYJIHGMT63IIGYLTQKGSH6/TN7F4YNDQ3FJ6JRJV2XDS3CGMFKQRLXV.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/5T6APCD6XXAHAFTHDATQKT4RFVWRY3KR/VM6PC4PLGZYYJIHGMT63IIGYLTQKGSH6/TN7F4YNDQ3FJ6JRJV2XDS3CGMFKQRLXV.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Supreme';
+  src: url('//cdn.fontshare.com/wf/WXSRY43URIRE64IGP2UFEDZJJYHLYCJP/LPLI5YGMTUH4GME3PMZ7UXGVYY6S47NB/UPZ7O6SKOW5AF4XEN7NCNHHDMAAMYNSS.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/WXSRY43URIRE64IGP2UFEDZJJYHLYCJP/LPLI5YGMTUH4GME3PMZ7UXGVYY6S47NB/UPZ7O6SKOW5AF4XEN7NCNHHDMAAMYNSS.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/WXSRY43URIRE64IGP2UFEDZJJYHLYCJP/LPLI5YGMTUH4GME3PMZ7UXGVYY6S47NB/UPZ7O6SKOW5AF4XEN7NCNHHDMAAMYNSS.ttf') format('truetype');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+
