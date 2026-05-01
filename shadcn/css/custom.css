@@ -43,7 +43,6 @@ article mark {
     conic-gradient(at 0 100%, rgb(var(--mark-color) / 82%) 1%, #fff0 3%) no-repeat 0 0 / auto 120%,
     conic-gradient(from 180deg at 100% 0, #fff0, rgb(var(--mark-color) / 82%) 1%, #fff0 4%) no-repeat 100% 100% / auto 120%,
     linear-gradient(var(--mark-bg-angle), rgb(var(--mark-color) / 58%), rgb(var(--mark-color) / 38%) 75%, rgb(var(--mark-color) / 54%)) no-repeat center / auto;
-  color: #15130f;
 }
 
 article mark:nth-of-type(3n + 2) {
@@ -54,6 +53,33 @@ article mark:nth-of-type(3n + 2) {
 article mark:nth-of-type(3n + 3) {
   --mark-color: 255 100 185;
   --mark-bg-angle: 150deg;
+}
+
+article .typography {
+  counter-reset: article-step;
+}
+
+article .typography > ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+article .typography > ol > li {
+  counter-increment: article-step;
+  position: relative;
+  padding-left: 2.25rem;
+}
+
+article .typography > ol > li::before {
+  content: counter(article-step) ".";
+  position: absolute;
+  left: 0;
+  min-width: 1.65rem;
+  color: var(--muted-foreground);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  text-align: right;
 }
 
 article .admonition,
