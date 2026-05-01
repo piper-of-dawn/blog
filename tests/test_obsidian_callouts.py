@@ -6,6 +6,7 @@ def render(text: str) -> str:
         extensions=[
             "admonition",
             "pymdownx.details",
+            "pymdownx.mark",
             "shadcn.extensions.obsidian_callouts",
         ]
     ).convert(text)
@@ -34,3 +35,9 @@ def test_obsidian_folded_callout_uses_details_syntax():
     assert "<details" in html
     assert "<summary>TLDR</summary>" in html
     assert "<p>Summary line.</p>" in html
+
+
+def test_obsidian_mark_highlight_renders_mark_tag():
+    html = render("This is ==highlighted text==.")
+
+    assert "<mark>highlighted text</mark>" in html

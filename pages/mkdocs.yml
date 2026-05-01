@@ -43,6 +43,7 @@ markdown_extensions:
     combine_header_slug: true
     separator: ___
   pymdownx.progressbar:
+  pymdownx.mark:
   pymdownx.snippets:
   pymdownx.arithmatex:
     generic: true

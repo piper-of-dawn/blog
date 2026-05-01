@@ -6,6 +6,9 @@ on:
       - gh_pages
   # workflow_dispatch allows the site to be rebuilt and published manually if needed
   workflow_dispatch:
+  repository_dispatch:
+    types:
+      - notes-updated
 
 # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
 permissions:

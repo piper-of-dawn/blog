@@ -83,19 +83,25 @@ const onThemeSwitch = (event) => {
 const onBottomSidebarDialogClick = (event) => {
 	const dialog = document.getElementById("bottom-sidebar");
 	if (dialog && event.target === dialog) {
-		dialog.close();
-		const button = document.getElementById("menu-button");
-		if (button) {
-			button.dataset.state = "closed";
-		}
+		onBottomSidebarClose();
+	}
+};
+
+const onBottomSidebarClose = () => {
+	const dialog = document.getElementById("bottom-sidebar");
+	dialog?.close();
+	const button = document.getElementById("menu-button");
+	if (button) {
+		button.dataset.state = "closed";
+		button.setAttribute("aria-expanded", "false");
 	}
 };
 
 const onMobileMenuButtonClick = (event) => {
-	event.currentTarget.dataset.state =
-		event.target.dataset.state === "open" ? "closed" : "open";
+	event.currentTarget.dataset.state = "open";
+	event.currentTarget.setAttribute("aria-expanded", "true");
 	const dialog = document.getElementById("bottom-sidebar");
-	if (dialog) {
+	if (dialog && !dialog.open) {
 		dialog.showModal();
 	}
 };
