@@ -325,4 +325,23 @@ article .admonition .codehilite {
   article .admonition {
     font-size: 0.95rem;
   }
+   .katex-display,
+
+  .MathJax_Display {
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    padding-bottom: 0.25rem;
+
+  }
+
+  .katex-display > .katex {
+
+    display: inline-block;
+
+    min-width: 100%;
+
+  }
 }
