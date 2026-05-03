@@ -325,14 +325,12 @@ article .admonition .codehilite {
   article .admonition {
     font-size: 1.15rem;
   }
-   .katex-display,
-
-  .MathJax_Display {
+   .katex-display {
 
     overflow-x: auto;
 
     overflow-y: hidden;
-
+    max-width: 100%;
     padding-bottom: 0.25rem;
 
   }
@@ -341,9 +339,18 @@ article .admonition .codehilite {
 
     display: inline-block;
 
-    min-width: 100%;
+    min-width: max-content;
 
   }
+  /* 1. Freeze page horizontally */
+
+html, body {
+
+  max-width: 100%;
+
+  overflow-x: hidden;
+
+}
 }
 
 article .katex,
