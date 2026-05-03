@@ -319,11 +319,11 @@ article .admonition .codehilite {
 
 @media (max-width: 767px) {
   article {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   article .admonition {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
    .katex-display,
 
