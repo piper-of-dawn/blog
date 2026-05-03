@@ -345,3 +345,11 @@ article .admonition .codehilite {
 
   }
 }
+
+article .katex,
+
+article .MathJax {
+
+  font-size: 1em;
+
+}
