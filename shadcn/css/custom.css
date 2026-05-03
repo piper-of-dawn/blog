@@ -316,6 +316,13 @@ article .admonition .codehilite {
   border: 1px solid #e8ddba;
 }
 
-article {
-font-size: larger;
+
+@media (max-width: 767px) {
+  article {
+    font-size: 1.05rem;
+  }
+
+  article .admonition {
+    font-size: 0.95rem;
+  }
 }
