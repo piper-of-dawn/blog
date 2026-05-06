@@ -3,7 +3,7 @@ article details:not(:first-of-type) {
 }
 
 article details {
-	@apply [&:not(:first-child)]:mt-6 border-b text-sm py-4 mt-0;
+	@apply [&:not(:first-child)]:mt-6 border-b py-4 mt-0;
 }
 
 article details summary {
@@ -27,7 +27,7 @@ article details[open] summary::after {
 }
 
 article details[open] > p {
-	@apply py-2 mt-0 text-sm font-normal no-underline;
+	@apply py-2 mt-0 font-normal no-underline;
 }
 
 article details[open] > p:last-child {

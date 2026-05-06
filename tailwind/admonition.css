@@ -3,7 +3,7 @@
 } */
 
 article .admonition {
-	@apply relative border px-4 py-3 text-sm w-auto rounded-xl border-surface bg-surface text-card-foreground/80 md:-mx-1 [&_code]:border [&_code]:bg-transparent mt-6;
+	@apply relative border px-4 py-3 w-auto rounded-xl border-surface bg-surface text-card-foreground/80 md:-mx-1 [&_code]:border [&_code]:bg-transparent mt-6;
 }
 
 article .admonition > p:nth-child(1) {

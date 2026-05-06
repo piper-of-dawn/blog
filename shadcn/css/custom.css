@@ -38,11 +38,13 @@ article mark {
 }
 
 .dark article mark {
-  --mark-color: 184 134 35;
-  background:
-    conic-gradient(at 0 100%, rgb(var(--mark-color) / 82%) 1%, #fff0 3%) no-repeat 0 0 / auto 120%,
-    conic-gradient(from 180deg at 100% 0, #fff0, rgb(var(--mark-color) / 82%) 1%, #fff0 4%) no-repeat 100% 100% / auto 120%,
-    linear-gradient(var(--mark-bg-angle), rgb(var(--mark-color) / 58%), rgb(var(--mark-color) / 38%) 75%, rgb(var(--mark-color) / 54%)) no-repeat center / auto;
+  --mark-color: 130 92 24;
+  background: linear-gradient(
+    var(--mark-bg-angle),
+    rgb(var(--mark-color) / 70%),
+    rgb(var(--mark-color) / 55%) 75%,
+    rgb(var(--mark-color) / 68%)
+  ) no-repeat center / auto;
 }
 
 article mark:nth-of-type(3n + 2) {
