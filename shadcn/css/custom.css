@@ -195,6 +195,25 @@ article details.todo {
   background: rgb(8 145 178 / 10%);
 }
 
+/* Keep callout body content block-level so nested lists don't collapse inline. */
+article .admonition > p:first-child,
+article .admonition > p:nth-child(2) {
+  display: block;
+  margin: 0;
+}
+
+article .admonition > p.admonition-title {
+  margin: 0;
+}
+
+article .admonition > :not(.admonition-title) {
+  margin-top: 0.75rem;
+}
+
+article .admonition li {
+  display: list-item;
+}
+
 article .arithmatex .katex-display {
   max-width: 100%;
   overflow-x: auto;
