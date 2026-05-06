@@ -317,3 +317,33 @@ article .admonition .codehilite {
   background: #fff9eb;
   border: 1px solid #e8ddba;
 }
+
+
+@media (max-width: 767px) {
+  article {
+    font-size: 1.05rem;
+  }
+
+  article .admonition {
+    font-size: 0.95rem;
+  }
+   .katex-display,
+
+  .MathJax_Display {
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    padding-bottom: 0.25rem;
+
+  }
+
+  .katex-display > .katex {
+
+    display: inline-block;
+
+    min-width: 100%;
+
+  }
+}
