@@ -6,70 +6,6 @@
 }
 
 @font-face {
-  font-family: "JetBrains Mono Nerd Font Propo";
-  src: url("../fonts/JetBrainsMonoNerdFontPropo/JetBrainsMonoNerdFontPropo-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono Nerd Font Propo";
-  src: url("../fonts/JetBrainsMonoNerdFontPropo/JetBrainsMonoNerdFontPropo-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono Nerd Font Propo";
-  src: url("../fonts/JetBrainsMonoNerdFontPropo/JetBrainsMonoNerdFontPropo-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono Nerd Font Propo";
-  src: url("../fonts/JetBrainsMonoNerdFontPropo/JetBrainsMonoNerdFontPropo-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono Nerd Font Propo";
-  src: url("../fonts/JetBrainsMonoNerdFontPropo/JetBrainsMonoNerdFontPropo-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono Nerd Font Propo";
-  src: url("../fonts/JetBrainsMonoNerdFontPropo/JetBrainsMonoNerdFontPropo-SemiBoldItalic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono Nerd Font Propo";
-  src: url("../fonts/JetBrainsMonoNerdFontPropo/JetBrainsMonoNerdFontPropo-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono Nerd Font Propo";
-  src: url("../fonts/JetBrainsMonoNerdFontPropo/JetBrainsMonoNerdFontPropo-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Geist Mono";
   src: url("../fonts/GeistMono.woff2") format("woff2");
   font-weight: 100 900;
@@ -90,10 +26,4 @@
   src: url("../fonts/Inter-Italic.woff2") format("woff2");
   font-weight: 100 900;
   font-display: swap;
-}
-
-:root {
-  --font-inter: "JetBrains Mono Nerd Font Propo", monospace;
-  --font-sans: "JetBrains Mono Nerd Font Propo", monospace;
-  --font-mono: "JetBrains Mono Nerd Font Propo", monospace;
 }
