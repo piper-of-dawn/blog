@@ -17,6 +17,65 @@
 :root {
   --font-sans: "Supreme", sans-serif;
   --font-inter: "Supreme", sans-serif;
+  font-size: 108%;
+}
+
+article {
+  font-family: "JetBrains Mono", var(--font-sans);
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: normal;
+  font-feature-settings: "liga" 1, "calt" 1, "tnum" 1;
+}
+
+article p {
+  line-height: 1.82;
+  letter-spacing: -0.012em;
+  word-spacing: -0.02em;
+  text-wrap: pretty;
+}
+
+article li {
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+article strong,
+article b {
+  font-weight: 500;
+}
+
+article #page-header h1,
+article .typography h2,
+article .typography h3,
+article .typography h4 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: manual;
+  text-wrap: pretty;
+}
+
+article #page-header h1 {
+  font-size: 1.5rem;
+  line-height: 1.95rem;
+}
+
+article .typography h2 {
+  font-size: 1.125rem;
+  line-height: 1.55rem;
+}
+
+article .typography h3 {
+  font-size: 1rem;
+  line-height: 1.45rem;
+}
+
+article .typography h4 {
+  font-size: 0.875rem;
+  line-height: 1.3rem;
 }
 
 article .arithmatex {
@@ -71,6 +130,11 @@ article .typography > ol > li {
   counter-increment: article-step;
   position: relative;
   padding-left: 2.25rem;
+  line-height: 1.95;
+}
+
+article .typography > ol > li + li {
+  margin-top: 0.55rem;
 }
 
 article .typography > ol > li::before {
