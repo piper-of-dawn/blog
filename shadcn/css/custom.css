@@ -284,8 +284,8 @@ article details.todo {
 }
 
 /* Keep callout body content block-level so nested lists don't collapse inline. */
-article .admonition > p:first-child,
-article .admonition > p:nth-child(2) {
+article .admonition > p:not(.admonition-title):first-child,
+article .admonition > p:not(.admonition-title):nth-child(2) {
   display: block;
   margin: 0;
 }
