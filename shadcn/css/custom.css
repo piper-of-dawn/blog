@@ -22,23 +22,49 @@
 
 article {
   font-family: var(--font-sans);
+  font-size: 16px;
+  color: #000;
+  line-height: 1.78;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-synthesis: none;
   font-synthesis-weight: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
   font-kerning: normal;
-  font-feature-settings: "liga" 1, "calt" 1, "tnum" 1;
+  font-variant-ligatures: common-ligatures contextual;
+  font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+}
+
+/* Apple displays usually benefit from lighter grayscale smoothing. */
+@supports (-webkit-touch-callout: none) {
+  article {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 410;
+  }
+}
+
+/* Firefox on Linux/Windows tends to look crisper without extra smoothing overrides. */
+@supports (-moz-appearance: none) {
+  article {
+    text-rendering: auto;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    font-weight: 400;
+  }
 }
 
 article p {
-  line-height: 1.82;
-  letter-spacing: -0.012em;
-  word-spacing: -0.02em;
+  line-height: 1.84;
+  letter-spacing: -0.011em;
+  word-spacing: -0.015em;
   text-wrap: pretty;
 }
 
 article li {
-  line-height: 1.8;
+  line-height: 1.78;
   letter-spacing: -0.01em;
   text-wrap: pretty;
 }
@@ -107,13 +133,13 @@ article mark {
 }
 
 article mark:nth-of-type(3n + 2) {
-  --mark-color: 91 233 92;
-  --mark-bg-angle: 30deg;
+  --mark-color: 245 214 73;
+  --mark-bg-angle: 42deg;
 }
 
 article mark:nth-of-type(3n + 3) {
-  --mark-color: 255 100 185;
-  --mark-bg-angle: 150deg;
+  --mark-color: 234 193 63;
+  --mark-bg-angle: 138deg;
 }
 
 article .typography {
@@ -150,8 +176,13 @@ article .typography > ol > li::before {
 
 article .admonition,
 article details {
-  --callout-color: currentColor;
+  --callout-color: #171717;
+  --callout-border: rgb(163 163 163 / 36%);
+  --callout-background: rgb(245 245 244 / 82%);
   --callout-icon: url("https://api.iconify.design/lucide/file-text.svg");
+  border-color: var(--callout-border);
+  background: var(--callout-background);
+  overflow: hidden;
 }
 
 article .admonition > p.admonition-title,
@@ -160,14 +191,20 @@ article details > summary {
   align-items: center;
   gap: 0.5rem;
   color: var(--callout-color);
+  padding: 0.72rem 0.9rem 0;
+  line-height: 1.3;
+  background: transparent;
+  border-bottom: 0;
 }
 
 article .admonition > p.admonition-title::before,
 article details > summary::before {
   content: "";
+  display: block;
   width: 1.08rem;
   height: 1.08rem;
   flex: 0 0 1.08rem;
+  opacity: 1;
   background-color: var(--callout-color);
   mask-image: var(--callout-icon);
   mask-repeat: no-repeat;
@@ -181,82 +218,69 @@ article details > summary::before {
 
 article .admonition.note,
 article details.note {
-  --callout-color: #5b6ee1;
   --callout-icon: url("https://api.iconify.design/lucide/notebook-tabs.svg");
-  border-color: rgb(91 110 225 / 42%);
-  background: rgb(91 110 225 / 10%);
 }
 
 article .admonition.abstract,
 article details.abstract {
-  --callout-color: #7c3aed;
+  --callout-border: rgb(214 174 44 / 42%);
+  --callout-background: rgb(245 214 73 / 11%);
+  --callout-color: rgb(138 104 20);
   --callout-icon: url("https://api.iconify.design/lucide/list-checks.svg");
-  border-color: rgb(124 58 237 / 42%);
-  background: rgb(124 58 237 / 10%);
 }
 
 article .admonition.info,
 article details.info {
-  --callout-color: #2563eb;
   --callout-icon: url("https://api.iconify.design/lucide/info.svg");
 }
 
 article .admonition.tip,
 article details.tip {
-  --callout-color: #16a34a;
+  --callout-border: rgb(214 174 44 / 42%);
+  --callout-background: rgb(245 214 73 / 11%);
+  --callout-color: rgb(138 104 20);
   --callout-icon: url("https://api.iconify.design/lucide/lightbulb.svg");
-  border-color: rgb(22 163 74 / 42%);
-  background: rgb(22 163 74 / 10%);
 }
 
 article .admonition.warning,
 article details.warning {
-  --callout-color: #d97706;
+  --callout-border: rgb(214 174 44 / 42%);
+  --callout-background: rgb(245 214 73 / 11%);
+  --callout-color: rgb(138 104 20);
   --callout-icon: url("https://api.iconify.design/lucide/triangle-alert.svg");
 }
 
 article .admonition.danger,
 article details.danger {
-  --callout-color: #dc2626;
+  --callout-color: #991b1b;
+  --callout-border: rgb(220 38 38 / 42%);
+  --callout-background: rgb(220 38 38 / 10%);
   --callout-icon: url("https://api.iconify.design/lucide/octagon-alert.svg");
 }
 
 article .admonition.success,
 article details.success {
-  --callout-color: #059669;
   --callout-icon: url("https://api.iconify.design/lucide/circle-check-big.svg");
 }
 
 article .admonition.question,
 article details.question {
-  --callout-color: #0d9488;
   --callout-icon: url("https://api.iconify.design/lucide/circle-help.svg");
-  border-color: rgb(13 148 136 / 42%);
-  background: rgb(13 148 136 / 10%);
 }
 
 article .admonition.example,
 article details.example {
-  --callout-color: #9333ea;
   --callout-icon: url("https://api.iconify.design/lucide/book-open-check.svg");
-  border-color: rgb(147 51 234 / 42%);
-  background: rgb(147 51 234 / 10%);
 }
 
 article .admonition.quote,
 article details.quote {
-  --callout-color: #64748b;
   --callout-icon: url("https://api.iconify.design/lucide/quote.svg");
-  border-color: rgb(100 116 139 / 42%);
-  background: rgb(100 116 139 / 10%);
 }
 
 article .admonition.todo,
 article details.todo {
-  --callout-color: #0891b2;
   --callout-icon: url("https://api.iconify.design/lucide/circle-plus.svg");
-  border-color: rgb(8 145 178 / 42%);
-  background: rgb(8 145 178 / 10%);
 }
 
 /* Keep callout body content block-level so nested lists don't collapse inline. */
@@ -268,10 +292,26 @@ article .admonition > p:nth-child(2) {
 
 article .admonition > p.admonition-title {
   margin: 0;
+  flex-wrap: nowrap;
 }
 
 article .admonition > :not(.admonition-title) {
   margin-top: 0.75rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+}
+
+article details > summary {
+  list-style: none;
+}
+
+article details > summary::-webkit-details-marker {
+  display: none;
+}
+
+article .admonition > :last-child,
+article details > :last-child {
+  padding-bottom: 0.85rem;
 }
 
 article .admonition li {
@@ -404,7 +444,7 @@ article .admonition .codehilite {
 
 @media (max-width: 767px) {
   article {
-    font-size: 1.05rem;
+    font-size: 16px;
   }
 
   article .admonition {
