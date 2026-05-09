@@ -21,7 +21,7 @@
 }
 
 article {
-  font-family: "JetBrains Mono", var(--font-sans);
+  font-family: var(--font-sans);
   font-synthesis-weight: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
