@@ -2,7 +2,7 @@
   font-family: "Supreme";
   src: url("../fonts/Supreme/Supreme-Variable.ttf") format("truetype");
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: 100 500;
   font-display: swap;
 }
 
@@ -10,21 +10,20 @@
   font-family: "Supreme";
   src: url("../fonts/Supreme/Supreme-VariableItalic.ttf") format("truetype");
   font-style: italic;
-  font-weight: 100 900;
+  font-weight: 100 500;
   font-display: swap;
 }
 
 :root {
   --font-sans: "Supreme", sans-serif;
   --font-inter: "Supreme", sans-serif;
-  font-size: 108%;
 }
 
 article {
   font-family: var(--font-sans);
   font-size: 16px;
   color: #000;
-  line-height: 1.78;
+  line-height: 26px;
   font-weight: 400;
   font-optical-sizing: auto;
   font-synthesis: none;
@@ -32,7 +31,7 @@ article {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-  font-kerning: normal;
+  font-kerning: auto;
   font-variant-ligatures: common-ligatures contextual;
   font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
 }
