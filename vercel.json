@@ -1,0 +1,5 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "python -m pip install . 'mkdocstrings[python]>=0.26.1' && mkdocs build --strict --config-file pages/mkdocs.yml --site-dir public",
+  "outputDirectory": "public"
+}

@@ -1,0 +1,3 @@
+- Sign autocorrelation
+- Standard deviation
+- Cumulative return

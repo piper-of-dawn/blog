@@ -432,14 +432,6 @@ article .arithmatex .katex-display > .katex {
 .mobile-nav-depth-0 { font-size: 1.05rem; }
 .mobile-nav-depth-1, .mobile-nav-depth-2, .mobile-nav-depth-3 { font-size: 0.95rem; }
 
-article > pre,
-article .codehilite,
-article .admonition .codehilite {
-  background: #fff9eb;
-  border: 1px solid #e8ddba;
-}
-
-
 @media (max-width: 767px) {
   article {
     font-size: 16px;

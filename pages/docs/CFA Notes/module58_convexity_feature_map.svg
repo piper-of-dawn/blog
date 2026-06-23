@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect x="280" y="180" width="340" height="120" rx="18" fill="#fff" stroke="#0f172a" stroke-width="3"/>
+  <text x="365" y="250" font-family="Georgia, serif" font-size="34" fill="#0f172a">More Convexity</text>
+  <line x1="450" y1="70" x2="450" y2="175" stroke="#16a34a" stroke-width="6"/>
+  <polygon points="450,40 425,85 475,85" fill="#16a34a"/>
+  <text x="330" y="30" font-family="Arial, sans-serif" font-size="28" fill="#166534">Longer maturity</text>
+  <line x1="140" y1="240" x2="275" y2="240" stroke="#16a34a" stroke-width="6"/>
+  <polygon points="105,240 150,215 150,265" fill="#16a34a"/>
+  <text x="30" y="205" font-family="Arial, sans-serif" font-size="28" fill="#166534">Lower coupon</text>
+  <line x1="625" y1="240" x2="760" y2="240" stroke="#16a34a" stroke-width="6"/>
+  <polygon points="795,240 750,215 750,265" fill="#16a34a"/>
+  <text x="650" y="205" font-family="Arial, sans-serif" font-size="28" fill="#166534">Lower YTM</text>
+  <text x="215" y="380" font-family="Arial, sans-serif" font-size="24" fill="#475569">Same story as duration:</text>
+  <text x="215" y="415" font-family="Arial, sans-serif" font-size="24" fill="#475569">longer maturity, lower coupon, lower yield</text>
+  <text x="215" y="450" font-family="Arial, sans-serif" font-size="24" fill="#475569">all stretch cash flows and raise curvature.</text>
+</svg>

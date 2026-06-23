@@ -1,5 +1,5 @@
 site_name: "blog"
-site_url: "https://piper-of-dawn.github.io/blog/"
+site_url: !ENV [SITE_URL, ""]
 site_description: "Documentation that also shines"
 site_author: "Kumar Shantanu <kumarshan25@gmail.com>"
 dev_addr: "127.0.0.1:8080"

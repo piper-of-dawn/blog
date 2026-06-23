@@ -1,0 +1,791 @@
+Derivatives — Exam Callout
+
+[!tip] Read this before the exam
+Derivatives questions usually test four things: position direction, payoff vs profit, present value timing, and whether the formula uses spot, forward, or futures price.
+
+⸻
+
+Module 1: Derivative Instrument and Derivative Market Features
+
+[!important] Important formulas
+
+* Long forward payoff: ST − F0(T)
+* Short forward payoff: F0(T) − ST
+* Contract payoff: per-unit payoff × contract size
+* Core rule: long benefits when underlying rises; short benefits when underlying falls.
+
+1. Numerical: Derivative Settlement from Contract Size
+
+Stem: A forward contract covers 1,000 shares at EUR30 per share. At settlement, the shares are worth EUR25. What cash settlement does the short forward receive?
+
+Solution: First find the price difference from the short side: fixed price minus market price = EUR30 − EUR25 = EUR5. Then scale it by contract size: EUR5 × 1,000 = EUR5,000. The short receives EUR5,000 because the short sold at EUR30 when the market is only EUR25.
+
+Formula: Short payoff = (F0(T) − ST) × contract size
+
+Memory: Long likes price up; short likes price down.
+
+Trap: Do not stop at per-share payoff when the contract gives a notional size.
+
+⸻
+
+2. OTC vs Exchange-Traded Margin Logic
+
+Stem: A derivative user wants exact 73-day exposure on a foreign currency payment. Which market is more likely to fit the exposure: OTC or exchange traded?
+
+Solution: The exact date is the giveaway. Exchange-traded derivatives are standardized, so the date and contract size may not match. OTC contracts can be customized to the exact maturity and notional. Use OTC when matching terms matters more than liquidity.
+
+Memory: OTC fits the suit; exchange traded fits the rack.
+
+Trap: Do not choose exchange traded just because it is safer. The question asks for exact exposure matching.
+
+⸻
+
+3. Central Counterparty Risk
+
+Stem: A centrally cleared OTC contract removes direct counterparty credit risk between two users. What risk becomes more important to the market?
+
+Solution: The central counterparty steps between the two users and guarantees settlement. That reduces bilateral credit risk, but it concentrates risk in the central counterparty. The key remaining concern is whether the central counterparty can perform.
+
+Memory: Clearing moves credit risk to the middle.
+
+Trap: If the question says centrally cleared, think central counterparty/systemic risk, not “no risk.”
+
+⸻
+
+Module 2: Forward Commitment and Contingent Claim Features and Instruments
+
+[!important] Important formulas
+
+* Long forward payoff: (ST − F0) × quantity
+* Short forward payoff: (F0 − ST) × quantity
+* Call buyer profit: max(0, ST − X) − premium
+* Put buyer profit: max(0, X − ST) − premium
+* Call breakeven: X + premium
+* Put breakeven: X − premium
+* Margin call: refill account back to initial margin, not maintenance margin.
+
+1. Numerical: Long Forward Payoff
+
+Stem: A long forward contract has a forward price of USD64 on 1,000 barrels of oil. At maturity, spot is USD58.50. What is the long’s payoff?
+
+Solution: The long agreed to buy at USD64, but the market price is only USD58.50. That is bad for the long. Per barrel payoff is USD58.50 − USD64 = −USD5.50. Scale by 1,000 barrels: payoff is −USD5,500.
+
+Formula: Long forward payoff = (ST − F0(T)) × quantity
+
+Memory: Forward payoff is spot minus fixed for the buyer.
+
+Trap: The producer may be the seller, but calculate from the position named in the question.
+
+⸻
+
+2. Numerical: Futures Margin Call
+
+Stem: A long gold futures account starts with USD4,950 initial margin and USD4,500 maintenance margin. The futures price falls by USD5 per ounce on a 100-ounce contract. Is there a margin call, and how much?
+
+Solution: A long loses when futures price falls. Loss = USD5 × 100 = USD500. New balance = USD4,950 − USD500 = USD4,450. This is below the maintenance margin of USD4,500, so the trader must top the account back to initial margin. Margin call = USD4,950 − USD4,450 = USD500.
+
+Formula: Margin call = initial margin − balance after loss
+
+Memory: Below maintenance, refill to initial.
+
+Trap: Do not refill only to maintenance margin.
+
+⸻
+
+3. Numerical: Call Option Profit vs Payoff
+
+Stem: A call with exercise price USD45 costs USD6. At expiration, the stock is USD50. What is the buyer’s profit?
+
+Solution: First calculate payoff: the call lets the buyer buy at USD45 when market is USD50, so payoff = USD5. Then subtract the premium already paid: USD5 − USD6 = −USD1. The buyer had a positive payoff but still lost money overall.
+
+Formula: Call buyer profit = max(0, ST − X) − premium
+
+Memory: Payoff ignores premium; profit includes premium.
+
+Trap: CFA often asks profit after giving a premium.
+
+⸻
+
+4. Numerical: Put Option Breakeven
+
+Stem: A put has exercise price USD40 and premium USD3. Below what stock price does the put buyer earn a positive profit?
+
+Solution: A put pays when the stock is below the exercise price. Profit is positive only when payoff exceeds the premium. So the stock must fall below USD40 − USD3 = USD37.
+
+Formula: Put buyer breakeven = X − premium
+
+Memory: Put buyer needs spot below strike minus cost.
+
+Trap: Stock below strike gives positive payoff, not necessarily positive profit.
+
+⸻
+
+5. Forward Commitment vs Contingent Claim
+
+Stem: A short forward and a long put both benefit when the underlying falls. Which one can have unlimited loss when the underlying rises?
+
+Solution: The short forward must settle at maturity no matter what, so if the underlying rises far above the fixed price, the short forward keeps losing. The long put simply expires worthless, and the buyer loses only the premium.
+
+Memory: Forward must settle; option can walk away.
+
+Trap: Similar direction does not mean similar loss profile.
+
+⸻
+
+Module 3: Derivative Benefits, Risks, and Issuer and Investor Uses
+
+[!important] Important formulas
+
+* Leverage ratio: exposure / cash outlay
+* Interest cost: borrowed amount × annual rate × fraction of year
+* Basis risk: hedge value and exposure value stop moving together.
+* Liquidity risk: margin or cash-flow timing creates pressure before the hedge pays off.
+* Cash flow hedge: variable future cash flows made fixed.
+* Fair value hedge: existing fixed-value asset/liability protected against value changes.
+
+1. Numerical: Implicit Leverage from Futures Margin
+
+Stem: Spot gold exposure is USD177,000. A futures contract gives similar exposure with USD4,950 initial margin. What is the approximate exposure-to-cash leverage?
+
+Solution: Divide the exposure controlled by the cash posted: USD177,000 / USD4,950 = 35.8×. A small move in gold can become a large percentage gain or loss on margin.
+
+Formula: Leverage ratio = exposure / cash outlay
+
+Memory: Small margin, big exposure.
+
+Trap: Do not compare futures return to the full notional unless the question asks for underlying return.
+
+⸻
+
+2. Numerical: Opportunity Cost of Margin vs Cash Purchase
+
+Stem: Borrowing costs are 5% per year. Compare the three-month interest cost of borrowing USD4,950 for futures margin versus USD177,000 for a spot gold purchase.
+
+Solution: Use three months as one-quarter of a year. Margin interest = USD4,950 × 5% / 4 = USD61.88. Spot purchase interest = USD177,000 × 5% / 4 = USD2,212.50. The futures position uses much less cash, but the exposure is still large.
+
+Memory: Futures reduce cash outlay, not economic exposure.
+
+Trap: Low initial cash does not mean low risk.
+
+⸻
+
+3. Basis Risk vs Liquidity Risk
+
+Stem: A hedge uses a futures contract on an index similar to, but not exactly the same as, the hedged portfolio. The futures value stops tracking the portfolio. Which risk is this?
+
+Solution: The problem is value divergence between the hedge and the exposure. That is basis risk. Liquidity risk is about cash-flow timing, such as margin calls arriving before the hedged transaction produces cash.
+
+Memory: Basis = value mismatch. Liquidity = cash timing mismatch.
+
+Trap: Margin-call wording usually points to liquidity risk.
+
+⸻
+
+4. Cash Flow Hedge vs Fair Value Hedge
+
+Stem: A company has floating-rate debt and enters a pay-fixed, receive-floating interest rate swap to make interest expense fixed. Which hedge type is this?
+
+Solution: The company is changing variable future cash flows into fixed cash flows. That is a cash flow hedge. A fair value hedge offsets changes in the fair value of an existing fixed-rate asset or liability.
+
+Memory: Variable cash flow made fixed = cash flow hedge.
+
+Trap: A receive-fixed swap for fixed-rate debt is a fair value hedge; a pay-fixed swap for floating-rate debt is a cash flow hedge.
+
+⸻
+
+Module 4: Arbitrage, Replication, and Cost of Carry
+
+[!important] Important formulas
+
+* No-income forward: F0(T) = S0(1 + r)^T
+* With income and costs: F0(T) = [S0 − PV(income) + PV(costs)](1 + r)^T
+* FX forward: F = S × e^[(price-currency rate − base-currency rate) × T]
+* Commodity with storage: storage cost raises forward price.
+* Convenience yield: benefit of physical ownership, so it lowers forward price.
+* Long forward replication: long spot financed by borrowing.
+
+1. Numerical: No-Arbitrage Forward with No Income
+
+Stem: Spot is GBP50, the six-month risk-free rate is 4% annual, and the six-month forward price is GBP52.50. Is there arbitrage?
+
+Solution: First calculate the no-arbitrage forward price: GBP50 × (1.04)^0.5 = GBP50.99. The quoted forward is GBP52.50, which is too high. Borrow GBP50, buy the asset, sell the forward, then deliver at GBP52.50. Profit = GBP52.50 − GBP50.99 = GBP1.51.
+
+Formula: F0(T) = S0(1 + r)^T
+
+Memory: Too-high forward: buy spot, sell forward.
+
+Trap: Use six-month compounding, not a full year.
+
+⸻
+
+2. Numerical: Costs and Benefits of Carry
+
+Stem: Spot is USD100, present value of income is USD3, present value of storage cost is USD2, and the one-year risk-free rate is 5%. What is the no-arbitrage forward price?
+
+Solution: Start with spot. Subtract benefits because the forward buyer does not receive them. Add costs because the spot holder must pay them. Adjusted spot = USD100 − USD3 + USD2 = USD99. Then compound one year: USD99 × 1.05 = USD103.95.
+
+Formula: F0(T) = [S0 − PV(I) + PV(C)](1 + r)^T
+
+Memory: Income down, costs up.
+
+Trap: Benefits reduce the forward price.
+
+⸻
+
+3. Numerical: FX Forward Rate
+
+Stem: KRW/EUR spot = 1,300. The KRW risk-free rate is 0.75%, the EUR risk-free rate is −0.25%, and maturity is 75/365 years. What is the KRW/EUR forward rate?
+
+Solution: KRW is the price currency and EUR is the base currency. Use price-currency rate minus base-currency rate. Rate difference = 0.75% − (−0.25%) = 1.00%. Forward = 1,300 × e^(0.0100 × 75/365) ≈ 1,302.67.
+
+Formula: F = S × e^[(price-currency rate − base-currency rate) × T]
+
+Memory: Price currency rate minus base currency rate.
+
+Trap: Do not flip the rates when the quote is price currency per one base currency.
+
+⸻
+
+4. Numerical: Commodity Storage Cost
+
+Stem: Spot gold is USD1,783.28, storage cost of USD2 is paid at maturity, risk-free rate is 2%, and maturity is 0.25 years. What forward price includes storage?
+
+Solution: First discount the storage cost because the formula uses present value of costs: USD2 / (1.02)^0.25 ≈ USD1.99. Add it to spot: USD1,783.28 + USD1.99 = USD1,785.27. Then compound to maturity: USD1,785.27 × (1.02)^0.25 ≈ USD1,794.13.
+
+Formula: F0(T) = [S0 + PV(C)](1 + r)^T
+
+Memory: Known storage is a cost of owning spot, so forward goes up.
+
+Trap: If a commodity forward is far below cost-of-carry value, think convenience yield.
+
+⸻
+
+5. Replication of Long Forward
+
+Stem: Which cash-market position replicates a long forward on a non-income asset?
+
+Solution: A long forward acts like owning the asset later without paying cash today. To replicate it today, borrow money and buy the underlying. At maturity, the asset value minus the financed purchase price gives the same payoff as the long forward.
+
+Memory: Long forward = long spot plus borrowed cash.
+
+Trap: Buying a risk-free bond does not finance the spot purchase; selling or borrowing does.
+
+⸻
+
+Module 5: Pricing and Valuation of Forward Contracts
+
+[!important] Important formulas
+
+* Long forward value: Vt(long) = St − PVt(F0)
+* Short forward value: Vt(short) = PVt(F0) − St
+* With income: Vt(long) = [St − PVt(remaining income)] − PVt(F0)
+* Bootstrap zero rate: price equals each cash flow discounted at its own zero rate.
+* Implied forward rate: (1 + zA)^A × (1 + IFR)^(B − A) = (1 + zB)^B
+* FRA settlement: discount the end-of-period net payment because FRA settles at the beginning of the loan period.
+
+1. Numerical: Forward Value During Life
+
+Stem: A long forward has fixed price EUR51.23. Three months remain, spot is EUR50.50, and the risk-free rate is 5%. What is the long forward value?
+
+Solution: The long compares today’s spot with the present value of the fixed price it must pay later. Discount the fixed price for the remaining 0.25 year: EUR51.23 × (1.05)^−0.25 ≈ EUR50.61. Value = EUR50.50 − EUR50.61 = −EUR0.11.
+
+Formula: Long value = St − F0(T)(1 + r)^−(T − t)
+
+Memory: Long forward value = spot now minus PV of fixed price.
+
+Trap: At time t, discount only the remaining life.
+
+⸻
+
+2. Numerical: Short Forward Value
+
+Stem: A short forward price is INR300.84, spot after three months is INR285, six-month original maturity is now three months away, and risk-free rate is 4%. What is the short value?
+
+Solution: The short will receive the fixed price later, so start with the present value of INR300.84 for the remaining 0.25 year. PV = INR300.84 × (1.04)^−0.25 ≈ INR297.90. Then subtract current spot INR285. Value = INR12.90 gain to the short.
+
+Formula: Short value = F0(T)(1 + r)^−(T − t) − St
+
+Memory: Short forward is the mirror image of long forward.
+
+Trap: Rising risk-free rates lower PV of the fixed price, hurting the short.
+
+⸻
+
+3. Numerical: Forward with Remaining Dividends
+
+Stem: Four months after inception, a six-month equity forward has fixed price EUR50.6311. One EUR0.30 dividend remains in two months, and the risk-free rate is 5%. What spot price makes the long value zero?
+
+Solution: For zero value, adjusted spot must equal PV of the forward price. PV of fixed price for two months = EUR50.6311 × (1.05)^−2/12 = EUR50.2202. PV of remaining dividend = EUR0.30 × (1.05)^−2/12 = EUR0.2976. Because the long forward does not receive the dividend, spot must be PV fixed + PV dividend = EUR50.5178.
+
+Formula: 0 = [St − PVt(I)] − PVt(F0)
+
+Memory: Breakeven spot must compensate for dividends the forward misses.
+
+Trap: Use only remaining benefits after time t.
+
+⸻
+
+4. Numerical: Zero-Rate Bootstrapping
+
+Stem: A two-year annual 3% coupon bond is priced at 99 per 100 face value. The one-year zero rate is 2.50%. What equation solves the two-year zero rate?
+
+Solution: Discount the year-1 coupon using the known one-year zero rate. Discount the year-2 coupon plus principal using the unknown two-year zero rate. Equation: 99 = 3 / 1.025 + 103 / (1 + z2)^2. Solve for z2, not yield to maturity. The result is about 3.5422%.
+
+Memory: Bootstrap one cash flow at a time.
+
+Trap: Do not solve internal rate of return on all cash flows when the question asks for a zero rate.
+
+⸻
+
+5. Numerical: Implied Forward Rate
+
+Stem: One-year zero rate is 4% and two-year zero rate is 5%. What is the one-year forward rate one year from now?
+
+Solution: Make the two strategies equal. Investing for two years at 5% must equal investing one year at 4% and rolling into the one-year forward rate. So (1.04)(1 + IFR1,1) = (1.05)^2. Solve: IFR1,1 = 6.0096%.
+
+Formula: (1 + zA)^A × (1 + IFRA,B−A)^(B−A) = (1 + zB)^B
+
+Memory: Forward rate is the missing reinvestment rate.
+
+Trap: In 2y3y, the first number is when it starts; the second is the tenor.
+
+⸻
+
+6. Numerical: FRA Settlement
+
+Stem: A pay-fixed FRA has fixed rate 2.24299%, three-month market reference rate sets at 2.15%, notional CNY100,000,000, and period 90/360. What is the cash settlement at the beginning of the period?
+
+Solution: First compute the end-of-period net payment from the fixed-rate payer’s perspective: (2.15% − 2.24299%) × CNY100,000,000 × 90/360 = −CNY23,247.50. FRAs settle at the beginning of the interest period, so discount using the market reference rate: −CNY23,247.50 / (1 + 0.0215/4) ≈ −CNY23,123.21.
+
+Formula: FRA PV settlement = end-period net payment / (1 + MRR × period)
+
+Memory: FRA cash settles early, so present value it.
+
+Trap: Pay-fixed gains when MRR sets above fixed. Here MRR is below fixed, so pay-fixed pays.
+
+⸻
+
+Module 6: Pricing and Valuation of Futures Contracts
+
+[!important] Important formulas
+
+* Futures with income: f0(T) = [S0 − PV(income)](1 + r)^T
+* Short futures MTM: −(ft − ft−1) × quantity
+* Interest rate futures quote: price = 100 − 100 × MRR
+* BPV: notional × 0.0001 × period
+* Positive correlation between futures price and rates: futures price > forward price.
+* FRA vs futures: futures payoff is linear; FRA settlement is present-valued.
+
+1. Numerical: Futures Price with Dividend
+
+Stem: A stock is EUR125, pays EUR2.50 at maturity, and the one-year risk-free rate is 1%. What is the no-arbitrage futures price?
+
+Solution: First discount the dividend because the formula uses present value of benefits: EUR2.50 / 1.01 = EUR2.48. Subtract it from spot because the futures buyer does not receive the dividend. Then compound: (EUR125 − EUR2.48) × 1.01 = EUR123.75.
+
+Formula: f0(T) = [S0 − PV(I)](1 + r)^T
+
+Memory: Dividend lowers futures price.
+
+Trap: Do not subtract the undiscounted dividend unless it is paid today.
+
+⸻
+
+2. Numerical: Daily Futures Mark-to-Market
+
+Stem: A short oil futures position on 1,000 barrels moves from USD66.02 to USD68.01. What is the daily mark-to-market?
+
+Solution: Price rose by USD1.99. A short loses when price rises. Loss = USD1.99 × 1,000 = USD1,990.
+
+Formula: Short futures MTM = −(ft − ft−1) × quantity
+
+Memory: Short hates price increases.
+
+Trap: Use the futures price change, not the spot price change.
+
+⸻
+
+3. Numerical: Interest Rate Futures Quote
+
+Stem: A three-month market reference rate futures contract trades at 98.25. What rate is implied?
+
+Solution: Interest rate futures are quoted as 100 minus 100 times the rate. So 98.25 = 100 − 100 × MRR. MRR = 1.75%.
+
+Formula: Futures price = 100 − 100 × MRR
+
+Memory: Price up means rate down.
+
+Trap: A futures price above 100 implies a negative market reference rate.
+
+⸻
+
+4. Numerical: Interest Rate Futures BPV
+
+Stem: Notional is USD50,000,000 and the futures references a one-month rate. What is the basis point value?
+
+Solution: One basis point is 0.01%, or 0.0001. Period is 1/12. BPV = USD50,000,000 × 0.0001 × 1/12 = USD416.67. A 100 bp move gives USD41,667.
+
+Formula: BPV = notional × 0.0001 × period
+
+Memory: BPV scales by notional and fraction of year.
+
+Trap: Do not use a full year for a one-month or three-month contract.
+
+⸻
+
+5. Futures vs Forward Price Direction
+
+Stem: Futures prices are positively correlated with interest rates. Which price is higher: futures or forward?
+
+Solution: A long futures position receives cash gains when prices rise, and those gains arrive when rates are high, so they can be reinvested at high rates. Losses happen when rates are low, so financing them is cheaper. Long futures are more attractive than long forwards, and the more attractive contract has the higher price. Therefore, futures price is above forward price.
+
+Memory: Positive correlation helps long futures.
+
+Trap: If interest rates are constant or uncorrelated with futures prices, forward and futures prices are equal.
+
+⸻
+
+6. Numerical: FRA Convexity Bias vs Futures
+
+Stem: A GBP25,000,000 pay-fixed FRA has fixed rate 2.95%, market reference rate sets at 3.25%, and period is 1/4. What is the FRA PV settlement and comparable short futures gain?
+
+Solution: End payment = (3.25% − 2.95%) × GBP25,000,000 × 1/4 = GBP18,750. The FRA settles on a present value basis, so PV = GBP18,750 / (1 + 0.0325/4) = GBP18,598.88. Futures BPV = GBP25,000,000 × 0.0001 × 1/4 = GBP625, and a 30 bp rise gives GBP18,750.
+
+Memory: Futures payoff is linear; FRA settlement is discounted.
+
+Trap: The futures gain is slightly larger because the FRA amount is present-valued.
+
+⸻
+
+Module 7: Pricing and Valuation of Interest Rates and Other Swaps
+
+[!important] Important formulas
+
+* Fixed payer settlement: (MRR − swap fixed rate) × notional × period
+* Pay-fixed loan hedge all-in cost: swap fixed rate + loan spread
+* Par swap rate: PV expected floating payments / sum of discount factors
+* Pay fixed, receive floating: gains when expected floating rates rise.
+* Receive fixed, pay floating: behaves like long fixed-rate bond exposure.
+
+1. Numerical: Periodic Swap Settlement
+
+Stem: An investor pays fixed 1.12% and receives six-month market reference rate on EUR100 million. The floating rate sets at 0.25%. What is the six-month settlement from the investor’s perspective?
+
+Solution: The investor is fixed-rate payer, so settlement = floating received minus fixed paid. Difference = 0.25% − 1.12% = −0.87%. Apply notional and six-month period: −0.87% × EUR100,000,000 × 0.5 = −EUR435,000. The investor pays.
+
+Formula: Fixed payer settlement = (MRR − sN) × notional × period
+
+Memory: Pay fixed gains when floating sets above fixed.
+
+Trap: Do not forget the 0.5 period.
+
+⸻
+
+2. Numerical: Swap as Loan Hedge
+
+Stem: A company pays three-month market reference rate plus 1.50% on a loan. It enters a pay-fixed 2.05%, receive-floating swap. What is its all-in rate?
+
+Solution: The loan payment is MRR + 1.50%. The swap receives MRR and pays 2.05%. The MRR paid on the loan and received on the swap cancel. All-in rate = 2.05% + 1.50% = 3.55%.
+
+Memory: Pay-fixed swap turns floating debt into fixed debt.
+
+Trap: The swap fixed rate is not the total cost if the loan has a spread.
+
+⸻
+
+3. Numerical: Par Swap Rate
+
+Stem: A three-period swap has PV of expected floating payments equal to 0.111017 and annuity factor for fixed payments equal to 2.800545. What is the par swap rate?
+
+Solution: The par swap rate makes PV floating equal PV fixed. PV fixed = swap rate × annuity factor. So swap rate = 0.111017 / 2.800545 = 3.9641%.
+
+Formula: sN = PV(floating payments) / sum(discount factors)
+
+Memory: Par swap rate is the fixed rate that makes swap value zero.
+
+Trap: The swap rate is constant; the individual forward rates usually are not.
+
+⸻
+
+4. Swap Value When Forward Rates Rise
+
+Stem: After a pay-fixed, receive-floating swap is initiated, expected future floating rates rise. Who gains?
+
+Solution: The fixed rate is locked. The floating payments expected to be received are now larger. So the fixed-rate payer, who receives floating, has a mark-to-market gain. The fixed-rate receiver has the equal loss.
+
+Memory: Pay fixed is short bond; receive fixed is long bond.
+
+Trap: Falling rates help the fixed-rate receiver, not the fixed-rate payer.
+
+⸻
+
+5. Receive-Fixed Duration Exposure
+
+Stem: A portfolio manager expects rates to fall and wants bond-like exposure without buying bonds. Which swap position fits?
+
+Solution: Receive fixed and pay floating. Fixed cash flows become more valuable when rates fall, just like a fixed-rate bond. Paying fixed would benefit from rising rates and reduce duration.
+
+Memory: Receive fixed = long fixed-rate bond.
+
+Trap: The floating-rate note side stays near par; the fixed side drives duration.
+
+⸻
+
+Module 8: Pricing and Valuation of Options
+
+[!important] Important formulas
+
+* Call exercise value before expiry: max(0, St − PV(X))
+* Put exercise value before expiry: max(0, PV(X) − St)
+* Time value: option price − exercise value
+* Call lower bound: max(0, St − PV(X))
+* Put lower bound: max(0, PV(X) − St)
+* Higher volatility: raises both call and put values.
+* Higher risk-free rate: raises call value, lowers put value.
+* Income/dividends: lower call value, raise put value.
+* Storage costs: raise call value, lower put value.
+
+1. Numerical: Call Exercise Value and Time Value
+
+Stem: A European call has exercise price GBP50, three months to maturity, risk-free rate 2%, spot GBP57.50, and option price GBP10. What are exercise value and time value?
+
+Solution: First present-value the exercise price for the remaining 0.25 year: GBP50 × (1.02)^−0.25 ≈ GBP49.75. Exercise value = max(0, GBP57.50 − GBP49.75) = GBP7.75. Time value = GBP10 − GBP7.75 = GBP2.25.
+
+Formula: Call exercise value = max(0, St − PV(X))
+
+Memory: Before expiry, compare spot with PV of strike.
+
+Trap: Do not use raw strike when time remains.
+
+⸻
+
+2. Numerical: Put Exercise Value and Time Value
+
+Stem: A put has exercise price EUR1,000, risk-free rate 1%, six months remaining, spot EUR950, and option price EUR50. What is time value?
+
+Solution: First find exercise value. PV of strike = EUR1,000 × (1.01)^−0.5 = EUR995.04. Put exercise value = EUR995.04 − EUR950 = EUR45.04. Time value = EUR50 − EUR45.04 = EUR4.96.
+
+Formula: Put exercise value = max(0, PV(X) − St)
+
+Memory: Put wants PV strike above spot.
+
+Trap: Time value is not the full option price unless exercise value is zero.
+
+⸻
+
+3. Numerical: Option Bounds
+
+Stem: A six-month call has strike GBP50, three months remain, spot is GBP65, and risk-free rate is 2%. What is the lower bound?
+
+Solution: The call lower bound is spot minus PV of exercise price, or zero if negative. PV strike = GBP50 × (1.02)^−0.25 ≈ GBP49.75. Lower bound = GBP65 − GBP49.75 = GBP15.25.
+
+Formula: Call lower bound = max(0, St − PV(X)); Put lower bound = max(0, PV(X) − St)
+
+Memory: Lower bound equals exercise value with PV strike.
+
+Trap: Call upper bound is spot; put upper bound is exercise price.
+
+⸻
+
+4. Factor Direction: Volatility
+
+Stem: Holding all else constant, what happens to call and put values if volatility rises?
+
+Solution: Both rise. Higher volatility widens future outcomes. The option buyer keeps the good tail and can ignore the bad tail by not exercising. That one-sided payoff makes volatility valuable for both calls and puts.
+
+Memory: Volatility helps both option buyers.
+
+Trap: Do not think put value falls just because high upside outcomes hurt puts. The downside tail helps and losses are capped.
+
+⸻
+
+5. Factor Direction: Risk-Free Rate
+
+Stem: What happens to a call and a put when the risk-free rate rises, holding all else constant?
+
+Solution: A higher rate lowers PV of the exercise price. For a call, paying the strike later becomes cheaper in present-value terms, so call value rises. For a put, receiving the strike later becomes less valuable in present-value terms, so put value falls.
+
+Memory: Higher rates help calls and hurt puts.
+
+Trap: The risk-free rate affects exercise value through PV of strike; it does not directly create time value.
+
+⸻
+
+6. Factor Direction: Income and Storage Effects
+
+Stem: An asset starts paying a larger dividend. What happens to call and put values?
+
+Solution: The asset owner receives the dividend, but the option owner does not. That makes owning the asset more attractive relative to a call, so call value falls. The dividend lowers expected forward value, which helps the put, so put value rises. Storage costs do the opposite: calls up, puts down.
+
+Memory: Benefits help puts; costs help calls.
+
+Trap: Convenience yield is a benefit of holding the physical commodity.
+
+⸻
+
+Module 9: Option Replication Using Put-Call Parity
+
+[!important] Important formulas
+
+* Put-call parity: S0 + p0 = c0 + PV(X)
+* Protective put: S0 + p0
+* Fiduciary call: c0 + PV(X)
+* Covered call parity: S0 − c0 = PV(X) − p0
+* Forward parity: PV(F0) + p0 = c0 + PV(X)
+* Equity as option: shareholders own a call on firm value.
+* Risky debt: risk-free debt minus a short put on firm value.
+
+1. Numerical: Put-Call Parity Price
+
+Stem: Stock is INR295, six-month call price is INR59, strike is INR265, and risk-free rate is 4%. What should the six-month put price be?
+
+Solution: First discount the strike: INR265 × (1.04)^−0.5 = INR259.85. Put-call parity says stock plus put equals call plus PV strike. So INR295 + put = INR59 + INR259.85. Put = INR23.85.
+
+Formula: S0 + p0 = c0 + X(1 + r)^−T
+
+Memory: Protective put equals fiduciary call.
+
+Trap: The options must be European, same strike, same maturity, and same underlying.
+
+⸻
+
+2. Numerical: Parity Arbitrage
+
+Stem: In the same setup, the put trades at INR30 instead of INR23.85. What is the arbitrage?
+
+Solution: The protective put side is expensive: stock + put = INR295 + INR30 = INR325. The fiduciary call side costs INR59 + INR259.85 = INR318.85. Sell the expensive side: sell stock and sell put. Buy the cheap side: buy call and buy the risk-free bond. Immediate profit = INR325 − INR318.85 = INR6.15, and future payoffs offset.
+
+Memory: Sell expensive side, buy cheap side.
+
+Trap: Do not buy the overpriced put just because it has downside protection.
+
+⸻
+
+3. Numerical: Covered Call Synthetic
+
+Stem: Stock is INR295, strike is INR325, six-month put price is INR56, and risk-free rate is 4%. What call price is consistent with a covered call parity rearrangement?
+
+Solution: A covered call is long stock minus call. Parity gives S0 − c0 = PV(X) − p0. PV strike = INR325 × (1.04)^−0.5 ≈ INR318.69. So INR295 − call = INR318.69 − INR56 = INR262.69. Call = INR32.31.
+
+Formula: S0 − c0 = X(1 + r)^−T − p0
+
+Memory: Covered call = bond minus put.
+
+Trap: Covered call means long underlying and short call, not long call.
+
+⸻
+
+4. Numerical: Put-Call Forward Parity
+
+Stem: Forward price is INR300.84, strike is INR265, six-month call price is INR59, and risk-free rate is 4%. What is the put price?
+
+Solution: Use forward parity because the underlying is replaced by long forward plus a risk-free bond. Relationship: PV(F0) + put = call + PV(X). So put − INR59 = (INR265 − INR300.84) × (1.04)^−0.5. The right side is about −INR35.14. Put = about INR23.86.
+
+Formula: F0(T)(1 + r)^−T + p0 = c0 + X(1 + r)^−T
+
+Memory: Forward plus bond can replace stock.
+
+Trap: Do not use spot if the question gives put-call forward parity inputs.
+
+⸻
+
+5. Firm Value as Options
+
+Stem: A firm has asset value at maturity VT and zero-coupon debt face value D. What are shareholder and debtholder payoffs?
+
+Solution: Shareholders get what remains after debt is paid, but never less than zero: max(0, VT − D). That is like a call option on firm value. Debtholders receive the smaller of firm value and promised debt: min(VT, D), which equals risk-free debt minus a sold put on firm value.
+
+Memory: Equity is a call; risky debt is risk-free debt minus a put.
+
+Trap: Higher insolvency risk makes the put more valuable and hurts debtholders.
+
+⸻
+
+Module 10: Valuing a Derivative Using a One-Period Binomial Model
+
+[!important] Important formulas
+
+* Hedge ratio: h = (cu − cd) / (Su − Sd)
+* Call value by hedge portfolio: c0 = hS0 − PV(riskless hedge payoff)
+* Risk-neutral up probability: π = (1 + r − Rd) / (Ru − Rd)
+* Option value: risk-neutral expected payoff / (1 + r)^T
+* Higher volatility: wider up/down outcomes raise option value.
+* Overpriced option: sell option and build hedge.
+* Underpriced option: buy option and short hedge.
+
+1. Numerical: Hedge Ratio for a Call
+
+Stem: Stock is EUR80. In one year it can be EUR110 or EUR60. A call has strike EUR100. What is the hedge ratio?
+
+Solution: First calculate call payoffs. Up payoff = max(0, EUR110 − EUR100) = EUR10. Down payoff = max(0, EUR60 − EUR100) = EUR0. Hedge ratio is change in option value divided by change in stock value: (EUR10 − EUR0) / (EUR110 − EUR60) = 0.20.
+
+Formula: h = (cu − cd) / (Su − Sd)
+
+Memory: Hedge ratio is option move over stock move.
+
+Trap: Use ending payoffs, not today’s option price.
+
+⸻
+
+2. Numerical: Call Value by Hedge Portfolio
+
+Stem: Using the EUR80 stock, EUR110/EUR60 outcomes, EUR100 strike, and 5% risk-free rate, what is the call value?
+
+Solution: From the hedge ratio, buy 0.20 shares and sell one call. In the up state, portfolio value = 0.20 × EUR110 − EUR10 = EUR12. In the down state, portfolio value = 0.20 × EUR60 − EUR0 = EUR12. This certain EUR12 must be worth EUR12 / 1.05 = EUR11.43 today. The 0.20 share position costs 0.20 × EUR80 = EUR16, so call value = EUR16 − EUR11.43 = EUR4.57.
+
+Formula: c0 = hS0 − V1 / (1 + r)
+
+Memory: Make the portfolio riskless, then discount at risk-free.
+
+Trap: Do not discount expected real-world payoff.
+
+⸻
+
+3. Numerical: Risk-Neutral Probability
+
+Stem: Stock is 16 today and can move to 20 or 12. The risk-free rate is 5%. What is the risk-neutral probability of an up move?
+
+Solution: First convert ending prices to gross returns. Up return = 20 / 16 = 1.25. Down return = 12 / 16 = 0.75. Risk-neutral up probability = (1 + 0.05 − 0.75) / (1.25 − 0.75) = 0.30 / 0.50 = 0.60.
+
+Formula: π = (1 + r − Rd) / (Ru − Rd)
+
+Memory: Risk-neutral probability uses returns, not the analyst’s belief.
+
+Trap: Actual probability of an up move does not price the option.
+
+⸻
+
+4. Numerical: Put Value by Risk-Neutral Pricing
+
+Stem: A stock is JPY8,000. In one month it can rise 5% or fall 15%. The one-month risk-free rate is −0.20%. Strike is JPY7,950. What is the put value?
+
+Solution: Up stock = JPY8,400, so put payoff is zero. Down stock = JPY6,800, so put payoff is JPY7,950 − JPY6,800 = JPY1,150. Risk-neutral up probability = (1 − 0.002 − 0.85) / (1.05 − 0.85) = 0.74, so down probability is 0.26. Expected payoff = 0.26 × JPY1,150 = JPY299. Discount by 0.998 because the risk-free rate is negative: JPY299 / 0.998 ≈ JPY299.60.
+
+Formula: Option value = risk-neutral expected payoff / (1 + r)^T
+
+Memory: Use negative rates exactly; do not force the discount rate positive.
+
+Trap: Down probability is 1 − π, not π.
+
+⸻
+
+5. Numerical: Higher Volatility in Binomial Model
+
+Stem: A one-year call has stock price USD50, strike USD55, and risk-free rate 5%. If up/down moves widen from ±20% to ±40%, what happens to the call value?
+
+Solution: With ±20%, ending prices are USD60 and USD40. Call payoffs are USD5 and USD0, giving a call value of about USD2.98. With ±40%, ending prices are USD70 and USD30. Call payoffs are USD15 and USD0, giving a call value of about USD8.04. Wider up/down outcomes increase volatility, and volatility increases both call and put values.
+
+Memory: Bigger spread between up and down = higher option value.
+
+Trap: The actual probability of the up move still does not matter.
+
+⸻
+
+6. Mispriced Call in Binomial Model
+
+Stem: A binomial model says a call is worth USD2.98, but it trades at USD3.50. What arbitrage direction is indicated?
+
+Solution: The call is overpriced. Sell the expensive call and buy the hedge portfolio needed to offset the option risk. In the call example, that means borrowing at the risk-free rate, selling the call, and buying the underlying in the hedge ratio. The extra sale price creates a return above the risk-free rate.
+
+Memory: Overpriced option = sell option, build hedge.
+
+Trap: The hedge ratio is based on payoff sensitivity, not actual probabilities.
