@@ -17,7 +17,42 @@
 :root {
   --font-sans: "Supreme", sans-serif;
   --font-inter: "Supreme", sans-serif;
+  --font-mono: "Geist Mono", monospace;
   --text-reg: 18px;
+  --cv-paper: #fcfdea;
+  --cv-ink: #302e2f;
+  --cv-ink-strong: #242224;
+  --cv-muted: #5a595b;
+  --cv-rule: #cfd0c6;
+  --cv-chip: #e8e7e2;
+  --cv-link: #225980;
+  --background: var(--cv-paper);
+  --foreground: var(--cv-ink);
+  --card: var(--cv-paper);
+  --card-foreground: var(--cv-ink);
+  --popover: var(--cv-paper);
+  --popover-foreground: var(--cv-ink);
+  --primary: var(--cv-ink-strong);
+  --primary-foreground: var(--cv-paper);
+  --secondary: var(--cv-chip);
+  --secondary-foreground: var(--cv-ink);
+  --muted: var(--cv-chip);
+  --muted-foreground: var(--cv-muted);
+  --accent: var(--cv-chip);
+  --accent-foreground: var(--cv-ink);
+  --border: var(--cv-rule);
+  --input: var(--cv-rule);
+  --ring: var(--cv-ink);
+  --sidebar: var(--cv-paper);
+  --sidebar-foreground: var(--cv-ink);
+  --sidebar-accent: var(--cv-chip);
+  --sidebar-accent-foreground: var(--cv-ink-strong);
+  --sidebar-border: var(--cv-rule);
+  --surface: rgb(232 231 226 / 58%);
+  --code: rgb(232 231 226 / 74%);
+  --code-foreground: var(--cv-ink);
+  --code-highlight: rgb(245 214 73 / 18%);
+  --code-number: var(--cv-muted);
 }
 
 article {
@@ -474,4 +509,246 @@ article .arithmatex .katex-display > .katex {
     min-width: 100%;
 
   }
+}
+
+/* CV-inspired visual system from cv.kumarshantanu.com. */
+.dark {
+  --cv-paper: #242224;
+  --cv-ink: #fcfdea;
+  --cv-ink-strong: #fcfdea;
+  --cv-muted: #d2d3cf;
+  --cv-rule: rgb(207 208 198 / 42%);
+  --cv-chip: #3f3d41;
+  --cv-link: #8ec5ff;
+  --background: var(--cv-paper);
+  --foreground: var(--cv-ink);
+  --card: #302e2f;
+  --card-foreground: var(--cv-ink);
+  --popover: #302e2f;
+  --popover-foreground: var(--cv-ink);
+  --primary: var(--cv-ink);
+  --primary-foreground: var(--cv-paper);
+  --secondary: var(--cv-chip);
+  --secondary-foreground: var(--cv-ink);
+  --muted: var(--cv-chip);
+  --muted-foreground: var(--cv-muted);
+  --accent: var(--cv-chip);
+  --accent-foreground: var(--cv-ink);
+  --border: var(--cv-rule);
+  --input: var(--cv-rule);
+  --ring: var(--cv-ink);
+  --sidebar: var(--cv-paper);
+  --sidebar-foreground: var(--cv-ink);
+  --sidebar-accent: var(--cv-chip);
+  --sidebar-accent-foreground: var(--cv-ink);
+  --sidebar-border: var(--cv-rule);
+  --surface: rgb(63 61 65 / 82%);
+  --code: rgb(63 61 65 / 88%);
+  --code-foreground: var(--cv-ink);
+  --code-highlight: rgb(245 214 73 / 16%);
+  --code-number: var(--cv-muted);
+}
+
+html,
+body,
+#inner-body {
+  background-color: var(--cv-paper);
+}
+
+body {
+  color: var(--cv-ink);
+  background-image: radial-gradient(circle, rgb(58 56 55 / 18%) 0.7px, transparent 0.8px);
+  background-size: 24px 24px;
+}
+
+#inner-body {
+  background-color: transparent;
+}
+
+header {
+  border-bottom: 2px dotted var(--cv-rule);
+  background-color: rgb(252 253 234 / 86%);
+  backdrop-filter: blur(8px);
+}
+
+.dark header {
+  background-color: rgb(36 34 36 / 88%);
+}
+
+header a,
+header button,
+#toc,
+[data-sidebar="content"],
+.mobile-nav-sheet {
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+header a,
+header button {
+  color: var(--cv-ink);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+header a:hover,
+header button:hover,
+article a {
+  color: var(--cv-link);
+}
+
+article {
+  color: var(--cv-ink);
+}
+
+article p,
+article li,
+article #summary {
+  color: var(--cv-muted);
+  font-size: var(--text-reg);
+  line-height: 1.56;
+  letter-spacing: 0.006em;
+  word-spacing: 0;
+}
+
+article #summary {
+  line-height: 1.45;
+}
+
+article #page-header h1,
+article .typography h2,
+article .typography h3,
+article .typography h4 {
+  color: var(--cv-ink-strong);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-wrap: pretty;
+}
+
+article #page-header h1 {
+  margin-bottom: 0.4rem;
+  border-bottom: 2px dotted var(--cv-rule);
+  padding-bottom: 0.85rem;
+  font-size: clamp(2.1rem, 5vw, 4.05rem);
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+article .typography h2 {
+  border-bottom: 2px dotted var(--cv-rule);
+  padding-bottom: 0.55rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+article .typography h3 {
+  color: var(--cv-muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+article .typography h4 {
+  color: var(--cv-muted);
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+article a {
+  text-decoration-color: rgb(34 89 128 / 46%);
+}
+
+article blockquote {
+  border-left: 2px dotted var(--cv-rule);
+  color: var(--cv-muted);
+}
+
+article mark {
+  --mark-color: 245 214 73;
+}
+
+article .admonition,
+article details {
+  --callout-border: rgb(207 208 198 / 90%);
+  --callout-background: rgb(232 231 226 / 58%);
+  border-radius: 5px;
+}
+
+[data-sidebar="menu-button"] {
+  color: var(--cv-ink);
+  border-radius: 5px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+[data-sidebar="group-label"] {
+  color: var(--cv-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+[data-sidebar="menu-button"][data-active="true"] {
+  background: var(--cv-chip);
+  color: var(--cv-ink-strong);
+}
+
+#toc p,
+#toc a {
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#toc p {
+  color: var(--cv-muted);
+  background: var(--cv-paper);
+  border-bottom: 2px dotted var(--cv-rule);
+}
+
+#toc a {
+  color: var(--cv-muted);
+}
+
+#toc a:hover,
+#toc a[data-active="true"] {
+  color: var(--cv-ink-strong);
+}
+
+article table,
+article pre,
+article code {
+  border-radius: 5px;
+}
+
+article table {
+  color: var(--cv-muted);
+  border: 2px dotted var(--cv-rule);
+  background: rgb(252 253 234 / 82%);
+}
+
+.dark article table {
+  background: rgb(36 34 36 / 82%);
+}
+
+article table tr {
+  border-bottom: 2px dotted var(--cv-rule);
+}
+
+article table thead tr th {
+  color: var(--cv-ink-strong);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mobile-nav-sheet {
+  background: rgb(252 253 234 / 0.94);
+}
+
+.dark .mobile-nav-sheet {
+  background: rgb(36 34 36 / 0.94);
 }
