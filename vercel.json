@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "uv venv .venv && uv pip install --python .venv/bin/python . 'mkdocstrings[python]>=0.26.1'",
-  "buildCommand": "rm -rf pages/docs && git clone --depth 1 --branch clean https://github.com/piper-of-dawn/KumarsNotes.git pages/docs && .venv/bin/mkdocs build --strict --config-file pages/mkdocs.yml --site-dir public",
+  "buildCommand": "rm -rf pages/docs && git clone --depth 1 --branch master https://github.com/piper-of-dawn/KumarsNotes.git pages/docs && .venv/bin/mkdocs build --strict --config-file pages/mkdocs.yml --site-dir public",
   "outputDirectory": "pages/public"
 }
