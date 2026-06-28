@@ -5,6 +5,11 @@
   "outputDirectory": "pages/public",
   "redirects": [
     {
+      "source": "/",
+      "destination": "https://piper-of-dawn.github.io/blog/",
+      "permanent": false
+    },
+    {
       "source": "/:path*",
       "destination": "https://piper-of-dawn.github.io/blog/:path*",
       "permanent": false
