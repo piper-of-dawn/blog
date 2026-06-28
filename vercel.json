@@ -2,17 +2,5 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "uv venv .venv && uv pip install --python .venv/bin/python . 'mkdocstrings[python]>=0.26.1'",
   "buildCommand": "rm -rf pages/docs && git clone --depth 1 --branch clean https://github.com/piper-of-dawn/KumarsNotes.git pages/docs && .venv/bin/mkdocs build --strict --config-file pages/mkdocs.yml --site-dir public",
-  "outputDirectory": "pages/public",
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "https://piper-of-dawn.github.io/blog/",
-      "permanent": false
-    },
-    {
-      "source": "/:path*",
-      "destination": "https://piper-of-dawn.github.io/blog/",
-      "permanent": false
-    }
-  ]
+  "outputDirectory": "pages/public"
 }
