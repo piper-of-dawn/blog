@@ -17,11 +17,12 @@
 :root {
   --font-sans: "Supreme", sans-serif;
   --font-inter: "Supreme", sans-serif;
+  --text-reg: 18px;
 }
 
 article {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: var(--text-reg);
   line-height: 26px;
   font-weight: 400;
   font-optical-sizing: auto;
@@ -55,6 +56,7 @@ article {
 }
 
 article p {
+  font-size: var(--text-reg);
   line-height: 1.84;
   letter-spacing: -0.011em;
   word-spacing: -0.015em;
@@ -329,6 +331,7 @@ article .arithmatex .katex-display > .katex {
 }
 
 [data-sidebar="menu-button"] {
+  font-size: var(--text-reg);
   height: auto !important;
   min-height: 2.25rem;
   align-items: flex-start;
@@ -340,6 +343,13 @@ article .arithmatex .katex-display > .katex {
 [data-sidebar="menu-button"] > span:last-child,
 [data-sidebar="menu-button"] {
   text-wrap: pretty;
+}
+
+[data-sidebar="content"],
+[data-sidebar="group-content"],
+[data-sidebar="group-label"],
+[data-sidebar="menu-sub"] {
+  font-size: var(--text-reg);
 }
 
 .mobile-nav-dialog {
@@ -369,7 +379,7 @@ article .arithmatex .katex-display > .katex {
   align-items: center;
   justify-content: space-between;
   padding: 0.35rem 0 0.85rem;
-  font-size: 1.1rem;
+  font-size: var(--text-reg);
   font-weight: 650;
   background: inherit;
 }
@@ -386,6 +396,7 @@ article .arithmatex .katex-display > .katex {
 
 .mobile-nav-link,
 .mobile-nav-section > summary {
+  font-size: var(--text-reg);
   display: block;
   min-height: 2.75rem;
   border-radius: 0.8rem;
@@ -429,12 +440,16 @@ article .arithmatex .katex-display > .katex {
   border-left: 1px solid var(--border);
 }
 
-.mobile-nav-depth-0 { font-size: 1.05rem; }
-.mobile-nav-depth-1, .mobile-nav-depth-2, .mobile-nav-depth-3 { font-size: 0.95rem; }
+.mobile-nav-depth-0,
+.mobile-nav-depth-1,
+.mobile-nav-depth-2,
+.mobile-nav-depth-3 {
+  font-size: var(--text-reg);
+}
 
 @media (max-width: 767px) {
   article {
-    font-size: 16px;
+    font-size: var(--text-reg);
   }
 
   article .admonition {
