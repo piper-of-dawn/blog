@@ -388,6 +388,81 @@ article .arithmatex .katex-display > .katex {
   font-size: var(--text-reg);
 }
 
+.sidebar-collapse-button {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  [data-slot="sidebar-wrapper"] {
+    transition: grid-template-columns 180ms ease;
+  }
+
+  [data-slot="sidebar"] {
+    transition: opacity 160ms ease, transform 160ms ease, width 160ms ease;
+  }
+
+  .sidebar-collapse-button {
+    position: absolute;
+    top: calc(var(--top-spacing) + 0.75rem);
+    left: calc(var(--sidebar-width) - 0.875rem);
+    z-index: 40;
+    display: inline-flex;
+    width: 1.75rem;
+    height: 1.75rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cv-rule);
+    border-radius: 999px;
+    background: rgb(252 253 234 / 0.9);
+    color: var(--cv-muted);
+    backdrop-filter: blur(8px);
+    transition: left 180ms ease, color 160ms ease, background-color 160ms ease;
+  }
+
+  .dark .sidebar-collapse-button {
+    background: rgb(36 34 36 / 0.9);
+  }
+
+  .sidebar-collapse-button:hover,
+  .sidebar-collapse-button:focus-visible {
+    color: var(--cv-ink-strong);
+    background: var(--cv-chip);
+  }
+
+  .sidebar-collapse-button:focus-visible {
+    outline: 2px solid var(--cv-link);
+    outline-offset: 2px;
+  }
+
+  .sidebar-collapse-button svg {
+    transition: transform 180ms ease;
+  }
+
+  html.sidebar-collapsed [data-slot="sidebar-wrapper"] {
+    grid-template-columns: 0 minmax(0, 1fr) !important;
+  }
+
+  html.sidebar-collapsed [data-slot="sidebar"] {
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-0.75rem);
+    overflow: hidden;
+  }
+
+  html.sidebar-collapsed .sidebar-collapse-button {
+    left: 0.5rem;
+  }
+
+  html.sidebar-collapsed .sidebar-collapse-button svg {
+    transform: rotate(180deg);
+  }
+
+  html.sidebar-collapsed article {
+    max-width: min(100%, 58rem);
+  }
+}
+
 .mobile-nav-dialog {
   width: 100vw; max-width: none;
   height: 100dvh; max-height: none;

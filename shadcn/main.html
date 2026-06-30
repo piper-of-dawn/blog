@@ -66,8 +66,8 @@
             <div class="container-wrapper flex flex-1 flex-col px-2">
                 <div data-slot="sidebar-wrapper"
                     style="--sidebar-width:calc(var(--spacing) * 80);--sidebar-width-icon:3rem;"
-                    class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full 3xl:fixed:container 3xl:fixed:px-3 min-h-min flex-1 items-start px-0 [--sidebar-width:248px] [--top-spacing:0] lg:grid lg:grid-cols-[var(--sidebar-width)_minmax(0,1fr)] lg:[--sidebar-width:272px] lg:[--top-spacing:calc(var(--spacing)*4)]">
-                    <div data-slot="sidebar"
+                    class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar relative flex w-full 3xl:fixed:container 3xl:fixed:px-3 min-h-min flex-1 items-start px-0 [--sidebar-width:248px] [--top-spacing:0] lg:grid lg:grid-cols-[var(--sidebar-width)_minmax(0,1fr)] lg:[--sidebar-width:272px] lg:[--top-spacing:calc(var(--spacing)*4)]">
+                    <div id="desktop-sidebar" data-slot="sidebar"
                         class="w-(--sidebar-width) flex-col text-sidebar-foreground sticky top-[calc(var(--header-height)+0.6rem)] z-30 hidden h-[calc(100svh-10rem)] overscroll-none bg-transparent [--sidebar-menu-width:--spacing(64)] lg:flex">
                         <div class="h-9"></div>
                         <div
@@ -81,6 +81,15 @@
                             {% include "templates/sidebar.html" %}
                         </div>
                     </div>
+                    <button type="button" class="sidebar-collapse-button" aria-controls="desktop-sidebar"
+                        aria-label="Collapse sidebar" aria-pressed="false" title="Collapse sidebar"
+                        onclick="toggleSidebar(event)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="m15 18-6-6 6-6"></path>
+                        </svg>
+                    </button>
                     <div class="h-full w-full">
                         <div data-slot="docs" class="flex items-stretch text-[1.05rem] sm:text-[15px] xl:w-full">
                             <div class="flex min-w-0 flex-1 flex-col">

@@ -106,6 +106,31 @@ const onMobileMenuButtonClick = (event) => {
 	}
 };
 
+const syncSidebarToggle = () => {
+	const collapsed = document.documentElement.classList.contains("sidebar-collapsed");
+	document.querySelectorAll(".sidebar-collapse-button").forEach((button) => {
+		const label = collapsed ? "Expand sidebar" : "Collapse sidebar";
+		button.setAttribute("aria-label", label);
+		button.setAttribute("aria-pressed", collapsed ? "true" : "false");
+		button.setAttribute("title", label);
+	});
+};
+
+const setSidebarCollapsed = (collapsed) => {
+	document.documentElement.classList.toggle("sidebar-collapsed", collapsed);
+	localStorage.setItem("sidebar-collapsed", collapsed ? "true" : "false");
+	syncSidebarToggle();
+};
+
+const toggleSidebar = (event) => {
+	event?.preventDefault();
+	setSidebarCollapsed(
+		!document.documentElement.classList.contains("sidebar-collapsed"),
+	);
+};
+
+document.addEventListener("DOMContentLoaded", syncSidebarToggle);
+
 const clipboardIcon = () => {
 	const svgElement = document.createElementNS(
 		"http://www.w3.org/2000/svg",
