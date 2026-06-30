@@ -22,6 +22,7 @@
   --cv-paper: #fcfdea;
   --cv-ink: #302e2f;
   --cv-ink-strong: #242224;
+  --cv-article: #4f4e50;
   --cv-muted: #5a595b;
   --cv-rule: #cfd0c6;
   --cv-chip: #e8e7e2;
@@ -516,6 +517,7 @@ article .arithmatex .katex-display > .katex {
   --cv-paper: #242224;
   --cv-ink: #fcfdea;
   --cv-ink-strong: #fcfdea;
+  --cv-article: #c7c8c4;
   --cv-muted: #d2d3cf;
   --cv-rule: rgb(207 208 198 / 42%);
   --cv-chip: #3f3d41;
@@ -604,7 +606,7 @@ article {
 article p,
 article li,
 article #summary {
-  color: var(--cv-muted);
+  color: var(--cv-article);
   font-size: var(--text-reg);
   line-height: 1.56;
   letter-spacing: 0.006em;
