@@ -557,8 +557,6 @@ body,
 
 body {
   color: var(--cv-ink);
-  background-image: radial-gradient(circle, rgb(58 56 55 / 18%) 0.7px, transparent 0.8px);
-  background-size: 24px 24px;
 }
 
 #inner-body {
