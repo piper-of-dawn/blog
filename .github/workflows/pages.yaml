@@ -34,8 +34,9 @@ jobs:
 
       - name: Fetch notes content
         run: |
-          rm -rf pages/docs
-          git clone --depth 1 --branch master https://github.com/piper-of-dawn/KumarsNotes.git pages/docs
+          rm -rf .notes-source
+          git clone --depth 1 --branch master https://github.com/piper-of-dawn/KumarsNotes.git .notes-source
+          NOTES_SOURCE=.notes-source python scripts/sync-notes.py
 
       - name: Install uv
         uses: astral-sh/setup-uv@v7
