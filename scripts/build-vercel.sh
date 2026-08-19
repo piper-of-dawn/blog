@@ -1,6 +1,10 @@
 #!/bin/sh
 set -eu
 
+# Always run from the repository root so the relative paths below
+# resolve no matter where the script is invoked from.
+cd "$(dirname "$0")/.."
+
 rm -rf .notes-source
 git clone \
   --depth 1 \

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">Hand drawn chain rule path for back propagation</title>
+  <desc id="desc">A sketch of the dependency path from z1 to the loss and the backward LaTeX-style derivative product used to compute delta1.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 14 14" refX="12" refY="7" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 1 2 L 12 7 L 1 12" fill="none" stroke="#1f2933" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="redarrow" viewBox="0 0 14 14" refX="12" refY="7" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 1 2 L 12 7 L 1 12" fill="none" stroke="#b42318" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <pattern id="paper" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#eadfcb" stroke-width="0.8" opacity="0.45"/>
+    </pattern>
+    <style>
+      .bg { fill: #fffaf0; }
+      .grid { fill: url(#paper); }
+      .boxwash1 { fill: #ffe8a8; opacity: 0.74; }
+      .boxwash2 { fill: #dcecff; opacity: 0.74; }
+      .boxwash3 { fill: #ffe1df; opacity: 0.74; }
+      .ink { stroke: #1f2933; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .ink2 { stroke: #1f2933; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; fill: none; opacity: 0.55; }
+      .edge { stroke: #1f2933; stroke-width: 2.3; stroke-linecap: round; fill: none; marker-end: url(#arrow); }
+      .back { stroke: #b42318; stroke-width: 2.5; stroke-linecap: round; fill: none; marker-end: url(#redarrow); stroke-dasharray: 7 8; }
+      .back2 { stroke: #b42318; stroke-width: 1.2; stroke-linecap: round; fill: none; opacity: 0.38; stroke-dasharray: 6 9; }
+      .title { font: 28px "Segoe Print", "Comic Sans MS", cursive; font-weight: 700; fill: #1f2933; }
+      .caption { font: 17px "Segoe Print", "Comic Sans MS", cursive; fill: #455a64; }
+      .label { font: 23px "Segoe Print", "Comic Sans MS", cursive; font-weight: 700; fill: #1f2933; text-anchor: middle; }
+      .small { font: 15px "Segoe Print", "Comic Sans MS", cursive; fill: #455a64; text-anchor: middle; }
+      .red { fill: #b42318; }
+      .math { font: 18px "Segoe Print", "Comic Sans MS", cursive; fill: #1f2933; }
+      .mathred { font: 16px "Segoe Print", "Comic Sans MS", cursive; fill: #b42318; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="920" height="520" rx="20"/>
+  <rect class="grid" x="0" y="0" width="920" height="520" rx="20"/>
+  <text class="title" x="44" y="62">The chain rule path</text>
+  <text class="caption" x="46" y="94">The backward pass is just local derivatives multiplied along the dependency trail.</text>
+
+  <path class="boxwash1" d="M 56 163 C 86 154, 137 154, 168 164 L 162 237 C 124 244, 86 241, 53 232 Z"/>
+  <path class="ink" d="M 56 163 C 90 155, 137 154, 168 164 L 163 236 C 125 243, 87 241, 54 232 Z"/>
+  <path class="ink2" d="M 62 168 C 95 160, 135 160, 164 169 L 157 231 C 122 237, 91 236, 60 227 Z"/>
+  <text class="label" x="111" y="195">z1</text>
+  <text class="small" x="111" y="222">pre-act</text>
+
+  <path class="boxwash1" d="M 216 163 C 248 154, 298 154, 328 165 L 323 238 C 283 244, 246 241, 214 232 Z"/>
+  <path class="ink" d="M 216 163 C 250 155, 298 154, 328 165 L 323 237 C 286 243, 247 242, 214 232 Z"/>
+  <path class="ink2" d="M 222 168 C 253 160, 296 160, 323 170 L 318 231 C 285 237, 251 236, 220 227 Z"/>
+  <text class="label" x="271" y="195">a1</text>
+  <text class="small" x="271" y="222">sigmoid</text>
+
+  <path class="boxwash2" d="M 376 163 C 408 154, 458 154, 488 165 L 484 237 C 445 244, 407 241, 374 232 Z"/>
+  <path class="ink" d="M 376 163 C 410 155, 458 154, 488 165 L 483 237 C 446 243, 408 242, 374 232 Z"/>
+  <path class="ink2" d="M 382 168 C 414 160, 456 160, 483 170 L 478 231 C 445 237, 411 236, 380 227 Z"/>
+  <text class="label" x="431" y="195">z3</text>
+  <text class="small" x="431" y="222">output sum</text>
+
+  <path class="boxwash2" d="M 536 163 C 568 154, 618 154, 648 165 L 644 237 C 605 244, 567 241, 534 232 Z"/>
+  <path class="ink" d="M 536 163 C 570 155, 618 154, 648 165 L 643 237 C 606 243, 568 242, 534 232 Z"/>
+  <path class="ink2" d="M 542 168 C 574 160, 616 160, 643 170 L 638 231 C 605 237, 571 236, 540 227 Z"/>
+  <text class="label" x="591" y="195">yhat</text>
+  <text class="small" x="591" y="222">prediction</text>
+
+  <path class="boxwash3" d="M 696 163 C 728 154, 778 154, 808 165 L 804 237 C 765 244, 727 241, 694 232 Z"/>
+  <path class="ink" d="M 696 163 C 730 155, 778 154, 808 165 L 803 237 C 766 243, 728 242, 694 232 Z"/>
+  <path class="ink2" d="M 702 168 C 734 160, 776 160, 803 170 L 798 231 C 765 237, 731 236, 700 227 Z"/>
+  <text class="label" x="751" y="195">L</text>
+  <text class="small" x="751" y="222">loss</text>
+
+  <path class="edge" d="M 169 199 C 181 195, 196 195, 216 198"/>
+  <path class="edge" d="M 329 199 C 344 196, 361 196, 376 198"/>
+  <path class="edge" d="M 489 199 C 504 196, 521 196, 536 198"/>
+  <path class="edge" d="M 649 199 C 664 196, 681 196, 696 198"/>
+
+  <path class="back2" d="M 753 258 C 719 350, 622 374, 592 260"/>
+  <path class="back" d="M 751 254 C 718 344, 622 368, 591 257"/>
+  <path class="back2" d="M 593 258 C 559 350, 462 374, 432 260"/>
+  <path class="back" d="M 591 254 C 558 344, 462 368, 431 257"/>
+  <path class="back2" d="M 433 258 C 399 350, 302 374, 272 260"/>
+  <path class="back" d="M 431 254 C 398 344, 302 368, 271 257"/>
+  <path class="back2" d="M 273 258 C 239 350, 142 374, 112 260"/>
+  <path class="back" d="M 271 254 C 238 344, 142 368, 111 257"/>
+
+  <text class="mathred" x="670" y="381">dL/dyhat</text>
+  <text class="mathred" x="510" y="381">dyhat/dz3</text>
+  <text class="mathred" x="350" y="381">dz3/da1 = v1</text>
+  <text class="mathred" x="190" y="381">da1/dz1</text>
+
+  <path class="boxwash3" d="M 84 404 C 277 391, 617 391, 835 405 L 825 480 C 595 471, 312 472, 91 482 Z"/>
+  <path class="ink" d="M 84 404 C 277 391, 617 391, 835 405 L 825 480 C 595 471, 312 472, 91 482 Z"/>
+  <path class="ink2" d="M 91 411 C 282 401, 613 401, 826 412 L 817 472 C 592 465, 316 465, 99 474 Z"/>
+  <text class="math" x="118" y="434">dL/dz1 = (dL/dz3)(dz3/da1)(da1/dz1)</text>
+  <text class="math" x="118" y="462">= -0.116618 * 0.30 * 0.235004 = -0.008222</text>
+</svg>

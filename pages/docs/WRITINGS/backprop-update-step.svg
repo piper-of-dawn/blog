@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">Hand drawn gradient descent update table</title>
+  <desc id="desc">A loose notebook-style table showing selected gradients, parameter updates, and the prediction and loss after one back propagation step.</desc>
+  <defs>
+    <pattern id="paper" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#eadfcb" stroke-width="0.8" opacity="0.45"/>
+    </pattern>
+    <style>
+      .bg { fill: #fffaf0; }
+      .grid { fill: url(#paper); }
+      .wash-blue { fill: #dcecff; opacity: 0.74; }
+      .wash-green { fill: #dff4df; opacity: 0.76; }
+      .wash-yellow { fill: #ffe8a8; opacity: 0.72; }
+      .ink { stroke: #1f2933; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .ink2 { stroke: #1f2933; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; fill: none; opacity: 0.55; }
+      .rule { stroke: #1f2933; stroke-width: 1.7; stroke-linecap: round; fill: none; opacity: 0.78; }
+      .rule2 { stroke: #1f2933; stroke-width: 0.9; stroke-linecap: round; fill: none; opacity: 0.42; }
+      .title { font: 28px "Segoe Print", "Comic Sans MS", cursive; font-weight: 700; fill: #1f2933; }
+      .caption { font: 17px "Segoe Print", "Comic Sans MS", cursive; fill: #455a64; }
+      .head { font: 16px "Segoe Print", "Comic Sans MS", cursive; font-weight: 700; fill: #1f2933; }
+      .math { font: 15px "Segoe Print", "Comic Sans MS", cursive; fill: #1f2933; }
+      .big { font: 22px "Segoe Print", "Comic Sans MS", cursive; font-weight: 700; fill: #1f2933; }
+      .muted { font: 14px "Segoe Print", "Comic Sans MS", cursive; fill: #455a64; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="920" height="520" rx="20"/>
+  <rect class="grid" x="0" y="0" width="920" height="520" rx="20"/>
+  <text class="title" x="44" y="62">One gradient step</text>
+  <text class="caption" x="46" y="94">Move opposite the gradient. Negative gradient means the parameter goes up.</text>
+
+  <path class="wash-blue" d="M 50 124 C 260 112, 657 113, 872 126 L 861 378 C 600 365, 311 367, 58 377 Z"/>
+  <path class="ink" d="M 50 124 C 260 112, 657 113, 872 126 L 861 378 C 600 365, 311 367, 58 377 Z"/>
+  <path class="ink2" d="M 58 132 C 265 121, 651 121, 863 133 L 853 368 C 598 359, 316 359, 66 369 Z"/>
+
+  <path class="rule" d="M 67 168 C 263 164, 617 164, 854 170"/>
+  <path class="rule2" d="M 68 219 C 256 215, 621 216, 852 221"/>
+  <path class="rule2" d="M 67 269 C 260 266, 618 267, 853 271"/>
+  <path class="rule2" d="M 67 319 C 259 316, 618 316, 852 322"/>
+  <path class="rule" d="M 194 135 C 188 202, 191 297, 188 363"/>
+  <path class="rule" d="M 339 135 C 334 202, 337 297, 333 363"/>
+  <path class="rule" d="M 482 135 C 477 202, 481 297, 475 363"/>
+  <path class="rule" d="M 713 135 C 707 203, 711 299, 706 363"/>
+
+  <text class="head" x="83" y="154">parameter</text>
+  <text class="head" x="221" y="154">old</text>
+  <text class="head" x="361" y="154">gradient</text>
+  <text class="head" x="514" y="154">old - lr*g</text>
+  <text class="head" x="741" y="154">new</text>
+
+  <text class="math" x="85" y="201">v1</text>
+  <text class="math" x="221" y="201">0.300000</text>
+  <text class="math" x="361" y="201">-0.072590</text>
+  <text class="math" x="514" y="201">0.30 - 0.5g</text>
+  <text class="math" x="741" y="201">0.336295</text>
+
+  <text class="math" x="85" y="251">v2</text>
+  <text class="math" x="221" y="251">-0.200000</text>
+  <text class="math" x="361" y="251">-0.064121</text>
+  <text class="math" x="514" y="251">-0.20 - 0.5g</text>
+  <text class="math" x="741" y="251">-0.167940</text>
+
+  <text class="math" x="85" y="301">w1</text>
+  <text class="math" x="221" y="301">0.100000</text>
+  <text class="math" x="361" y="301">-0.008222</text>
+  <text class="math" x="514" y="301">0.10 - 0.5g</text>
+  <text class="math" x="741" y="301">0.104111</text>
+
+  <text class="math" x="85" y="351">w3</text>
+  <text class="math" x="221" y="351">-0.100000</text>
+  <text class="math" x="361" y="351">0.005773</text>
+  <text class="math" x="514" y="351">-0.10 - 0.5g</text>
+  <text class="math" x="741" y="351">-0.102886</text>
+
+  <path class="wash-yellow" d="M 70 414 C 158 402, 327 404, 421 415 L 414 476 C 300 468, 180 469, 77 477 Z"/>
+  <path class="ink" d="M 70 414 C 158 402, 327 404, 421 415 L 414 476 C 300 468, 180 469, 77 477 Z"/>
+  <path class="ink2" d="M 78 421 C 162 412, 322 412, 413 422 L 407 467 C 299 462, 184 462, 84 468 Z"/>
+  <text class="muted" x="96" y="437">prediction</text>
+  <text class="big" x="96" y="464">yhat: 0.531650 -> 0.556745</text>
+
+  <path class="wash-green" d="M 502 414 C 590 402, 759 404, 853 415 L 846 476 C 732 468, 612 469, 509 477 Z"/>
+  <path class="ink" d="M 502 414 C 590 402, 759 404, 853 415 L 846 476 C 732 468, 612 469, 509 477 Z"/>
+  <path class="ink2" d="M 510 421 C 594 412, 754 412, 845 422 L 839 467 C 731 462, 616 462, 516 468 Z"/>
+  <text class="muted" x="528" y="437">loss</text>
+  <text class="big" x="528" y="464">L: 0.109676 -> 0.098237</text>
+</svg>

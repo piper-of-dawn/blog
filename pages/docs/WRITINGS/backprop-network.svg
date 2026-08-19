@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540" role="img" aria-labelledby="title desc">
+  <title id="title">Hand drawn sketch of the tiny neural network</title>
+  <desc id="desc">A loose notebook-style drawing of two input nodes, two hidden sigmoid neurons, and one output neuron, with LaTeX-style labels for weights and activations.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 14 14" refX="12" refY="7" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 1 2 L 12 7 L 1 12" fill="none" stroke="#1f2933" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <pattern id="paper" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#eadfcb" stroke-width="0.8" opacity="0.45"/>
+    </pattern>
+    <style>
+      .bg { fill: #fffaf0; }
+      .grid { fill: url(#paper); }
+      .ink { stroke: #1f2933; stroke-width: 2.7; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .ink2 { stroke: #1f2933; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; fill: none; opacity: 0.55; }
+      .edge { stroke: #1f2933; stroke-width: 2.3; stroke-linecap: round; fill: none; marker-end: url(#arrow); }
+      .edge2 { stroke: #1f2933; stroke-width: 1.2; stroke-linecap: round; fill: none; opacity: 0.45; }
+      .wash-blue { fill: #dcecff; opacity: 0.72; }
+      .wash-yellow { fill: #ffe8a8; opacity: 0.70; }
+      .wash-green { fill: #dff4df; opacity: 0.72; }
+      .wash-note { fill: #ffffff; opacity: 0.82; }
+      .title { font: 28px "Segoe Print", "Comic Sans MS", cursive; font-weight: 700; fill: #1f2933; }
+      .caption { font: 17px "Segoe Print", "Comic Sans MS", cursive; fill: #455a64; }
+      .label { font: 22px "Segoe Print", "Comic Sans MS", cursive; font-weight: 700; fill: #1f2933; text-anchor: middle; }
+      .small { font: 15px "Segoe Print", "Comic Sans MS", cursive; fill: #455a64; text-anchor: middle; }
+      .math { font: 16px "Segoe Print", "Comic Sans MS", cursive; fill: #1f2933; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="920" height="540" rx="20"/>
+  <rect class="grid" x="0" y="0" width="920" height="540" rx="20"/>
+  <path class="ink2" d="M 31 39 C 258 31, 570 32, 889 42"/>
+  <text class="title" x="44" y="62">The tiny network</text>
+  <text class="caption" x="46" y="94">Do the forward pass left to right. Send blame back right to left.</text>
+
+  <path class="edge2" d="M 179 174 C 256 167, 335 189, 423 198"/>
+  <path class="edge" d="M 181 170 C 263 164, 339 184, 423 194"/>
+  <path class="edge2" d="M 180 176 C 268 213, 341 292, 423 324"/>
+  <path class="edge" d="M 179 173 C 269 210, 344 290, 422 319"/>
+  <path class="edge2" d="M 181 351 C 266 315, 337 233, 423 208"/>
+  <path class="edge" d="M 179 348 C 263 312, 338 232, 422 204"/>
+  <path class="edge2" d="M 181 351 C 264 350, 339 338, 424 334"/>
+  <path class="edge" d="M 180 346 C 262 349, 340 337, 424 331"/>
+  <path class="edge2" d="M 535 201 C 594 205, 655 240, 703 263"/>
+  <path class="edge" d="M 534 197 C 593 203, 654 237, 704 258"/>
+  <path class="edge2" d="M 535 333 C 593 326, 654 294, 704 277"/>
+  <path class="edge" d="M 535 329 C 593 323, 654 292, 704 272"/>
+
+  <text class="math" x="268" y="156">w1 = 0.10</text>
+  <text class="math" x="290" y="268">w3 = -0.10</text>
+  <text class="math" x="264" y="314">w2 = 0.20</text>
+  <text class="math" x="292" y="407">w4 = 0.10</text>
+  <text class="math" x="596" y="213">v1 = 0.30</text>
+  <text class="math" x="596" y="344">v2 = -0.20</text>
+
+  <ellipse class="wash-blue" cx="135" cy="170" rx="50" ry="44"/>
+  <path class="ink" d="M 89 158 C 100 123, 152 115, 176 142 C 203 174, 179 212, 131 214 C 91 212, 73 182, 89 158 Z"/>
+  <path class="ink2" d="M 94 151 C 111 119, 153 122, 177 147 C 196 178, 172 207, 132 208 C 95 207, 78 180, 94 151 Z"/>
+  <text class="label" x="135" y="166">x1</text>
+  <text class="small" x="135" y="191">1</text>
+
+  <ellipse class="wash-blue" cx="136" cy="349" rx="51" ry="45"/>
+  <path class="ink" d="M 91 337 C 105 302, 154 297, 180 324 C 206 353, 178 394, 132 393 C 91 391, 74 363, 91 337 Z"/>
+  <path class="ink2" d="M 95 331 C 112 301, 157 304, 179 329 C 198 359, 174 387, 132 388 C 95 386, 80 361, 95 331 Z"/>
+  <text class="label" x="135" y="346">x2</text>
+  <text class="small" x="135" y="371">2</text>
+
+  <ellipse class="wash-yellow" cx="480" cy="200" rx="61" ry="53"/>
+  <path class="ink" d="M 423 188 C 438 146, 504 136, 533 169 C 568 207, 533 253, 478 253 C 430 253, 404 219, 423 188 Z"/>
+  <path class="ink2" d="M 429 181 C 451 143, 505 146, 532 175 C 559 211, 527 246, 478 247 C 433 247, 412 217, 429 181 Z"/>
+  <text class="label" x="480" y="190">h1</text>
+  <text class="small" x="480" y="217">z1 -> a1</text>
+  <text class="small" x="480" y="241">b1 = 0</text>
+
+  <ellipse class="wash-yellow" cx="480" cy="330" rx="61" ry="53"/>
+  <path class="ink" d="M 424 317 C 441 278, 502 268, 534 300 C 567 336, 533 384, 477 383 C 431 383, 406 350, 424 317 Z"/>
+  <path class="ink2" d="M 430 312 C 449 278, 506 277, 531 306 C 558 341, 526 376, 478 377 C 434 376, 412 347, 430 312 Z"/>
+  <text class="label" x="480" y="321">h2</text>
+  <text class="small" x="480" y="348">z2 -> a2</text>
+  <text class="small" x="480" y="372">b2 = 0.10</text>
+
+  <ellipse class="wash-green" cx="761" cy="266" rx="67" ry="57"/>
+  <path class="ink" d="M 698 253 C 715 211, 779 199, 817 230 C 856 263, 829 321, 759 325 C 709 326, 677 289, 698 253 Z"/>
+  <path class="ink2" d="M 704 247 C 724 210, 781 209, 815 237 C 848 270, 821 316, 759 318 C 713 318, 686 287, 704 247 Z"/>
+  <text class="label" x="761" y="257">output</text>
+  <text class="small" x="761" y="284">z3 -> yhat</text>
+  <text class="small" x="761" y="308">b3 = 0.05</text>
+
+  <path class="wash-note" d="M 632 399 C 686 387, 803 388, 861 401 L 856 468 C 790 459, 706 462, 639 468 Z"/>
+  <path class="ink" d="M 632 398 C 694 390, 805 389, 862 401 L 856 467 C 792 461, 706 462, 638 468 Z"/>
+  <text class="math" x="662" y="426">y = 1</text>
+  <text class="math" x="662" y="453">yhat = 0.531650</text>
+</svg>
