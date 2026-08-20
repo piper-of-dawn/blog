@@ -2,6 +2,10 @@ const onSearchBarClick = (event) => {
 	const dialog = document.getElementById("search-dialog");
 	if (dialog) {
 		dialog.showModal();
+		event?.currentTarget?.setAttribute("aria-expanded", "true");
+		requestAnimationFrame(() => {
+			dialog.querySelector('input[data-slot="command-input"]')?.focus();
+		});
 	}
 };
 

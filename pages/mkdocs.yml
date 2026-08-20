@@ -2,7 +2,7 @@ site_name: "blog"
 site_url: !ENV [SITE_URL, ""]
 site_description: "Documentation that also shines"
 site_author: "Kumar Shantanu <kumarshan25@gmail.com>"
-dev_addr: "127.0.0.1:8080"
+dev_addr: "127.0.0.1:3000"
 repo_url: "https://github.com/piper-of-dawn/blog"
 extra_css:
   - css/custom.css
