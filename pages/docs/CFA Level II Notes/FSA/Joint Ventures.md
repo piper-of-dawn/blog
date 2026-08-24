@@ -127,3 +127,80 @@
 | Retained earnings              |                                           $12,000 |
 | Minority Interest              |                   ($10,000 / 0.8) * 0.2 =  $2,500 |
 | **Total liabilities & equity** |                                       **$96,500** |
+
+## ONE LINE CONSOLIDATION
+
+ 12. This is simplest of all the methods. Company B buys Company S and shows it in the balance sheet as a one line entry which is called "Investment in S". Nothing else changes.
+ 
+| **January 1, 2023**            | **Company P** | **Company S** |
+| ------------------------------ | ------------: | ------------: |
+| Current assets                 |       $48,000 |       $16,000 |
+| Other assets                   |       $32,000 |        $8,000 |
+| **Total assets**               |   **$80,000** |   **$24,000** |
+| Current liabilities            |       $40,000 |       $14,000 |
+| Common stock                   |       $28,000 |        $6,000 |
+| Retained earnings              |       $12,000 |        $4,000 |
+| **Total liabilities & equity** |   **$80,000** |   **$24,000** |
+*Post Acquisition (bought S for $8,000)*
+	
+| **January 1, 2023**            | **Company P** | **Company S** |
+| ------------------------------ | ------------: | ------------: |
+| Current assets                 |       $40,000 |       $16,000 |
+| Investments in S               |        $8,000 |             - |
+| Other assets                   |       $32,000 |        $8,000 |
+| **Total assets**               |   **$80,000** |   **$24,000** |
+| Current liabilities            |       $40,000 |       $14,000 |
+| Common stock                   |       $28,000 |        $6,000 |
+| Retained earnings              |       $12,000 |        $4,000 |
+| **Total liabilities & equity** |   **$80,000** |   **$24,000** |
+
+> [!tip] HAMMER THIS INTO YOUR HEAD
+>  Under equity method, when you pay for a company more than or less than its book value, the goodwill created is never shown in the balance sheet. It is clubbed as a single line statement. That is a truly one line consolidation investment in S. That's it.
+>  However, this doesn't mean that goodwill will last forever. **It has to be tested for impairment annually.** Everything else is depreciated or amortized and flows through the income statement.
+
+
+## Special Purpose Entities
+
+13. Special purpose entities are the Enron way: you create a paper company for each small unit of work, yet you still bear the risk and liabilities yourself.
+14. Earlier, these entities were created off‑balance‑sheet, letting you artificially inflate financial ratios—exactly what Enron did. They became a breeding ground for scandals.
+15. Now they are known as variable purpose entities, which is the term that FASB uses. These entities are rigorously defined; their shareholders lack at least one of these: first, the decision‑making rights; second, the obligation to absorb complete losses; third, right to claim residual return.
+16. Just remember it like this: they don’t take part in either decision‑making or financing stuff.
+17. Say the parent company wants to set up a variable interest entity for R&D and fund it with a million euros. 
+
+|ParentCo|€m|
+|---|--:|
+|**Assets**||
+|Cash|9.0|
+|Investment in R&D VIE|1.0|
+|**Total Assets**|**10.0**|
+|**Liabilities**||
+|Liabilities|4.0|
+|**Equity**||
+|Equity|6.0|
+|**Total Liabilities + Equity**|**10.0**|
+
+| R&D VIE                        |      €m |
+| ------------------------------ | ------: |
+| **Assets**                     |         |
+| Cash                           |     1.0 |
+| **Total Assets**               | **1.0** |
+| **Liabilities**                |         |
+| Liabilities                    |     0.0 |
+| **Equity**                     |         |
+| Parent funding                 |     1.0 |
+| **Total Liabilities + Equity** | **1.0** |
+
+The €1m **investment in VIE** and €1m **VIE equity** cancel on consolidation.
+
+|Consolidated ParentCo + VIE|€m|
+|---|--:|
+|**Assets**||
+|Cash|10.0|
+|**Total Assets**|**10.0**|
+|**Liabilities**||
+|Liabilities|4.0|
+|**Equity**||
+|Equity|6.0|
+|**Total Liabilities + Equity**|**10.0**|
+
+This is the core consolidation mechanic in the FSA treatment of SPEs/VIEs.

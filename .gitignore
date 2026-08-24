@@ -11,3 +11,4 @@ pages/public
 tests/_site
 test.mkdocs.*
 .vercel
+.notes-source
