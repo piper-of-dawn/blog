@@ -995,6 +995,7 @@ article blockquote {
   font-family: var(--editorial-serif);
   font-size: 1.08rem;
   font-style: normal;
+  padding: 0.15rem 0 0.15rem 1.15rem;
 }
 
 article .admonition,
@@ -1010,7 +1011,7 @@ article .admonition > p.admonition-title,
 article details > summary {
   color: var(--editorial-brick);
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   line-height: 1.5;
   padding: 0 0 0.9rem;
@@ -1028,6 +1029,12 @@ article details > :not(summary) {
 article .admonition > p:not(.admonition-title),
 article details > p {
   line-height: 1.82;
+}
+
+/* Restore the inset removed by the generic callout-body padding reset. */
+article .admonition > blockquote:not(.admonition-title),
+article details > blockquote:not(.admonition-title) {
+  padding: 0.15rem 0 0.15rem 1.15rem;
 }
 
 article table {
@@ -1084,6 +1091,19 @@ article div.arithmatex::after {
 article div.arithmatex .katex-display {
   margin: 0;
   padding-bottom: 0;
+}
+
+/* Keep callout equations evenly spaced between their horizontal rules. */
+article .admonition > div.arithmatex,
+article details > div.arithmatex {
+  margin: 1.25rem 0;
+  padding: 0.9rem 3.5rem 0.9rem 1rem;
+}
+
+/* Inline math should not enlarge only the lines that contain it. */
+article span.arithmatex .katex {
+  font-size: 1em;
+  line-height: 1;
 }
 
 /* Keep the surrounding documentation frame crisp and readable. */
@@ -1152,6 +1172,11 @@ article div.arithmatex .katex-display {
   }
 
   article div.arithmatex {
+    padding-right: 2.75rem;
+  }
+
+  article .admonition > div.arithmatex,
+  article details > div.arithmatex {
     padding-right: 2.75rem;
   }
 
