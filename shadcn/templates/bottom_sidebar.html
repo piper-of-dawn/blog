@@ -15,16 +15,25 @@
 {% endif %}
 {%- endmacro %}
 
-<dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="mobile-nav-dialog">
-    <div class="mobile-nav-sheet" role="dialog" aria-label="Menu" tabindex="-1">
-        <div class="mobile-nav-head">
-            <span>Menu</span>
-            <button type="button" onclick="onBottomSidebarClose()" aria-label="Close menu">&times;</button>
+<dialog id="master-navigation" aria-labelledby="master-navigation-title"
+    onclick="onMasterNavigationBackdropClick(event)" class="master-nav-dialog">
+    <section class="master-nav-toast" role="document" aria-label="Master index" tabindex="-1">
+        <div class="master-nav-head">
+            <div>
+                <span class="master-nav-eyebrow">Field manual</span>
+                <h2 id="master-navigation-title">Master index</h2>
+            </div>
+            <button type="button" onclick="closeMasterNavigation()" aria-label="Close master index">&times;</button>
         </div>
         <nav class="mobile-nav-list">
             {% for item in nav %}
             {{ mobile_nav_item(item) }}
             {% endfor %}
         </nav>
-    </div>
+        <div class="master-nav-utilities">
+            <button type="button" onclick="closeMasterNavigation(); onSearchBarClick(event)">Search notes</button>
+            <button type="button" onclick="onThemeSwitch(event)">Switch theme</button>
+            {% if config.repo_url %}<a target="_blank" rel="noreferrer" href="{{ config.repo_url }}">Source</a>{% endif %}
+        </div>
+    </section>
 </dialog>

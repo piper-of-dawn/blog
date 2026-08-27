@@ -1,0 +1,22 @@
+{% if page.toc %}
+<nav class="article-contents" aria-label="Contents">
+    <p class="article-contents__label">Contents</p>
+    <ol class="article-contents__list">
+        {% for item in page.toc %}
+        <li>
+            <a href="{{ item.url }}">
+                <span class="article-contents__number">§{{ loop.index }}</span>
+                <span class="article-contents__title">{{ item.title }}</span>
+                {% if item.children %}
+                <span class="article-contents__detail">
+                    {% for child in item.children[:3] %}{{ child.title }}{% if not loop.last %}, {% endif %}{% endfor %}
+                </span>
+                {% endif %}
+                <span class="article-contents__leader" aria-hidden="true"></span>
+                <span class="article-contents__jump" aria-hidden="true">↘</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ol>
+</nav>
+{% endif %}

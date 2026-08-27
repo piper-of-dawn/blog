@@ -6,6 +6,7 @@ dev_addr: "127.0.0.1:3000"
 repo_url: "https://github.com/piper-of-dawn/blog"
 extra_css:
   - css/custom.css
+  - css/editorial.css
 theme:
   name: shadcn
   icon: null

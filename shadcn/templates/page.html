@@ -1,12 +1,13 @@
 <article class="w-full" view-transition-name="page">
-  <div class="flex flex-col gap-2">
-    <div class="flex flex-col gap-2">
+  <div class="editorial-page-intro">
+    <p class="editorial-kicker">Independent compilation · Not affiliated with any university or firm</p>
+    <div class="editorial-title-row">
       <div id="page-header" class="flex flex-col gap-3">
         <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
           {% if page.meta.title %}{{ page.meta.title }}{% else %}{{ page.title }}{% endif %}
         </h1>
-
-        <div class="flex flex-wrap items-center gap-2">
+      </div>
+      <div class="editorial-page-actions">
           {% include "templates/copy_button.html" %}
           {% if page.previous_page %}
           <a data-slot="button" id="previous-button"
@@ -36,14 +37,13 @@
             </svg>
           </a>
           {% endif %}
-        </div>
       </div>
+    </div>
       {% if page.meta.summary %}
       <p id="summary" class="text-muted-foreground text-[1.05rem] text-balance sm:text-base">
         {{ page.meta.summary }}
       </p>
       {% endif %}
-    </div>
     <div class="flex justify-end items-center">
       {% if page.meta.external_links %}
       <div class="grow flex items-center space-x-2 pt-4 external_links">
@@ -66,6 +66,8 @@
       {# do nothing #} {% elif config.theme.show_datetime == True %} {% include
       "components/datetime.html" %} {% endif %}
     </div>
+    <p class="editorial-citation-line">Cite the source · Reconstruct the result · Keep assumptions visible</p>
+    {% include "templates/article_contents.html" %}
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
     {{ page.content }}
