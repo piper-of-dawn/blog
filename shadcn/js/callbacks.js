@@ -299,3 +299,17 @@ const toc = {
 		},
 	),
 };
+
+// Always print with the light syntax highlighting palette,
+// even when the site is displayed in dark mode.
+const useLightPygmentsStylesheet = () => {
+	const lightLink = document.getElementById("pygments-light");
+	const darkLink = document.getElementById("pygments-dark");
+	if (darkLink && lightLink) {
+		lightLink.media = "all";
+		darkLink.media = "none";
+	}
+};
+
+window.addEventListener("beforeprint", useLightPygmentsStylesheet);
+window.addEventListener("afterprint", updatePygmentsStylesheet);
