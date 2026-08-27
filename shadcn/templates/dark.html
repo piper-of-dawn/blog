@@ -1,5 +1,10 @@
 <script>
     const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const isAppleDevice = /Mac|iPhone|iPad|iPod/.test(navigator.userAgent)
+        || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    if (isAppleDevice) {
+        document.documentElement.classList.add("apple-system-font");
+    }
     darkTheme.onchange = (e) => {
         if (e.matches) {
             document.documentElement.classList.add("dark")

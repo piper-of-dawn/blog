@@ -56,6 +56,9 @@
 
     {# can inject extra head content here through overrides #}
     {% include "templates/extra_head.html" %}
+
+    {# print styles: loaded last so they win the cascade over custom.css #}
+    <link href="{{ 'css/print.css' | url }}" rel="stylesheet" media="print">
 </head>
 
 <body

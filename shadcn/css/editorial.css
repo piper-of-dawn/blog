@@ -1,4 +1,15 @@
 /* Field-manual layout derived from the supplied Quant Bible reference. */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap");
+
+article {
+	--editorial-serif: "Libre Bodoni", Georgia, "Times New Roman", serif;
+}
+
+html.apple-system-font {
+	--font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+	--font-inter: var(--font-sans);
+}
+
 :root {
 	--cv-paper: #fcfbf7;
 	--background: var(--cv-paper);
@@ -188,6 +199,10 @@ article p.editorial-citation-line {
 	letter-spacing: 0.24em;
 	line-height: 1.5;
 	text-transform: uppercase;
+}
+
+.editorial-kicker:empty {
+	min-height: 0.9rem;
 }
 
 .editorial-title-row {
@@ -673,6 +688,35 @@ article .typography > .admonition.danger {
 		right: 0.75rem;
 		width: calc(100vw - 1.5rem);
 		max-height: calc(100svh - 1.5rem);
+	}
+}
+
+/* The compact field-manual rail survives on tablet-sized reading panes. */
+@media (min-width: 39rem) and (max-width: 63.999rem) {
+	article .typography {
+		padding-left: 2.2rem;
+	}
+
+	article .typography h2 {
+		font-size: 2.15rem;
+	}
+
+	article .typography h2::before,
+	article .typography h3::before {
+		position: absolute;
+		right: calc(100% + 0.35rem);
+		width: 1.85rem;
+		margin: 0;
+		font-size: 0.72rem;
+		text-align: left;
+	}
+
+	article .typography h2::before {
+		top: 0.72rem;
+	}
+
+	article .typography h3::before {
+		top: 0.35rem;
 	}
 }
 

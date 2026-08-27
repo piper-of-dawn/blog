@@ -111,7 +111,8 @@ const onMobileMenuButtonClick = (event) => {
 };
 
 const syncSidebarToggle = () => {
-	const collapsed = document.documentElement.classList.contains("sidebar-collapsed");
+	const collapsed =
+		document.documentElement.classList.contains("sidebar-collapsed");
 	document.querySelectorAll(".sidebar-collapse-button").forEach((button) => {
 		const label = collapsed ? "Expand sidebar" : "Collapse sidebar";
 		button.setAttribute("aria-label", label);
@@ -311,5 +312,28 @@ const useLightPygmentsStylesheet = () => {
 	}
 };
 
-window.addEventListener("beforeprint", useLightPygmentsStylesheet);
-window.addEventListener("afterprint", updatePygmentsStylesheet);
+// Collapsed <details> sections would be missing from the printout:
+// expand them before printing and restore their state afterwards.
+const expandDetailsForPrint = () => {
+	const closed = document.querySelectorAll("article details:not([open])");
+	return Array.from(closed).map((d) => {
+		d.setAttribute("open", "");
+		return d;
+	});
+};
+
+const onBeforePrint = () => {
+	useLightPygmentsStylesheet();
+	window.__printDetails = expandDetailsForPrint();
+};
+
+const onAfterPrint = () => {
+	updatePygmentsStylesheet();
+	for (const d of window.__printDetails || []) {
+		d.removeAttribute("open");
+	}
+	window.__printDetails = [];
+};
+
+window.addEventListener("beforeprint", onBeforePrint);
+window.addEventListener("afterprint", onAfterPrint);
