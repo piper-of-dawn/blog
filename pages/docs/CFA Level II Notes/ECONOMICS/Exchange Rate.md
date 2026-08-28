@@ -2,6 +2,10 @@
 
 > A dealer quotes **EUR/GBP = 1.1750 - 1.1760**. Calculate: **(1)** EUR received from converting GBP 2,000,000. **(2)** GBP received from converting EUR 2,000,000.
 
+> [!abstract] HAMMER THIS INTO YOUR HEAD
+> Denominator -> numerator = **go up the quote -> Bid -> multiply**. Numerator -> denominator = **go down the quote -> Ask -> divide**.
+> **B for Bid, B for Buy**: dealer buys the denominator currency from you -> Bid; dealer sells it to you -> Ask.
+
 First understand the quote. EUR/GBP means: *How many EUR are paid for 1 GBP?* Therefore, EUR is the numerator/top currency and GBP is the denominator/bottom currency. The quote is **1.1750 Bid - 1.1760 Ask**.
 
 **Always think from the dealer's perspective.**
@@ -76,17 +80,21 @@ $$
 
 The EUR cancels and GBP remains.
 
-**Foolproof rule:** denominator -> numerator = **go up the quote -> use Bid -> multiply**. Numerator -> denominator = **go down the quote -> use Ask -> divide**.
 
-**Memory:** **B for Bid, B for Buy.** If the dealer buys the denominator currency from you, use Bid. If the dealer sells the denominator currency to you, use Ask.
 
 ---
 
 ## Variant: Triangular Arbitrage
 
-> Interbank quotes: **USD/AUD = 0.6000 - 0.6015**, **USD/MXN = 0.0933 - 0.0935**. **(1)** Find the implied **MXN/AUD** cross rate. **(2)** A dealer quotes **MXN/AUD = 6.3000 - 6.3025**. Is arbitrage possible? Start with **USD 1,000,000**.
+> [!abstract] HAMMER THIS INTO YOUR HEAD
+> **Down = Ask = Divide. Up = Bid = Multiply.** For cross rates, treat currency pairs like fractions so the unwanted currency cancels.
+> If **dealer Ask < implied Bid**, buy from the dealer and sell through the market.
 
-> [!NOTE]
+> Interbank quotes: **USD/AUD = 0.6000 - 0.6015**, **USD/MXN = 0.0933 - 0.0935**.
+> **(1)** Find the implied **MXN/AUD** cross rate. 
+> **(2)** A dealer quotes **MXN/AUD = 6.3000 - 6.3025**. Is arbitrage possible? Start with **USD 1,000,000**.
+
+> [!NOTE] What is Triangular Arbitrage?
 > *Triangular arbitrage* means moving through **three currencies and returning to the starting currency**. If you return with more money than you started with, the difference is risk-free arbitrage profit.
 
 ```text
@@ -110,7 +118,10 @@ $$
 \frac{USD}{AUD}\times\frac{MXN}{USD}=\frac{MXN}{AUD}
 $$
 
-But we are given **USD/MXN**, so invert it. **When you invert a quote, Bid and Ask swap:**
+But we are given **USD/MXN**, so invert it.
+
+> [!NOTE] Inversion Trap
+> Inverting a quote swaps the sides: the new **Bid comes from the old Ask**, and the new **Ask from the old Bid**.
 
 $$
 A/B=Bid-Ask \quad\Rightarrow\quad B/A=\frac1{Ask}-\frac1{Bid}
@@ -191,8 +202,6 @@ $$
 \boxed{\text{Profit}=1,018,185.21-1,000,000=18,185.21\text{ USD}}
 $$
 
-**Foolproof rules:** **Down = Ask = Divide. Up = Bid = Multiply.** For cross rates, treat currency pairs like fractions and make the unwanted currency cancel. If **dealer Ask < implied Bid**, buy from the dealer and sell through the market.
-
 ---
 ## Variant: Converting Forward Points into an All-In Forward Rate
 
@@ -259,7 +268,9 @@ $$
 
 **Why are the points positive?** The forward AUD/CAD rate is higher than the spot rate. Under the quotation convention used here, this means **CAD, the denominator/base currency, is trading at a forward premium**. A forward premium means the base currency is expected to appreciate, so one CAD would cost more AUD in the future.
 
-**Foolproof rule:** first convert points by dividing by **10,000**. Then **positive -> add, negative -> subtract**. Never mix sides: **Bid with Bid, Ask with Ask**.
+> [!NOTE] Foolproof Rule
+> First convert points by dividing by **10,000**. Then **positive -> add, negative -> subtract**.
+> Never mix sides: **Bid with Bid, Ask with Ask**.
 
 ---
 
@@ -322,7 +333,10 @@ $$
 
 But there is one important issue: **AUD 8,480 is received 60 days from now, not today.** Mark-to-market asks for the value **today**, so we must discount this future AUD amount back 60 days.
 
-Because the cash flow is measured in **AUD**, use the **AUD interest rate**. This is the foolproof rule: **discount using the interest rate of the currency in which the value is being measured.**
+Because the cash flow is measured in **AUD**, use the **AUD interest rate**.
+
+> [!NOTE] Discounting Rule
+> Discount using the interest rate of the **currency in which the value is measured** — here, AUD.
 
 Using the 60-day AUD rate of 1.16%:
 
@@ -342,7 +356,9 @@ Therefore, Yip's forward contract has a **positive mark-to-market value of AUD 8
 
 The intuition is simple: Yip locked in buying CAD for **1.05358 AUD**, but CAD can now be sold forward for **1.06206 AUD**. CAD has become more valuable relative to AUD, which benefits someone who is **long CAD**.
 
-**Foolproof workflow:** determine what the old contract makes you buy or sell -> create the opposite trade -> use the forward maturity matching the **remaining life** -> choose Bid/Ask from the dealer's perspective -> calculate the difference between the new and old forward rates -> multiply by contract size -> discount using the interest rate of the **valuation currency**.
+> [!NOTE] Foolproof Workflow
+> Old contract's opposite trade -> forward maturity matching the **remaining life** -> Bid/Ask from the dealer's perspective -> (new rate - old rate) x contract size.
+> Then discount using the interest rate of the **valuation currency**.
 
 ---
 ## Variant: Covered Interest Arbitrage
@@ -438,52 +454,9 @@ $$
 
 So **yes, covered interest arbitrage exists**, producing approximately **USD 20.76 per USD 1,000 borrowed**.
 
-**Foolproof rule:** first calculate the forward rate implied by interest-rate parity. If **market forward > parity forward**, the denominator currency here **EUR is overpriced forward -> buy EUR spot, invest EUR, and sell EUR forward**. If **market forward < parity forward**, reverse every transaction.
-
----
-
-## Variant: Forecasting Spot Rates with Uncovered Interest Rate Parity
-
-> The current exchange rate is **ZAR/EUR = 8.385**. The 1-year interest rate is **10% in the eurozone** and **8% in South Africa**. Using uncovered interest rate parity, estimate the expected percentage change in the exchange rate over the next year.
-
-First understand the quote. **ZAR/EUR = 8.385** means:
-
-1 EUR=8.385 ZAR1\text{ EUR}=8.385\text{ ZAR}
-
-So **EUR is the denominator/base currency**. If ZAR/EUR **falls**, fewer rand are needed to buy one euro, meaning the **euro has depreciated relative to the rand**.
-
-Now understand _uncovered interest rate parity (UIP)_. UIP says that, in expectation, **the currency with the higher interest rate should depreciate relative to the currency with the lower interest rate**.
-
-Why? Suppose two countries offered different interest rates but their currencies were expected to remain unchanged. Everyone would simply invest in the country paying the higher rate. UIP says the expected currency movement offsets that interest-rate advantage.
-
-Here:
-
-- Euro interest rate = **10%**
-    
-- Rand interest rate = **8%**
-    
-
-The euro offers the **higher interest rate by 2%**. Therefore, UIP predicts that the **euro should depreciate by approximately 2% relative to the rand**.
-
-For a quote written as **ZAR/EUR**, a useful approximation is:
-
-%ΔS≈rZAR−rEUR\%\Delta S \approx r_{ZAR}-r_{EUR}
-
-Therefore:
-
-%ΔS≈8%−10%=−2%\%\Delta S\approx8\%-10\%=\boxed{-2\%}
-
-**What does the negative sign mean?** It means the quoted number **ZAR/EUR is expected to fall by 2%**. Since the quote tells us how many rand one euro buys, a falling quote means **one euro buys fewer rand -> the euro depreciates and the rand appreciates**.
-
-The expected exchange rate is therefore approximately:
-
-8.385(1−0.02)=8.2173 ZAR/EUR8.385(1-0.02)=\boxed{8.2173\text{ ZAR/EUR}}
-
-Think of it very simply: today **EUR 1 buys ZAR 8.385**. UIP predicts that one year later, **EUR 1 will buy only about ZAR 8.217**.
-
-**Foolproof intuition:** **higher interest rate -> expected currency depreciation. Lower interest rate -> expected currency appreciation.** Here **EUR pays 10% versus ZAR's 8% -> EUR is expected to depreciate by about 2% -> ZAR/EUR falls by about 2%.**
-
-_Important:_ this is an **expectation**, not an arbitrage guarantee. It is called **uncovered** because unlike covered interest parity, there is **no forward contract locking the future exchange rate**.
+> [!NOTE] Foolproof Rule
+> First calculate the parity forward. If **market forward > parity forward**, the denominator currency (here EUR) is overpriced forward: **buy EUR spot, invest EUR, sell EUR forward**.
+> If **market forward < parity forward**, reverse every transaction.
 
 ---
 
@@ -532,9 +505,12 @@ $$
 
 Think of it very simply: today **EUR 1 buys ZAR 8.385**. UIP predicts that one year later, **EUR 1 will buy only about ZAR 8.217**.
 
-**Foolproof intuition:** **higher interest rate -> expected currency depreciation. Lower interest rate -> expected currency appreciation.** Here **EUR pays 10% versus ZAR's 8% -> EUR is expected to depreciate by about 2% -> ZAR/EUR falls by about 2%.**
+> [!NOTE] Foolproof Intuition
+> **Higher interest rate -> expected currency depreciation. Lower interest rate -> expected currency appreciation.**
+> Here **EUR pays 10% versus ZAR's 8% -> EUR is expected to depreciate by about 2% -> ZAR/EUR falls by about 2%.**
 
-*Important:* this is an **expectation**, not an arbitrage guarantee. It is called **uncovered** because unlike covered interest parity, there is **no forward contract locking the future exchange rate**.
+> [!NOTE] Why "Uncovered"?
+> UIP gives an **expectation**, not an arbitrage guarantee — unlike covered interest parity, **no forward contract locks the future exchange rate**.
 
 ---
 
@@ -618,7 +594,9 @@ $$
 
 So **0.97 is the standard approximation**, while **0.9714 is the exact PPP-implied rate**.
 
-**Foolproof intuition:** **higher inflation -> currency depreciates; lower inflation -> currency appreciates.** Then look carefully at how the exchange rate is quoted. Here **AUD has higher inflation -> AUD depreciates -> one AUD buys fewer USD -> USD/AUD falls.**
+> [!NOTE] Foolproof Intuition
+> **Higher inflation -> currency depreciates; lower inflation -> currency appreciates.** Then look carefully at how the exchange rate is quoted.
+> Here **AUD has higher inflation -> AUD depreciates -> one AUD buys fewer USD -> USD/AUD falls.**
 
 
 ---
@@ -707,9 +685,13 @@ $$
 \frac{30}{1,500}=2\%
 $$
 
-**The real risk in a carry trade is the exchange rate.** The 2% interest-rate advantage is profitable only because GBP did **not depreciate** against USD. If GBP weakened enough (USD becomes expensive), the currency loss could erase the entire interest-rate gain.
+> [!NOTE] The Real Risk
+> The 2% interest-rate advantage is profitable only because GBP did **not depreciate** against USD.
+> If GBP weakened enough (USD becomes expensive), the currency loss could erase the entire interest-rate gain.
 
-**Foolproof intuition:** **borrow the low-yield currency -> convert -> invest in the high-yield currency -> convert back -> repay the loan.** If the exchange rate does not move, your approximate return is simply the **interest-rate difference: $3%-1%=2%$**.
+> [!NOTE] Foolproof Intuition
+> **Borrow the low-yield currency -> convert -> invest in the high-yield currency -> convert back -> repay the loan.**
+> If the exchange rate does not move, your approximate return is simply the **interest-rate difference: $3\%-1\%=2\%$**.
 
 ---
 
@@ -717,12 +699,9 @@ $$
 
 > U.K. interest rate = **3%**, U.S. interest rate = **1%**, and **USD/GBP moves from 1.50 today to 1.44 one year later**. Compute the return to an investor who **borrows in the United States and invests in the United Kingdom**.
 
-> [!note] KEY CONCEPTS
-> - A carry trade earns the foreign interest rate but pays the domestic borrowing rate.
-> - The investor also gains or loses from the currency movement. For **USD/GBP**, a fall means GBP depreciates against USD.
-> - Exact return: $(1+r_{GBP})\left(\frac{S_1}{S_0}\right)-(1+r_{USD})$.
-> - Approximate return: **interest-rate advantage + percentage change in the investment currency**.
-> - Always calculate the final payoff in the currency in which the loan must be repaid.
+> [!NOTE] Key Concepts
+> A carry trade earns the foreign interest rate but pays the domestic borrowing rate, plus or minus the currency movement; for **USD/GBP**, a fall means GBP depreciates against USD.
+> Exact return: $(1+r_{GBP})\left(\frac{S_1}{S_0}\right)-(1+r_{USD})$; approx: **rate advantage + % change in the investment currency**. Always calculate the final payoff in the loan-repayment currency.
 
 The investor borrows **USD 1,500**. At today's rate of **1.50 USD/GBP**, this buys:
 
@@ -778,4 +757,6 @@ $$
 
 The **2% interest-rate advantage** is more than erased by the **4% depreciation of GBP**. The exact loss is slightly larger because the exchange-rate movement also affects the interest earned on the GBP investment.
 
-**Foolproof intuition:** a high foreign interest rate does not guarantee a profitable carry trade. Compare the interest-rate advantage with the movement in the currency you invested in; if that currency depreciates by more than the interest advantage, the trade loses money.
+> [!NOTE] Foolproof Intuition
+> A high foreign interest rate does not guarantee a profitable carry trade. Compare the interest-rate advantage with the movement in the currency you invested in.
+> If that currency depreciates by more than the interest advantage, the trade loses money.

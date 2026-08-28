@@ -438,29 +438,28 @@ article .typography > details.abstract {
 	text-align: left;
 }
 
-/* A marginalia right after a heading aligns its top border with the heading's
-   top edge, so the heading must give up its own rule/padding. */
-article .typography h2:has(+ .admonition.abstract),
-article .typography h2:has(+ details.abstract),
-article .typography h3:has(+ .admonition.abstract),
-article .typography h3:has(+ details.abstract),
-article .typography h4:has(+ .admonition.abstract),
-article .typography h4:has(+ details.abstract) {
-	border-top: 0;
-	padding-top: 0;
+/* A marginalia directly after a heading is pulled up so its own top rule and
+   first text line sit level with the heading's first text line. Applies only
+   to the desktop note rail (and never to print, which re-floats marginalia). */
+@media screen and (min-width: 64rem) {
+	article .typography h2 + .admonition.abstract,
+	article .typography h2 + details.abstract {
+		margin-top: calc(-1 * (0.75rem + 1px + clamp(1.75rem, 3vw, 2.15rem) * 1.15));
+	}
+
+	article .typography h3 + .admonition.abstract,
+	article .typography h3 + details.abstract {
+		margin-top: calc(-1 * (0.75rem + 1px + 1.3rem * 1.25));
+	}
+
+	article .typography h4 + .admonition.abstract,
+	article .typography h4 + details.abstract {
+		margin-top: calc(-1 * (0.75rem + 1px + 0.82rem * 1.55));
+	}
 }
 
 article .typography > .admonition.abstract:first-child,
 article .typography > details.abstract:first-child {
-	margin-top: 0;
-}
-
-article .typography h2 + .admonition.abstract,
-article .typography h2 + details.abstract,
-article .typography h3 + .admonition.abstract,
-article .typography h3 + details.abstract,
-article .typography h4 + .admonition.abstract,
-article .typography h4 + details.abstract {
 	margin-top: 0;
 }
 
@@ -844,9 +843,9 @@ article .typography > .admonition.danger {
 	article .typography h2::before,
 	article .typography h3::before {
 		position: absolute;
-		left: calc(-1 * var(--editorial-margin));
-		right: auto;
-		width: 1.5rem;
+		left: auto;
+		right: calc(100% + 0.5rem);
+		width: auto;
 		margin: 0;
 		text-align: left;
 	}
