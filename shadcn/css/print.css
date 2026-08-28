@@ -8,7 +8,7 @@
 	@bottom-left {
 		content: "CONDITION FIRST, COMPUTE SECOND";
 		color: #555;
-		font-family: "Geist Mono", monospace;
+		font-family: "Roboto Mono", monospace;
 		font-size: 6pt;
 		font-weight: 500;
 		letter-spacing: 0.2em;
@@ -17,7 +17,7 @@
 	@bottom-right {
 		content: "PAGE " counter(page) " / " counter(pages);
 		color: #000;
-		font-family: "Geist Mono", monospace;
+		font-family: "Roboto Mono", monospace;
 		font-size: 6pt;
 		font-weight: 600;
 		letter-spacing: 0.18em;
@@ -99,10 +99,12 @@
 		background-image: none !important;
 	}
 
-	article pre,
+	article pre:not(.codehilite pre):not(.highlight pre),
 	article .codehilite,
 	article .highlight {
-		border: 0.5pt solid #000 !important;
+		border: 0 !important;
+		border-left: 1.2pt solid #000 !important;
+		border-radius: 0 !important;
 	}
 
 	#inner-body {
@@ -248,8 +250,9 @@
 	}
 
 	.article-contents__list a {
-		min-height: 6mm;
+		min-height: 8mm;
 		gap: 2.5mm;
+		padding: 1.25mm 0;
 	}
 
 	.article-contents__number,
@@ -260,7 +263,7 @@
 	.article-contents__title {
 		max-width: 92mm;
 		font-size: 8.5pt;
-		line-height: 1.2;
+		line-height: 1.35;
 	}
 
 	.article-contents__detail {
@@ -300,7 +303,9 @@
 		margin-top: 9mm;
 		border-top: 0.7pt solid #000;
 		padding-top: 2mm;
+		font-family: var(--editorial-serif);
 		font-size: 16pt;
+		font-weight: 400;
 		line-height: 1.15;
 		break-after: avoid;
 	}
@@ -323,8 +328,8 @@
 
 	article .typography h2::before,
 	article .typography h3::before {
-		right: calc(100% + 6mm);
-		width: 26mm;
+		right: calc(100% + 2mm);
+		width: 12mm;
 		font-size: 6pt;
 	}
 
@@ -343,9 +348,9 @@
 		font-size: 9pt;
 	}
 
-	/* Only NOTE callouts become marginalia; warnings remain in the text. */
-	article .typography > .admonition.note,
-	article .typography > details.note {
+	/* Only ABSTRACT callouts become marginalia; ordinary notes stay inline. */
+	article .typography > .admonition.abstract,
+	article .typography > details.abstract {
 		float: left;
 		clear: left;
 		width: 26mm;
@@ -357,22 +362,23 @@
 		break-inside: avoid;
 	}
 
-	article .typography > .admonition.note > p.admonition-title::before,
-	article .typography > details.note > summary::before {
+	article .typography > .admonition.abstract > p.admonition-title::before,
+	article .typography > details.abstract > summary::before {
 		font-size: 6pt;
 		line-height: 1.3;
 	}
 
-	article .typography > .admonition.note > :not(.admonition-title),
-	article .typography > details.note > :not(summary),
-	article .typography > .admonition.note p,
-	article .typography > details.note p {
+	article .typography > .admonition.abstract > :not(.admonition-title),
+	article .typography > details.abstract > :not(summary),
+	article .typography > .admonition.abstract p,
+	article .typography > details.abstract p {
+		font-family: var(--font-sans);
 		font-size: 7pt;
 		line-height: 1.38;
 	}
 
-	article .admonition:not(.note),
-	article details:not(.note) {
+	article .admonition:not(.abstract),
+	article details:not(.abstract) {
 		margin: 4mm 0;
 		border-left-width: 1.2pt;
 		padding: 3mm 4mm;
@@ -461,18 +467,27 @@
 	article .codehilite pre,
 	article .codehilite code {
 		max-height: none !important;
-		font-size: 7pt;
-		line-height: 1.35;
+		font-size: 7.5pt;
+		line-height: 1.5;
 		white-space: pre-wrap !important;
 		overflow: visible !important;
 		overflow-wrap: anywhere;
 	}
 
-	article pre,
-	article .codehilite {
+	article pre:not(.codehilite pre):not(.highlight pre),
+	article .codehilite,
+	article .highlight {
 		margin: 3mm 0;
-		padding: 2.5mm 3mm;
+		padding: 2.5mm 0 2.5mm 3mm;
 		break-inside: avoid;
+	}
+
+	article .codehilite pre,
+	article .highlight pre {
+		margin: 0 !important;
+		border: 0 !important;
+		border-radius: 0 !important;
+		padding: 0 !important;
 	}
 
 	article img {

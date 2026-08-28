@@ -66,9 +66,11 @@
       {# do nothing #} {% elif config.theme.show_datetime == True %} {% include
       "components/datetime.html" %} {% endif %}
     </div>
-    <p class="editorial-citation-line">Cite the source · Reconstruct the result · Keep assumptions visible</p>
-    {% include "templates/article_contents.html" %}
+    <p class="editorial-citation-line">{% if page.parent %}{{ page.parent.title }} &gt; {% endif %}{{ page.title }}</p>
   </div>
+  <aside class="editorial-contents-rail" aria-label="Contents">
+    {% include "templates/article_contents.html" %}
+  </aside>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
     {{ page.content }}
   </div>

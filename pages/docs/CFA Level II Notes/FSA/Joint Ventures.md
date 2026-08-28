@@ -1,6 +1,4 @@
 
-
-
 1. A JV is when two or more parties share control. Nobody gets to run the important decisions alone. CFA is clear on this: joint control only exists if there’s a contract that locks it in. No contract, no JV. Period.
 
 2. **Acquisition method:** You bring in 100% of the assets and revenue, even if you only own 60%. Then you separately park the other 40% as non-controlling interest so the numbers still add up.

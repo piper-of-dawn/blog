@@ -153,23 +153,17 @@ body,
 	transform: translateY(1px);
 }
 
-/* Documentation rails collapse into the article's own contents and notes. */
+/* Keep the reference page free of application navigation while the editorial
+   layout is being tuned. The master index remains available from the header. */
+#desktop-sidebar,
 .article-toc-rail,
-.sidebar-collapse-button {
+.sidebar-collapse-button,
+#bottom-navigation {
 	display: none !important;
 }
 
-@media (min-width: 64rem) {
-	[data-slot="sidebar-wrapper"] {
-		grid-template-columns: 0 minmax(0, 1fr) !important;
-	}
-
-	#desktop-sidebar {
-		width: 0 !important;
-		opacity: 0;
-		pointer-events: none;
-		overflow: hidden;
-	}
+[data-slot="sidebar-wrapper"] {
+	display: block !important;
 }
 
 /* Article front matter */
@@ -323,9 +317,72 @@ article p.editorial-citation-line {
 	border-bottom: 1px dotted #b9c0c6;
 }
 
+.editorial-contents-rail:empty {
+	display: none;
+}
+
+@media (min-width: 64rem) {
+	article:has(.editorial-contents-rail .article-contents) {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 15.5rem;
+		column-gap: 1.75rem;
+		align-items: start;
+	}
+
+	.editorial-page-intro,
+	article .typography {
+		grid-column: 1;
+	}
+
+	.editorial-contents-rail {
+		position: sticky;
+		top: calc(var(--header-height) + 1.5rem);
+		grid-column: 2;
+		grid-row: 1 / span 2;
+		align-self: start;
+		max-height: calc(100svh - var(--header-height) - 3rem);
+		overflow: auto;
+		padding-top: 0.15rem;
+	}
+
+	.editorial-contents-rail .article-contents {
+		display: block;
+		margin: 0;
+	}
+
+	.editorial-contents-rail .article-contents__label {
+		margin-bottom: 0.85rem;
+		padding: 0;
+		text-align: left;
+	}
+
+	.editorial-contents-rail .article-contents__title {
+		max-width: none;
+		font-size: 1rem;
+		line-height: 1.35;
+	}
+
+	.editorial-contents-rail .article-contents__detail,
+	.editorial-contents-rail .article-contents__jump {
+		display: none;
+	}
+
+	.editorial-contents-rail .article-contents__list a {
+		min-height: 2.85rem;
+		align-items: flex-start;
+		gap: 0.55rem;
+		padding: 0.55rem 0;
+	}
+
+	.editorial-contents-rail .article-contents__number {
+		padding-top: 0.16rem;
+		font-size: 0.82rem;
+	}
+}
+
 /* Numbered section geometry and left annotation rail. */
 article .typography {
-	counter-reset: editorial-section editorial-subsection editorial-note;
+	counter-reset: editorial-section editorial-subsection editorial-abstract;
 	position: relative;
 	padding-left: var(--editorial-margin);
 }
@@ -345,11 +402,11 @@ article .typography h3 {
 article .typography h2::before,
 article .typography h3::before {
 	position: absolute;
-	right: calc(100% + 2.2rem);
-	width: calc(var(--editorial-margin) - 2.2rem);
+	right: calc(100% + 1.1rem);
+	width: calc(var(--editorial-margin) - 1.1rem);
 	color: var(--editorial-teal);
 	font-family: var(--font-mono);
-	font-size: 0.68rem;
+	font-size: 0.82rem;
 	font-weight: 600;
 	letter-spacing: 0.08em;
 	text-align: right;
@@ -366,33 +423,33 @@ article .typography h3::before {
 	color: var(--editorial-muted);
 }
 
-article .typography > .admonition.note,
-article .typography > details.note {
-	counter-increment: editorial-note;
+article .typography > .admonition.abstract,
+article .typography > details.abstract {
+	counter-increment: editorial-abstract;
 	float: left;
 	clear: left;
-	width: calc(var(--editorial-margin) - 2.2rem);
+	width: calc(var(--editorial-margin) - 1.1rem);
 	margin: 0.35rem 0 1.7rem calc(-1 * var(--editorial-margin));
 	border: 0;
 	border-top: 1px solid var(--editorial-rule-strong);
 	background: transparent;
 	padding: 0.75rem 0 0;
-	text-align: right;
+	text-align: left;
 }
 
-article .typography > .admonition.note > p.admonition-title,
-article .typography > details.note > summary {
+article .typography > .admonition.abstract > p.admonition-title,
+article .typography > details.abstract > summary {
 	display: block;
 	color: var(--editorial-teal);
 	font-size: 0;
 	letter-spacing: 0.12em;
 	line-height: 0;
-	text-align: right;
+	text-align: left;
 }
 
-article .typography > .admonition.note > p.admonition-title::before,
-article .typography > details.note > summary::before {
-	content: "NOTE " counter(editorial-note);
+article .typography > .admonition.abstract > p.admonition-title::before,
+article .typography > details.abstract > summary::before {
+	content: "ABSTRACT " counter(editorial-abstract);
 	display: block;
 	width: auto;
 	height: auto;
@@ -404,18 +461,18 @@ article .typography > details.note > summary::before {
 	-webkit-mask: none;
 }
 
-article .typography > .admonition.note > :not(.admonition-title),
-article .typography > details.note > :not(summary) {
+article .typography > .admonition.abstract > :not(.admonition-title),
+article .typography > details.abstract > :not(summary) {
 	margin-top: 0.45rem;
 	color: var(--editorial-muted);
-	font-family: var(--editorial-serif);
+	font-family: var(--font-sans);
 	font-size: 0.82rem;
 	line-height: 1.45;
-	text-align: right;
+	text-align: left;
 }
 
-article .typography > .admonition.note p,
-article .typography > details.note p {
+article .typography > .admonition.abstract p,
+article .typography > details.abstract p {
 	font-size: 0.82rem;
 	line-height: 1.45;
 }
@@ -589,21 +646,21 @@ article .typography > .admonition.danger {
 		text-align: left;
 	}
 
-	article .typography > .admonition.note,
-	article .typography > details.note {
+	article .typography > .admonition.abstract,
+	article .typography > details.abstract {
 		float: none;
 		width: auto;
 		margin: 1.5rem 0;
-		border-top: 0;
+		border-top: 1px solid var(--editorial-rule-strong);
 		border-left: 3px solid var(--editorial-teal);
 		padding: 1rem 1.1rem;
 		text-align: left;
 	}
 
-	article .typography > .admonition.note > p.admonition-title,
-	article .typography > details.note > summary,
-	article .typography > .admonition.note > :not(.admonition-title),
-	article .typography > details.note > :not(summary) {
+	article .typography > .admonition.abstract > p.admonition-title,
+	article .typography > details.abstract > summary,
+	article .typography > .admonition.abstract > :not(.admonition-title),
+	article .typography > details.abstract > :not(summary) {
 		text-align: left;
 	}
 }
@@ -717,6 +774,62 @@ article .typography > .admonition.danger {
 
 	article .typography h3::before {
 		top: 0.35rem;
+	}
+}
+
+/* Desktop uses the whole canvas: reading column left, contents ledger right. */
+@media (min-width: 64rem) {
+	.editorial-site-header__inner,
+	.editorial-site-header__rule {
+		width: calc(100% - 4rem);
+		max-width: none;
+	}
+
+	article,
+	html.sidebar-collapsed article {
+		width: 100%;
+		max-width: none;
+	}
+
+	article:has(.editorial-contents-rail .article-contents) {
+		grid-template-columns: minmax(0, 1fr) 18rem;
+		column-gap: 2.5rem;
+	}
+
+	/* A genuine left note rail uses the canvas rather than wasting it. */
+	article {
+		--editorial-margin: 10rem;
+	}
+
+	/* The title and reading column share one left edge. */
+	.editorial-page-intro,
+	article .typography {
+		padding-left: var(--editorial-margin);
+	}
+
+	article .typography > .admonition.abstract,
+	article .typography > details.abstract {
+		width: var(--editorial-margin);
+		margin-left: calc(-1 * var(--editorial-margin));
+		padding-left: 2rem;
+	}
+
+	article .typography h2::before,
+	article .typography h3::before {
+		position: absolute;
+		left: calc(-1 * var(--editorial-margin));
+		right: auto;
+		width: 1.5rem;
+		margin: 0;
+		text-align: left;
+	}
+
+	article .typography h2::before {
+		top: 0.75rem;
+	}
+
+	article .typography h3::before {
+		top: 0.3rem;
 	}
 }
 
