@@ -382,20 +382,21 @@ article p.editorial-citation-line {
 
 /* Numbered section geometry and left annotation rail. */
 article .typography {
-	counter-reset: editorial-section editorial-subsection editorial-abstract;
+	counter-reset: editorial-section editorial-subsection;
 	position: relative;
 	padding-left: var(--editorial-margin);
 }
 
 article .typography h2 {
 	counter-increment: editorial-section;
-	counter-reset: editorial-subsection;
+	counter-reset: editorial-subsection editorial-abstract;
 	position: relative;
 	margin-top: 4.4rem;
 }
 
 article .typography h3 {
 	counter-increment: editorial-subsection;
+	counter-reset: editorial-abstract;
 	position: relative;
 }
 
@@ -437,6 +438,32 @@ article .typography > details.abstract {
 	text-align: left;
 }
 
+/* A marginalia right after a heading aligns its top border with the heading's
+   top edge, so the heading must give up its own rule/padding. */
+article .typography h2:has(+ .admonition.abstract),
+article .typography h2:has(+ details.abstract),
+article .typography h3:has(+ .admonition.abstract),
+article .typography h3:has(+ details.abstract),
+article .typography h4:has(+ .admonition.abstract),
+article .typography h4:has(+ details.abstract) {
+	border-top: 0;
+	padding-top: 0;
+}
+
+article .typography > .admonition.abstract:first-child,
+article .typography > details.abstract:first-child {
+	margin-top: 0;
+}
+
+article .typography h2 + .admonition.abstract,
+article .typography h2 + details.abstract,
+article .typography h3 + .admonition.abstract,
+article .typography h3 + details.abstract,
+article .typography h4 + .admonition.abstract,
+article .typography h4 + details.abstract {
+	margin-top: 0;
+}
+
 article .typography > .admonition.abstract > p.admonition-title,
 article .typography > details.abstract > summary {
 	display: block;
@@ -449,7 +476,7 @@ article .typography > details.abstract > summary {
 
 article .typography > .admonition.abstract > p.admonition-title::before,
 article .typography > details.abstract > summary::before {
-	content: "ABSTRACT " counter(editorial-abstract);
+	content: "§" counter(editorial-section) "." counter(editorial-abstract);
 	display: block;
 	width: auto;
 	height: auto;

@@ -1,9 +1,6 @@
 
 ## Variant: Index CDS Default Payoff and Remaining Notional
 
-> [!abstract] HAMMER THIS INTO YOUR HEAD
-> If one entity in an index of `N` entities defaults, its share of the index notional is paid out at `1-R`, and that entity’s notional is then removed from the index; an **entity** is one individual company or borrower in the CDS index whose debt may default, `N` is the total number of such entities, **notional** is the reference amount used to calculate CDS payments, and `R` is the recovery rate, meaning the fraction of value recovered after default—for example, if a €100 million index contains 100 entities, each entity represents €1 million of notional, so if one defaults and `R = 40%`, the CDS pays €600,000 and the remaining index notional falls to €99 million.
-
 > Party X is the **protection buyer** in a five-year **$100 million notional CDS index** containing **125 equally weighted entities**. One constituent, Company A, defaults. After default, its bonds trade at **30% of par**.
 > **1. What payoff does Party X receive?**
 > **2. What is the CDS index notional after the default?**
@@ -114,17 +111,31 @@ The remaining 124 companies continue to be covered.
 > [!NOTE]
 > For an equally weighted CDS index: $\text{Defaulted notional}=\frac{\text{Index notional}}{\text{Number of constituents}}$.
 
+**Reusable pattern**
+
+$$
+\text{Defaulted entity notional}
+=
+\frac{\text{Total index notional}}{N}
+$$
+
+$$
+\text{CDS payoff}
+=
+\text{Defaulted entity notional}\times(1-R)
+$$
+
+$$
+\text{Remaining index notional}
+=
+\text{Old notional}-\text{Defaulted entity notional}
+$$
 
 ---
 
 ## Variant: Calculating Survival Probability from Annual Hazard Rates
 
 > Consider a five-year senior CDS on Xeon Corp. Its **hazard rate is 2% in Year 1 and increases by 1 percentage point each year**. Calculate the probability that Xeon **survives all five years without defaulting**.
-
-
-> [!NOTE] Recognition pattern
-> Hazard rates across several periods + probability of surviving to maturity → convert each hazard into $1-h$ and multiply.
-
 
 **What is the question asking?**
 
@@ -211,7 +222,9 @@ Start
 ```
 
 > [!NOTE]
-> Do **not** simply subtract $2\%+3\%+4\%+5\%+6\%=20\%$ from 100%; each hazard rate applies only to firms that survived earlier years.
+> Do **not** simply subtract $2%+3%+4%+5%+6%=20%$ from 100%; each hazard rate applies only to firms that survived earlier years.
+
+**Reusable rule**
 
 For annual hazard rates $h_1,h_2,\ldots,h_T$:
 
@@ -223,6 +236,7 @@ P(\text{survive through }T)
 }
 $$
 
+Recognition pattern: **hazard rates across several periods + probability of surviving to maturity → convert each hazard into $1-h$ and multiply.**
 
 ---
 
@@ -369,6 +383,8 @@ CTD price = recovery rate
       v
 Payoff = Notional × (1 - Recovery)
 ```
+
+**Rule:** **Eligibility first → cheapest bond second → recovery third → CDS payoff last.**
 
 ---
 
