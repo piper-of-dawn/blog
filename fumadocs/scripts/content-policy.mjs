@@ -176,10 +176,16 @@ export function convertCalloutsAndHighlights(markdown) {
       index += 1;
     }
     const calloutBody = body.filter((bodyLine) => !/^\s*[“”"']\s*$/u.test(bodyLine));
+    const paragraph = calloutBody
+      .join(' ')
+      .replace(/\s+/gu, ' ')
+      .replace(/^[\s“"]+/u, '')
+      .replace(/[\s”"]+$/u, '')
+      .trim();
     output.push(
       `> **${title}**`,
       '>',
-      ...calloutBody.map((bodyLine) => `> ${bodyLine}`.trimEnd()),
+      ...(paragraph ? [`> ${paragraph}`] : []),
     );
   }
 
