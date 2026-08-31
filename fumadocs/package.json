@@ -1,0 +1,50 @@
+{
+  "name": "fumadocs",
+  "version": "0.0.22",
+  "private": true,
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "build": "next build --webpack && pnpm run privacy:artifact",
+    "dev": "next dev --webpack --hostname 127.0.0.1 --port 3001",
+    "prebuild": "pnpm run sync && pnpm run privacy:source",
+    "predev": "pnpm run sync && pnpm run privacy:source",
+    "sync": "node scripts/sync-notes.mjs",
+    "review:refresh": "node scripts/sync-notes.mjs --refresh-manifest",
+    "privacy:source": "node scripts/privacy-check.mjs content/docs public/assets",
+    "privacy:artifact": "node scripts/privacy-check.mjs out",
+    "privacy:check": "node scripts/privacy-check.mjs content/docs public/assets out",
+    "routes:check": "node scripts/check-routes.mjs",
+    "serve:local": "pnpm run sync && pnpm run privacy:source && node scripts/local-server.mjs",
+    "start": "serve out",
+    "test": "node --test tests/*.test.mjs",
+    "types:check": "next typegen && tsc --noEmit",
+    "lint": "eslint .",
+    "validate": "pnpm test && pnpm run lint && pnpm run types:check && pnpm run build && pnpm run routes:check"
+  },
+  "dependencies": {
+    "cnfast": "^0.1.0",
+    "fumadocs-core": "16.15.4",
+    "fumadocs-mdx": "15.4.0",
+    "fumadocs-ui": "npm:@fumadocs/base-ui@16.15.4",
+    "katex": "^0.16.27",
+    "lucide-react": "^1.34.0",
+    "next": "16.3.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/mdx": "^2.0.14",
+    "@types/node": "^26.3.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "postcss": "^8.5.26",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "serve": "^14.2.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "16.3.3"
+  }
+}

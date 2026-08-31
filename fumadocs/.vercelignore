@@ -1,0 +1,6 @@
+node_modules
+.next
+.source
+.work
+content/docs
+public/assets

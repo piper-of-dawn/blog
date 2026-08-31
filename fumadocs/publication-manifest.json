@@ -1,0 +1,996 @@
+{
+  "version": 1,
+  "source": {
+    "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
+    "ref": "master"
+  },
+  "publicIdentity": {
+    "author": "Kumar Shantanu",
+    "profile": "https://github.com/piper-of-dawn"
+  },
+  "legacyAliases": [
+    {
+      "path": "CFA L1 Notes/ALTERNATIVE INVESTMENTS/PRIVATE EQUITY.md",
+      "route": "/CFA L1 Notes/ALTERNATIVE INVESTMENTS/PRIVATE EQUITY/",
+      "target": "/CFA L1 Notes/ALTERNATIVE INVESTMENTS/Alternative Investment Features Methods and Structures/",
+      "title": "Private Equity"
+    }
+  ],
+  "entries": [
+    {
+      "path": "Arts/Art of Git.md",
+      "sha256": "c52ce48a8eee005080157ff4460c63bae39d5208c2f1d60777d2114672d6caf3",
+      "type": "content",
+      "route": "/Arts/Art of Git/"
+    },
+    {
+      "path": "Arts/Art of Shell.md",
+      "sha256": "b9f0dcba0b3c534a326f81bdb53d7045202dadd6657ae13284a2d8ba5a12f395",
+      "type": "content",
+      "route": "/Arts/Art of Shell/"
+    },
+    {
+      "path": "Arts/Async Programming.md",
+      "sha256": "c4e2ed2b36a0467a2b4da685b8e1381391e1d6069fd947a188f6774e1a0fd8e3",
+      "type": "content",
+      "route": "/Arts/Async Programming/"
+    },
+    {
+      "path": "Arts/Data Engineering.md",
+      "sha256": "0924f7dc105e43ece8314b5d0ca31ca1729f75f705eef628db41997a7ca03b02",
+      "type": "content",
+      "route": "/Arts/Data Engineering/"
+    },
+    {
+      "path": "Books/Siddhartha.md",
+      "sha256": "3da073af6d995839a39149354eca8a42a68099a88bc48f726fb02105f718a2e4",
+      "type": "content",
+      "route": "/Books/Siddhartha/"
+    },
+    {
+      "path": "Books/The Zen and the Art of Motorcycle Maintenance.md",
+      "sha256": "cc0d77133f3db003005403a983791ea41eebd008adbc4e6dda0731d4fd26b9dd",
+      "type": "content",
+      "route": "/Books/The Zen and the Art of Motorcycle Maintenance/"
+    },
+    {
+      "path": "C++/Concepts.md",
+      "sha256": "2de0fb0747ca2c8d14abaf1d3dbe96b11e41d3805a35fdaf41280a7f6de66132",
+      "type": "content",
+      "route": "/C++/Concepts/"
+    },
+    {
+      "path": "C++/GDB.md",
+      "sha256": "a4105eecfe6fe0dea21c0aaf79a629de46752654359e107889f7d086c6dd0907",
+      "type": "content",
+      "route": "/C++/GDB/"
+    },
+    {
+      "path": "C++/Lambdas.md",
+      "sha256": "2f1599b5a7b064f24a1c68a6461015c27814a8408c8ea59c99fed36795c72432",
+      "type": "content",
+      "route": "/C++/Lambdas/"
+    },
+    {
+      "path": "C++/Linked List in C++ with Smart Pointers.md",
+      "sha256": "0fed251e8e67730aa86b5eb0029b142970254bc664c4c165eef7e5887fb668ed",
+      "type": "content",
+      "route": "/C++/Linked List in C++ with Smart Pointers/"
+    },
+    {
+      "path": "C++/Read CSV in C++.md",
+      "sha256": "cab52b7687f5468af56b1a1f20f790bdca360efd90ed7b99513bfde1c67b47cb",
+      "type": "content",
+      "route": "/C++/Read CSV in C++/"
+    },
+    {
+      "path": "C++/Reading Args.md",
+      "sha256": "151257d30260bb0f7fc5aa84f84ee3fa1a1f621d1ead48d75eed1c72e2687291",
+      "type": "content",
+      "route": "/C++/Reading Args/"
+    },
+    {
+      "path": "C++/Shared vs Static libraries.md",
+      "sha256": "1d12d619558def15cb53131c7176334d9b2982d890bc718a987fdc510013fb8c",
+      "type": "content",
+      "route": "/C++/Shared vs Static libraries/"
+    },
+    {
+      "path": "C++/The Art of Higher Order Functions.md",
+      "sha256": "a4eddfb2f1672ab711c58635b44c56c11bc521f32e38fd81f6b4528dcd344532",
+      "type": "content",
+      "route": "/C++/The Art of Higher Order Functions/"
+    },
+    {
+      "path": "C++/The Two Kinds of Parallelism.md",
+      "sha256": "f78a856be31b0f8f8f621f827dd74f244b06123ba49f223d43789d91ffa7a37b",
+      "type": "content",
+      "route": "/C++/The Two Kinds of Parallelism/"
+    },
+    {
+      "path": "C++/Unions.md",
+      "sha256": "1a5e504980def10c129ff82ade40d28d627ec0b0acd18f3eb0919fa2d072cc47",
+      "type": "content",
+      "route": "/C++/Unions/"
+    },
+    {
+      "path": "CFA L1 Notes/ALTERNATIVE INVESTMENTS/01 Alternative Investment Features Methods and Structures.md",
+      "sha256": "5842561a78f64b92d370eaddd6fdfaefb5ccdad01b86507462bd3ae486f6095d",
+      "type": "content",
+      "route": "/CFA L1 Notes/ALTERNATIVE INVESTMENTS/Alternative Investment Features Methods and Structures/"
+    },
+    {
+      "path": "CFA L1 Notes/ALTERNATIVE INVESTMENTS/02 Alternative Investment Performance and Returns.md",
+      "sha256": "87542a9f38fbd7c23d56eb7a74a99ba2ea2b4dd655cb201308f6653c102b1930",
+      "type": "content",
+      "route": "/CFA L1 Notes/ALTERNATIVE INVESTMENTS/Alternative Investment Performance and Returns/"
+    },
+    {
+      "path": "CFA L1 Notes/ALTERNATIVE INVESTMENTS/CHEATSHEET.md",
+      "sha256": "0a7787fde306f950b97fb18bb8b8a05d710b0b87850ea3cd1f83f14cbf009e6b",
+      "type": "content",
+      "route": "/CFA L1 Notes/ALTERNATIVE INVESTMENTS/CHEATSHEET/"
+    },
+    {
+      "path": "CFA L1 Notes/ALTERNATIVE INVESTMENTS/Introduction to Digital Assets.md",
+      "sha256": "cc090a7bc56f4c8760fcf75e513e1cb711bfaf8f601ed76143749b102b5d0769",
+      "type": "content",
+      "route": "/CFA L1 Notes/ALTERNATIVE INVESTMENTS/Introduction to Digital Assets/"
+    },
+    {
+      "path": "CFA L1 Notes/ALTERNATIVE INVESTMENTS/REAL ESTATE.md",
+      "sha256": "33ee5842713f90268b9b9a57881d77de47013f667c7d1746ee6a5e0f69c6379b",
+      "type": "content",
+      "route": "/CFA L1 Notes/ALTERNATIVE INVESTMENTS/REAL ESTATE/"
+    },
+    {
+      "path": "CFA L1 Notes/CORPORATE ISSUERS/05 Capital Investments and Capital Allocation.md",
+      "sha256": "fead60d0c151989877454accf101b0ebb374b7b9ed3fd2ea0b2e581bbe11c030",
+      "type": "content",
+      "route": "/CFA L1 Notes/CORPORATE ISSUERS/Capital Investments and Capital Allocation/"
+    },
+    {
+      "path": "CFA L1 Notes/CORPORATE ISSUERS/20-features-of-corporate-issuers.md",
+      "sha256": "008722cf970654d81880f79db61bb41017ba779ccb3d3ecdd70854762bd8c377",
+      "type": "content",
+      "route": "/CFA L1 Notes/CORPORATE ISSUERS/20-features-of-corporate-issuers/"
+    },
+    {
+      "path": "CFA L1 Notes/CORPORATE ISSUERS/21-stakeholders-and-esg-factors.md",
+      "sha256": "a0b4eb827ecbc26191eedda93cdc54aff8d8d7a5691daf74a624260aee99afc9",
+      "type": "content",
+      "route": "/CFA L1 Notes/CORPORATE ISSUERS/21-stakeholders-and-esg-factors/"
+    },
+    {
+      "path": "CFA L1 Notes/CORPORATE ISSUERS/22-corporate-governance.md",
+      "sha256": "1b3498afcbe3362e7c8ce614f680867446c1833d24b94edd30b13579f589ba83",
+      "type": "content",
+      "route": "/CFA L1 Notes/CORPORATE ISSUERS/22-corporate-governance/"
+    },
+    {
+      "path": "CFA L1 Notes/CORPORATE ISSUERS/23-liquidity-measures-and-management.md",
+      "sha256": "8b0b5ee65e876edbbd7d6d48329336e56c94a086a2302f4a6c8094eae11105d7",
+      "type": "content",
+      "route": "/CFA L1 Notes/CORPORATE ISSUERS/23-liquidity-measures-and-management/"
+    },
+    {
+      "path": "CFA L1 Notes/CORPORATE ISSUERS/24-2-capital-allocation-principles-and-real-options.md",
+      "sha256": "3dee63b8d107bb013cf22642e4de8657f5ff4b27e65c9c42ad82058600bf5f1a",
+      "type": "content",
+      "route": "/CFA L1 Notes/CORPORATE ISSUERS/24-2-capital-allocation-principles-and-real-options/"
+    },
+    {
+      "path": "CFA L1 Notes/CORPORATE ISSUERS/25-1-weighted-average-cost-of-capital.md",
+      "sha256": "40d82249a85f75764d0716766e9ae70de825cb0fcc691c1e9d54a0efd36ab101",
+      "type": "content",
+      "route": "/CFA L1 Notes/CORPORATE ISSUERS/25-1-weighted-average-cost-of-capital/"
+    },
+    {
+      "path": "CFA L1 Notes/CORPORATE ISSUERS/25-2-capital-structure-theories.md",
+      "sha256": "66411b55f164678d1b6b2e5d49e19a128abca131270562d2388f17d733dfa2f8",
+      "type": "content",
+      "route": "/CFA L1 Notes/CORPORATE ISSUERS/25-2-capital-structure-theories/"
+    },
+    {
+      "path": "CFA L1 Notes/DERIVATIVES/02 Forward Commitment and Contingent Claim Features and Instruments.md",
+      "sha256": "3e035364587f68fa41218f1eba3a8206f9b3a24f457cc082308f58283c236374",
+      "type": "content",
+      "route": "/CFA L1 Notes/DERIVATIVES/Forward Commitment and Contingent Claim Features and Instruments/"
+    },
+    {
+      "path": "CFA L1 Notes/DERIVATIVES/09 Option Replication Using Put Call Parity.md",
+      "sha256": "bd4ad245b8a12c22954caede23ede20764fc313a23dcb6242fc87b53ac732a1b",
+      "type": "content",
+      "route": "/CFA L1 Notes/DERIVATIVES/Option Replication Using Put Call Parity/"
+    },
+    {
+      "path": "CFA L1 Notes/ECONOMICS/01 The Firm and Market Structures.md",
+      "sha256": "a9da918e8d7210cc88a37c2e2b37f8fc675ae8c3c4e0c7a971fa952aebe20de2",
+      "type": "content",
+      "route": "/CFA L1 Notes/ECONOMICS/The Firm and Market Structures/"
+    },
+    {
+      "path": "CFA L1 Notes/ECONOMICS/02 Understanding Business Cycles.md",
+      "sha256": "d5eddaa5db40580eca121e4de0104d3e62087db90ff9ea048e217ce58c505361",
+      "type": "content",
+      "route": "/CFA L1 Notes/ECONOMICS/Understanding Business Cycles/"
+    },
+    {
+      "path": "CFA L1 Notes/ECONOMICS/03 FISCAL POLICY.md",
+      "sha256": "76daf129b55887335de0afffe27b4a3a9d62213edf0740142fd7e43139001ee9",
+      "type": "content",
+      "route": "/CFA L1 Notes/ECONOMICS/FISCAL POLICY/"
+    },
+    {
+      "path": "CFA L1 Notes/ECONOMICS/04 MONETARY POLICY.md",
+      "sha256": "fbf020c1ba05aa793287bdeb1ac552ead885a5f3da1cc5b92140c1b530e7816c",
+      "type": "content",
+      "route": "/CFA L1 Notes/ECONOMICS/MONETARY POLICY/"
+    },
+    {
+      "path": "CFA L1 Notes/ECONOMICS/International Trade.md",
+      "sha256": "19aee9bca27e41e6cc031f0510094243dcaf258f093209a3806fbd3407861dae",
+      "type": "content",
+      "route": "/CFA L1 Notes/ECONOMICS/International Trade/"
+    },
+    {
+      "path": "CFA L1 Notes/ECONOMICS/Introduction to Geopolitics.md",
+      "sha256": "4b662fbda6857f0306f2d4ccf1f11b4bee172055255773053392d8b6ea41226b",
+      "type": "content",
+      "route": "/CFA L1 Notes/ECONOMICS/Introduction to Geopolitics/"
+    },
+    {
+      "path": "CFA L1 Notes/ECONOMICS/lrtc.svg",
+      "sha256": "4fb202144878aa740016793493d04eb6c0e1686f3d94ca720e8e26488cb3ac02",
+      "type": "asset"
+    },
+    {
+      "path": "CFA L1 Notes/EQUITY/01-market-organization-and-structure (2).md",
+      "sha256": "8899b6a038a0daaf7f8f1b9fc1a77ae87b2efacc523a44dbe62da48d29f9a4e1",
+      "type": "content",
+      "route": "/CFA L1 Notes/EQUITY/01-market-organization-and-structure (2)/"
+    },
+    {
+      "path": "CFA L1 Notes/EQUITY/01-market-organization-and-structure.md",
+      "sha256": "8899b6a038a0daaf7f8f1b9fc1a77ae87b2efacc523a44dbe62da48d29f9a4e1",
+      "type": "content",
+      "route": "/CFA L1 Notes/EQUITY/01-market-organization-and-structure/"
+    },
+    {
+      "path": "CFA L1 Notes/EQUITY/02 Security Market Indexes.md",
+      "sha256": "1c774bf87aba4510d76b029e6f601275e3f228a7f8697939e66822eb61e6be81",
+      "type": "content",
+      "route": "/CFA L1 Notes/EQUITY/Security Market Indexes/"
+    },
+    {
+      "path": "CFA L1 Notes/EQUITY/03-market-efficiency.md",
+      "sha256": "21d216ae50e7cd9e283cdb4fd2fea7f795f5000c334d2dd56152539a9d18f2d7",
+      "type": "content",
+      "route": "/CFA L1 Notes/EQUITY/03-market-efficiency/"
+    },
+    {
+      "path": "CFA L1 Notes/EQUITY/04-overview-of-equity-securities.md",
+      "sha256": "fcccd62550cbb278fa695e45d7105542d3bdd59af11470ba26fd8b68c4251c31",
+      "type": "content",
+      "route": "/CFA L1 Notes/EQUITY/04-overview-of-equity-securities/"
+    },
+    {
+      "path": "CFA L1 Notes/EQUITY/05-company-analysis-past-and-present.md",
+      "sha256": "f49102e439a1565f9891baf9644e3878b0c7cf650d698d08c384726e3ebc56da",
+      "type": "content",
+      "route": "/CFA L1 Notes/EQUITY/05-company-analysis-past-and-present/"
+    },
+    {
+      "path": "CFA L1 Notes/EQUITY/06-industry-and-competitive-analysis.md",
+      "sha256": "39f7947aa62eecf0fcceefa5ba5aa7a27408940e5e303547047d93f627cd6205",
+      "type": "content",
+      "route": "/CFA L1 Notes/EQUITY/06-industry-and-competitive-analysis/"
+    },
+    {
+      "path": "CFA L1 Notes/EQUITY/07-company-analysis-forecasting.md",
+      "sha256": "0490c3b12de68c82b05de336b45e885b565ff335caf7c5f354337763cb99bb0c",
+      "type": "content",
+      "route": "/CFA L1 Notes/EQUITY/07-company-analysis-forecasting/"
+    },
+    {
+      "path": "CFA L1 Notes/EQUITY/08-equity-valuation-concepts-and-basic-tools.md",
+      "sha256": "b5adeaa97a1e9a5bd21757d9269d806550e5cb7342c9ae7deeeed4f1d8860b4e",
+      "type": "content",
+      "route": "/CFA L1 Notes/EQUITY/08-equity-valuation-concepts-and-basic-tools/"
+    },
+    {
+      "path": "CFA L1 Notes/ETHICS/GIPS.md",
+      "sha256": "92670c623662e379e8de14b5aec63ee7e77bd55823e9daf4a6863a1cb22cfe9b",
+      "type": "content",
+      "route": "/CFA L1 Notes/ETHICS/GIPS/"
+    },
+    {
+      "path": "CFA L1 Notes/ETHICS/STANDARD 1 - PROFESSIONALISM.md",
+      "sha256": "7a627ac327e93ad279de478111bbea438d96dd9a246f58d12fae936ff4a8f997",
+      "type": "content",
+      "route": "/CFA L1 Notes/ETHICS/STANDARD 1 - PROFESSIONALISM/"
+    },
+    {
+      "path": "CFA L1 Notes/ETHICS/STANDARD 2 - INTEGRITY OF CAPITAL MARKETS.md",
+      "sha256": "c45b13ae95873c45f96b2e8b5affbf8b6df25aefd0c9c88e9beeba033f392648",
+      "type": "content",
+      "route": "/CFA L1 Notes/ETHICS/STANDARD 2 - INTEGRITY OF CAPITAL MARKETS/"
+    },
+    {
+      "path": "CFA L1 Notes/ETHICS/STANDARD 3 - DUTIES TO CLIENTS.md",
+      "sha256": "611d856779bab45bc639124caa5127d9d0092cb8e0ac38790389a33e4f8bc705",
+      "type": "content",
+      "route": "/CFA L1 Notes/ETHICS/STANDARD 3 - DUTIES TO CLIENTS/"
+    },
+    {
+      "path": "CFA L1 Notes/ETHICS/STANDARD 4 - DUTIES TO EMPLOYERS.md",
+      "sha256": "838eeb348dc3565ef271ece113b9a7e7bc30eac7efd04d85c92702066056dd24",
+      "type": "content",
+      "route": "/CFA L1 Notes/ETHICS/STANDARD 4 - DUTIES TO EMPLOYERS/"
+    },
+    {
+      "path": "CFA L1 Notes/ETHICS/STANDARD 5 - INVESTMENT ANALYSIS RECOMMENDATIONS AND ACTIONS.md",
+      "sha256": "e932beec876fe12b8da078e5b15eefb5835c3337801d1a0de5f6232c3b1f62d9",
+      "type": "content",
+      "route": "/CFA L1 Notes/ETHICS/STANDARD 5 - INVESTMENT ANALYSIS RECOMMENDATIONS AND ACTIONS/"
+    },
+    {
+      "path": "CFA L1 Notes/ETHICS/STANDARD 6 - CONFLICTS OF INTEREST.md",
+      "sha256": "93307680ac64ac3489b0c063f9be5a279494a61af7b47c7a54695ae5e7a10833",
+      "type": "content",
+      "route": "/CFA L1 Notes/ETHICS/STANDARD 6 - CONFLICTS OF INTEREST/"
+    },
+    {
+      "path": "CFA L1 Notes/ETHICS/STANDARD 7 - RESPONSIBILITIES AS A CFA INSTITUTE MEMBER OR CFA CANDIDATE.md",
+      "sha256": "e8e8384e3deb0aa921ac59880bd2334aadf971cb4ef50d810a350d3a5a37d58c",
+      "type": "content",
+      "route": "/CFA L1 Notes/ETHICS/STANDARD 7 - RESPONSIBILITIES AS A CFA INSTITUTE MEMBER OR CFA CANDIDATE/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/01 - Fixed-Income Instrument Features.md",
+      "sha256": "56cc3bd24fd801554f4dcbf9fc5dd9a2dd76795f51236dcddb522c32e28ed973",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/- Fixed-Income Instrument Features/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/02 - Fixed-Income Cash Flows and Types.md",
+      "sha256": "a268543856d7b91e3d1257d37e1c04eb41cb69c1750a3c80b3790cd9af5d9317",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/- Fixed-Income Cash Flows and Types/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/03 - Fixed Income Issuance and Trading.md",
+      "sha256": "28dfc51d66f2fe1a4394480bc6e7ebe2502f1975179bf916dea2e2f0c7a18cb5",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/- Fixed Income Issuance and Trading/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/04-fixed-income-markets-for-corporate-issuers.md",
+      "sha256": "165bfca7e4fa25249ec25b7194f2c2ca3118a851998fafb03b8f9483adecdbfb",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/04-fixed-income-markets-for-corporate-issuers/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/05-fixed-income-markets-for-government-issuers.md",
+      "sha256": "0d54f823149148a946327f50f4c255a65ea0336541ccddfa51c184a8350f5be8",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/05-fixed-income-markets-for-government-issuers/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/06-fixed-income-bond-valuation-prices-and-yields.md",
+      "sha256": "b7d03f07cc37595820435d778e0fb01cef3e0988b730de00488c812cc955a489",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/06-fixed-income-bond-valuation-prices-and-yields/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/08 - Yield and Yield Spread Measures for Floating-Rate Instruments.md",
+      "sha256": "ec3335a63e6ae7db8b48335cef430a04b0e6034a124368237f89be480a210a42",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/- Yield and Yield Spread Measures for Floating-Rate Instruments/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/09-the-term-structure-of-interest-rates-spot-par-and-forward-curves.md",
+      "sha256": "d50e5e1255135e1f00fb2e732996db85b1872c8768f40886bde82e9fdd8888e4",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/09-the-term-structure-of-interest-rates-spot-par-and-forward-curves/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/10 Interest Rate Risk and Return.md",
+      "sha256": "bf67aaa0d040825046532ce34aeb41aef531de0c4d43504465b974ccf460cd0b",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/Interest Rate Risk and Return/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/11 Yield-Based Bond Duration Measures and Properties.md",
+      "sha256": "1b2e3a37aa73bfd5e46c3b48f3334e366f1da99693d625bec5280f28614506d1",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/Yield-Based Bond Duration Measures and Properties/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/12 - Yield-Based Bond Convexity and Portfolio Properties.md",
+      "sha256": "261459214fc19e0550fd9923b11f0e6e241f41b362bb17ddd13470e14cc8f1c2",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/- Yield-Based Bond Convexity and Portfolio Properties/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/13-curve-based-and-empirical-fixed-income-risk-measures.md",
+      "sha256": "09b17c2acce1aebea82251d0a9aed2bf02d35b5bea2f7ca6b51c7f0461e7ffa3",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/13-curve-based-and-empirical-fixed-income-risk-measures/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/14-credit-risk.md",
+      "sha256": "502d276bf75b4e08cbb46b4de7b6c478e0a00b7bee3fb383ac697ab543859501",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/14-credit-risk/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/15-credit-analysis-for-government-issuers.md",
+      "sha256": "9332c979b029358135a2041f9f5abcadde767c3e7fa59f1e8d31dc0e8623c2df",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/15-credit-analysis-for-government-issuers/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/16-credit-analysis-for-corporate-issuers.md",
+      "sha256": "0008527da436b79be10fd374a92c147b8120e86a2a4e6560a793f6d979c8873d",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/16-credit-analysis-for-corporate-issuers/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/17-fixed-income-securitization.md",
+      "sha256": "d7729668e1d4b42b588152bdf31df18b9c26f5c977916269a1cb1f825a21692b",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/17-fixed-income-securitization/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/18-asset-backed-security-abs-instrument-and-market-features.md",
+      "sha256": "57b79c09f0dcefc84d30b9d70b3b59b018963e5c8a110f2434cc81ba952616a7",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/18-asset-backed-security-abs-instrument-and-market-features/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/19-mortgage-backed-security-mbs-instrument-and-market-features.md",
+      "sha256": "5c8238f421fb96273e235d9d21b3f6c2b342e2bfa1c42f3a9d6594d3dba2991b",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/19-mortgage-backed-security-mbs-instrument-and-market-features/"
+    },
+    {
+      "path": "CFA L1 Notes/FIXED INCOME/Yield and Yield Spread Measures for Fixed-Rate Bonds.md",
+      "sha256": "d1c5fe7bf95326cc73667bcdcfca4c4d2969c1752d73d812c4aa45bdda913ffb",
+      "type": "content",
+      "route": "/CFA L1 Notes/FIXED INCOME/Yield and Yield Spread Measures for Fixed-Rate Bonds/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/03-analyzing-balance-sheets.md",
+      "sha256": "d991f9b56f6da3661e966f6315d9ed5e52cb602051cb85be9a5aa8d2e912a36f",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/03-analyzing-balance-sheets/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/04 ANALYZING STATEMENTS OF CASH FLOWS I.md",
+      "sha256": "bf7ef54de52da6777be6876f49c8377c71d32c0ef1863fa1f079a7e24bf347d6",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/ANALYZING STATEMENTS OF CASH FLOWS I/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/05 ANALYZING STATEMENTS OF CASH FLOWS II.md",
+      "sha256": "4f7c28622bf269b220a44288a5b8fbd1d509ea38b8edb22a327ece47e7c1e2c1",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/ANALYZING STATEMENTS OF CASH FLOWS II/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/06-analysis-of-inventories.md",
+      "sha256": "ccc2c68227e8dda261acbe7f22107c8ed4dfe5ff6bc3403dd2a61ddc8b8d4589",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/06-analysis-of-inventories/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/07-analysis-of-long-term-assets.md",
+      "sha256": "b3df098bcf5767a71dd9646525209216061845f72ca17d2ae778bfea04887eee",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/07-analysis-of-long-term-assets/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/08-topics-in-long-term-liabilities-and-equity.md",
+      "sha256": "e1a57a534babeee982f3f41865ccbfb1f06e980af84c860443c38921e775b5ed",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/08-topics-in-long-term-liabilities-and-equity/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/09-analysis-of-income-taxes.md",
+      "sha256": "1432d3d0032b39b26a789e50e6bf32d20d4a2e2b3b20fe3a1c697915b5413f3f",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/09-analysis-of-income-taxes/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/10 - Financial Reporting Quality.md",
+      "sha256": "c29c61bcc26af882f1bec48174570d5585af0b59ecba720849ede10272ff94ad",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/- Financial Reporting Quality/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/11-financial-analysis-techniques.md",
+      "sha256": "f18daa9f5de0c50e34299b4537cde6941ac93ca99afe4ae42946eabd976bd6c9",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/11-financial-analysis-techniques/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/12-introduction-to-financial-statement-modeling.md",
+      "sha256": "f7eb940b7e1a592ed34f913b779eb7f0726fc6ab834c48d99e6c14dd17d0ea88",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/12-introduction-to-financial-statement-modeling/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/2 - Analysing Income Statements.md",
+      "sha256": "dedbeddc4d8c1815cd1e12897e2cbbc1e73bc105505cffacccdcdac3fc2ff7a3",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/- Analysing Income Statements/"
+    },
+    {
+      "path": "CFA L1 Notes/FSA/Introduction to Financial Statement Analysis.md",
+      "sha256": "91115ff69a1b2a7cda9bdf37c516f24dcd6e6a3c0bfed967f4622ac0a7524efc",
+      "type": "content",
+      "route": "/CFA L1 Notes/FSA/Introduction to Financial Statement Analysis/"
+    },
+    {
+      "path": "CFA L1 Notes/module58_convexity_curve.svg",
+      "sha256": "ad2e9405bf0860c091734e4efa11c7ca373f33babb582ca8049005ca35e9c00b",
+      "type": "asset"
+    },
+    {
+      "path": "CFA L1 Notes/module58_convexity_feature_map.svg",
+      "sha256": "8b3fd031a3469a74d113a5cf22430b514ec1141dc2fb92bdc0c4e28d46b6d861",
+      "type": "asset"
+    },
+    {
+      "path": "CFA L1 Notes/PORTFOLIO MANAGEMENT/Introduction to Risk Management.md",
+      "sha256": "fbb22c095c88574d7963f6fbfecffc220c1967856b52c76082577326d36daef5",
+      "type": "content",
+      "route": "/CFA L1 Notes/PORTFOLIO MANAGEMENT/Introduction to Risk Management/"
+    },
+    {
+      "path": "CFA L1 Notes/QUANTITATIVE METHODS/Introduction to Big Data Techniques.md",
+      "sha256": "3ebf9e3040bd737d30b50380c10640f3c8c691a700cf4519c1479e496d8b2d5d",
+      "type": "content",
+      "route": "/CFA L1 Notes/QUANTITATIVE METHODS/Introduction to Big Data Techniques/"
+    },
+    {
+      "path": "CFA L1 Notes/QUANTITATIVE METHODS/Probability Trees and Conditional Expectations.md",
+      "sha256": "c8082f74a459b501e3c9c3fe86bbac99ab8aabeb3f7106cca68f3f08653ae36a",
+      "type": "content",
+      "route": "/CFA L1 Notes/QUANTITATIVE METHODS/Probability Trees and Conditional Expectations/"
+    },
+    {
+      "path": "CFA L1 Notes/QUANTITATIVE METHODS/Simple Linear Regression.md",
+      "sha256": "24fccefc5ee3e831d3b96e542edce1d30e31fd493db55baba37ffcc08b2966a4",
+      "type": "content",
+      "route": "/CFA L1 Notes/QUANTITATIVE METHODS/Simple Linear Regression/"
+    },
+    {
+      "path": "CFA Level II Notes/Corporate Issuers/Cost of Capital.md",
+      "sha256": "38c726a1cd7b2f5b99d30a62f3d24d764956182179466b7fb16833663cc3e47e",
+      "type": "content",
+      "route": "/CFA Level II Notes/Corporate Issuers/Cost of Capital/"
+    },
+    {
+      "path": "CFA Level II Notes/Derivatives/Hedge Ratio.md",
+      "sha256": "a04874e1b7e9633c9afe8d37a768c741a2a12c476ecc9c5e068a3f91e935ac1e",
+      "type": "content",
+      "route": "/CFA Level II Notes/Derivatives/Hedge Ratio/"
+    },
+    {
+      "path": "CFA Level II Notes/Derivatives/Replication.md",
+      "sha256": "5dbb4f2806f9db32551f1c534d323d0a5f689d381754bb00dd503ad0b5c0d511",
+      "type": "content",
+      "route": "/CFA Level II Notes/Derivatives/Replication/"
+    },
+    {
+      "path": "CFA Level II Notes/Derivatives/Valuation of Contingent Claims.md",
+      "sha256": "4ea4b44795eac09f905e7fa4e9e4a69c985ab95947d1cb63385cb5f667127ffe",
+      "type": "content",
+      "route": "/CFA Level II Notes/Derivatives/Valuation of Contingent Claims/"
+    },
+    {
+      "path": "CFA Level II Notes/ECONOMICS/Exchange Rate.md",
+      "sha256": "8fa757abbc03be8287ea59e14b5109b6068e12e768379415d52a2957d9d0b463",
+      "type": "content",
+      "route": "/CFA Level II Notes/ECONOMICS/Exchange Rate/"
+    },
+    {
+      "path": "CFA Level II Notes/FIXED INCOME/Credit Default Swaps.md",
+      "sha256": "3f53f9117ea1449cf9b69524c066544a5f492e4f05dc57d0ad8cc0d313b4b342",
+      "type": "content",
+      "route": "/CFA Level II Notes/FIXED INCOME/Credit Default Swaps/"
+    },
+    {
+      "path": "CFA Level II Notes/FIXED INCOME/Term Structure and Interest Rate Dynamics.md",
+      "sha256": "108df6407797ed31adce06e3807b54b27f2e262c00cc2161c6d7839fcfcacab9",
+      "type": "content",
+      "route": "/CFA Level II Notes/FIXED INCOME/Term Structure and Interest Rate Dynamics/"
+    },
+    {
+      "path": "CFA Level II Notes/FIXED INCOME/Untitled.md",
+      "sha256": "0731aff2f73474709311b5e0a42d8d6dab4e14839119bb2d7d80853d0f200558",
+      "type": "content",
+      "route": "/CFA Level II Notes/FIXED INCOME/Untitled/"
+    },
+    {
+      "path": "CFA Level II Notes/FSA/FSA Techniques.md",
+      "sha256": "59acfa86b0871f69ca19726e3cab08f15ff07fadf0d5cb70027f3cf912cef92f",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/FSA Techniques/"
+    },
+    {
+      "path": "CFA Level II Notes/FSA/Joint Ventures.md",
+      "sha256": "454014f2667abb60df640da4f2e3202a205d54eb583dc33771da51a499112ae1",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/Joint Ventures/"
+    },
+    {
+      "path": "CFA Level II Notes/FSA/Treasury Stock Method.md",
+      "sha256": "54486f3397ebab669f89c461140832dbee693cc64acf15ca196b55e2be70e4ac",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/Treasury Stock Method/"
+    },
+    {
+      "path": "CFA Level II Notes/PORTFOLIO MANAGEMENT/LM2 - Analysis of Active Portfolio Management.md",
+      "sha256": "7f81c7177c83a2ad77c690aff0def1973c25a73e5f2c443200240aac179ef227",
+      "type": "content",
+      "route": "/CFA Level II Notes/PORTFOLIO MANAGEMENT/LM2 - Analysis of Active Portfolio Management/"
+    },
+    {
+      "path": "Competitive Probability/Coins.md",
+      "sha256": "5ba51749d410427cfbeee1b3297cdca819565e02a22af10cff76681696368eb1",
+      "type": "content",
+      "route": "/Competitive Probability/Coins/"
+    },
+    {
+      "path": "Competitive Probability/Collecting Toys I.md",
+      "sha256": "7b9adfd7ab26d47af8e106bf1dbe7d1365a85efbb843165a1266dc57749f9207",
+      "type": "content",
+      "route": "/Competitive Probability/Collecting Toys I/"
+    },
+    {
+      "path": "Competitive Probability/Combinatorics.md",
+      "sha256": "86bb95b42d8f699d51b933d37c79dfcac0255f0fd4a05b04a44eb20c6103ffe5",
+      "type": "content",
+      "route": "/Competitive Probability/Combinatorics/"
+    },
+    {
+      "path": "Competitive Probability/Coupon Collector.md",
+      "sha256": "061441fe4a29244dae4855e8ceb6ca4b54f6b7d3be546cb735154caaddabe0a0",
+      "type": "content",
+      "route": "/Competitive Probability/Coupon Collector/"
+    },
+    {
+      "path": "Competitive Probability/Expectation.md",
+      "sha256": "8c3b06e96944ae78d6d65c743afc3c94c632077b5aa67eab3999c7800ddabc9e",
+      "type": "content",
+      "route": "/Competitive Probability/Expectation/"
+    },
+    {
+      "path": "Competitive Probability/Geometric Distribution.md",
+      "sha256": "0dfa4a0f0fa15e492bef906f872c345529cccf4490d12d974b25879bdbe2222b",
+      "type": "content",
+      "route": "/Competitive Probability/Geometric Distribution/"
+    },
+    {
+      "path": "Competitive Probability/Markov Processes.md",
+      "sha256": "cc640fb5da540f3a6a135f215f9c52a2ddc9e47027cf8e65f4a0639d120a6ae0",
+      "type": "content",
+      "route": "/Competitive Probability/Markov Processes/"
+    },
+    {
+      "path": "Competitive Probability/Negative Binomial Distribution.md",
+      "sha256": "44fc69c026d9cd4c3f65d164b1d003cbb6ad896226c91fecf899c106be1bcc1c",
+      "type": "content",
+      "route": "/Competitive Probability/Negative Binomial Distribution/"
+    },
+    {
+      "path": "Competitive Probability/Optimal Substructure Reasoning.md",
+      "sha256": "2552384c9f19378e461e31be87b371727c6202f09ddb86ae61ba2e0174bae67a",
+      "type": "content",
+      "route": "/Competitive Probability/Optimal Substructure Reasoning/"
+    },
+    {
+      "path": "Competitive Probability/Place and Take.md",
+      "sha256": "8c10c63b041383eeca74d66239fb674c60ae0f36f40296d84976677a4e20aea6",
+      "type": "content",
+      "route": "/Competitive Probability/Place and Take/"
+    },
+    {
+      "path": "Dark Arts/Resolve Merge Conflicts.md",
+      "sha256": "c8d020ae9334b8dfad5fa35b0655e05a151948eed06f6c4b18f3193d7c5e4ac8",
+      "type": "content",
+      "route": "/Dark Arts/Resolve Merge Conflicts/"
+    },
+    {
+      "path": "Dark Arts/The Intramonth Momentum Cycle.md",
+      "sha256": "fd83dbbdbde7999f3894e8ada7d93ff17cf87ecae9ff38a6394e38f9b163e528",
+      "type": "content",
+      "route": "/Dark Arts/The Intramonth Momentum Cycle/"
+    },
+    {
+      "path": "Dark Arts/Valeyere (2025).md",
+      "sha256": "b860a3f10ac5cf14bfe0fea0a769a786a606f04167708ed1fd7efa3e55709be2",
+      "type": "content",
+      "route": "/Dark Arts/Valeyere (2025)/"
+    },
+    {
+      "path": "dp.png",
+      "sha256": "835bbf9ae659a7a6739e0cf9b25d9c7c79c015dbc27294f77e92b229f9f15916",
+      "type": "asset"
+    },
+    {
+      "path": "index.md",
+      "sha256": "108cc11031f4d5b76fc5d33ff29c3ace0fc9f388d1951eceecf057b4fe563320",
+      "type": "content",
+      "route": "/"
+    },
+    {
+      "path": "Linear Algebra/Inverse of the Matrix.md",
+      "sha256": "1c5a3f23735c13261ad66d4da39b5ec2d7e4d6d48b7a4628067dd20c6688f27a",
+      "type": "content",
+      "route": "/Linear Algebra/Inverse of the Matrix/"
+    },
+    {
+      "path": "Linear Algebra/Linear Map.md",
+      "sha256": "46f448f70dc7500d2000b9bb9f78a463612c3cdec331813e28af9ce6255c26a8",
+      "type": "content",
+      "route": "/Linear Algebra/Linear Map/"
+    },
+    {
+      "path": "Linear Algebra/Linear Regression as Projections.md",
+      "sha256": "593885ef6ed540f13c55362dcebe0e0d01d895f75e334c75ac16d7c905f0ca50",
+      "type": "content",
+      "route": "/Linear Algebra/Linear Regression as Projections/"
+    },
+    {
+      "path": "Linear Algebra/Matrix Multiplication.md",
+      "sha256": "bd99279feb3f0ce32b691c962e509ce1c37a7a8ab55afdc0532e369f967e6b9b",
+      "type": "content",
+      "route": "/Linear Algebra/Matrix Multiplication/"
+    },
+    {
+      "path": "Linear Algebra/Pasted image 20250429102423.png",
+      "sha256": "e557554c4ca1a82590a55c8112bb59c853f80bbd94d3657f9435b3433489a682",
+      "type": "asset"
+    },
+    {
+      "path": "Linear Algebra/Subspace.md",
+      "sha256": "37e95c50ec9870a5884f2fcc1919673652f696ee0b5509cf274611dc5dee5564",
+      "type": "content",
+      "route": "/Linear Algebra/Subspace/"
+    },
+    {
+      "path": "Linear Algebra/The Deeper Meaning of Matrix Transpose.md",
+      "sha256": "29af9650e513afeeb861506db0d9c48cde59325e29ad9115054faac343500c35",
+      "type": "content",
+      "route": "/Linear Algebra/The Deeper Meaning of Matrix Transpose/"
+    },
+    {
+      "path": "Linear Algebra/Vector Projection.md",
+      "sha256": "00dbed2e43a31b2c839cc8b11572daf529dd60b60855a0399c68090e513fc22d",
+      "type": "content",
+      "route": "/Linear Algebra/Vector Projection/"
+    },
+    {
+      "path": "Linear Algebra/Vector Space.md",
+      "sha256": "afb4063de5bd9aea93f010b77ea5dea62f18d1f08511dcf963ce8da975677049",
+      "type": "content",
+      "route": "/Linear Algebra/Vector Space/"
+    },
+    {
+      "path": "Linear Algebra/Vector Subspace.md",
+      "sha256": "7d5ec637277982020b1e25c7019aab247da27842f82fdd04f2c90b41c623163d",
+      "type": "content",
+      "route": "/Linear Algebra/Vector Subspace/"
+    },
+    {
+      "path": "LLM Engineering/Byte Pair Encoding.md",
+      "sha256": "a925e03664c87fd7874483aadf6f58abf4c320c7d0d88ab0777d07450c0cfd7b",
+      "type": "content",
+      "route": "/LLM Engineering/Byte Pair Encoding/"
+    },
+    {
+      "path": "LLM Engineering/Tokenization.md",
+      "sha256": "cbf9d6db59db39c3c8f4da65c7b0da82ca99a4bdf3ee086d3eacd7a43ab6fcae",
+      "type": "content",
+      "route": "/LLM Engineering/Tokenization/"
+    },
+    {
+      "path": "LLM Engineering/Transformers 101.md",
+      "sha256": "0c4ca457e5aa690722e682fb9839f128c58eacda0b4e3c9e887b758d647631f0",
+      "type": "content",
+      "route": "/LLM Engineering/Transformers 101/"
+    },
+    {
+      "path": "Pasted image 20260725201034.png",
+      "sha256": "5b9b10a3b6c12efe02af26b137a2133f5667ac58a5ccf0d706883292acb4a484",
+      "type": "asset"
+    },
+    {
+      "path": "Pasted image 20260725202542.png",
+      "sha256": "e5abd00b06613a86eb2f4e5f5f18f6161e948b322f1637485ac24c53b242c953",
+      "type": "asset"
+    },
+    {
+      "path": "Pasted image 20260725202647.png",
+      "sha256": "e9826e30f7578e1da7d056399130e600c5a9d258621f0d53b88cc6dc4eb47bdb",
+      "type": "asset"
+    },
+    {
+      "path": "Pasted image 20260815130136.png",
+      "sha256": "6ec569839cefd26f8693349706994b7a7f29be0b8a4c537e4b85def435cdf3e4",
+      "type": "asset"
+    },
+    {
+      "path": "Pasted image 20260815130243.png",
+      "sha256": "6ec569839cefd26f8693349706994b7a7f29be0b8a4c537e4b85def435cdf3e4",
+      "type": "asset"
+    },
+    {
+      "path": "Pasted image 20260815130518.png",
+      "sha256": "7d91a5268425db228a54439f5a97354aa74ad7ab0ab24a32635a7d23137f2264",
+      "type": "asset"
+    },
+    {
+      "path": "Pasted image 20260815130549.png",
+      "sha256": "4d916455279c34118a45795fbd1bb190465a8b1699479ca00b111314b5e68a56",
+      "type": "asset"
+    },
+    {
+      "path": "Polish/Connectors.md",
+      "sha256": "5ac6ef1e00e7a7304843742973ba9ed45ca60ffde9e95f9549c849ff15d68722",
+      "type": "content",
+      "route": "/Polish/Connectors/"
+    },
+    {
+      "path": "Polish/notes.md",
+      "sha256": "98debba422ddb48c89634c55562ab3c72f3cd193718630836af9e2558e664e7d",
+      "type": "content",
+      "route": "/Polish/notes/"
+    },
+    {
+      "path": "Polish/rules.md",
+      "sha256": "9f04a8da9dd32780782c83ab7e325a391a5e02e9534bca3fbfffccf23fba09c0",
+      "type": "content",
+      "route": "/Polish/rules/"
+    },
+    {
+      "path": "Polish/sentences.md",
+      "sha256": "11bae390994afc0900709b56657c3ab766b77dc0a4b5b33ecd0225f2cd8ef6d3",
+      "type": "content",
+      "route": "/Polish/sentences/"
+    },
+    {
+      "path": "Python/Function Augmentation Decorators in Python.md",
+      "sha256": "4325c146bbe7249a0e3bf4f2b4b7dda299aaafa76a00995603c4169369fed67b",
+      "type": "content",
+      "route": "/Python/Function Augmentation Decorators in Python/"
+    },
+    {
+      "path": "Quant Finance/ANALYSIS OF VARIANCE.md",
+      "sha256": "391f5e272aa6e68d24980feb294a368feb8f6a405563d0fb083018ddf74cb134",
+      "type": "content",
+      "route": "/Quant Finance/ANALYSIS OF VARIANCE/"
+    },
+    {
+      "path": "Quant Finance/Gold, Inflation Expectations, and the Rate Bluff.md",
+      "sha256": "560cb3580be51ba2aa322f9535278fea23225e3560148f599fa327c9b610ff14",
+      "type": "content",
+      "route": "/Quant Finance/Gold, Inflation Expectations, and the Rate Bluff/"
+    },
+    {
+      "path": "Quant Finance/Linear Model of Returns.md",
+      "sha256": "1f99b6dfdb1533891ce0e129322ae4d3f569be0ab887590410806f73ad8b1722",
+      "type": "content",
+      "route": "/Quant Finance/Linear Model of Returns/"
+    },
+    {
+      "path": "Quant Finance/Linear Regressions.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "content",
+      "route": "/Quant Finance/Linear Regressions/"
+    },
+    {
+      "path": "Quant Finance/Mean Variance Portfolio Optimization.md",
+      "sha256": "81abf6c00116d3fd709ca7472b7c32582356e9d6b6813afc0025dfe20fadd90d",
+      "type": "content",
+      "route": "/Quant Finance/Mean Variance Portfolio Optimization/"
+    },
+    {
+      "path": "Quant Finance/Stylized Facts for Return Distribution.md",
+      "sha256": "07aeb114cb7199913e80fb630ddc41ff66050b67c2031d073160355cb4756c63",
+      "type": "content",
+      "route": "/Quant Finance/Stylized Facts for Return Distribution/"
+    },
+    {
+      "path": "Rust/Async Rust.md",
+      "sha256": "2ab498cb33f2654b70dd87646071cc6964718405bd53cfc8d8e1b7745b552f40",
+      "type": "content",
+      "route": "/Rust/Async Rust/"
+    },
+    {
+      "path": "Rust/Concepts.md",
+      "sha256": "ca24be7c8f2f9e54064cd0fb03136b23e99f5dae52bf86679dbe52c2f94c55d8",
+      "type": "content",
+      "route": "/Rust/Concepts/"
+    },
+    {
+      "path": "Rust/Error.md",
+      "sha256": "becb71072f5ed1ae97e9d28936a4778c33b550a9fa79c49a514fb67eab648b39",
+      "type": "content",
+      "route": "/Rust/Error/"
+    },
+    {
+      "path": "Rust/Rust Jupyter Notebooks.md",
+      "sha256": "43614775ee9af28b7d94df1cd1575cdcac45196983fdee635a53dc8db521bc2e",
+      "type": "content",
+      "route": "/Rust/Rust Jupyter Notebooks/"
+    },
+    {
+      "path": "Rust/Tying Traits to Lifetime.md",
+      "sha256": "3be6cefb837b4b9a0f95a07a88fc4cd528c6a28a80c7b1486a36caab860cb16c",
+      "type": "content",
+      "route": "/Rust/Tying Traits to Lifetime/"
+    },
+    {
+      "path": "Spells/Dymanic Betas Using Kalman Filter.md",
+      "sha256": "c1d17aedd8bbcc0bf9b923d9559efce7e48844abd7a8c9942910a5118a395d4f",
+      "type": "content",
+      "route": "/Spells/Dymanic Betas Using Kalman Filter/"
+    },
+    {
+      "path": "Spells/Rsync.md",
+      "sha256": "3eedcdedf2a2a2ada2b461f4e8bf9bc8697e74c49c4ffc1facd3340ecee7a06c",
+      "type": "content",
+      "route": "/Spells/Rsync/"
+    },
+    {
+      "path": "WRITINGS/backprop-chain-rule.svg",
+      "sha256": "6f56fa3d08eb99a841ace82645e151ab0be69451addb5380a62a034ab87d0638",
+      "type": "asset"
+    },
+    {
+      "path": "WRITINGS/backprop-network.svg",
+      "sha256": "e17990d2d595a6b78e184f6fa84f358a15c8fa8dabcf01ff64c8afa3f7e2024e",
+      "type": "asset"
+    },
+    {
+      "path": "WRITINGS/backprop-update-step.svg",
+      "sha256": "6ac9e13946cbbe5432e48791adf6b0368f3add120275556ff46cebe22b8fd563",
+      "type": "asset"
+    },
+    {
+      "path": "WRITINGS/Doing Back Propagation by Hand.md",
+      "sha256": "c3ba1a4dd60a172ebc9eb0c1adff5016c19cb0a2cce69e38718e83b5afe6c2ed",
+      "type": "content",
+      "route": "/WRITINGS/Doing Back Propagation by Hand/"
+    },
+    {
+      "path": "WRITINGS/The Government Blinked. That Matters..md",
+      "sha256": "3a081098729d2f278d4ca01b63ba5e9abfcb6147d5a97577dd1e128f2343f9f1",
+      "type": "content",
+      "route": "/WRITINGS/The Government Blinked. That Matters./"
+    },
+    {
+      "path": "WRITINGS/The Great Reset of Gaming.md",
+      "sha256": "1c1a6e0addc55c0b57872444bbe7652f1bf01ba269c6cc97c922f64285dac911",
+      "type": "content",
+      "route": "/WRITINGS/The Great Reset of Gaming/"
+    },
+    {
+      "path": "WRITINGS/The Nishad Boy.md",
+      "sha256": "2ef1f4a592aa4b5beac356317d14ee28acfa6d1317a896a6172a6cdeaa541347",
+      "type": "content",
+      "route": "/WRITINGS/The Nishad Boy/"
+    },
+    {
+      "path": "WRITINGS/Why is Gold valuable at all.md",
+      "sha256": "2116fcb7d27b0001429692841374ab39d9ec1b2d9bba667733dc4def77e5f148",
+      "type": "content",
+      "route": "/WRITINGS/Why is Gold valuable at all/"
+    }
+  ]
+}
