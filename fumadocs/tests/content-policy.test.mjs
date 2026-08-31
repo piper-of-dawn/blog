@@ -37,6 +37,12 @@ test('callouts and highlights are converted outside code fences', () => {
   assert.match(result, /```txt\n==literal==\n```/u);
 });
 
+test('callouts omit standalone quotation marks', () => {
+  const result = convertCalloutsAndHighlights('> [!note]\n> “\n> The car is running.\n> ”');
+  assert.doesNotMatch(result, /> [“”]/u);
+  assert.match(result, /> The car is running\./u);
+});
+
 test('unsupported MkDocs fence labels are normalized for Shiki', () => {
   assert.equal(
     convertCalloutsAndHighlights('```table-of-contents\nA\n```'),

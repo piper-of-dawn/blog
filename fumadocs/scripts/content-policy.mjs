@@ -175,10 +175,11 @@ export function convertCalloutsAndHighlights(markdown) {
       body.push((quoted[1] ?? '').replace(/==([^=\n]+)==/gu, '<mark>$1</mark>'));
       index += 1;
     }
+    const calloutBody = body.filter((bodyLine) => !/^\s*[“”"']\s*$/u.test(bodyLine));
     output.push(
       `> **${title}**`,
       '>',
-      ...body.map((bodyLine) => `> ${bodyLine}`.trimEnd()),
+      ...calloutBody.map((bodyLine) => `> ${bodyLine}`.trimEnd()),
     );
   }
 
