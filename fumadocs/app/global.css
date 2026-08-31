@@ -157,6 +157,32 @@ article mark {
   padding: 0 0.12em;
 }
 
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid var(--editorial-rule-strong);
+  border-bottom: 1px solid var(--editorial-rule-strong);
+  background: transparent !important;
+  color: var(--editorial-body);
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+}
+
+article table th {
+  color: var(--editorial-muted);
+  font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+article table th,
+article table td {
+  border-bottom: 1px solid var(--editorial-rule);
+  padding: 0.55rem 0.7rem;
+  background: transparent !important;
+}
+
 /* Equation blocks in the reference are separated like ledger entries. */
 article .katex-display {
   margin: 1.35rem 0;

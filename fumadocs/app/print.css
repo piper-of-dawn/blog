@@ -120,9 +120,10 @@
   }
   article pre, article code { background: #fff !important; color: #000 !important; }
   article pre { border-left: 1.2pt solid #000; border-radius: 0; padding: 2.5mm 0 2.5mm 3mm; font-size: 7.5pt; white-space: pre-wrap; break-inside: avoid; }
-  article table { width: 100%; margin: 4mm 0; border-top: 0.7pt solid #000; border-bottom: 0.7pt solid #000; font-size: 7.2pt; break-inside: avoid; }
-  article th { padding: 1.6mm 1.5mm; font-size: 5.5pt; letter-spacing: 0.17em; }
-  article td { padding: 1.5mm; }
+  article table { width: 100%; margin: 4mm 0; border-collapse: collapse; border-top: 0.7pt solid #000; border-bottom: 0.7pt solid #000; background: #fff !important; font-family: 'Libre Bodoni', Georgia, serif; font-size: 7.2pt; break-inside: avoid; }
+  article th { padding: 1.6mm 1.5mm; color: #555 !important; font-family: 'Roboto Mono', ui-monospace, monospace; font-size: 5.5pt; font-weight: 600; letter-spacing: 0.17em; text-transform: uppercase; }
+  article td { padding: 1.5mm; font-family: 'Libre Bodoni', Georgia, serif; }
+  article th, article td { border-bottom: 0.4pt solid #d9d9d9; background: #fff !important; }
   article img, article figure { max-width: 100% !important; height: auto; break-inside: avoid; }
   article mark { background: #dcebe7 !important; color: #000 !important; }
 }
