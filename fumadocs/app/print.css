@@ -93,6 +93,16 @@
     font-family: 'Libre Bodoni', Georgia, serif;
     font-size: 9.5pt;
   }
+  article blockquote.editorial-callout--abstract {
+    border-top: 0;
+  }
+  article blockquote.editorial-callout--abstract > p:first-child strong {
+    color: transparent !important;
+  }
+  article blockquote.editorial-callout--abstract > p:first-child strong::before {
+    content: "§" counter(editorial-section) "." counter(editorial-abstract);
+    color: #000 !important;
+  }
   article blockquote > p:first-child strong {
     color: #000 !important;
     font-family: 'Roboto Mono', ui-monospace, monospace;
