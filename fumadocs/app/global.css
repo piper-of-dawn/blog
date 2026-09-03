@@ -339,12 +339,6 @@ article .prose > p > strong:first-child {
   font-weight: 650;
 }
 
-@media (min-width: 48rem) {
-  article .prose > p:has(> strong:only-child) {
-    translate: 0 1.8rem;
-  }
-}
-
 article .prose > p:has(> strong:first-child + em) {
   margin-block: -1.375rem 1.5rem;
   font-family: var(--font-sans), system-ui, sans-serif;
