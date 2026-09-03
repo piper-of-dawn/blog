@@ -585,6 +585,12 @@
       "route": "/CFA Level II Notes/Derivatives/Replication/"
     },
     {
+      "path": "CFA Level II Notes/Derivatives/Valuation of Contingent Claims - Numerical Problems.md",
+      "sha256": "b76b87214d0381d5bc55fe686c3d17cec486de1b1b7a017ad081c45aa9f7180c",
+      "type": "content",
+      "route": "/CFA Level II Notes/Derivatives/Valuation of Contingent Claims - Numerical Problems/"
+    },
+    {
       "path": "CFA Level II Notes/Derivatives/Valuation of Contingent Claims.md",
       "sha256": "4ea4b44795eac09f905e7fa4e9e4a69c985ab95947d1cb63385cb5f667127ffe",
       "type": "content",
@@ -604,7 +610,7 @@
     },
     {
       "path": "CFA Level II Notes/FIXED INCOME/Term Structure and Interest Rate Dynamics.md",
-      "sha256": "108df6407797ed31adce06e3807b54b27f2e262c00cc2161c6d7839fcfcacab9",
+      "sha256": "44806e053d6ec58d836c861f69ea2d03139b52144beedbc7235a0bb97268e3be",
       "type": "content",
       "route": "/CFA Level II Notes/FIXED INCOME/Term Structure and Interest Rate Dynamics/"
     },
@@ -631,6 +637,12 @@
       "sha256": "54486f3397ebab669f89c461140832dbee693cc64acf15ca196b55e2be70e4ac",
       "type": "content",
       "route": "/CFA Level II Notes/FSA/Treasury Stock Method/"
+    },
+    {
+      "path": "CFA Level II Notes/PORTFOLIO MANAGEMENT/LM2 - Analysis of Active Portfolio Management - Question Notes.md",
+      "sha256": "d136e829afc2d3ee2006f07a7e247d95a402facf6053c9cd7f148cbbb19a56a2",
+      "type": "content",
+      "route": "/CFA Level II Notes/PORTFOLIO MANAGEMENT/LM2 - Analysis of Active Portfolio Management - Question Notes/"
     },
     {
       "path": "CFA Level II Notes/PORTFOLIO MANAGEMENT/LM2 - Analysis of Active Portfolio Management.md",
@@ -794,7 +806,7 @@
     },
     {
       "path": "LLM Engineering/Tokenization.md",
-      "sha256": "cbf9d6db59db39c3c8f4da65c7b0da82ca99a4bdf3ee086d3eacd7a43ab6fcae",
+      "sha256": "fdffe3c6682c0be20e683a69f407d20035bafca9055c5359594f69491ddf018e",
       "type": "content",
       "route": "/LLM Engineering/Tokenization/"
     },

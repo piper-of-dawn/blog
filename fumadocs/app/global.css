@@ -204,7 +204,7 @@ article .katex-display {
 }
 
 html {
-  scrollbar-gutter: stable;
+  scrollbar-gutter: auto;
 }
 
 html,
@@ -217,4 +217,271 @@ main {
 html > body[data-scroll-locked] {
   margin-right: 0px !important;
   --removed-body-scroll-bar-size: 0px !important;
+}
+
+/* Screenshot-parity reading mode. The Fumadocs page tree still powers routes
+   and search, while the visible canvas follows the field-manual reference. */
+body {
+  min-height: 100svh;
+  border: 1px solid var(--editorial-brick);
+  color: var(--editorial-body);
+}
+
+#nd-subnav,
+[data-sidebar-placeholder],
+#nd-sidebar,
+[data-toc],
+[data-toc-popover] {
+  display: none !important;
+}
+
+#nd-docs-layout {
+  display: block !important;
+  min-height: calc(100dvh - 2px);
+  --fd-header-height: 0px !important;
+  --fd-sidebar-width: 0px !important;
+  --fd-toc-width: 0px !important;
+}
+
+main[data-layout-main] {
+  display: block;
+}
+
+article#nd-page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  gap: 2.2rem;
+  padding: 1.2rem 0 5rem;
+}
+
+article#nd-page > h1,
+article#nd-page > [data-page-description] {
+  margin-inline: 2.6rem 0.9rem;
+}
+
+article#nd-page > h1 {
+  max-width: 62rem;
+  margin-top: 0;
+  color: var(--editorial-ink);
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+  font-size: clamp(3.2rem, 6vw, 4.35rem);
+  font-weight: 400;
+  letter-spacing: -0.038em;
+  line-height: 0.98;
+}
+
+article .prose {
+  max-width: none;
+  padding: 0 0.9rem 0 2.6rem;
+  counter-reset: editorial-section display-equation;
+}
+
+article .prose h2 {
+  counter-increment: editorial-section;
+  counter-reset: editorial-subsection editorial-abstract;
+  position: relative;
+  margin-top: 4.5rem;
+  border-top: 1px solid var(--editorial-rule-strong);
+  padding-top: 0.75rem;
+  color: var(--editorial-ink);
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.75rem, 3vw, 2.15rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+article .prose h2::before {
+  content: "§" counter(editorial-section);
+  position: absolute;
+  top: 1rem;
+  right: calc(100% + 0.75rem);
+  width: auto;
+  color: var(--editorial-teal);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+article .prose h2::after {
+  content: none;
+}
+
+article .prose h3 {
+  margin-top: 2.75rem;
+  color: var(--editorial-ink);
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+article .prose p,
+article .prose li {
+  color: var(--editorial-body);
+  font-size: 1.125rem;
+  line-height: 1.72;
+  letter-spacing: 0;
+}
+
+article .prose strong {
+  color: var(--editorial-ink);
+}
+
+article .prose > p > strong:first-child {
+  color: var(--editorial-body);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1.11em;
+  font-weight: 650;
+}
+
+article .prose > p:has(> strong:first-child + em) {
+  margin-block: 0.25rem 1.95rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-style: italic;
+}
+
+article .prose > hr {
+  display: none;
+}
+
+article blockquote.editorial-callout {
+  margin: 1.35rem 0;
+  border: 0;
+  border-left: 3px solid var(--editorial-brick);
+  background: transparent;
+  padding: 0.15rem 0 0.15rem 1.15rem;
+  color: #4a5962;
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.72;
+}
+
+article blockquote.editorial-callout p {
+  margin-block: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+article blockquote.editorial-callout::before,
+article blockquote.editorial-callout::after,
+article blockquote.editorial-callout > p:first-child::before,
+article blockquote.editorial-callout > p:last-child::after {
+  content: none !important;
+}
+
+article blockquote.editorial-callout--note {
+  margin-block: 1.8rem;
+  border-bottom: 1px solid #d4d0c7;
+  padding: 1rem 1.3rem 1.3rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+article blockquote.editorial-callout--note > p:first-child {
+  margin: 0 0 0.8rem;
+}
+
+article blockquote.editorial-callout--note > p:last-child {
+  margin-bottom: 0;
+}
+
+article blockquote.editorial-callout--note > p:first-child strong {
+  display: block;
+  margin-bottom: 0.9rem;
+  color: var(--editorial-brick);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+article blockquote.editorial-callout--note > p:first-child strong::before {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.95rem;
+  margin-right: 0.65rem;
+  border: 1.5px solid var(--editorial-ink);
+  border-left: 3px double var(--editorial-ink);
+  border-radius: 1px;
+  background:
+    linear-gradient(var(--editorial-ink), var(--editorial-ink)) 60% 35% / 45% 1px no-repeat,
+    linear-gradient(var(--editorial-ink), var(--editorial-ink)) 60% 65% / 45% 1px no-repeat;
+  vertical-align: -0.12rem;
+}
+
+article .katex-display {
+  position: relative;
+  display: block;
+  counter-increment: display-equation;
+  margin: 1.25rem 0;
+  border-top: 1px solid #e1ddd3;
+  border-bottom: 1px solid #e1ddd3;
+  padding: 0.9rem 3.5rem 0.9rem 1rem;
+  color: var(--editorial-ink);
+  overflow-x: auto;
+}
+
+article .katex-display::after {
+  content: "(" counter(display-equation) ")";
+  position: absolute;
+  top: 50%;
+  right: 0.2rem;
+  translate: 0 -50%;
+  color: var(--editorial-muted);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+article .katex-display > .katex {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 47.999rem) {
+  article#nd-page {
+    gap: 1.5rem;
+    padding: 1.1rem 0 4rem;
+  }
+
+  article#nd-page > h1,
+  article#nd-page > [data-page-description],
+  article .prose {
+    margin-inline: 0;
+    padding-inline: 1rem;
+  }
+
+  article#nd-page > h1 {
+    font-size: clamp(2.65rem, 13vw, 3.65rem);
+  }
+
+  article .prose h2 {
+    margin-top: 3.5rem;
+    font-size: 1.75rem;
+  }
+
+  article .prose h2::before {
+    position: static;
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  article .katex-display {
+    padding-right: 2.75rem;
+  }
 }

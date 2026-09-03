@@ -9,9 +9,15 @@ function classifyCallouts() {
         const text = JSON.stringify(node.children?.[0] ?? '').toLowerCase();
         node.data ??= {};
         node.data.hProperties ??= {};
-        node.data.hProperties.className = text.includes('abstract')
-          ? ['editorial-callout', 'editorial-callout--abstract']
-          : ['editorial-callout', 'editorial-callout--inline'];
+        const variant = text.includes('abstract')
+          ? 'abstract'
+          : text.includes('note')
+            ? 'note'
+            : 'quote';
+        node.data.hProperties.className = [
+          'editorial-callout',
+          `editorial-callout--${variant}`,
+        ];
       }
       for (const child of node.children ?? []) visit(child);
     };
