@@ -281,12 +281,12 @@ article .prose h2 {
   counter-increment: editorial-section;
   counter-reset: editorial-subsection editorial-abstract;
   position: relative;
-  margin-top: 4.5rem;
+  margin-top: 5rem;
   border-top: 1px solid var(--editorial-rule-strong);
   padding-top: 0.75rem;
   color: var(--editorial-ink);
   font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.75rem, 3vw, 2.15rem);
+  font-size: 2.45rem;
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1.15;
@@ -323,7 +323,7 @@ article .prose h3 {
 article .prose p,
 article .prose li {
   color: var(--editorial-body);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.72;
   letter-spacing: 0;
 }
@@ -335,12 +335,12 @@ article .prose strong {
 article .prose > p > strong:first-child {
   color: var(--editorial-body);
   font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 1.11em;
+  font-size: 1em;
   font-weight: 650;
 }
 
 article .prose > p:has(> strong:first-child + em) {
-  margin-block: 0.25rem 1.95rem;
+  margin-block: -1.375rem 1.5rem;
   font-family: var(--font-sans), system-ui, sans-serif;
   font-style: italic;
 }
@@ -382,7 +382,7 @@ article blockquote.editorial-callout > p:last-child::after {
 article blockquote.editorial-callout--note {
   margin-block: 1.8rem;
   border-bottom: 1px solid #d4d0c7;
-  padding: 1rem 1.3rem 1.3rem;
+  padding: 1.375rem 1.3rem 1.425rem;
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 1.25rem;
   line-height: 1.8;
@@ -427,10 +427,10 @@ article .katex-display {
   position: relative;
   display: block;
   counter-increment: display-equation;
-  margin: 1.25rem 0;
+  margin: 1.7rem 0;
   border-top: 1px solid #e1ddd3;
   border-bottom: 1px solid #e1ddd3;
-  padding: 0.9rem 3.5rem 0.9rem 1rem;
+  padding: 1.2rem 3.5rem 1.2rem 1rem;
   color: var(--editorial-ink);
   overflow-x: auto;
 }
