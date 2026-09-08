@@ -154,11 +154,12 @@ body,
 }
 
 /* Keep the reference page free of application navigation while the editorial
-   layout is being tuned. The master index remains available from the header. */
+   layout is being tuned: no masthead, no side/toc rail, no bottom navigation. */
 #desktop-sidebar,
 .article-toc-rail,
 .sidebar-collapse-button,
-#bottom-navigation {
+#bottom-navigation,
+.editorial-site-header {
 	display: none !important;
 }
 
@@ -444,17 +445,17 @@ article .typography > details.abstract {
 @media screen and (min-width: 64rem) {
 	article .typography h2 + .admonition.abstract,
 	article .typography h2 + details.abstract {
-		margin-top: calc(-1 * (0.75rem + 1px + clamp(1.75rem, 3vw, 2.15rem) * 1.15));
+		margin-top: calc(-1 * (0.75rem + clamp(1.75rem, 3vw, 2.15rem) * 1.15));
 	}
 
 	article .typography h3 + .admonition.abstract,
 	article .typography h3 + details.abstract {
-		margin-top: calc(-1 * (0.75rem + 1px + 1.3rem * 1.25));
+		margin-top: calc(-1 * (0.75rem + 1.3rem * 1.25));
 	}
 
 	article .typography h4 + .admonition.abstract,
 	article .typography h4 + details.abstract {
-		margin-top: calc(-1 * (0.75rem + 1px + 0.82rem * 1.55));
+		margin-top: calc(-1 * (0.75rem + 0.82rem * 1.55));
 	}
 }
 
@@ -837,6 +838,7 @@ article .typography > .admonition.danger {
 	article .typography > details.abstract {
 		width: var(--editorial-margin);
 		margin-left: calc(-1 * var(--editorial-margin));
+		border: 0;
 		padding-left: 2rem;
 	}
 

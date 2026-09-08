@@ -5,10 +5,10 @@
 
 > **Brevis Solutions** is a technology provider. **Sunil Tilak, CFA** is estimating the **cost of debt**, which represents **30% of Brevis' capital structure**. The **6-year, BB-rated debt** is **thinly traded**. Tilak collects data on similar **BB-rated securities** with liquid markets:
 >
-> * **Silva:** 4-year, 5% coupon, price **$99.45**
-> * **Deso:** 4-year, 6% coupon, price **$101.75**
-> * **Manfried:** 7-year, 7% coupon, price **$110.00**
-> * **Listor:** 7-year, 8% coupon, price **$114.00**
+> * **Silva:** 4-year, 5% coupon, price **\$99.45**
+> * **Deso:** 4-year, 6% coupon, price **\$101.75**
+> * **Manfried:** 7-year, 7% coupon, price **\$110.00**
+> * **Listor:** 7-year, 8% coupon, price **\$114.00**
 >
 > Estimate the **cost of debt** using the **matrix method**.
 
@@ -39,7 +39,7 @@ $$
 \text{Listor: } PV=-114.00,\; N=7,\; PMT=8,\; FV=100 \Rightarrow YTM=\boxed{5.53\%}
 $$
 
-*Intuition:* Price above par means yield below coupon; price below par means yield above coupon. Silva at $99.45 is almost at par, so its 5.16% YTM is just above its 5% coupon. Deso at $101.75 is a premium bond, so its 5.50% YTM is below its 6% coupon.
+*Intuition:* Price above par means yield below coupon; price below par means yield above coupon. Silva at \$99.45 is almost at par, so its 5.16% YTM is just above its 5% coupon. Deso at \$101.75 is a premium bond, so its 5.50% YTM is below its 6% coupon.
 
 **2. Construct the matrix and average yields by maturity**
 
@@ -81,7 +81,7 @@ $$
 > [!abstract]
 > The lease hides a loan. PV is what the lessor spends (fair value + direct costs), PMT is the lease payment, FV is the residual. Solve for I/Y — that is the hidden cost of debt.
 
-> **Company A** has signed a **15-year lease** with **annual payments of $10 million** at the end of each year. The **lease residual value** is **$30 million**. The **fair value of the asset** is **$120 million**, and the **lessor incurs a cost of $5 million** at lease initiation.
+> **Company A** has signed a **15-year lease** with **annual payments of \$10 million** at the end of each year. The **lease residual value** is **\$30 million**. The **fair value of the asset** is **\$120 million**, and the **lessor incurs a cost of \$5 million** at lease initiation.
 >
 > Calculate the **RIIL** (rate implicit in the lease).
 
@@ -94,7 +94,7 @@ We need the **hidden interest rate** baked into this lease — the rate that mak
 
 **1. Identify the lessor's cash flows**
 
-The lessor gives up the asset (fair value $120m) and pays extra costs ($5m) at inception. In return, they receive 15 annual payments of $10m plus the residual of $30m at the end.
+The lessor gives up the asset (fair value \$120m) and pays extra costs (\$5m) at inception. In return, they receive 15 annual payments of \$10m plus the residual of \$30m at the end.
 
 $$
 \text{PV (lessor outflow)} = \text{Fair value} + \text{Lessor's direct cost} = 120 + 5 = \$125\text{m}
@@ -104,7 +104,7 @@ $$
 \text{PMT (annual inflow)} = \$10\text{m}, \quad \text{FV (residual)} = \$30\text{m}, \quad N = 15
 $$
 
-*Intuition:* The lessor spends $125m today to buy and deliver the asset. They get $10m/year for 15 years, then the asset back (worth $30m). The IRR of that stream is the hidden borrowing rate.
+*Intuition:* The lessor spends \$125m today to buy and deliver the asset. They get \$10m/year for 15 years, then the asset back (worth \$30m). The IRR of that stream is the hidden borrowing rate.
 
 **2. Solve for the rate (TVM)**
 
@@ -116,7 +116,7 @@ $$
 \text{CPT I/Y} = \boxed{4.28\%}
 $$
 
-*Why?* The lessor lends $125m, receives $10m/year plus $30m at the end. The rate that balances those flows is 4.28% — that is the cost of debt implied by the lease.
+*Why?* The lessor lends \$125m, receives \$10m/year plus \$30m at the end. The rate that balances those flows is 4.28% — that is the cost of debt implied by the lease.
 
 > [!NOTE]
 > RIIL uses the lessor's perspective: $PV = -(\text{fair value} + \text{direct cost})$, $PMT = \text{lease payment}$, $FV = \text{residual}$.
@@ -213,8 +213,8 @@ $$
 
 > Calculate the **cost of equity** for two companies:
 >
-> * **Cogenics, Inc.:** Expected dividend **$4** at end of Year 1, dividends grow at a constant rate of **4%** per year, current stock price **$100**.
-> * **Betagenics, Inc.:** Expected dividends of **$1.50, $2.00, $2.50, and $3.00** at the end of each of the next four years. Current stock price **$50**, expected stock price at end of Year 4 is **$60**.
+> * **Cogenics, Inc.:** Expected dividend **\$4** at end of Year 1, dividends grow at a constant rate of **4%** per year, current stock price **\$100**.
+> * **Betagenics, Inc.:** Expected dividends of **\$1.50, \$2.00, \$2.50, and \$3.00** at the end of each of the next four years. Current stock price **\$50**, expected stock price at end of Year 4 is **\$60**.
 
 **What is the question really asking?**
 
@@ -231,7 +231,7 @@ $$
 r_e = \frac{D_1}{P_0} + g = \frac{4}{100} + 4\% = 4\% + 4\% = \boxed{8\%}
 $$
 
-*Intuition:* You pay $100 today. You get a $4 dividend yield immediately, and the stock grows at 4% per year (capital gains). Total required return = 8%.
+*Intuition:* You pay \$100 today. You get a \$4 dividend yield immediately, and the stock grows at 4% per year (capital gains). Total required return = 8%.
 
 **2. Betagenics — non-constant growth (IRR)**
 
@@ -243,7 +243,7 @@ The cash flows are:
 | ---: | ---: | ---: | ---: | ---: | ---: |
 | CF | −50 | 1.50 | 2.00 | 2.50 | 63.00 |
 
-*Why $63$ at Year 4?* The last cash flow bundles the **final dividend ($3.00)** with the **terminal stock price ($60)**: $3 + 60 = 63$.
+*Why $63$ at Year 4?* The last cash flow bundles the **final dividend (\$3.00)** with the **terminal stock price (\$60)**: $3 + 60 = 63$.
 
 > [!NOTE]
 > The terminal stock price enters at the same time as the final dividend — bundle them: $CF_{last} = D_{last} + P_{terminal}$.
@@ -258,7 +258,7 @@ $$
 \text{CPT IRR} = \boxed{8.78\%}
 $$
 
-*Intuition:* You pay $50 now and receive a growing dividend stream plus $60 at the end. The IRR that balances those flows — 8.78% — is what equity holders require.
+*Intuition:* You pay \$50 now and receive a growing dividend stream plus \$60 at the end. The IRR that balances those flows — 8.78% — is what equity holders require.
 
 ---
 
