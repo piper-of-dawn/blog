@@ -153,13 +153,12 @@ body,
 	transform: translateY(1px);
 }
 
-/* Keep the reference page free of application navigation while the editorial
-   layout is being tuned: no masthead, no side/toc rail, no bottom navigation. */
+/* Keep the reference page free of secondary application navigation while the
+   editorial layout is being tuned: no sidebar, side/toc rail, or bottom navigation. */
 #desktop-sidebar,
 .article-toc-rail,
 .sidebar-collapse-button,
-#bottom-navigation,
-.editorial-site-header {
+#bottom-navigation {
 	display: none !important;
 }
 

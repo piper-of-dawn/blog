@@ -235,7 +235,6 @@
 		grid-template-columns: 27mm minmax(0, 1fr);
 		gap: 6mm;
 		margin-top: 2mm;
-		break-inside: avoid;
 	}
 
 	/* The interactive "On This Page" rail is navigation, never printed copy. */
