@@ -438,6 +438,28 @@ article .typography > details.abstract {
 	text-align: left;
 }
 
+/* Inline explanations become quiet Bodoni marginalia on wide reading panes. */
+article .typography .jargon-unlock {
+	color: var(--editorial-muted);
+	font-family: var(--editorial-serif);
+	font-size: 0.9em;
+	line-height: 1.35;
+}
+
+@media screen and (min-width: 64rem) {
+	article .typography .jargon-unlock {
+		float: left;
+		clear: left;
+		width: calc(var(--editorial-margin) - 1.1rem);
+		margin: 0.35rem 0 1.7rem calc(-1 * var(--editorial-margin));
+		border-top: 1px solid var(--editorial-rule-strong);
+		padding: 0.75rem 0 0;
+		font-size: 0.82rem;
+		line-height: 1.45;
+		text-align: left;
+	}
+}
+
 /* A marginalia directly after a heading is pulled up so its own top rule and
    first text line sit level with the heading's first text line. Applies only
    to the desktop note rail (and never to print, which re-floats marginalia). */

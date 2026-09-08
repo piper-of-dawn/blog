@@ -361,6 +361,20 @@
 		break-inside: avoid;
 	}
 
+	article .typography .jargon-unlock {
+		float: left;
+		clear: left;
+		width: 26mm;
+		margin: 1mm 0 5mm -32mm;
+		border-top: 0.7pt solid #000;
+		background: transparent;
+		padding: 2mm 0 0;
+		font-family: var(--editorial-serif) !important;
+		font-size: 7pt;
+		line-height: 1.38;
+		break-inside: avoid;
+	}
+
 	article .typography > .admonition.abstract > p.admonition-title::before,
 	article .typography > details.abstract > summary::before {
 		font-size: 6pt;
