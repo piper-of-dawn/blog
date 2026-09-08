@@ -4,7 +4,7 @@
 
 > A global small-cap manager is judged against a private index of 40 large-cap domestic stocks. Its weights are disclosed only after year-end, and no passive fund can replicate it. Is this a valid benchmark? Explain each failure and whether the zero-sum argument for active management applies cleanly.
 
-**Benchmark. What is a benchmark?** It is the comparison portfolio—the plain, low-cost alternative the manager is supposed to beat. **Mandate. What is a mandate?** It is the agreed job the manager was hired to do. **Small-cap and large-cap. What do those mean?** Small-cap companies have relatively small stock-market values; large-cap companies have relatively large ones. **Passive fund. What is a passive fund?** It simply copies an index instead of choosing active bets. **Replicate. What does replicate mean?** It means an investor can copy the index by buying the same holdings in the same weights. **Investable and observable. What do those mean?** Investable means the benchmark can actually be bought at reasonable cost; observable means its rules, weights, and returns can be checked. **Zero-sum. What does zero-sum mean here?** Before fees, one manager's win against the whole market must be another manager's loss.
+**Active management. What is active management?** It means deliberately choosing holdings or weights that differ from a benchmark in an attempt to beat it. **Benchmark. What is a benchmark?** It is the comparison portfolio—the plain, low-cost alternative the manager is supposed to beat. **Mandate. What is a mandate?** It is the agreed job the manager was hired to do. **Representative. What does representative mean?** The benchmark owns the same kind of investments allowed by the mandate. **Small-cap and large-cap. What do those mean?** Small-cap companies have relatively small stock-market values; large-cap companies have relatively large ones. **Index. What is an index?** It is a rules-based list of investments whose combined return represents a market. **Passive fund. What is a passive fund?** It simply copies an index instead of choosing active bets. **Replicate. What does replicate mean?** It means buying the same holdings in the same weights. **Investable and observable. What do those mean?** Investable means the benchmark can actually be bought at reasonable cost; observable means its rules, weights, and returns can be checked. **Zero-sum. What does zero-sum mean here?** Before fees, one manager's win against the whole market must be another manager's loss.
 
 **1. Run the three-part benchmark check**
 
@@ -31,7 +31,7 @@ Active management is zero-sum before costs when the benchmark is **float-adjuste
 
 > Stocks return 14% and bonds return 2%. The benchmark is 60% stocks and 40% bonds; the manager holds 70% and 30%. Calculate both returns and value added.
 
-**Portfolio return. What is portfolio return?** It is the weighted return on the mix the manager actually owns: $R_P=\sum_i w_{P,i}R_i$. **Benchmark return. What is benchmark return?** It is the weighted return on the comparison mix: $R_B=\sum_i w_{B,i}R_i$. **Active return—or value added. What is that?** It is the extra return created, or lost, by moving away from the benchmark: $R_A=R_P-R_B$.
+**Portfolio. What is a portfolio?** It is the basket of investments owned together. **Portfolio return. What is portfolio return?** It is the weighted return on that basket: $R_P=\sum_i w_{P,i}R_i$. **Benchmark return. What is benchmark return?** It is the weighted return on the comparison basket: $R_B=\sum_i w_{B,i}R_i$. **Active return—or value added. What is that?** It is the extra return created, or lost, by moving away from the benchmark: $R_A=R_P-R_B$.
 
 **1. Price the passive alternative**
 
@@ -97,7 +97,9 @@ The Japan underweight helped, but the much larger German overweight got crushed.
 
 > A portfolio returns 8.6%, its benchmark returns 7.4%, and portfolio beta is 1.10. Calculate active return and the module's simplified beta-adjusted alpha.
 
-**Beta. What is beta?** It tells you how strongly the portfolio tends to move when the benchmark moves: $\beta_P=\operatorname{Cov}(R_P,R_B)/\operatorname{Var}(R_B)$. Beta 1.10 means roughly 1.10% of movement for each 1% benchmark move. **Alpha. What is alpha?** It is return left after charging for that benchmark exposure: $\alpha_P=R_P-\beta_PR_B$. **Beta-adjusted. What does that mean?** It means we compare the portfolio with $\beta_PR_B$, not blindly with one copy of $R_B$.
+**Beta. What is beta?** It tells you how strongly the portfolio tends to move when the benchmark moves: $\beta_P=\operatorname{Cov}(R_P,R_B)/\operatorname{Var}(R_B)$. **Covariance and variance. What are those?** Covariance measures whether two returns move together; variance is one return's own volatility squared. Beta 1.10 means roughly 1.10% of movement for each 1% benchmark move. **Alpha. What is alpha?** It is return left after charging for benchmark exposure: $\alpha_P=R_P-\beta_PR_B$. **Beta-adjusted. What does that mean?** Compare the portfolio with $\beta_PR_B$, not blindly with one copy of $R_B$.
+
+**Active return. What is active return?** It is the unadjusted benchmark gap: $R_A=R_P-R_B$. Alpha and active return answer different questions unless $\beta_P=1$.
 
 **1. Calculate the plain benchmark gap**
 
@@ -128,7 +130,7 @@ The portfolio beat the benchmark by 1.20%, but 0.74 percentage point of that gap
 
 > Actual weights are 68% equities and 32% bonds versus policy weights of 60% and 40%. Equity fund/benchmark returns are −5.6%/−4.5%; bond fund/benchmark returns are −0.3%/0.0%. Decompose value added using the curriculum convention.
 
-**Policy weight. What is a policy weight?** It is the client's planned long-run percentage for an asset class—the neutral starting point. **Asset allocation. What is asset allocation?** It is the decision to put more or less money in broad buckets such as equities and bonds; its contribution is $R_{allocation}=\sum_i(w_{P,i}-w_{B,i})R_{B,i}$. **Security selection. What is security selection?** It is the decision about what to own inside each bucket; its contribution is $R_{selection}=\sum_iw_{P,i}(R_{P,i}-R_{B,i})$. **Attribution. What is attribution?** It is the split $R_A=R_{allocation}+R_{selection}$.
+**Asset class. What is an asset class?** It is a broad investment bucket, such as equities or bonds. **Policy weight. What is a policy weight?** It is the client's planned long-run percentage for an asset class—the neutral starting point. **Asset allocation. What is asset allocation?** It is the decision to put more or less money in those broad buckets; its contribution is $R_{allocation}=\sum_i(w_{P,i}-w_{B,i})R_{B,i}$. **Security selection. What is security selection?** It is the decision about what to own inside each bucket; its contribution is $R_{selection}=\sum_iw_{P,i}(R_{P,i}-R_{B,i})$. **Attribution. What is attribution?** It is the split $R_A=R_{allocation}+R_{selection}$.
 
 **1. Find active class weights and within-class active returns**
 
@@ -294,6 +296,8 @@ This says the manager generated about 0.58 unit of average active return per uni
 
 **Expected return. What is expected return?** Written $E(R)$, it is the return we forecast, not a promise. **Volatility. What is volatility?** Written $\sigma$, it is return standard deviation—the amount returns are expected to jump around. **Cash. What does cash mean here?** It is the risk-free investment: return $R_f$ and zero volatility. **Cash scaling. What is cash scaling?** Mix risky portfolio weight $w$ with cash, so $E(R_C)=wE(R_P)+(1-w)R_f$ and $\sigma_C=w\sigma_P$.
 
+**Sharpe ratio. What is the Sharpe ratio?** It is expected return above cash per unit of total volatility: $SR=[E(R)-R_f]/\sigma$.
+
 **1. Find how much risky portfolio fits inside the risk budget**
 
 $$
@@ -328,6 +332,8 @@ At equal risk, small caps plus cash still beat the 8.2% large-cap forecast.
 > An active fund has expected active return 2.0% and active risk 5.0%. Invest 60% in the fund and 40% in its benchmark. Find the blend's active return, active risk, and information ratio.
 
 **Active fund. What is an active fund?** It deliberately holds different weights from the benchmark to try to beat it. **Blend. What is a blend?** It is one portfolio made by mixing active-fund weight $w$ with benchmark weight $1-w$. **Benchmark scaling. What is benchmark scaling?** It turns down the active piece: $E(R_{A,blend})=wE(R_{A,fund})$ and $\sigma_{A,blend}=w\sigma_{A,fund}$, so $IR$ stays unchanged.
+
+**Information ratio. What is the information ratio?** It is expected active return per unit of active risk: $IR=E(R_A)/\sigma_A$.
 
 **1. Calculate the original information ratio**
 
@@ -397,6 +403,8 @@ $$
 
 **Closet index fund. What is a closet index fund?** It is a supposedly active fund that barely moves away from its benchmark. **Market-neutral fund. What is a market-neutral fund?** It builds offsetting long and short positions so broad market movements are designed to cancel; the goal is to earn from security choices, not from the whole market rising. **Long and short. What do those mean?** Long benefits when an investment rises; short benefits when it falls. With cash as the benchmark, $R_A=R_P-R_f$ and $\sigma_A=\sigma_P$, so $IR=SR$.
 
+**Active risk and total risk. What are they?** Active risk, $\sigma_A$, measures movement relative to a benchmark. Total risk, $\sigma_P$, measures movement of the fund itself.
+
 **1. Closet-index information ratio**
 
 $$
@@ -420,7 +428,7 @@ $$
 
 ## Variant: Select the Better Active Manager Using Information Ratio
 
-**Abstract:** *The manager with the highest expected IR can create the best combined portfolio. Stand-alone return, volatility, or Sharpe can point at the wrong winner.*
+**Abstract:** *The manager with the highest expected IR can create the best combined portfolio. A fund's raw return, volatility, or Sharpe can point at the wrong winner.*
 
 > Fund I has expected active return −1.4% and active risk 5.1%. Fund II has expected active return 1.2% and active risk 6.2%. Both use the same benchmark. Which fund should be combined with that benchmark?
 
@@ -451,11 +459,13 @@ Fund II produces positive expected value added per unit of active risk. Fund I d
 
 ## Variant: Calculate the Maximum Combined Sharpe Ratio
 
-**Abstract:** *An efficient active strategy adds a separate source of reward beside the benchmark. Square benchmark Sharpe and IR, add them, then take the square root.*
+**Abstract:** *A useful active strategy adds a separate source of reward beside the benchmark. Square benchmark Sharpe and IR, add them, then take the square root.*
 
 > A benchmark has expected Sharpe ratio 0.53. The chosen active manager has expected information ratio 0.20. Find the highest Sharpe ratio available from an optimal combination.
 
 **Optimal combination. What is an optimal combination?** It is the mix of benchmark and active strategy that produces the highest expected Sharpe ratio under the chapter's assumptions. **Maximum combined Sharpe ratio. What is that?** It is the best score the two pieces can produce together: $SR_{max}=\sqrt{SR_B^2+IR^2}$.
+
+**Sharpe ratio and information ratio. What are they?** Sharpe measures return above cash per unit of total risk, $SR=[E(R_P)-R_f]/\sigma_P$. Information ratio measures active return per unit of active risk, $IR=E(R_A)/\sigma_A$.
 
 **1. Use the optimal-combination identity**
 
@@ -481,6 +491,8 @@ The improvement is real but modest: $0.57-0.53\approx0.04$.
 > A benchmark has $SR_B=0.53$ and volatility 14.4%. An active fund has $IR=0.20$ and active risk 6.2%. Find optimal active risk and the weights in the active fund and benchmark.
 
 **Optimal active risk. What is optimal active risk?** It is the benchmark-relative risk that maximizes the combined portfolio's Sharpe ratio: $\sigma_A^*=(IR/SR_B)\sigma_B$. **Fund weight. What is a fund weight?** It is the fraction of money placed in the active fund; resize it with $w_{fund}=\sigma_A^*/\sigma_{A,fund}$.
+
+**The symbols $SR_B$, $IR$, and $\sigma_B$. What are they?** They mean benchmark Sharpe ratio, active-fund information ratio, and benchmark volatility. Sharpe is $SR_B=[E(R_B)-R_f]/\sigma_B$; information ratio is $IR=E(R_A)/\sigma_A$.
 
 **1. Find the Sharpe-maximizing tracking risk**
 
@@ -514,6 +526,8 @@ The fund brings too much tracking risk on its own, so the benchmark **dilutes it
 
 **Leverage. What is leverage?** It means investing more than 100% in the active fund by borrowing or taking a negative benchmark position. **Negative benchmark weight. What is that?** Instead of owning the benchmark, you short it; the cash finances the extra active-fund position. The weights still net to one: $w_B=1-w_{fund}$.
 
+**The symbols $IR$, $SR_B$, and $\sigma_A$. What are they?** They mean information ratio, benchmark Sharpe ratio, and active risk. The target is $\sigma_A^*=(IR/SR_B)\sigma_B$, then $w_{fund}=\sigma_A^*/\sigma_{A,fund}$.
+
 **1. Calculate target active risk**
 
 $$
@@ -533,7 +547,7 @@ $$
 So invest 101.4% in Indigo and finance the extra 1.4% by shorting the benchmark.
 
 > [!NOTE]
-> A negative benchmark weight is not a typo. It is the mechanism for pushing active risk above the fund's native level.
+> A negative benchmark weight is how active risk gets pushed above the fund's built-in 8% level.
 
 ---
 
@@ -544,6 +558,8 @@ So invest 101.4% in Indigo and finance the extra 1.4% by shorting the benchmark.
 > A security returns 12%, the benchmark returns 8%, and the security beta is 1.25. Calculate its simple active return and its single-factor beta-adjusted residual return.
 
 **Security. What is a security?** It is one investable asset, such as one stock or bond. **Single-factor model. What is a single-factor model?** It explains the security using one shared driver—the benchmark. **Residual return. What is residual return?** It is what remains after removing beta-scaled benchmark return: $R_{residual,i}=R_i-\beta_iR_B$. Plain active return removes only one benchmark copy: $R_{A,i}=R_i-R_B$.
+
+**Security beta. What is security beta?** It measures how strongly the security tends to move with the benchmark: $\beta_i=\operatorname{Cov}(R_i,R_B)/\operatorname{Var}(R_B)$.
 
 **1. Simple benchmark-relative return**
 
@@ -574,7 +590,7 @@ The simple version calls all 4% “active.” The risk-model version recognizes 
 
 > Four securities have scores $+1,+1,-1,-1$, active volatilities 25%, 50%, 25%, 50%, and expected $IC=0.20$. Calculate each expected active return.
 
-**Score. What is a score?** It puts signals on one common scale: positive means “beat,” negative means “lag,” and size shows conviction. **Information coefficient, or IC. What is IC?** It is the correlation between forecasts and later active returns: $IC=\rho(\text{forecast},\text{realized active return})$. Higher positive IC means better forecasting skill. **Grinold scaling. What is Grinold scaling?** It turns score $S_i$ into forecast $\mu_i$ using $\mu_i=IC\,\sigma_iS_i$.
+**Score. What is a score?** It puts signals on one common scale: positive means “beat,” negative means “lag,” and size shows conviction. **Active volatility. What is active volatility?** Written $\sigma_i$, it measures how much one security's return relative to the benchmark can bounce around. **Information coefficient, or IC. What is IC?** It is the correlation between forecasts and later active returns: $IC=\rho(\text{forecast},\text{realized active return})$. Higher positive IC means better forecasting skill. **Grinold scaling. What is Grinold scaling?** It turns score $S_i$ into forecast $\mu_i$ using $\mu_i=IC\,\sigma_iS_i$.
 
 **1. Apply the scaling rule**
 
@@ -750,7 +766,9 @@ $$
 
 > An unconstrained strategy has $IC=0.20$, $BR=4$, and active risk 9%. Calculate its information ratio and expected active return; compare with a direct active return of 3.6%.
 
-**Fundamental law of active management. What is it?** It says active performance comes from forecasting skill, independent opportunities, implementation quality, and risk. **Aggressiveness. What does aggressiveness mean here?** It is simply the amount of active risk, $\sigma_A$. **Basic fundamental law. What makes it basic?** It assumes no constraints, so $IR^*=IC\sqrt{BR}$ and $E(R_A)^*=IC\sqrt{BR}\sigma_A$.
+**Fundamental law of active management. What is it?** It says active performance comes from forecasting skill, independent opportunities, how well forecasts become weights, and risk. **Aggressiveness. What does aggressiveness mean here?** It is simply active risk, $\sigma_A$. **Basic fundamental law. What makes it basic?** It assumes forecasts become ideal weights with no constraints, so $IR^*=IC\sqrt{BR}$ and $E(R_A)^*=IC\sqrt{BR}\sigma_A$.
+
+**IC and BR. What are they?** $IC$ is the correlation between forecasts and later active returns—forecasting skill. $BR$ is breadth—the number of independent decisions.
 
 **1. Calculate active efficiency**
 
@@ -764,7 +782,7 @@ $$
 E(R_A)^*=IR^*\sigma_A=0.40(9\%)=\boxed{3.60\%}
 $$
 
-The law matches the direct portfolio calculation, which is the required checksum.
+The law matches the direct portfolio calculation, giving us an independent check on the answer.
 
 > [!NOTE]
 > $IC$ is skill, $BR$ is independent opportunity count, and $\sigma_A$ is aggressiveness. Do not use $BR$ without the square root.
@@ -777,7 +795,9 @@ The law matches the direct portfolio calculation, which is the required checksum
 
 > A manager has $IR=0.75$, $IC=0.1819$, and $TC=1.0$. Assuming independent security decisions, solve for breadth.
 
-**Transfer coefficient, or TC. What is TC?** It measures how faithfully forecasts become actual portfolio weights; one means perfect transfer. The full law is $IR=TC\,IC\sqrt{BR}$. **Solving for breadth. What are we doing?** Run that law backward: $BR=[IR/(TC\,IC)]^2$.
+**Transfer coefficient, or TC. What is TC?** It measures how faithfully forecasts become actual portfolio weights; one means perfect transfer. The full law is $IR=TC\,IC\sqrt{BR}$. **Breadth. What is breadth?** It is the number of independent decisions. **Solving for breadth. What are we doing?** Run the law backward: $BR=[IR/(TC\,IC)]^2$.
+
+**IR and IC. What are they?** $IR=E(R_A)/\sigma_A$ measures active return per unit of active risk. $IC=\rho(\text{forecast},\text{realized active return})$ measures forecasting skill.
 
 **1. Rearrange the full law**
 
@@ -838,7 +858,7 @@ $$
 
 > For the same managers, risk-weighted forecast vectors are M1 $(0.1765,0.4000,0.4167,0.2400)$, M2 $(0.2353,0.1000,0,0.0800)$, and M3 $(0.1471,0.1500,0.0417,0.0600)$. Risk-adjusted weight vectors are M1 $(-0.0213,0.0025,0.0090,0.0063)$, M2 $(0.0340,0,-0.0120,-0.0250)$, and M3 $(-0.0085,0.0050,0.0060,-0.0125)$. Which manager has the highest TC?
 
-**Risk-adjusted weight. What is a risk-adjusted weight?** It is active weight multiplied by the security's active volatility, $\Delta w_i\sigma_i$, so position size is read together with its risk. **Transfer coefficient, or TC. What is TC?** It is the correlation between risk-weighted forecasts and risk-adjusted actual weights: $TC=\rho(\mu_i/\sigma_i,\Delta w_i\sigma_i)$. High positive TC means the portfolio actually reflects the forecasts.
+**Forecast vector. What is a forecast vector?** It is an ordered list of expected active returns—one forecast per security. **Risk-adjusted weight. What is a risk-adjusted weight?** It is active weight multiplied by the security's active volatility, $\Delta w_i\sigma_i$, so position size is read together with its risk. **Transfer coefficient, or TC. What is TC?** It is the correlation between risk-weighted forecasts and risk-adjusted actual weights: $TC=\rho(\mu_i/\sigma_i,\Delta w_i\sigma_i)$. High positive TC means the portfolio reflects the forecasts.
 
 **1. Match forecasts with implemented weights**
 
@@ -870,6 +890,8 @@ $$
 > Expected active returns are 5%, 10%, −5%, and −10%; actual active weights are 6%, 4%, 7%, and −17%; active volatilities are 25%, 50%, 25%, and 50%. Given $TC=0.58$, $IC=0.20$, and $BR=4$, verify active return and risk directly and through the expanded law.
 
 **Constraint. What is a constraint?** It is a rule—such as no shorting or a position limit—that blocks the manager from taking the ideal weight. **Actual active weight. What is that?** It is the weight the constrained portfolio can really hold, not the unconstrained ideal. **Expanded fundamental law. What is it?** It adds implementation quality to the basic law: $E(R_A)=TC\,IC\sqrt{BR}\sigma_A$.
+
+**No shorting and position limit. What do those mean?** No shorting means a total holding cannot fall below zero. A position limit caps how far a weight may move. **TC, IC, and BR. What are they?** TC measures forecast-to-weight transfer, IC measures forecast accuracy, and BR counts independent decisions.
 
 **1. Direct active return**
 
@@ -911,6 +933,8 @@ $$
 
 **Constrained strategy. What is a constrained strategy?** It is an active strategy whose ideal bets are restricted; a lower $TC$ means the actual weights line up less closely with the forecasts. **Constrained optimal risk. What is that?** It is $\sigma_{A,C}^*=TC(IR^*/SR_B)\sigma_B$. **Constrained maximum Sharpe. What is that?** It is the best combined score after the implementation penalty: $SR_{max}=\sqrt{SR_B^2+TC^2(IR^*)^2}$.
 
+**The symbols $TC$, $IR^*$, and $SR_B$. What are they?** TC measures how closely weights follow forecasts, $IR^*$ is unconstrained information ratio, and $SR_B$ is benchmark Sharpe ratio.
+
 **1. Shrink optimal active risk by TC**
 
 $$
@@ -943,6 +967,8 @@ $$
 > A strategy has $BR=100$, expected $IC=0.05$, $TC=0.80$, and active risk 4%. Realized $IC_R=-0.10$ and actual active return is −2.6%. Find ex ante return, conditional ex post return, noise, and variance shares.
 
 **Ex ante. What does ex ante mean?** It means forecast before the period: $E(R_A)=TC\,IC\sqrt{BR}\sigma_A$. **Realized IC. What is realized IC?** Written $IC_R$, it is the forecasting success that actually occurred. **Conditional ex post return. What is that?** It is the return expected after we know realized skill: $E(R_A\mid IC_R)=TC\,IC_R\sqrt{BR}\sigma_A$. **Noise. What is noise?** It is the leftover surprise: $\text{Noise}=R_A-E(R_A\mid IC_R)$. The variance shares are $TC^2$ from skill and $1-TC^2$ from noise.
+
+**BR and TC. What are they?** BR counts independent decisions. TC measures how closely actual weights line up with forecasts.
 
 **1. Ex ante expectation**
 
@@ -983,6 +1009,8 @@ Noise softened a bad forecasting period; it did not turn bad forecasting into sk
 
 **Stock selection. What is stock selection?** It means forecasting individual companies. **Sector selection. What is sector selection?** It means forecasting broad industry groups such as banks or technology. **Risk budget. What is a risk budget?** It is the amount of active risk the strategy is allowed to take—3% here. **Selector IR. What is it?** With no constraints, it is $IR=IC\sqrt{BR}$; expected active return is then $E(R_A)=IR\sigma_A$. This lets skill and opportunity count compete on the same scoreboard.
 
+**IC and BR. What are they?** IC measures how well forecasts match later results; BR counts independent forecasts. One better forecast raises IC, while one genuinely new forecast raises BR.
+
 **1. Stock selection**
 
 $$
@@ -1016,7 +1044,9 @@ The sector manager is three times as accurate, but the stock manager has enough 
 
 > Quarterly IG and HY volatilities are 2.84% and 4.64%, with correlation 0.575. A manager makes four independent annual credit calls, is correct 55% of the time, targets 2% annual active risk, and starts from 70% IG/30% HY. Calculate differential risk, IC, active tilt, allocations, IR, and expected active return.
 
-**IG and HY. What are they?** IG means investment-grade bonds—borrowers judged less likely to default. HY means high-yield bonds—riskier borrowers offering investors a bigger promised return. **Credit-timing call. What is that?** It is a choice to lean toward IG or HY based on which is forecast to outperform. **Correlation. What is correlation?** Written $\rho$, it measures how closely IG and HY returns move together. **Differential risk. What is that?** It is volatility of $R_{IG}-R_{HY}$: $\sigma_{IG-HY}=\sqrt{\sigma_{IG}^2+\sigma_{HY}^2-2\rho\sigma_{IG}\sigma_{HY}}$. **Hit-rate IC. What is that?** For a two-way call, $IC=p_{correct}-p_{wrong}=2p_{correct}-1$. **Active tilt. What is that?** It is the weight moved from one side to the other: $|\Delta w|=\sigma_A/\sigma_{IG-HY}$.
+**IG and HY. What are they?** IG means investment-grade bonds—borrowers judged less likely to default. HY means high-yield bonds—riskier borrowers offering investors a bigger promised return. **Credit-timing call. What is that?** It is a choice to lean toward IG or HY based on which is forecast to outperform. **Correlation. What is correlation?** Written $\rho$, it measures how closely IG and HY returns move together. **Differential risk. What is that?** It is volatility of $R_{IG}-R_{HY}$: $\sigma_{IG-HY}=\sqrt{\sigma_{IG}^2+\sigma_{HY}^2-2\rho\sigma_{IG}\sigma_{HY}}$. Quarterly risk becomes annual risk here through $\sigma_{annual}=\sqrt4\sigma_{quarterly}$. **Hit-rate IC. What is that?** For a two-way call, $IC=p_{correct}-p_{wrong}=2p_{correct}-1$. **Active tilt. What is that?** It is the weight moved from one side to the other: $|\Delta w|=\sigma_A/\sigma_{IG-HY}$.
+
+**IR and expected active return. What are they here?** Four independent timing calls give $BR=4$, so $IR=IC\sqrt4$ and $E(R_A)=IR\sigma_A$.
 
 **1. Risk of the return difference**
 
@@ -1063,7 +1093,7 @@ $$
 
 > A four-asset strategy has annual breadth 3.2 because some active returns are correlated. What is the maximum breadth under monthly independent rebalancing? What happens if monthly signals merely repeat the annual forecast?
 
-**Rebalancing. What is rebalancing?** It means refreshing portfolio weights at a scheduled time. **Time-series breadth. What is that?** It counts genuinely new decisions through time. If every monthly decision is independent, $BR_{monthly}=12BR_{annual}$; if the same forecast is repeated, breadth does not increase. **Turnover. What is turnover?** It is how much of the portfolio gets bought and sold during rebalancing.
+**Rebalancing. What is rebalancing?** It means refreshing portfolio weights at a scheduled time. **Time-series breadth. What is that?** It counts genuinely new decisions through time. If every monthly decision is independent, $BR_{monthly}=12BR_{annual}$; if the same forecast is repeated, breadth does not increase. **Turnover. What is turnover?** It is how much of the portfolio gets bought and sold. **TC. What is TC?** It measures how closely actual weights follow forecasts: $TC=\rho(\mu_i/\sigma_i,\Delta w_i\sigma_i)$.
 
 **1. Truly independent monthly decisions**
 
@@ -1093,6 +1123,8 @@ Higher turnover can also lower TC, so even genuinely higher breadth does not gua
 > A global strategy has $IC=0.099$ and $BR=24.5$. Compare: (A) $TC=0.995$, active risk 2%; (B) long-only and weight limits with $TC=0.694$, risk 2%; and (C) tighter binding at $TC=0.567$, risk 2.74%. Find IR and expected active return.
 
 **Long-only. What does long-only mean?** The portfolio may own a security or hold zero, but it may not short it. **Weight limit. What is a weight limit?** It caps how far a position may move above or below its benchmark weight. **Binding constraint. What does binding mean?** The rule is actively stopping the desired trade, so TC falls. For each case, $IR=TC\,IC\sqrt{BR}$ and $E(R_A)=IR\sigma_A$.
+
+**TC, IC, and BR. What are they?** TC measures whether forecasts become weights, IC measures whether forecasts become results, and BR counts independent decisions. They combine as $IR=TC\,IC\sqrt{BR}$.
 
 **1. Nearly unconstrained**
 
@@ -1168,6 +1200,8 @@ The two positions offset risk so strongly that effective breadth exceeds two.
 
 **IC uncertainty. What is IC uncertainty?** Realized forecasting skill changes from period to period; $\sigma_{IC}$ measures that wobble. **Risk-model tracking risk. What is that?** Written $\sigma_{RM}$, it is the active risk predicted by the security-risk model before skill uncertainty is added. **Strategy risk. What is strategy risk?** It is $\sigma_A=\sigma_{IC}\sqrt N\sigma_{RM}$. Expected active return is $E(R_A)=(IC/\sigma_{IC})\sigma_A$ when $TC=1$.
 
+**$TC=1$. What does that mean?** The transfer coefficient equals one, so forecasts and actual weights line up perfectly; no gap between ideal and actual weights reduces expected return.
+
 **1. Calculate strategy risk**
 
 $$
@@ -1200,6 +1234,8 @@ $$
 > A monthly S&P 500 stock selector claims $IC=0.05$ and sets $BR=12\times500=6{,}000$. At 3% active risk, calculate the claimed IR and return, then give the main reasons they are likely overstated.
 
 **S&P 500. What is the S&P 500?** It is a widely used benchmark of roughly 500 large US companies. **Claimed breadth. What is claimed breadth?** It is the manager's stated count of independent bets—here $BR=12\times500$. **Claimed IR. What is that?** Under the basic law it is $IR=IC\sqrt{BR}$, but that answer is trustworthy only if the 6,000 decisions are truly independent and the IC estimate is honest.
+
+**IC. What is IC?** It is the correlation between forecasts and later active returns: $IC=\rho(\text{forecast},\text{realized active return})$. **Expected active return. What is that?** Once IR is known, it is $E(R_A)=IR\sigma_A$.
 
 **1. Reproduce the tempting calculation**
 
@@ -1234,6 +1270,8 @@ $$
 > Manager 1 has $IC=0.15$, $TC=1.0$, and 50 independent security decisions. Manager 2 has $IC=0.10$, $TC=0.80$, and 100 independent decisions. Both target 5% active risk. Which manager has the higher expected active return?
 
 **Manager comparison. What are we comparing?** Not skill, breadth, or constraints one at a time. We compare the complete output of the law: $E(R_A)=TC\,IC\sqrt{BR}\sigma_A$. Because both managers use the same $\sigma_A$, the higher $TC\,IC\sqrt{BR}$ wins.
+
+**TC, IC, and BR. What are they?** TC measures forecast-to-weight transfer, IC measures forecast accuracy, and BR counts independent decisions. **Active risk. What is active risk?** Written $\sigma_A$, it is how much return relative to the benchmark is expected to bounce around.
 
 **1. Run Manager 1 through the full law**
 
@@ -1273,6 +1311,8 @@ Manager 2 has twice as many bets, but breadth only helps through a square root. 
 > A strategy begins with $IC=0.10$, $TC=0.50$, $BR=100$, and active risk 3%. Research changes lower IC to 0.08, while relaxed constraints raise TC to 0.75; breadth and risk stay fixed. Compare expected active return before and after.
 
 **Relaxed constraint. What is a relaxed constraint?** It is a rule made less restrictive, allowing forecasts to pass into weights more easily and usually raising TC. **Offsetting changes. What does that mean?** One input hurts while another helps. Recalculate the full product $E(R_A)=TC\,IC\sqrt{BR}\sigma_A$; eyeballing only IC or only TC can give the wrong answer.
+
+**IC, TC, BR, and $\sigma_A$. What are they?** They are forecast accuracy, forecast-to-weight transfer, independent-decision count, and active risk. Together they generate expected active return: $E(R_A)=TC\,IC\sqrt{BR}\sigma_A$.
 
 **1. Original strategy**
 
