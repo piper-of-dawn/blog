@@ -579,6 +579,12 @@
       "route": "/CFA Level II Notes/Derivatives/Hedge Ratio/"
     },
     {
+      "path": "CFA Level II Notes/Derivatives/LM1 - Pricing and Valuation of Forward Commitments - Question Notes.md",
+      "sha256": "9111141b87a58ecdaf74718dbb596249914ca0bce3ffa844d6b7570ab5538fd4",
+      "type": "content",
+      "route": "/CFA Level II Notes/Derivatives/LM1 - Pricing and Valuation of Forward Commitments - Question Notes/"
+    },
+    {
       "path": "CFA Level II Notes/Derivatives/Replication.md",
       "sha256": "5dbb4f2806f9db32551f1c534d323d0a5f689d381754bb00dd503ad0b5c0d511",
       "type": "content",
@@ -603,10 +609,22 @@
       "route": "/CFA Level II Notes/ECONOMICS/Exchange Rate/"
     },
     {
+      "path": "CFA Level II Notes/EQUITY VALUATION/LM3 - Free Cash Flow Valuation - Question Notes.md",
+      "sha256": "3d21ebd4aa7494b666fa13a20dac1ab99157886296a918eb65af6752b17ef699",
+      "type": "content",
+      "route": "/CFA Level II Notes/EQUITY VALUATION/LM3 - Free Cash Flow Valuation - Question Notes/"
+    },
+    {
       "path": "CFA Level II Notes/FIXED INCOME/Credit Default Swaps.md",
       "sha256": "3f53f9117ea1449cf9b69524c066544a5f492e4f05dc57d0ad8cc0d313b4b342",
       "type": "content",
       "route": "/CFA Level II Notes/FIXED INCOME/Credit Default Swaps/"
+    },
+    {
+      "path": "CFA Level II Notes/FIXED INCOME/LM3 - Valuation and Analysis of Bonds with Embedded Options - Question Notes.md",
+      "sha256": "61853bab45b8343216dcd16f31c5e0b2f6dc048bc5fa8911415df1eaf3ca295d",
+      "type": "content",
+      "route": "/CFA Level II Notes/FIXED INCOME/LM3 - Valuation and Analysis of Bonds with Embedded Options - Question Notes/"
     },
     {
       "path": "CFA Level II Notes/FIXED INCOME/Term Structure and Interest Rate Dynamics.md",
@@ -640,7 +658,7 @@
     },
     {
       "path": "CFA Level II Notes/PORTFOLIO MANAGEMENT/LM2 - Analysis of Active Portfolio Management - Question Notes.md",
-      "sha256": "d136e829afc2d3ee2006f07a7e247d95a402facf6053c9cd7f148cbbb19a56a2",
+      "sha256": "e0771577d4823bac10cf04f3ffeb0e5dad519651812927365ed82f96bbf6ee83",
       "type": "content",
       "route": "/CFA Level II Notes/PORTFOLIO MANAGEMENT/LM2 - Analysis of Active Portfolio Management - Question Notes/"
     },
@@ -649,6 +667,12 @@
       "sha256": "7f81c7177c83a2ad77c690aff0def1973c25a73e5f2c443200240aac179ef227",
       "type": "content",
       "route": "/CFA Level II Notes/PORTFOLIO MANAGEMENT/LM2 - Analysis of Active Portfolio Management/"
+    },
+    {
+      "path": "CFA Level II Notes/PORTFOLIO MANAGEMENT/LM3 - Exchange-Traded Funds - Question Notes.md",
+      "sha256": "17797799250864ea6a78c32b32712613076ce4e534cc8620ba523f4c28a50399",
+      "type": "content",
+      "route": "/CFA Level II Notes/PORTFOLIO MANAGEMENT/LM3 - Exchange-Traded Funds - Question Notes/"
     },
     {
       "path": "Competitive Probability/Coins.md",
