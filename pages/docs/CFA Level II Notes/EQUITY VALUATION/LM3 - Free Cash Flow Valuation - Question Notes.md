@@ -1,21 +1,28 @@
+---
+article_class: article-reading
+---
+
 ## Variant: Match the Cash Flow, Discount Rate, and Value
 
 **Abstract:** *First identify who gets the cash. FCFF belongs to all capital providers and uses WACC; FCFE belongs only to common shareholders and uses the required return on equity.*
 
 > An analyst has forecasts of both FCFF and FCFE. Which cash flow and discount rate should be used to estimate firm value and equity value?
 
-**FCFF. What is FCFF?** Free cash flow to the firm is cash available to debt and equity investors after operations and reinvestment. **FCFE. What is FCFE?** Free cash flow to equity is cash left for common shareholders after reinvestment and net debt financing. **WACC. What is WACC?** The weighted average cost of capital is the required return demanded by all capital providers.
+<span class="jargon-unlock jargon-unlock--label">KEY TERMS</span>
+<span class="jargon-unlock"><strong>FCFF:</strong> Free cash flow to the firm. Cash available to debt and equity investors after operations and reinvestment.</span>
+<span class="jargon-unlock"><strong>FCFE:</strong> Free cash flow to equity. Cash left for common shareholders after reinvestment and net debt financing.</span>
+<span class="jargon-unlock"><strong>WACC:</strong> The weighted average cost of capital. The required return demanded by all capital providers.</span>
 
 **1. Match each cash stream to its owner**
 
 $$
-\boxed{\text{Firm value}=PV(FCFF\text{ discounted at WACC})}
+\text{Firm value}=PV(FCFF\text{ discounted at WACC})
 $$
 
 *Carry that checkpoint into the next step.*
 
 $$
-\boxed{\text{Equity value}=PV(FCFE\text{ discounted at }r)}
+\text{Equity value}=PV(FCFE\text{ discounted at }r)
 $$
 
 Here, $r$ is the required return on common equity. The discount rate must belong to the same people who receive the cash.

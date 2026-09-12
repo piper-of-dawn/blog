@@ -446,6 +446,190 @@ article .typography .jargon-unlock {
 	line-height: 1.35;
 }
 
+/* The question-note article is a reading surface, not a second navigation
+   layout. Its site header remains available, while the article gets the full
+   canvas and the reference's narrow left annotation rail. */
+.article-reading {
+	--editorial-margin: 12rem;
+}
+
+.article-reading .editorial-page-intro,
+.article-reading .editorial-contents-rail {
+	display: none !important;
+}
+
+body:has(article.article-reading) .editorial-site-header {
+	display: none !important;
+}
+
+.article-reading {
+	display: block !important;
+	width: 100% !important;
+	max-width: none !important;
+	margin: -5px 0 0 !important;
+	padding: 0 0.5rem 5rem 0 !important;
+}
+
+.article-reading .typography {
+	--editorial-margin: 11.4rem;
+	max-width: none;
+	padding-left: var(--editorial-margin);
+	padding-right: 0;
+}
+
+.article-reading .typography h2:first-child {
+	margin-top: 0;
+}
+
+.article-reading .typography h2 {
+	border-top-color: var(--editorial-rule-strong);
+	font-size: clamp(1.55rem, 2.45vw, 1.85rem);
+}
+
+.article-reading .typography h3 {
+	margin-top: 0.85rem;
+	font-family: var(--editorial-serif);
+	font-size: 1.08rem;
+	font-weight: 600;
+}
+
+.article-reading .typography > p {
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+.article-reading .typography > h2 + p {
+	margin-top: 0.95rem;
+	margin-bottom: 1rem;
+}
+
+.article-reading .typography > blockquote {
+	margin-top: 1rem;
+	margin-bottom: 0.7rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	font-size: 1rem;
+	line-height: 1.35;
+}
+
+.article-reading .typography > blockquote p {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.35;
+}
+
+.article-reading .typography > p:has(> .jargon-unlock) {
+	height: 0;
+	margin: 0;
+	line-height: 0;
+}
+
+.article-reading .typography .jargon-unlock {
+	font-size: 0.78rem;
+	line-height: 1.38;
+}
+
+.article-reading .typography .jargon-unlock--label {
+	color: var(--editorial-ink);
+	font-family: var(--font-mono);
+	font-size: 0.68rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	line-height: 1.5;
+}
+
+.article-reading .typography .jargon-unlock strong {
+	color: var(--editorial-ink);
+	font-family: var(--font-sans);
+	font-size: 0.72rem;
+	font-weight: 600;
+}
+
+.article-reading .typography .jargon-unlock--label,
+.article-reading .typography .jargon-unlock {
+	float: left;
+	clear: left;
+	width: 7rem;
+	margin-left: -7.6rem;
+	border-top: 1px solid var(--editorial-rule-strong);
+	padding-top: 0.55rem;
+	text-align: left;
+}
+
+.article-reading .typography .jargon-unlock + .jargon-unlock {
+	margin-top: 0.55rem;
+	border-top: 0;
+	padding-top: 0;
+}
+
+.article-reading .typography > div.arithmatex {
+	margin-top: 0.8rem;
+	margin-bottom: 0.65rem;
+	border: 1px solid var(--editorial-rule);
+	padding: 0.7rem 3.5rem 0.7rem 1rem;
+}
+
+.article-reading .typography > div.arithmatex + p {
+	margin-top: 1.35rem;
+}
+
+.article-reading .typography > .admonition.note,
+.article-reading .typography > details.note {
+	--callout-icon: url("https://api.iconify.design/lucide/info.svg");
+	margin-top: 0.4rem;
+	border-left-color: var(--editorial-teal);
+	padding: 0.75rem 1rem 0.85rem;
+}
+
+.article-reading .typography > .admonition.note > p.admonition-title,
+.article-reading .typography > details.note > summary {
+	padding-bottom: 0.35rem;
+	color: var(--editorial-teal);
+	font-size: 0.72rem;
+}
+
+.article-reading .typography > .admonition.note > :not(.admonition-title),
+.article-reading .typography > details.note > :not(summary) {
+	margin-top: 0.3rem;
+}
+
+.article-reading .typography > .admonition.note > p:not(.admonition-title),
+.article-reading .typography > details.note > p {
+	font-size: 0.95rem !important;
+	line-height: 1.5 !important;
+}
+
+@media (max-width: 63.999rem) {
+	body:has(article.article-reading) .editorial-site-header {
+		display: block !important;
+	}
+
+	.article-reading {
+		margin-top: 0 !important;
+		padding-right: 1rem !important;
+	}
+
+	.article-reading .typography {
+		padding-left: 0;
+	}
+
+	.article-reading .typography .jargon-unlock--label,
+	.article-reading .typography .jargon-unlock {
+		float: none;
+		display: block;
+		width: auto;
+		margin: 0.8rem 0 0;
+		border-top: 1px solid var(--editorial-rule-strong);
+		padding-top: 0.55rem;
+	}
+
+	.article-reading .typography > p:has(> .jargon-unlock) {
+		height: auto;
+		margin: 1rem 0;
+		line-height: 1.7;
+	}
+}
+
 @media screen and (min-width: 64rem) {
 	article .typography .jargon-unlock {
 		float: left;

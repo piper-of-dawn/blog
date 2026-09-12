@@ -14,7 +14,13 @@ function encodedFile(urlPath) {
   // so re-encoding these decoded URL segments would make valid browser URLs
   // miss their files.
   const segments = clean.split('/').filter(Boolean).map((segment) => segment.replaceAll(' ', '%20'));
-  if (clean.startsWith('_next/') || clean.startsWith('assets/')) {
+  const lastSegment = segments.at(-1) || '';
+  if (
+    clean.startsWith('_next/') ||
+    clean.startsWith('assets/') ||
+    lastSegment.endsWith('.txt') ||
+    lastSegment.endsWith('.html')
+  ) {
     return path.join(root, ...segments);
   }
   return path.join(root, ...(segments.length ? segments : ['index']), 'index.html');

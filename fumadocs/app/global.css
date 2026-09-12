@@ -219,45 +219,25 @@ html > body[data-scroll-locked] {
   --removed-body-scroll-bar-size: 0px !important;
 }
 
-/* Screenshot-parity reading mode. The Fumadocs page tree still powers routes
-   and search, while the visible canvas follows the field-manual reference. */
+/* Keep the Fumadocs shell intact. The visual treatment belongs to the article
+   canvas, while the page tree, search, mobile menu, and table of contents are
+   still owned by Fumadocs. */
 body {
   min-height: 100svh;
   border: 1px solid var(--editorial-brick);
   color: var(--editorial-body);
 }
 
-#nd-subnav,
-[data-sidebar-placeholder],
-#nd-sidebar,
-[data-toc],
-[data-toc-popover] {
-  display: none !important;
-}
-
-#nd-docs-layout {
-  display: block !important;
-  min-height: calc(100dvh - 2px);
-  --fd-header-height: 0px !important;
-  --fd-sidebar-width: 0px !important;
-  --fd-toc-width: 0px !important;
-}
-
-main[data-layout-main] {
-  display: block;
-}
-
 article#nd-page {
-  width: 100%;
-  max-width: none;
-  margin: 0;
+  max-width: 66rem;
+  margin-inline: auto;
   gap: 2.2rem;
-  padding: 1.2rem 0 5rem;
+  padding: 3.5rem 2.5rem 5rem;
 }
 
 article#nd-page > h1,
 article#nd-page > [data-page-description] {
-  margin-inline: 2.6rem 0.9rem;
+  margin-inline: 0;
 }
 
 article#nd-page > h1 {
@@ -273,7 +253,7 @@ article#nd-page > h1 {
 
 article .prose {
   max-width: none;
-  padding: 0 0.9rem 0 2.6rem;
+  padding: 0;
   counter-reset: editorial-section display-equation;
 }
 
@@ -456,14 +436,14 @@ article .katex-display > .katex {
 @media (max-width: 47.999rem) {
   article#nd-page {
     gap: 1.5rem;
-    padding: 1.1rem 0 4rem;
+    padding: 2rem 1.25rem 4rem;
   }
 
   article#nd-page > h1,
   article#nd-page > [data-page-description],
   article .prose {
     margin-inline: 0;
-    padding-inline: 1rem;
+    padding-inline: 0;
   }
 
   article#nd-page > h1 {
