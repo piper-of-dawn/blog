@@ -441,7 +441,7 @@ article .typography > details.abstract {
 /* Inline explanations become quiet Bodoni marginalia on wide reading panes. */
 article .typography .jargon-unlock {
 	color: var(--editorial-muted);
-	font-family: var(--editorial-serif);
+	font-family: var(--font-sans);
 	font-size: 0.9em;
 	line-height: 1.35;
 }
