@@ -12,3 +12,4 @@ tests/_site
 test.mkdocs.*
 .vercel
 .notes-source
+.worktrees/
