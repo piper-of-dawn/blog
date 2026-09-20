@@ -2,7 +2,8 @@
   "version": 1,
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
-    "ref": "master"
+    "ref": "master",
+    "commit": "4c195ea3d73ad2fab1b6b97fa36819c85885effc"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -592,7 +593,7 @@
     },
     {
       "path": "CFA Level II Notes/Derivatives/Valuation of Contingent Claims - Numerical Problems.md",
-      "sha256": "b76b87214d0381d5bc55fe686c3d17cec486de1b1b7a017ad081c45aa9f7180c",
+      "sha256": "0de73a4f8712206fb8b10fa325b13d16bb847f7bac591bd734d084da7866993a",
       "type": "content",
       "route": "/CFA Level II Notes/Derivatives/Valuation of Contingent Claims - Numerical Problems/"
     },
@@ -829,6 +830,12 @@
       "route": "/LLM Engineering/Byte Pair Encoding/"
     },
     {
+      "path": "LLM Engineering/Reasoning Prompts.md",
+      "sha256": "3dfdba64b1fa55a05f5e7f42e309e1105273936b304289733ba64a0e10993d94",
+      "type": "content",
+      "route": "/LLM Engineering/Reasoning Prompts/"
+    },
+    {
       "path": "LLM Engineering/Tokenization.md",
       "sha256": "fdffe3c6682c0be20e683a69f407d20035bafca9055c5359594f69491ddf018e",
       "type": "content",
@@ -856,30 +863,28 @@
       "type": "asset"
     },
     {
-      "path": "Pasted image 20260815130136.png",
-      "sha256": "6ec569839cefd26f8693349706994b7a7f29be0b8a4c537e4b85def435cdf3e4",
-      "type": "asset"
-    },
-    {
-      "path": "Pasted image 20260815130243.png",
-      "sha256": "6ec569839cefd26f8693349706994b7a7f29be0b8a4c537e4b85def435cdf3e4",
-      "type": "asset"
-    },
-    {
-      "path": "Pasted image 20260815130518.png",
-      "sha256": "7d91a5268425db228a54439f5a97354aa74ad7ab0ab24a32635a7d23137f2264",
-      "type": "asset"
-    },
-    {
-      "path": "Pasted image 20260815130549.png",
-      "sha256": "4d916455279c34118a45795fbd1bb190465a8b1699479ca00b111314b5e68a56",
-      "type": "asset"
-    },
-    {
       "path": "Polish/Connectors.md",
       "sha256": "5ac6ef1e00e7a7304843742973ba9ed45ca60ffde9e95f9549c849ff15d68722",
       "type": "content",
       "route": "/Polish/Connectors/"
+    },
+    {
+      "path": "Polish/lekcja_2_exam_notes.md",
+      "sha256": "e9dd169f2bacdc799116668a4012f7da2c8b06f6473d00fa254781f4a14e2265",
+      "type": "content",
+      "route": "/Polish/lekcja_2_exam_notes/"
+    },
+    {
+      "path": "Polish/lekcja_5_exam_notes.md",
+      "sha256": "1aaaa39cb99d345e13423bd16405dbf6b5f0a9ced1bd8555099b1d36c5dd82aa",
+      "type": "content",
+      "route": "/Polish/lekcja_5_exam_notes/"
+    },
+    {
+      "path": "Polish/memorise.md",
+      "sha256": "e193fb4d3ccba4d4edc4a973a06475396e296e95910d57bf73d7ef82b3db58fe",
+      "type": "content",
+      "route": "/Polish/memorise/"
     },
     {
       "path": "Polish/notes.md",

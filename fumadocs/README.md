@@ -37,8 +37,10 @@ also confirms that approved MkDocs URLs exist and known private URLs do not.
 - Source frontmatter is discarded except for the page title.
 - Local filesystem paths, email addresses, common secret formats, and image
   metadata are removed or rejected.
-- `publication-manifest.json` pins the approved source files by SHA-256. A
-  changed or new source file makes normal sync/build fail closed.
+- `publication-manifest.json` pins the approved source files by SHA-256 and the
+  exact reviewed notes commit. Normal sync/build uses that commit, so later
+  upstream edits cannot change or break the published site. A deliberate
+  `pnpm run review:refresh` advances the pin after review.
 - Review an intentional source change with `pnpm run review:refresh`, inspect
   the generated report and diff, then rerun the full verification commands.
 

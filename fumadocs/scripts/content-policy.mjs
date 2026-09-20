@@ -260,12 +260,39 @@ export function rewriteLinks(markdown, noteRelative, contentPaths, assetPaths, o
   return output;
 }
 
+function normalizeHtmlLineBreaks(markdown) {
+  let fenced = false;
+
+  return markdown
+    .split('\n')
+    .map((line) => {
+      if (/^\s*```/u.test(line)) {
+        fenced = !fenced;
+        return line;
+      }
+      if (fenced || !/<br\b/iu.test(line)) return line;
+
+      if (/^\s*>\s*#{1,6}\s/u.test(line)) {
+        return line.replace(/\s*<br\s*\/?>(?=\s*)/giu, ' — ');
+      }
+      if (line.includes('|')) {
+        return line.replace(/\s*<br\s*\/?>(?=\s*)/giu, '; ');
+      }
+
+      const blockquotePrefix = line.match(/^(\s*>\s*)/u)?.[1];
+      const replacement = blockquotePrefix ? `  \n${blockquotePrefix}` : '  \n';
+      return line.replace(/\s*<br\s*\/?>(?=\s*)/giu, replacement);
+    })
+    .join('\n');
+}
+
 export function transformMarkdown(markdown, relativePath, contentPaths, assetPaths, omissions = []) {
   const redacted = redactPrivateText(markdown);
   const { body, title: frontmatterTitle } = stripFrontmatter(redacted);
   const title = deriveTitle(body, relativePath, frontmatterTitle);
   let output = convertCalloutsAndHighlights(body);
   output = rewriteLinks(output, relativePath, contentPaths, assetPaths, omissions);
+  output = normalizeHtmlLineBreaks(output);
   return `---\ntitle: ${JSON.stringify(title)}\n---\n\n${output.trim()}\n`;
 }
 

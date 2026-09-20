@@ -15,6 +15,7 @@ import {
   transformMarkdown,
   walkFiles,
 } from './content-policy.mjs';
+import { resolvePublicationSource } from '../lib/publication-source.mjs';
 
 const exec = promisify(execFile);
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -24,8 +25,6 @@ const contentRoot = path.join(projectRoot, 'content', 'docs');
 const assetsRoot = path.join(projectRoot, 'public', 'assets');
 const manifestPath = path.join(projectRoot, 'publication-manifest.json');
 const reportPath = path.join(workRoot, 'migration-report.json');
-const repository = process.env.NOTES_REPOSITORY_URL || 'https://github.com/piper-of-dawn/KumarsNotes.git';
-const ref = process.env.NOTES_REF || 'master';
 const refreshManifest = process.argv.includes('--refresh-manifest');
 const legacyAliases = [
   {
@@ -49,7 +48,7 @@ async function cleanManagedDirectory(target) {
   await mkdir(target, { recursive: true });
 }
 
-async function prepareSource() {
+async function prepareSource(source) {
   if (process.env.NOTES_SOURCE_DIR) {
     const local = path.resolve(process.env.NOTES_SOURCE_DIR);
     await access(local);
@@ -59,10 +58,27 @@ async function prepareSource() {
   await mkdir(workRoot, { recursive: true });
   assertManagedPath(cloneRoot);
   await rm(cloneRoot, { recursive: true, force: true });
-  await exec('git', ['clone', '--quiet', '--depth', '1', '--branch', ref, repository, cloneRoot], {
+  await exec('git', ['clone', '--quiet', source.repository, cloneRoot], {
     cwd: projectRoot,
   });
+  if (source.commit) {
+    await exec('git', ['fetch', '--quiet', '--depth', '1', 'origin', source.commit], {
+      cwd: cloneRoot,
+    });
+    await exec('git', ['checkout', '--quiet', '--detach', source.commit], {
+      cwd: cloneRoot,
+    });
+  } else {
+    await exec('git', ['checkout', '--quiet', '--detach', `origin/${source.ref}`], {
+      cwd: cloneRoot,
+    });
+  }
   return cloneRoot;
+}
+
+async function sourceCommit(sourceRoot) {
+  const { stdout } = await exec('git', ['rev-parse', 'HEAD'], { cwd: sourceRoot });
+  return stdout.trim();
 }
 
 async function collectCandidates(sourceRoot) {
@@ -87,10 +103,14 @@ async function loadManifest() {
   return JSON.parse(await readFile(manifestPath, 'utf8'));
 }
 
-async function writeManifest(entries) {
+async function writeManifest(entries, source, commit) {
   const manifest = {
     version: 1,
-    source: { repository, ref },
+    source: {
+      repository: source.repository,
+      ref: source.ref,
+      ...(commit ? { commit } : {}),
+    },
     publicIdentity: {
       author: 'Kumar Shantanu',
       profile: 'https://github.com/piper-of-dawn',
@@ -194,11 +214,13 @@ async function emit(candidates) {
 }
 
 async function main() {
-  const sourceRoot = await prepareSource();
+  const currentManifest = refreshManifest ? null : await loadManifest();
+  const source = resolvePublicationSource({ manifest: currentManifest, refreshManifest });
+  const sourceRoot = await prepareSource(source);
   const candidates = await collectCandidates(sourceRoot);
   const manifest = refreshManifest
-    ? await writeManifest(candidates)
-    : await loadManifest();
+    ? await writeManifest(candidates, source, await sourceCommit(sourceRoot))
+    : currentManifest;
   validateAgainstManifest(candidates, manifest);
   const omissions = await emit(candidates);
   const contentCount = candidates.filter((entry) => entry.type === 'content').length;

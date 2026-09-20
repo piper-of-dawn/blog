@@ -8,6 +8,7 @@ import {
   scanText,
   transformMarkdown,
 } from '../scripts/content-policy.mjs';
+import { resolvePublicationSource } from '../lib/publication-source.mjs';
 
 test('private and opaque sources are excluded', () => {
   assert.equal(classify('Diary/journal.md'), null);
@@ -26,6 +27,26 @@ test('routes preserve source path, spaces, and casing', () => {
     routeForMarkdown('CFA Notes/03 - Fixed Income.md'),
     '/CFA Notes/- Fixed Income/',
   );
+});
+
+test('normal sync stays on the reviewed publication commit', () => {
+  const manifest = {
+    source: {
+      repository: 'https://example.test/notes.git',
+      ref: 'master',
+      commit: 'abc123',
+    },
+  };
+  assert.deepEqual(resolvePublicationSource({ manifest }), {
+    repository: 'https://example.test/notes.git',
+    ref: 'master',
+    commit: 'abc123',
+  });
+  assert.deepEqual(resolvePublicationSource({ manifest, refreshManifest: true }), {
+    repository: 'https://example.test/notes.git',
+    ref: 'master',
+    commit: null,
+  });
 });
 
 test('callouts and highlights are converted outside code fences', () => {
@@ -61,6 +82,20 @@ test('frontmatter is minimized and personal provenance is redacted', () => {
   assert.match(result, /^---\ntitle: "Safe Title"\n---/u);
   assert.doesNotMatch(result, /2020-01-01|\/home\/|me@example\.com/u);
   assert.deepEqual(scanText(result), []);
+});
+
+test('normalizes HTML line breaks before MDX compilation', () => {
+  const result = transformMarkdown(
+    '> ### Revision<br>first line<br>second line\n> Dialogue<br>reply\n\n| A<br>B | C |\n\n```mermaid\nA[one<br>two]\n```',
+    'Safe.md',
+    new Set(['Safe.md']),
+    new Set(),
+  );
+  assert.match(result, /> ### Revision — first line — second line/u);
+  assert.match(result, /> Dialogue  \n> reply/u);
+  assert.match(result, /\| A; B \| C \|/u);
+  assert.match(result, /A\[one<br>two\]/u);
+  assert.doesNotMatch(result, /<br\s*\/?>(?!two)/iu);
 });
 
 test('privacy rules detect direct identifiers and secrets', () => {
