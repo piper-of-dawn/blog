@@ -58,10 +58,9 @@ async function prepareSource(source) {
   await mkdir(workRoot, { recursive: true });
   assertManagedPath(cloneRoot);
   await rm(cloneRoot, { recursive: true, force: true });
-  await exec('git', ['clone', '--quiet', source.repository, cloneRoot], {
-    cwd: projectRoot,
-  });
   if (source.commit) {
+    await exec('git', ['init', '--quiet', cloneRoot], { cwd: projectRoot });
+    await exec('git', ['remote', 'add', 'origin', source.repository], { cwd: cloneRoot });
     await exec('git', ['fetch', '--quiet', '--depth', '1', 'origin', source.commit], {
       cwd: cloneRoot,
     });
@@ -69,8 +68,17 @@ async function prepareSource(source) {
       cwd: cloneRoot,
     });
   } else {
-    await exec('git', ['checkout', '--quiet', '--detach', `origin/${source.ref}`], {
-      cwd: cloneRoot,
+    await exec('git', [
+      'clone',
+      '--quiet',
+      '--depth',
+      '1',
+      '--branch',
+      source.ref,
+      source.repository,
+      cloneRoot,
+    ], {
+      cwd: projectRoot,
     });
   }
   return cloneRoot;
