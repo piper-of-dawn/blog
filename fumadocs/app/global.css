@@ -12,7 +12,26 @@
   --editorial-brick: #a54834;
   --editorial-rule: #e9e5dc;
   --editorial-rule-strong: #252d34;
+  --editorial-highlight: rgb(22 113 103 / 18%);
+  --editorial-callout: #4a5962;
+  --editorial-rule-soft: #d4d0c7;
+  --editorial-rule-equation: #e1ddd3;
   --editorial-margin: 12.25rem;
+}
+
+.dark {
+  --editorial-paper: #141216;
+  --editorial-ink: #f4edf4;
+  --editorial-body: #c7bfca;
+  --editorial-muted: #a49aa7;
+  --editorial-teal: #72d4c0;
+  --editorial-brick: #e09a86;
+  --editorial-rule: #39323d;
+  --editorial-rule-strong: #a59aa7;
+  --editorial-highlight: rgb(114 212 192 / 22%);
+  --editorial-callout: #c7bfca;
+  --editorial-rule-soft: #39323d;
+  --editorial-rule-equation: #39323d;
 }
 
 /* The navigation keeps Fumadocs' sans-serif defaults. These rules are scoped
@@ -152,7 +171,7 @@ article blockquote > p:not(:first-child) strong {
 }
 
 article mark {
-  background: rgb(22 113 103 / 18%);
+  background: var(--editorial-highlight);
   color: inherit;
   padding: 0 0.12em;
 }
@@ -335,7 +354,7 @@ article blockquote.editorial-callout {
   border-left: 3px solid var(--editorial-brick);
   background: transparent;
   padding: 0.15rem 0 0.15rem 1.15rem;
-  color: #4a5962;
+  color: var(--editorial-callout);
   font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
   font-size: 1.25rem;
   font-weight: 400;
@@ -361,7 +380,7 @@ article blockquote.editorial-callout > p:last-child::after {
 
 article blockquote.editorial-callout--note {
   margin-block: 1.8rem;
-  border-bottom: 1px solid #d4d0c7;
+  border-bottom: 1px solid var(--editorial-rule-soft);
   padding: 1.375rem 1.3rem 1.425rem;
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 1.25rem;
@@ -408,8 +427,8 @@ article .katex-display {
   display: block;
   counter-increment: display-equation;
   margin: 1.7rem 0;
-  border-top: 1px solid #e1ddd3;
-  border-bottom: 1px solid #e1ddd3;
+  border-top: 1px solid var(--editorial-rule-equation);
+  border-bottom: 1px solid var(--editorial-rule-equation);
   padding: 1.2rem 3.5rem 1.2rem 1rem;
   color: var(--editorial-ink);
   overflow-x: auto;

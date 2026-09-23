@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import {
   classify,
@@ -9,6 +10,8 @@ import {
   transformMarkdown,
 } from '../scripts/content-policy.mjs';
 import { resolvePublicationSource } from '../lib/publication-source.mjs';
+
+const globalCss = readFileSync(new URL('../app/global.css', import.meta.url), 'utf8');
 
 test('private and opaque sources are excluded', () => {
   assert.equal(classify('Diary/journal.md'), null);
@@ -47,6 +50,14 @@ test('normal sync stays on the reviewed publication commit', () => {
     ref: 'master',
     commit: null,
   });
+});
+
+test('dark mode defines a dark editorial palette', () => {
+  assert.match(globalCss, /\.dark\s*\{[\s\S]*--editorial-paper:\s*#[0-9a-f]{6}/u);
+  assert.match(globalCss, /\.dark\s*\{[\s\S]*--editorial-ink:\s*#[0-9a-f]{6}/u);
+  assert.match(globalCss, /\.dark\s*\{[\s\S]*--editorial-body:\s*#[0-9a-f]{6}/u);
+  assert.match(globalCss, /\.dark\s*\{[\s\S]*--editorial-rule:\s*#[0-9a-f]{6}/u);
+  assert.match(globalCss, /--editorial-highlight:\s*rgb\(/u);
 });
 
 test('callouts and highlights are converted outside code fences', () => {
