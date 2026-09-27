@@ -8,6 +8,7 @@ import {
 } from 'fumadocs-ui/layouts/docs/page';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 function decodeSlug(slug: string[] | undefined) {
@@ -34,11 +35,34 @@ export default async function Page(props: PageProps<'/[[...slug]]'>) {
   if (!page) notFound();
 
   const MDX = page.data.body;
+  const isHome = !params.slug || params.slug.length === 0;
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
+    <DocsPage toc={page.data.toc} full={page.data.full} className={isHome ? 'profile-home' : undefined}>
+      {isHome ? (
+        <>
+          <header className="profile-home__header">
+            <div>
+              <p className="profile-home__eyebrow">About me</p>
+              <h1 className="profile-home__title">Kumar Shantanu</h1>
+            </div>
+            <Image
+              className="profile-home__portrait"
+              src="/assets/dp.png"
+              alt="Kumar Shantanu"
+              width={800}
+              height={800}
+              priority
+            />
+          </header>
+          <DocsDescription>{page.data.description}</DocsDescription>
+        </>
+      ) : (
+        <>
+          <DocsTitle>{page.data.title}</DocsTitle>
+          <DocsDescription>{page.data.description}</DocsDescription>
+        </>
+      )}
       <DocsBody>
         <MDX
           components={getMDXComponents({
@@ -62,7 +86,7 @@ export async function generateMetadata(
   if (!page) notFound();
 
   return {
-    title: page.data.title,
+    title: !params.slug || params.slug.length === 0 ? 'Kumar Shantanu' : page.data.title,
     description: page.data.description,
   };
 }
