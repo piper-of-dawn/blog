@@ -34,6 +34,20 @@
   --editorial-rule-equation: #39323d;
 }
 
+/* Embedded SVGs use the OS color preference, while the site theme can be
+   toggled independently. Correct this diagram when those two themes differ. */
+@media (prefers-color-scheme: dark) {
+  html:not(.dark) article img[alt="two-period-rate-option"] {
+    filter: invert(1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html.dark article img[alt="two-period-rate-option"] {
+    filter: invert(1);
+  }
+}
+
 /* The navigation keeps Fumadocs' sans-serif defaults. These rules are scoped
    to the article body to reproduce the field-manual reference pages. */
 article {
