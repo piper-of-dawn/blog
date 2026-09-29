@@ -3,7 +3,7 @@
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
     "ref": "master",
-    "commit": "4c195ea3d73ad2fab1b6b97fa36819c85885effc"
+    "commit": "bc5ae03c7f95e06ece6e5fcbcee440fcdc70da26"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -580,6 +580,31 @@
       "route": "/CFA Level II Notes/Derivatives/Hedge Ratio/"
     },
     {
+      "path": "CFA Level II Notes/Derivatives/images/one-period-option-payoffs.svg",
+      "sha256": "de1a3b2eb99fd20d26a589860e0aa304a8e6d023a9b41351737dbfa408169508",
+      "type": "asset"
+    },
+    {
+      "path": "CFA Level II Notes/Derivatives/images/two-period-american-put.svg",
+      "sha256": "98bd56dd744026967715aa69b31fcf52f027f35c863f739eac8fe99d97eac789",
+      "type": "asset"
+    },
+    {
+      "path": "CFA Level II Notes/Derivatives/images/two-period-european-call.svg",
+      "sha256": "ec1a981c0b0f932a96d60a5b66f953330c5b1b5acc57666e7fd032b63b3c84a7",
+      "type": "asset"
+    },
+    {
+      "path": "CFA Level II Notes/Derivatives/images/two-period-european-put.svg",
+      "sha256": "bf8bfd319af58ed9c17e4cb2212aa432be812d55759443fe7c46dfee533108f9",
+      "type": "asset"
+    },
+    {
+      "path": "CFA Level II Notes/Derivatives/images/two-period-rate-option.svg",
+      "sha256": "0ecbf7cc6c88a0f70a1861e1959acf0ec8d08b5dba408cf6034bef5a84cb7dfb",
+      "type": "asset"
+    },
+    {
       "path": "CFA Level II Notes/Derivatives/LM1 - Pricing and Valuation of Forward Commitments - Question Notes.md",
       "sha256": "9111141b87a58ecdaf74718dbb596249914ca0bce3ffa844d6b7570ab5538fd4",
       "type": "content",
@@ -593,7 +618,7 @@
     },
     {
       "path": "CFA Level II Notes/Derivatives/Valuation of Contingent Claims - Numerical Problems.md",
-      "sha256": "0de73a4f8712206fb8b10fa325b13d16bb847f7bac591bd734d084da7866993a",
+      "sha256": "6bda6e43aac21550a59d9624a9a2076b23d2b256b4d58cedd22bab26206a632c",
       "type": "content",
       "route": "/CFA Level II Notes/Derivatives/Valuation of Contingent Claims - Numerical Problems/"
     },
@@ -614,6 +639,12 @@
       "sha256": "3d21ebd4aa7494b666fa13a20dac1ab99157886296a918eb65af6752b17ef699",
       "type": "content",
       "route": "/CFA Level II Notes/EQUITY VALUATION/LM3 - Free Cash Flow Valuation - Question Notes/"
+    },
+    {
+      "path": "CFA Level II Notes/EQUITY VALUATION/Untitled.md",
+      "sha256": "abbbf91c2022d59a679a95b7311054c894b95e5d5d391caae350e5d8864f425c",
+      "type": "content",
+      "route": "/CFA Level II Notes/EQUITY VALUATION/Untitled/"
     },
     {
       "path": "CFA Level II Notes/FIXED INCOME/Credit Default Swaps.md",
@@ -650,6 +681,18 @@
       "sha256": "454014f2667abb60df640da4f2e3202a205d54eb583dc33771da51a499112ae1",
       "type": "content",
       "route": "/CFA Level II Notes/FSA/Joint Ventures/"
+    },
+    {
+      "path": "CFA Level II Notes/FSA/LM1 - Intercorporate Investments - Question Notes.md",
+      "sha256": "38c101ddbb63be7673c97aeba9a169c41f79464db98133a9b3eedac7732e3eb9",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/LM1 - Intercorporate Investments - Question Notes/"
+    },
+    {
+      "path": "CFA Level II Notes/FSA/LM4 - Analysis of Financial Institutions - Question Notes.md",
+      "sha256": "feef002f56bd856b99a174d35eb53043c0ff0bb01877f1d55466111ffcf127bc",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/LM4 - Analysis of Financial Institutions - Question Notes/"
     },
     {
       "path": "CFA Level II Notes/FSA/Treasury Stock Method.md",

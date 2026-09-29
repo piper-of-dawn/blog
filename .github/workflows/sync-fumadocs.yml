@@ -1,0 +1,67 @@
+name: Sync Fumadocs notes
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+  push:
+    branches: [master]
+    paths:
+      - 'fumadocs/publication-manifest.json'
+      - 'fumadocs/scripts/**'
+      - 'fumadocs/lib/publication-source.mjs'
+      - '.github/workflows/sync-fumadocs.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fumadocs-notes-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out blog
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.9.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: fumadocs/pnpm-lock.yaml
+
+      - name: Install dependencies
+        working-directory: fumadocs
+        run: pnpm install --frozen-lockfile
+
+      - name: Refresh approved vault snapshot
+        working-directory: fumadocs
+        run: pnpm run review:refresh
+
+      - name: Validate synchronized site
+        working-directory: fumadocs
+        run: pnpm run validate
+
+      - name: Commit source pin when it changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- fumadocs/publication-manifest.json; then
+            echo 'Notes source is already current.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add fumadocs/publication-manifest.json
+          git commit -m "Sync Fumadocs notes source"
+          git push origin HEAD:master

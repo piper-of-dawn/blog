@@ -37,12 +37,14 @@ also confirms that approved MkDocs URLs exist and known private URLs do not.
 - Source frontmatter is discarded except for the page title.
 - Local filesystem paths, email addresses, common secret formats, and image
   metadata are removed or rejected.
-- `publication-manifest.json` pins the approved source files by SHA-256 and the
-  exact reviewed notes commit. Normal sync/build uses that commit, so later
-  upstream edits cannot change or break the published site. A deliberate
-  `pnpm run review:refresh` advances the pin after review.
-- Review an intentional source change with `pnpm run review:refresh`, inspect
-  the generated report and diff, then rerun the full verification commands.
+- `publication-manifest.json` pins the published source files by SHA-256 and the
+  exact notes commit. The `Sync Fumadocs notes` GitHub workflow refreshes this
+  pin after each vault push, with an hourly check as a fallback. It validates
+  the generated site before committing the new pin; Vercel then deploys from
+  the `blog` repository. Privacy checks remain fail closed, so a sync that
+  detects sensitive text or unsafe assets stops before publication.
+- To refresh locally, run `pnpm run review:refresh`, inspect the generated
+  report and manifest diff, then run `pnpm run validate` before committing.
 
 The public author identity is intentionally limited to `Kumar Shantanu` and
 the existing `piper-of-dawn/blog` GitHub link. No email address is published.
