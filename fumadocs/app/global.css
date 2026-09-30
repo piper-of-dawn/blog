@@ -20,18 +20,18 @@
 }
 
 .dark {
-  --editorial-paper: #141216;
-  --editorial-ink: #f4edf4;
-  --editorial-body: #c7bfca;
-  --editorial-muted: #a49aa7;
+  --editorial-paper: #191715;
+  --editorial-ink: #f3eee6;
+  --editorial-body: #c9c2b8;
+  --editorial-muted: #a69d92;
   --editorial-teal: #72d4c0;
   --editorial-brick: #e09a86;
-  --editorial-rule: #39323d;
-  --editorial-rule-strong: #a59aa7;
+  --editorial-rule: #39332d;
+  --editorial-rule-strong: #a69d92;
   --editorial-highlight: rgb(114 212 192 / 22%);
-  --editorial-callout: #c7bfca;
-  --editorial-rule-soft: #39323d;
-  --editorial-rule-equation: #39323d;
+  --editorial-callout: #c9c2b8;
+  --editorial-rule-soft: #39332d;
+  --editorial-rule-equation: #39332d;
 }
 
 /* Embedded SVGs use the OS color preference, while the site theme can be
@@ -446,6 +446,18 @@ article blockquote.editorial-callout p {
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
+}
+
+article blockquote.editorial-callout--quote {
+  margin-block: 1rem;
+  padding: 0.25rem 0 0.25rem 1rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+article blockquote.editorial-callout--quote > p:not(:first-child) strong {
+  color: var(--editorial-ink);
 }
 
 article blockquote.editorial-callout::before,
