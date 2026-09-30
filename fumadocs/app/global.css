@@ -228,11 +228,15 @@ article blockquote.editorial-callout--abstract > p:first-child strong::before {
 }
 
 article blockquote.editorial-callout--inline > p:first-child strong {
+  display: block;
+  margin-bottom: 0.55rem;
   color: var(--editorial-teal);
-  font-family: inherit;
-  font-size: 1em;
-  letter-spacing: normal;
-  text-transform: none;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 article blockquote > p:not(:first-child) strong {
@@ -257,7 +261,8 @@ article table {
   border-bottom: 1px solid var(--editorial-rule-strong);
   background: transparent !important;
   color: var(--editorial-body);
-  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+  font-family: 'Roboto Mono', var(--font-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
 }
 
 article table th {
@@ -388,6 +393,7 @@ article .prose h2::before {
 /* Give the native right-hand Fumadocs TOC the numbered contents-ledger style. */
 #nd-toc {
   counter-reset: editorial-toc-section;
+  --fd-toc-width: min(22rem, calc(100vw - 2rem));
   padding-top: 1rem;
 }
 
@@ -410,7 +416,11 @@ article .prose h2::before {
 
 #nd-toc #toc-title::after {
   content: 'Contents';
-  font-size: 0.68rem;
+  font-size: 0.82rem;
+}
+
+#nd-toc [style*='--track-top'] {
+  display: none;
 }
 
 #nd-toc a[href*='#'] {
@@ -443,6 +453,11 @@ article .prose h2::before {
   letter-spacing: 0.04em;
 }
 
+#nd-toc a[data-active='true'] {
+  color: var(--editorial-teal);
+  font-weight: 600;
+}
+
 article .prose h2::after {
   content: none;
 }
@@ -467,11 +482,6 @@ article .prose li {
 
 article .prose strong {
   color: var(--editorial-teal);
-  text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--editorial-teal) 45%, transparent);
-  text-decoration-thickness: 0.06em;
-  text-underline-offset: 0.14em;
-  text-decoration-skip-ink: auto;
 }
 
 article .prose > p > strong:first-child {
@@ -547,7 +557,7 @@ article blockquote.editorial-callout > p:last-child::after {
 
 article blockquote.editorial-callout--note {
   margin-block: 1.8rem;
-  border-bottom: 1px solid var(--editorial-rule-soft);
+  border-bottom: 0;
   padding: 1.375rem 1.3rem 1.425rem;
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 1.25rem;
@@ -572,6 +582,7 @@ article blockquote.editorial-callout--note > p:first-child strong {
   letter-spacing: 0.12em;
   line-height: 1.5;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 article blockquote.editorial-callout--note > p:first-child strong::before {

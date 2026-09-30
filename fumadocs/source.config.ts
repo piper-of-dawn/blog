@@ -3,17 +3,27 @@ import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 
 function classifyCallouts() {
+  const textContent = (node: any): string =>
+    node.type === 'text'
+      ? node.value ?? ''
+      : (node.children ?? []).map(textContent).join('');
+
   return (tree: any) => {
     const visit = (node: any) => {
       if (node.type === 'blockquote') {
-        const text = JSON.stringify(node.children?.[0] ?? '').toLowerCase();
+        const lead = node.children?.[0]?.children?.[0];
+        const leadTitle = lead?.type === 'strong' ? textContent(lead).trim() : '';
+        const isLabeledNote =
+          leadTitle.length > 0 && !/^(what is|question\b|\(?\d+)/i.test(leadTitle);
         node.data ??= {};
         node.data.hProperties ??= {};
-        const variant = text.includes('abstract')
+        const variant = /abstract/i.test(leadTitle)
           ? 'abstract'
-          : text.includes('note')
+          : /\bnote\b/i.test(leadTitle)
             ? 'note'
-            : 'quote';
+            : isLabeledNote
+              ? 'inline'
+              : 'quote';
         node.data.hProperties.className = [
           'editorial-callout',
           `editorial-callout--${variant}`,
