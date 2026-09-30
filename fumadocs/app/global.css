@@ -3,6 +3,14 @@
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
+@font-face {
+  font-family: 'Fumadocs Nerd Symbols';
+  src: url('/fonts/nerd-arrow.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --editorial-paper: #fcfbf7;
   --editorial-ink: #0f1620;
@@ -251,6 +259,16 @@ article mark {
   background: var(--editorial-highlight);
   color: inherit;
   padding: 0 0.12em;
+}
+
+article .nerd-arrow {
+  display: inline-block;
+  margin-inline: 0.25em;
+  font-family: 'Fumadocs Nerd Symbols', sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: -0.04em;
 }
 
 article table {
