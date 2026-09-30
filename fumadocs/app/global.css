@@ -218,7 +218,7 @@ article blockquote.editorial-callout--abstract > p:first-child strong::before {
   color: var(--editorial-teal);
 }
 
-article blockquote > p:first-child strong {
+article blockquote > p:first-child > strong:first-child {
   display: block;
   margin-bottom: 0.35rem;
   color: var(--editorial-teal);
