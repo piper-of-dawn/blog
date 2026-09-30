@@ -401,7 +401,7 @@ article .prose h3 {
 article .prose p,
 article .prose li {
   color: var(--editorial-body);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.72;
   letter-spacing: 0;
 }
@@ -453,9 +453,9 @@ article blockquote.editorial-callout p {
 article blockquote.editorial-callout--quote {
   margin-block: 1rem;
   padding: 0.25rem 0 0.25rem 1rem;
-  font-family: 'Arimo Nerd Arrow', var(--font-sans), system-ui, sans-serif;
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
   font-feature-settings: 'calt' 1;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.6;
 }
 
