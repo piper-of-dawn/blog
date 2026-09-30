@@ -20,6 +20,8 @@
   --editorial-brick: #a54834;
   --editorial-rule: #e9e5dc;
   --editorial-rule-strong: #252d34;
+  --editorial-table-body: #625e66;
+  --editorial-table-rule: #ded8d1;
   --editorial-highlight: rgb(22 113 103 / 18%);
   --editorial-callout: #4a5962;
   --editorial-rule-soft: #d4d0c7;
@@ -36,6 +38,8 @@
   --editorial-brick: #e09a86;
   --editorial-rule: #39332d;
   --editorial-rule-strong: #a69d92;
+  --editorial-table-body: #c9c2b8;
+  --editorial-table-rule: #39332d;
   --editorial-highlight: rgb(114 212 192 / 22%);
   --editorial-callout: #c9c2b8;
   --editorial-rule-soft: #39332d;
@@ -256,38 +260,43 @@ article mark {
 
 article table {
   width: 100%;
-  table-layout: fixed;
+  table-layout: auto;
   border-collapse: collapse;
   border: 0;
+  border-radius: 0;
   border-top: 1px solid var(--editorial-rule-strong);
   border-bottom: 1px solid var(--editorial-rule-strong);
   background: transparent !important;
-  color: var(--editorial-body);
+  overflow: visible;
+  margin: 1.5rem 0;
+  color: var(--editorial-table-body);
   font-family: 'Roboto Mono', var(--font-mono), ui-monospace, monospace;
-  font-size: 0.58rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 article table th {
   color: var(--editorial-muted);
   font-family: inherit;
-  font-size: 0.52rem;
+  font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.16em;
+  line-height: 1.35;
   text-transform: uppercase;
 }
 
 article table th,
 article table td {
   border: 0;
-  border-bottom: 1px solid var(--editorial-rule);
+  border-bottom: 1px solid var(--editorial-table-rule);
   border-inline: 0;
-  padding: 0.2rem 0.35rem;
+  padding: 0.5rem;
   background: transparent !important;
 }
 
 article table thead th {
-  border-bottom: 1px solid var(--editorial-rule-strong);
+  border-bottom: 1px solid var(--editorial-table-rule);
+  padding-block: 0.65rem;
 }
 
 article table tbody tr:last-child td {
@@ -408,6 +417,7 @@ article .prose h2::before {
   counter-reset: editorial-toc-section;
   --fd-toc-width: min(22rem, calc(100vw - 2rem));
   padding-top: 1rem;
+  overflow-x: clip;
 }
 
 #nd-toc #toc-title {
