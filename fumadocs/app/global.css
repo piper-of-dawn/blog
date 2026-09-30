@@ -456,8 +456,14 @@ article blockquote.editorial-callout--quote {
   line-height: 1.6;
 }
 
-article blockquote.editorial-callout--quote > p:not(:first-child) strong {
+article blockquote.editorial-callout--quote strong {
+  display: inline;
+  margin: 0;
   color: var(--editorial-ink);
+  font-family: inherit;
+  font-size: 1em;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 article blockquote.editorial-callout::before,
