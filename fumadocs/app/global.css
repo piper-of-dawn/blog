@@ -419,8 +419,13 @@ article .prose h2::before {
   font-size: 0.82rem;
 }
 
-#nd-toc [style*='--track-top'] {
-  display: none;
+#nd-toc [style*='--track-top'] > svg path {
+  stroke: var(--editorial-teal);
+  stroke-width: 1.5;
+}
+
+#nd-toc [style*='--track-top'] > div {
+  background-color: var(--editorial-teal);
 }
 
 #nd-toc a[href*='#'] {
