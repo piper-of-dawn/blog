@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Roboto+Mono:wght@400;500;600&display=swap');
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
@@ -258,6 +258,7 @@ article table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
+  border: 0;
   border-top: 1px solid var(--editorial-rule-strong);
   border-bottom: 1px solid var(--editorial-rule-strong);
   background: transparent !important;
@@ -269,7 +270,7 @@ article table {
 
 article table th {
   color: var(--editorial-muted);
-  font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: inherit;
   font-size: 0.52rem;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -278,9 +279,19 @@ article table th {
 
 article table th,
 article table td {
+  border: 0;
   border-bottom: 1px solid var(--editorial-rule);
+  border-inline: 0;
   padding: 0.2rem 0.35rem;
   background: transparent !important;
+}
+
+article table thead th {
+  border-bottom: 1px solid var(--editorial-rule-strong);
+}
+
+article table tbody tr:last-child td {
+  border-bottom: 0;
 }
 
 /* Equation blocks in the reference are separated like ledger entries. */
