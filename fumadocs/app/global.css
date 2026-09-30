@@ -4,8 +4,8 @@
 @import 'fumadocs-ui/css/preset.css';
 
 @font-face {
-  font-family: 'Fumadocs Nerd Symbols';
-  src: url('/fonts/nerd-arrow.ttf') format('truetype');
+  font-family: 'Arimo Nerd Symbols';
+  src: url('/fonts/arimo-nerd-arrow.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -226,18 +226,6 @@ article blockquote.editorial-callout--abstract > p:first-child strong::before {
   color: var(--editorial-teal);
 }
 
-article blockquote > p:first-child > strong:first-child {
-  display: block;
-  margin-bottom: 0.35rem;
-  color: var(--editorial-teal);
-  font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-align: left;
-}
-
 article blockquote.editorial-callout--inline > p:first-child strong {
   color: var(--editorial-body);
   font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
@@ -264,7 +252,7 @@ article mark {
 article .nerd-arrow {
   display: inline-block;
   margin-inline: 0.25em;
-  font-family: 'Fumadocs Nerd Symbols', sans-serif;
+  font-family: 'Arimo Nerd Symbols', sans-serif;
   font-size: 0.95em;
   font-weight: 400;
   line-height: 1;
