@@ -220,6 +220,7 @@ article blockquote.editorial-callout--abstract > p:first-child strong::before {
 
 article blockquote.editorial-callout--abstract > p:first-child strong {
   color: transparent;
+  text-decoration: none;
 }
 
 article blockquote.editorial-callout--abstract > p:first-child strong::before {
@@ -227,8 +228,8 @@ article blockquote.editorial-callout--abstract > p:first-child strong::before {
 }
 
 article blockquote.editorial-callout--inline > p:first-child strong {
-  color: var(--editorial-body);
-  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+  color: var(--editorial-teal);
+  font-family: inherit;
   font-size: 1em;
   letter-spacing: normal;
   text-transform: none;
@@ -378,10 +379,68 @@ article .prose h2::before {
   width: auto;
   color: var(--editorial-teal);
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 0.82rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   white-space: nowrap;
+}
+
+/* Give the native right-hand Fumadocs TOC the numbered contents-ledger style. */
+#nd-toc {
+  counter-reset: editorial-toc-section;
+  padding-top: 1rem;
+}
+
+#nd-toc #toc-title {
+  display: block;
+  margin: 0 0 0.85rem;
+  border-bottom: 1px solid var(--editorial-rule);
+  padding: 0 0 0.55rem;
+  color: var(--editorial-teal);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+#nd-toc #toc-title svg {
+  display: none;
+}
+
+#nd-toc #toc-title::after {
+  content: 'Contents';
+  font-size: 0.68rem;
+}
+
+#nd-toc a[href*='#'] {
+  display: grid;
+  grid-template-columns: 1.65rem minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 0.55rem;
+  counter-increment: editorial-toc-section;
+  border-bottom: 1px dotted var(--editorial-rule-soft);
+  padding: 0.55rem 0;
+  color: var(--editorial-ink);
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+#nd-toc a[href*='#'] > svg {
+  display: none;
+}
+
+#nd-toc a[href*='#']::before {
+  content: '§' counter(editorial-toc-section);
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--editorial-teal);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 article .prose h2::after {
@@ -407,11 +466,16 @@ article .prose li {
 }
 
 article .prose strong {
-  color: var(--editorial-ink);
+  color: var(--editorial-teal);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--editorial-teal) 45%, transparent);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.14em;
+  text-decoration-skip-ink: auto;
 }
 
 article .prose > p > strong:first-child {
-  color: var(--editorial-body);
+  color: var(--editorial-teal);
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 1em;
   font-weight: 650;
@@ -441,6 +505,11 @@ article blockquote.editorial-callout {
   line-height: 1.72;
 }
 
+article blockquote.editorial-callout--inline {
+  font-family: 'Arimo Nerd Arrow', var(--font-sans), system-ui, sans-serif;
+  font-feature-settings: 'calt' 1;
+}
+
 article blockquote.editorial-callout p {
   margin-block: 0;
   color: inherit;
@@ -462,7 +531,7 @@ article blockquote.editorial-callout--quote {
 article blockquote.editorial-callout--quote strong {
   display: inline;
   margin: 0;
-  color: var(--editorial-ink);
+  color: var(--editorial-teal);
   font-family: inherit;
   font-size: 1em;
   letter-spacing: normal;
