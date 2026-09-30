@@ -1,7 +1,5 @@
-# Bundled symbol font
+# Arimo Nerd Arrow font
 
-`public/fonts/arimo-nerd-arrow.ttf` is a subset of Arimo Nerd Font Propo Regular, containing only the Font Awesome `arrow-right` glyph at U+F061. Arimo is a proportional sans-serif font; Nerd Fonts lists it as a sans-serif family.
+`public/fonts/arimo-nerd-arrow.ttf` is a subset of Arimo Nerd Font Propo Regular. It preserves the proportional sans-serif glyphs and Nerd Font arrow glyph, and adds an OpenType `calt` ligature mapping `->` directly to Font Awesome `arrow-right` at U+F061. No Markdown or HTML text rewriting is used.
 
-Arimo is copyright Google LLC and is licensed under the SIL Open Font License 1.1. See `Arimo-OFL.txt`.
-
-The glyph is distributed through [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts), whose glyph set includes Font Awesome icons. See the [Nerd Fonts glyph set documentation](https://github.com/ryanoasis/nerd-fonts/wiki/Glyph-Sets-and-Code-Points).
+Arimo is licensed under the SIL Open Font License 1.1; see `Arimo-OFL.txt`. Nerd Fonts lists the Font Awesome glyph set as CC BY 4.0 and documents the glyph mappings at <https://github.com/ryanoasis/nerd-fonts/wiki/Glyph-Sets-and-Code-Points>.

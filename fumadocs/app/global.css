@@ -4,7 +4,7 @@
 @import 'fumadocs-ui/css/preset.css';
 
 @font-face {
-  font-family: 'Arimo Nerd Symbols';
+  font-family: 'Arimo Nerd Arrow';
   src: url('/fonts/arimo-nerd-arrow.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
@@ -249,16 +249,6 @@ article mark {
   padding: 0 0.12em;
 }
 
-article .nerd-arrow {
-  display: inline-block;
-  margin-inline: 0.25em;
-  font-family: 'Arimo Nerd Symbols', sans-serif;
-  font-size: 0.95em;
-  font-weight: 400;
-  line-height: 1;
-  vertical-align: -0.04em;
-}
-
 article table {
   width: 100%;
   border-collapse: collapse;
@@ -357,6 +347,12 @@ article .prose {
   max-width: none;
   padding: 0;
   counter-reset: editorial-section display-equation;
+  font-family: 'Arimo Nerd Arrow', var(--font-sans), system-ui, sans-serif;
+  font-feature-settings: 'calt' 1;
+}
+
+article .prose :is(code, pre) {
+  font-feature-settings: normal;
 }
 
 article .prose h2 {
@@ -457,7 +453,8 @@ article blockquote.editorial-callout p {
 article blockquote.editorial-callout--quote {
   margin-block: 1rem;
   padding: 0.25rem 0 0.25rem 1rem;
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: 'Arimo Nerd Arrow', var(--font-sans), system-ui, sans-serif;
+  font-feature-settings: 'calt' 1;
   font-size: 1rem;
   line-height: 1.6;
 }

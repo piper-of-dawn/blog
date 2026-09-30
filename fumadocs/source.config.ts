@@ -25,57 +25,9 @@ function classifyCallouts() {
   };
 }
 
-function nerdifyForwardPointArrows() {
-  const forwardPointLines = new Set([
-    'Positive points (+) -> add them to spot',
-    'Negative points (-) -> subtract them from spot',
-  ]);
-
-  const textContent = (node: any): string => node.type === 'text'
-    ? node.value
-    : (node.children ?? []).map(textContent).join('');
-
-  const replaceArrow = (node: any) => {
-    if (node.type === 'text' && node.value.includes('->')) {
-      const parts = node.value.split('->');
-      const children: any[] = [];
-      parts.forEach((part: string, index: number) => {
-        if (part) children.push({ type: 'text', value: part });
-        if (index < parts.length - 1) {
-          children.push({
-            type: 'mdxJsxTextElement',
-            name: 'span',
-            attributes: [
-              { type: 'mdxJsxAttribute', name: 'className', value: 'nerd-arrow' },
-              { type: 'mdxJsxAttribute', name: 'aria-hidden', value: 'true' },
-            ],
-            children: [{ type: 'text', value: '\uf061' }],
-          });
-        }
-      });
-      return children;
-    }
-
-    if (!node.children) return [node];
-    node.children = node.children.flatMap(replaceArrow);
-    return [node];
-  };
-
-  return (tree: any) => {
-    const visit = (node: any) => {
-      if (node.type === 'listItem' && forwardPointLines.has(textContent(node).trim())) {
-        node.children = node.children.flatMap(replaceArrow);
-        return;
-      }
-      for (const child of node.children ?? []) visit(child);
-    };
-    visit(tree);
-  };
-}
-
 export default defineConfig({
   mdxOptions: {
-    remarkPlugins: [remarkMath, classifyCallouts, nerdifyForwardPointArrows],
+    remarkPlugins: [remarkMath, classifyCallouts],
     rehypePlugins: (plugins) => [[rehypeKatex, { strict: false }], ...plugins],
   },
 });
