@@ -256,13 +256,15 @@ article mark {
 
 article table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   border-top: 1px solid var(--editorial-rule-strong);
   border-bottom: 1px solid var(--editorial-rule-strong);
   background: transparent !important;
   color: var(--editorial-body);
   font-family: 'Roboto Mono', var(--font-mono), ui-monospace, monospace;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
+  line-height: 1.5;
 }
 
 article table th {
@@ -277,7 +279,7 @@ article table th {
 article table th,
 article table td {
   border-bottom: 1px solid var(--editorial-rule);
-  padding: 0.55rem 0.7rem;
+  padding: 0.3rem 0.5rem;
   background: transparent !important;
 }
 
@@ -441,10 +443,6 @@ article .prose h2::before {
   font-size: 1rem;
   line-height: 1.35;
   text-decoration: none;
-}
-
-#nd-toc a[href*='#'] > svg {
-  display: none;
 }
 
 #nd-toc a[href*='#']::before {
