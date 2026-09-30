@@ -278,10 +278,10 @@ article table {
 article table th {
   color: var(--editorial-table-body);
   font-family: inherit;
-  font-size: 0.72rem;
+  font-size: inherit;
   font-weight: 700;
   letter-spacing: 0.14em;
-  line-height: 1.35;
+  line-height: inherit;
   text-transform: uppercase;
 }
 
@@ -415,9 +415,12 @@ article .prose h2::before {
 /* Give the native right-hand Fumadocs TOC the numbered contents-ledger style. */
 #nd-toc {
   counter-reset: editorial-toc-section;
-  --fd-toc-width: min(22rem, calc(100vw - 2rem));
   padding-top: 1rem;
   overflow-x: clip;
+}
+
+#nd-docs-layout:has(#nd-toc) {
+  --fd-toc-width: 22rem;
 }
 
 #nd-toc #toc-title {
