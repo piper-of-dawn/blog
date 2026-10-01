@@ -1,4 +1,5 @@
 import { Provider } from '@/components/provider';
+import { ResponsiveSidebar } from '@/components/responsive-sidebar';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { baseOptions } from '@/lib/layout.shared';
 import { source } from '@/lib/source';
@@ -21,6 +22,7 @@ export default function Layout({ children }: LayoutProps<'/'>) {
       <body className="flex flex-col min-h-screen">
         <Provider>
           <DocsLayout tree={source.getPageTree()} {...baseOptions()}>
+            <ResponsiveSidebar />
             {children}
           </DocsLayout>
         </Provider>

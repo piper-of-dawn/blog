@@ -419,8 +419,33 @@ article .prose h2::before {
   overflow-x: clip;
 }
 
-#nd-docs-layout:has(#nd-toc) {
-  --fd-toc-width: 22rem;
+/* The native TOC disappears below 80rem. Keep its grid track only while it
+   is actually visible, and extend that visible range after the left sidebar
+   collapses so the article gets the space it needs first. */
+@media (min-width: 64rem) {
+  #nd-docs-layout:has(#nd-toc) {
+    --fd-toc-width: 22rem;
+  }
+}
+
+@media (min-width: 64rem) and (max-width: 79.999rem) {
+  #nd-docs-layout:has([data-toc-popover]) {
+    --fd-toc-popover-height: 0px;
+  }
+
+  #nd-toc {
+    display: flex;
+  }
+
+  #nd-docs-layout [data-toc-popover] {
+    display: none;
+  }
+}
+
+@media (max-width: 63.999rem) {
+  #nd-docs-layout:has(#nd-toc) {
+    --fd-toc-width: 0px;
+  }
 }
 
 #nd-toc #toc-title {
