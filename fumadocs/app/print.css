@@ -33,7 +33,7 @@
   article { color: #000 !important; font-size: 9.5pt; line-height: 1.48; }
   article h1, article h2, article h3, article h4, article h5, article h6 {
     color: #000 !important;
-    font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif !important;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
     break-after: avoid;
     font-weight: 400 !important;
   }
