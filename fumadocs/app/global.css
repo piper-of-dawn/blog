@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Playfair+Display:wght@400..700&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Roboto+Mono:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
@@ -62,7 +62,7 @@ article h3,
 article h4,
 article h5,
 article h6 {
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
   color: var(--editorial-ink);
   letter-spacing: -0.025em;
 }
@@ -96,7 +96,7 @@ article.profile-home {
 .profile-home__title {
   margin: 0;
   color: var(--editorial-ink);
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 500;
   letter-spacing: -0.04em;
@@ -350,7 +350,7 @@ article#nd-page > h1 {
   max-width: 62rem;
   margin-top: 0;
   color: var(--editorial-ink);
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
   font-size: clamp(3.2rem, 6vw, 4.35rem);
   font-weight: 400;
   letter-spacing: -0.038em;
@@ -377,7 +377,7 @@ article .prose h2 {
   border-top: 1px solid var(--editorial-rule-strong);
   padding-top: 0.75rem;
   color: var(--editorial-ink);
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
   font-size: 2.45rem;
   font-weight: 400;
   letter-spacing: -0.025em;
@@ -506,9 +506,9 @@ article.question-notes .prose h2 {
   border-top: 0;
   border-bottom: 1px solid var(--editorial-rule-strong);
   padding: 0 0 0.8rem 4.8rem;
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
   font-size: clamp(1.9rem, 3vw, 2.45rem);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.08;
 }
@@ -544,7 +544,7 @@ article.question-notes .prose h2::after {
 article .prose h3 {
   margin-top: 2.75rem;
   color: var(--editorial-ink);
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
   font-size: 1.3rem;
   font-weight: 400;
   letter-spacing: -0.025em;
@@ -611,7 +611,7 @@ article blockquote.editorial-callout p {
 article blockquote.editorial-callout--quote {
   margin-block: 1rem;
   padding: 0.25rem 0 0.25rem 1rem;
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
   font-feature-settings: 'calt' 1;
   font-size: 1.125rem;
   line-height: 1.6;
