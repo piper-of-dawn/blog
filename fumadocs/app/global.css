@@ -500,6 +500,47 @@ article .prose h2::after {
   content: none;
 }
 
+/* Question variants use an in-column section marker and a closing rule. */
+article.question-notes .prose h2 {
+  margin-top: 4rem;
+  border-top: 0;
+  border-bottom: 1px solid var(--editorial-rule-strong);
+  padding: 0 0 0.8rem 4.8rem;
+  font-family: 'Arimo Nerd Arrow', var(--font-sans), system-ui, sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.45rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+article.question-notes .prose h2::before {
+  display: grid;
+  place-items: center;
+  top: 0.15rem;
+  right: auto;
+  left: 0;
+  width: 3rem;
+  height: 2.8rem;
+  border-radius: 0.3rem;
+  background: color-mix(in srgb, var(--editorial-teal) 8%, var(--editorial-paper));
+  color: var(--editorial-teal);
+  font-family: 'Arimo Nerd Arrow', var(--font-sans), system-ui, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+article.question-notes .prose h2::after {
+  content: '';
+  position: absolute;
+  top: 0.15rem;
+  left: 3.9rem;
+  width: 1px;
+  height: 2.8rem;
+  background: var(--editorial-rule-soft);
+}
+
 article .prose h3 {
   margin-top: 2.75rem;
   color: var(--editorial-ink);
@@ -570,7 +611,7 @@ article blockquote.editorial-callout p {
 article blockquote.editorial-callout--quote {
   margin-block: 1rem;
   padding: 0.25rem 0 0.25rem 1rem;
-  font-family: 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+  font-family: 'Arimo Nerd Arrow', var(--font-sans), system-ui, sans-serif;
   font-feature-settings: 'calt' 1;
   font-size: 1.125rem;
   line-height: 1.6;
@@ -722,6 +763,16 @@ article .katex-display > .katex {
     position: static;
     display: block;
     margin-bottom: 0.35rem;
+  }
+
+  article.question-notes .prose h2 {
+    padding-left: 4.8rem;
+  }
+
+  article.question-notes .prose h2::before {
+    position: absolute;
+    display: grid;
+    margin-bottom: 0;
   }
 
   article .katex-display {

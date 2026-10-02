@@ -36,9 +36,14 @@ export default async function Page(props: PageProps<'/[[...slug]]'>) {
 
   const MDX = page.data.body;
   const isHome = !params.slug || params.slug.length === 0;
+  const isQuestionNotes = page.data.title.endsWith('Question Notes');
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full} className={isHome ? 'profile-home' : undefined}>
+    <DocsPage
+      toc={page.data.toc}
+      full={page.data.full}
+      className={isHome ? 'profile-home' : isQuestionNotes ? 'question-notes' : undefined}
+    >
       {isHome ? (
         <>
           <header className="profile-home__header">
