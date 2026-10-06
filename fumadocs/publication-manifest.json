@@ -3,7 +3,7 @@
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
     "ref": "master",
-    "commit": "292c238cbf73fc57f802d418e9b1371c7dc052f8"
+    "commit": "b971a0f3cdb1c1fb79e4bad25e73cb69605b8807"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -693,6 +693,12 @@
       "sha256": "daaeb19b0e3ca11c25b0e64254da4b4791f144d2035a13c320146cbb64e95cb3",
       "type": "content",
       "route": "/CFA Level II Notes/FSA/LM2 - Defined Contribution and Defined Benefit Plans - Question Notes/"
+    },
+    {
+      "path": "CFA Level II Notes/FSA/LM3 - Multinational Operations - Question Notes.md",
+      "sha256": "f6afb5e200b2ce5f542c0fb33a0ae555defb9e4514c8c8510a963a668c91a41a",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/LM3 - Multinational Operations - Question Notes/"
     },
     {
       "path": "CFA Level II Notes/FSA/LM4 - Analysis of Financial Institutions - Question Notes.md",
