@@ -3,7 +3,7 @@
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
     "ref": "master",
-    "commit": "b971a0f3cdb1c1fb79e4bad25e73cb69605b8807"
+    "commit": "dd7d3dd8f036afac7511be6ab1733d4187ed4adb"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -325,7 +325,7 @@
     },
     {
       "path": "CFA L1 Notes/ETHICS/STANDARD 4 - DUTIES TO EMPLOYERS.md",
-      "sha256": "838eeb348dc3565ef271ece113b9a7e7bc30eac7efd04d85c92702066056dd24",
+      "sha256": "14b534332e3df36ec86724079261752e17cc858b54dd241316ea3f367a3d8ae2",
       "type": "content",
       "route": "/CFA L1 Notes/ETHICS/STANDARD 4 - DUTIES TO EMPLOYERS/"
     },
@@ -569,7 +569,7 @@
     },
     {
       "path": "CFA Level II Notes/Corporate Issuers/Cost of Capital.md",
-      "sha256": "38c726a1cd7b2f5b99d30a62f3d24d764956182179466b7fb16833663cc3e47e",
+      "sha256": "632650d6b659e4d095dbd4dfe9033d7432bf94ce9bace3eb73b9b5056862d41f",
       "type": "content",
       "route": "/CFA Level II Notes/Corporate Issuers/Cost of Capital/"
     },
@@ -641,6 +641,12 @@
       "route": "/CFA Level II Notes/EQUITY VALUATION/LM3 - Free Cash Flow Valuation - Question Notes/"
     },
     {
+      "path": "CFA Level II Notes/EQUITY VALUATION/LM4 - Market-Based Valuation - Explainer.md",
+      "sha256": "ad06ad3e1b611485f6ced9003582c23ebb950da7d0dfbe7afcff3076f2b35a9f",
+      "type": "content",
+      "route": "/CFA Level II Notes/EQUITY VALUATION/LM4 - Market-Based Valuation - Explainer/"
+    },
+    {
       "path": "CFA Level II Notes/EQUITY VALUATION/Untitled.md",
       "sha256": "4cf8f146498ccf4c5cad8458cbb73b3a3dc15143fbefbead09ef154e5f496381",
       "type": "content",
@@ -702,7 +708,7 @@
     },
     {
       "path": "CFA Level II Notes/FSA/LM4 - Analysis of Financial Institutions - Question Notes.md",
-      "sha256": "feef002f56bd856b99a174d35eb53043c0ff0bb01877f1d55466111ffcf127bc",
+      "sha256": "7e4398a793c317f1d71c38921ef9ea6eca3c0123dc092a52127dea16d51962a5",
       "type": "content",
       "route": "/CFA Level II Notes/FSA/LM4 - Analysis of Financial Institutions - Question Notes/"
     },
