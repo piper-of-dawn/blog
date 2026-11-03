@@ -3,7 +3,7 @@
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
     "ref": "master",
-    "commit": "7df684dc1cbb194bf29f4b5118b37d6b13b13c92"
+    "commit": "a5423d60376e04b476b1934aa62e72dfc94aaaef"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -618,7 +618,7 @@
     },
     {
       "path": "CFA Level II Notes/Derivatives/Valuation of Contingent Claims - Numerical Problems.md",
-      "sha256": "489c839fd026d941cbc48aba9a6daaee1120573010af41475af6427f1b397c3d",
+      "sha256": "42393c2875b7a2b47b469b9fe57a241152333770ff677830e0f644a4dd9fe762",
       "type": "content",
       "route": "/CFA Level II Notes/Derivatives/Valuation of Contingent Claims - Numerical Problems/"
     },
