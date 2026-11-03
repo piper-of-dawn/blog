@@ -3,7 +3,7 @@
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
     "ref": "master",
-    "commit": "dd7d3dd8f036afac7511be6ab1733d4187ed4adb"
+    "commit": "c6a576a73dff3fc4da9758ba2a65806112dcfa23"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -601,7 +601,7 @@
     },
     {
       "path": "CFA Level II Notes/Derivatives/images/two-period-rate-option.svg",
-      "sha256": "0ecbf7cc6c88a0f70a1861e1959acf0ec8d08b5dba408cf6034bef5a84cb7dfb",
+      "sha256": "4d76d8b9eb2a76b7a3e574ecf4ddc6c721857e7c12ac2f55f2c6298ad9c3fdca",
       "type": "asset"
     },
     {
@@ -618,7 +618,7 @@
     },
     {
       "path": "CFA Level II Notes/Derivatives/Valuation of Contingent Claims - Numerical Problems.md",
-      "sha256": "6bda6e43aac21550a59d9624a9a2076b23d2b256b4d58cedd22bab26206a632c",
+      "sha256": "e09e0bfe7bf7585215f424de08ab07ce5866c3bf07e1f268c745da5278446d99",
       "type": "content",
       "route": "/CFA Level II Notes/Derivatives/Valuation of Contingent Claims - Numerical Problems/"
     },
