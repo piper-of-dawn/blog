@@ -3,7 +3,7 @@
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
     "ref": "master",
-    "commit": "a5423d60376e04b476b1934aa62e72dfc94aaaef"
+    "commit": "62db7f759ba411166d29a25259fbba7057892b9d"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -651,6 +651,54 @@
       "sha256": "4cf8f146498ccf4c5cad8458cbb73b3a3dc15143fbefbead09ef154e5f496381",
       "type": "content",
       "route": "/CFA Level II Notes/EQUITY VALUATION/Untitled/"
+    },
+    {
+      "path": "CFA Level II Notes/ETHICS/GIPS.md",
+      "sha256": "50831b9cc140fed107094e30f2b5212527c986d22caf8bf731266753e0a1e057",
+      "type": "content",
+      "route": "/CFA Level II Notes/ETHICS/GIPS/"
+    },
+    {
+      "path": "CFA Level II Notes/ETHICS/STANDARD 1 - PROFESSIONALISM.md",
+      "sha256": "5ee2baa5987da789bd2414ae4faa9b77817847c1a419fcd7d54fb00c3f06dcee",
+      "type": "content",
+      "route": "/CFA Level II Notes/ETHICS/STANDARD 1 - PROFESSIONALISM/"
+    },
+    {
+      "path": "CFA Level II Notes/ETHICS/STANDARD 2 - INTEGRITY OF CAPITAL MARKETS.md",
+      "sha256": "50bb61182f38168191e764dd8f17e141509cc49acf64a03176666b8434dd16c2",
+      "type": "content",
+      "route": "/CFA Level II Notes/ETHICS/STANDARD 2 - INTEGRITY OF CAPITAL MARKETS/"
+    },
+    {
+      "path": "CFA Level II Notes/ETHICS/STANDARD 3 - DUTIES TO CLIENTS.md",
+      "sha256": "443c88476dc883d4da5ba49cd32f301ec2f87870160e0325a4b05262a072021a",
+      "type": "content",
+      "route": "/CFA Level II Notes/ETHICS/STANDARD 3 - DUTIES TO CLIENTS/"
+    },
+    {
+      "path": "CFA Level II Notes/ETHICS/STANDARD 4 - DUTIES TO EMPLOYERS.md",
+      "sha256": "ec8e14d6601f0e9a9433c2d49c795ebe58244f162dbb093edae74aaa281da83d",
+      "type": "content",
+      "route": "/CFA Level II Notes/ETHICS/STANDARD 4 - DUTIES TO EMPLOYERS/"
+    },
+    {
+      "path": "CFA Level II Notes/ETHICS/STANDARD 5 - INVESTMENT ANALYSIS RECOMMENDATIONS AND ACTIONS.md",
+      "sha256": "1d7aa5acb897c3432490647a94a75fc183135801ccb1ac6de7e7762b7f82d83b",
+      "type": "content",
+      "route": "/CFA Level II Notes/ETHICS/STANDARD 5 - INVESTMENT ANALYSIS RECOMMENDATIONS AND ACTIONS/"
+    },
+    {
+      "path": "CFA Level II Notes/ETHICS/STANDARD 6 - CONFLICTS OF INTEREST.md",
+      "sha256": "054cbcb918e76993a8c894ef194a627416f323e28a6be1c14b4652b1573b823c",
+      "type": "content",
+      "route": "/CFA Level II Notes/ETHICS/STANDARD 6 - CONFLICTS OF INTEREST/"
+    },
+    {
+      "path": "CFA Level II Notes/ETHICS/STANDARD 7 - RESPONSIBILITIES AS A CFA INSTITUTE MEMBER OR CFA CANDIDATE.md",
+      "sha256": "c112b4f56756b80829b1f88ef94e0523e76b281d25c5086cad2b301cbc80937d",
+      "type": "content",
+      "route": "/CFA Level II Notes/ETHICS/STANDARD 7 - RESPONSIBILITIES AS A CFA INSTITUTE MEMBER OR CFA CANDIDATE/"
     },
     {
       "path": "CFA Level II Notes/FIXED INCOME/Credit Default Swaps.md",
