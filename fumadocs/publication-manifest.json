@@ -3,7 +3,7 @@
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
     "ref": "master",
-    "commit": "17899bf9d627acf90865342b808812488d2b1fdb"
+    "commit": "b82f4987e33f131de2c342f342df70b559f5fb40"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -568,6 +568,18 @@
       "route": "/CFA L1 Notes/QUANTITATIVE METHODS/Simple Linear Regression/"
     },
     {
+      "path": "CFA Level II Notes/ALT INV/Commodities.md",
+      "sha256": "92468af21e58a84f578a97814eb176e05c73d28857d361711440749251deb2fe",
+      "type": "content",
+      "route": "/CFA Level II Notes/ALT INV/Commodities/"
+    },
+    {
+      "path": "CFA Level II Notes/ALT INV/REIT Valuation.md",
+      "sha256": "95fa0d63314bc6b12b41f79b1d95f6567432a28054d65e2d88b422fea1255693",
+      "type": "content",
+      "route": "/CFA Level II Notes/ALT INV/REIT Valuation/"
+    },
+    {
       "path": "CFA Level II Notes/Corporate Issuers/Cost of Capital.md",
       "sha256": "632650d6b659e4d095dbd4dfe9033d7432bf94ce9bace3eb73b9b5056862d41f",
       "type": "content",
@@ -629,6 +641,12 @@
       "route": "/CFA Level II Notes/Derivatives/Valuation of Contingent Claims/"
     },
     {
+      "path": "CFA Level II Notes/ECONOMICS/Economic Growth.md",
+      "sha256": "111fa0c063188375101a92ebd09c1c45e085a4d8b23cb0bded310515635fbaf1",
+      "type": "content",
+      "route": "/CFA Level II Notes/ECONOMICS/Economic Growth/"
+    },
+    {
       "path": "CFA Level II Notes/ECONOMICS/Exchange Rate.md",
       "sha256": "8fa757abbc03be8287ea59e14b5109b6068e12e768379415d52a2957d9d0b463",
       "type": "content",
@@ -672,7 +690,7 @@
     },
     {
       "path": "CFA Level II Notes/ETHICS/STANDARD 3 - DUTIES TO CLIENTS.md",
-      "sha256": "443c88476dc883d4da5ba49cd32f301ec2f87870160e0325a4b05262a072021a",
+      "sha256": "9652ea65e750475de583a6846303485b2631e33af11ab7a12dd7297d190090bb",
       "type": "content",
       "route": "/CFA Level II Notes/ETHICS/STANDARD 3 - DUTIES TO CLIENTS/"
     },
@@ -725,10 +743,22 @@
       "route": "/CFA Level II Notes/FIXED INCOME/Untitled/"
     },
     {
+      "path": "CFA Level II Notes/FIXED INCOME/Valuation and Analysis of Bonds with Embedded Options.md",
+      "sha256": "6870ae25fa2ebbf42b6eec10d5ee2064c65d693e3908d1bca97b7d365dc44f8f",
+      "type": "content",
+      "route": "/CFA Level II Notes/FIXED INCOME/Valuation and Analysis of Bonds with Embedded Options/"
+    },
+    {
       "path": "CFA Level II Notes/FSA/FSA Techniques.md",
       "sha256": "59acfa86b0871f69ca19726e3cab08f15ff07fadf0d5cb70027f3cf912cef92f",
       "type": "content",
       "route": "/CFA Level II Notes/FSA/FSA Techniques/"
+    },
+    {
+      "path": "CFA Level II Notes/FSA/Integration of Financial Analysis Techniques.md",
+      "sha256": "88eddc3086a326c6df58b4d81229cefefa725c0a06212e1b605fbcb3503140b4",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/Integration of Financial Analysis Techniques/"
     },
     {
       "path": "CFA Level II Notes/FSA/Joint Ventures.md",
@@ -755,16 +785,34 @@
       "route": "/CFA Level II Notes/FSA/LM3 - Multinational Operations - Question Notes/"
     },
     {
+      "path": "CFA Level II Notes/FSA/LM3 - Multinational Operations.md",
+      "sha256": "2f8c7cf8149d685735b072a08996973ccbd3e027365c60600837f31f6b0bb3c1",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/LM3 - Multinational Operations/"
+    },
+    {
       "path": "CFA Level II Notes/FSA/LM4 - Analysis of Financial Institutions - Question Notes.md",
       "sha256": "7e4398a793c317f1d71c38921ef9ea6eca3c0123dc092a52127dea16d51962a5",
       "type": "content",
       "route": "/CFA Level II Notes/FSA/LM4 - Analysis of Financial Institutions - Question Notes/"
     },
     {
+      "path": "CFA Level II Notes/FSA/REV - Evaluationg Quality of Financial Statements.md",
+      "sha256": "52e9a549db613d04184e42222e2e206828ac95d3d8a664a4917df7afd4e3f4d8",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/REV - Evaluationg Quality of Financial Statements/"
+    },
+    {
       "path": "CFA Level II Notes/FSA/Treasury Stock Method.md",
       "sha256": "54486f3397ebab669f89c461140832dbee693cc64acf15ca196b55e2be70e4ac",
       "type": "content",
       "route": "/CFA Level II Notes/FSA/Treasury Stock Method/"
+    },
+    {
+      "path": "CFA Level II Notes/PORTFOLIO MANAGEMENT/ETF.md",
+      "sha256": "157410897fa453d778ccc60c93d5cd4cde2a600dfcc337b58ba34feb9b82b57c",
+      "type": "content",
+      "route": "/CFA Level II Notes/PORTFOLIO MANAGEMENT/ETF/"
     },
     {
       "path": "CFA Level II Notes/PORTFOLIO MANAGEMENT/LM2 - Analysis of Active Portfolio Management - Question Notes.md",
@@ -783,6 +831,18 @@
       "sha256": "17797799250864ea6a78c32b32712613076ce4e534cc8620ba523f4c28a50399",
       "type": "content",
       "route": "/CFA Level II Notes/PORTFOLIO MANAGEMENT/LM3 - Exchange-Traded Funds - Question Notes/"
+    },
+    {
+      "path": "CFA Level II Notes/PORTFOLIO MANAGEMENT/Managing Market Risk.md",
+      "sha256": "cb78dc2c178ac7b9e0efbb2d68aeac4c34094edc6694dc1503740f6c05dfee32",
+      "type": "content",
+      "route": "/CFA Level II Notes/PORTFOLIO MANAGEMENT/Managing Market Risk/"
+    },
+    {
+      "path": "CFA Level II Notes/QUANTITATIVE METHODS/Linear Regression.md",
+      "sha256": "250b6c1568fcdd4da6f83614f15982762152f0da59bbd0bda61f2e77a8d154e0",
+      "type": "content",
+      "route": "/CFA Level II Notes/QUANTITATIVE METHODS/Linear Regression/"
     },
     {
       "path": "Competitive Probability/BasketBall Practice.md",
