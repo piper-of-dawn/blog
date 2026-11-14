@@ -3,7 +3,7 @@
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
     "ref": "master",
-    "commit": "1d9f82e0bda4dafe3b2023c865fa35d9c412e88b"
+    "commit": "83a1d04254923ab93020fa136f90ba1dec89cae0"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -665,6 +665,12 @@
       "route": "/CFA Level II Notes/EQUITY VALUATION/LM4 - Market-Based Valuation - Explainer/"
     },
     {
+      "path": "CFA Level II Notes/EQUITY VALUATION/Residual Income.md",
+      "sha256": "fe7ede327529e0a7c86ae331278e67087e44f8bccbb9ac0aad8ac70e25705d8f",
+      "type": "content",
+      "route": "/CFA Level II Notes/EQUITY VALUATION/Residual Income/"
+    },
+    {
       "path": "CFA Level II Notes/EQUITY VALUATION/Untitled.md",
       "sha256": "4cf8f146498ccf4c5cad8458cbb73b3a3dc15143fbefbead09ef154e5f496381",
       "type": "content",
@@ -747,6 +753,12 @@
       "sha256": "6870ae25fa2ebbf42b6eec10d5ee2064c65d693e3908d1bca97b7d365dc44f8f",
       "type": "content",
       "route": "/CFA Level II Notes/FIXED INCOME/Valuation and Analysis of Bonds with Embedded Options/"
+    },
+    {
+      "path": "CFA Level II Notes/FSA/Defined Contribution and Defined Benefit Plans.md",
+      "sha256": "7ef2146939e62f28a31333ca24743306213c8a980a706d05064cdf66e27904b9",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/Defined Contribution and Defined Benefit Plans/"
     },
     {
       "path": "CFA Level II Notes/FSA/FSA Techniques.md",
