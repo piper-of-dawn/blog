@@ -3,7 +3,7 @@
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
     "ref": "master",
-    "commit": "83a1d04254923ab93020fa136f90ba1dec89cae0"
+    "commit": "b93c421bbba1a16a27164648e0ffa2e32bb71fe6"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -759,6 +759,12 @@
       "sha256": "7ef2146939e62f28a31333ca24743306213c8a980a706d05064cdf66e27904b9",
       "type": "content",
       "route": "/CFA Level II Notes/FSA/Defined Contribution and Defined Benefit Plans/"
+    },
+    {
+      "path": "CFA Level II Notes/FSA/FSA Survival Guide.md",
+      "sha256": "d080441f8725e7fd98c82ea43cc59c1341206b83a47318aee959abe6758d351a",
+      "type": "content",
+      "route": "/CFA Level II Notes/FSA/FSA Survival Guide/"
     },
     {
       "path": "CFA Level II Notes/FSA/FSA Techniques.md",
