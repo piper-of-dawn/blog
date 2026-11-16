@@ -3,7 +3,7 @@
   "source": {
     "repository": "https://github.com/piper-of-dawn/KumarsNotes.git",
     "ref": "master",
-    "commit": "b93c421bbba1a16a27164648e0ffa2e32bb71fe6"
+    "commit": "a99cea3d98815595a615a872c0206cfab7e56d6e"
   },
   "publicIdentity": {
     "author": "Kumar Shantanu",
@@ -645,6 +645,12 @@
       "sha256": "111fa0c063188375101a92ebd09c1c45e085a4d8b23cb0bded310515635fbaf1",
       "type": "content",
       "route": "/CFA Level II Notes/ECONOMICS/Economic Growth/"
+    },
+    {
+      "path": "CFA Level II Notes/ECONOMICS/Economics Survival Guide.md",
+      "sha256": "c74f0b566fd2df86551e0824f21501deaea79dabbc40f5068472a11e4fd36e74",
+      "type": "content",
+      "route": "/CFA Level II Notes/ECONOMICS/Economics Survival Guide/"
     },
     {
       "path": "CFA Level II Notes/ECONOMICS/Exchange Rate.md",
